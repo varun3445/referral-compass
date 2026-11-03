@@ -1,0 +1,12 @@
+
+Layout check against http://localhost:3040
+
+  Width   console   evidence  summary   
+  --------------------------------------
+  320     pass      pass      pass      
+  390     pass      pass      pass      
+  768     pass      pass      pass      
+  1024    pass      pass      pass      
+  1440    pass      pass      pass      
+
+ALL WIDTHS PASS

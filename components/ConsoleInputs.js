@@ -11,12 +11,13 @@ export const PRIORITIES = [
   ['balanced', 'Balanced'],
 ];
 
-// A group of radio buttons styled as chips. Arrow keys move between them.
-function ChipGroup({ legend, name, options, value, onChange, segmented, even }) {
+// A group of radio buttons styled as choices. Arrow keys move between them.
+// layout: 'grid' (2 equal columns) or 'segmented' (one full-width control).
+function ChipGroup({ legend, name, options, value, onChange, layout = 'grid' }) {
   return (
     <fieldset className={styles.group}>
       <legend className={styles.legend}>{legend}</legend>
-      <div className={segmented ? styles.segmented : even ? styles.even : styles.chips}>
+      <div className={layout === 'segmented' ? styles.segmented : styles.grid}>
         {options.map(([v, label]) => (
           <label key={v} className={styles.chip}>
             <input
@@ -57,6 +58,7 @@ export default function ConsoleInputs({ value, onChange, postcodeStatus, onSubmi
           id="postcode"
           className={styles.postcode}
           value={value.postcode}
+          placeholder="e.g. WC2N"
           onChange={(e) => set('postcode')(e.target.value)}
           autoComplete="off"
           autoCapitalize="characters"
@@ -86,7 +88,7 @@ export default function ConsoleInputs({ value, onChange, postcodeStatus, onSubmi
         options={DISTANCES.map((d) => [d, `${d} km`])}
         value={value.maxKm}
         onChange={(v) => set('maxKm')(Number(v))}
-        even
+        layout="segmented"
       />
 
       <ChipGroup
@@ -95,7 +97,7 @@ export default function ConsoleInputs({ value, onChange, postcodeStatus, onSubmi
         options={PRIORITIES}
         value={value.priority}
         onChange={set('priority')}
-        segmented
+        layout="segmented"
       />
 
       <details className={styles.more} open={value.includeSpecialist || value.includeQuality || undefined}>

@@ -4,8 +4,8 @@ import WaitBar from './WaitBar';
 import { weeks, km } from '@/lib/format';
 import styles from './OptionRow.module.css';
 
-// A compact "other option" card. The Evidence button stretches over the
-// whole card, so it is one big tap target with one accessible name.
+// A compact "other option" row. The Evidence button stretches over the
+// whole row, so it is one big tap target with one accessible name.
 export default function OptionRow({ result, maxWait, onEvidence }) {
   const { provider, wait, distanceKm } = result;
   return (

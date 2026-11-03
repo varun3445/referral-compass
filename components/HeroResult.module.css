@@ -1,20 +1,22 @@
+/* The top result is the hero: tinted mint with a hairline border. Hierarchy
+   comes from contrast with the plain white cards around it. */
 .card {
   display: grid;
   gap: var(--space-24);
   padding: var(--pad-card);
-  background: var(--card);
+  background: var(--mint);
+  border: 1px solid var(--mint-line);
   border-radius: var(--radius);
-  box-shadow: var(--shadow);
   transition: transform 200ms var(--ease), box-shadow 200ms var(--ease);
 }
 .card:hover { transform: translateY(-2px); box-shadow: var(--shadow-lift); }
 
 .titleBlock { display: grid; gap: var(--space-8); justify-items: start; }
-.kicker { margin: 0; font-size: 0.875rem; font-weight: 500; color: var(--text-2); }
-.name { font-size: var(--h2); line-height: 1.2; letter-spacing: -0.025em; }
+.kicker { margin: 0; font-size: var(--small); font-weight: 600; letter-spacing: 0.01em; color: var(--accent); }
+.name { font-size: var(--h2); line-height: 1.15; letter-spacing: -0.02em; }
 .specialist {
   margin: 0;
-  font-size: 0.8125rem; font-weight: 600;
+  font-size: var(--small); font-weight: 500; letter-spacing: 0.01em;
   padding: var(--space-4) var(--space-12); border-radius: 999px;
   background: var(--amber-bg); color: var(--amber-text);
 }
@@ -30,7 +32,8 @@
   gap: var(--space-12);
   padding: var(--space-16);
   border-radius: var(--radius-sm);
-  background: var(--soft);
+  background: var(--card);
+  border: 1px solid var(--mint-line);
 }
 @container (min-width: 39rem) {
   .tiles { grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: auto auto auto; }
@@ -38,20 +41,20 @@
   .tile { grid-row: span 3; grid-template-rows: subgrid; }
 }
 
-.label { font-size: 0.8125rem; font-weight: 500; color: var(--text-2); letter-spacing: 0.01em; }
+.label { font-size: var(--small); font-weight: 500; letter-spacing: 0.01em; color: var(--text-2); }
 .row, .context { margin: 0; }
 .context { display: flex; align-items: center; min-height: 1.25rem; }
 .contextText { font-size: 0.875rem; color: var(--text-2); }
 
 .value { display: inline-flex; align-items: baseline; gap: var(--space-4); white-space: nowrap; }
 .number {
-  font-size: 2.5rem;            /* 40 */
+  font-size: var(--display-2);  /* 40 */
   font-weight: 600;
   line-height: 1.05;
   letter-spacing: -0.03em;
   font-variant-numeric: tabular-nums;
 }
-.xl .number { font-size: 2.5rem; }
+.xl .number { font-size: var(--display); }   /* 48: the wait */
 .unit { font-size: 1rem; font-weight: 500; color: var(--text-2); }
 
 .track { display: block; width: 100%; height: 0.375rem; border-radius: 999px; background: var(--track); overflow: hidden; }

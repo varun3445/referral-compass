@@ -8,7 +8,7 @@ export default function TopBar() {
     <header className={styles.bar}>
       <div className={styles.inner}>
         <Link href="/" className={styles.brand}>
-          <Icon name="compass" size={22} />
+          <Icon name="compass" size={24} />
           Referral Compass
         </Link>
         <div className={styles.right}>

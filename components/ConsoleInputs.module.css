@@ -1,92 +1,92 @@
 .form {
   display: grid;
   gap: var(--space-24);
+  padding: var(--pad-card);
   background: var(--card);
+  border: 1px solid var(--line);
   border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: var(--space-24);
 }
 
 .field { display: grid; gap: var(--space-4); }
 .inputWrap { display: grid; padding-top: var(--space-4); }
-.label, .legend { font-weight: 600; font-size: 0.9375rem; padding: 0; letter-spacing: -0.005em; }
-.hint { margin: 0; font-size: 0.875rem; color: var(--text-2); }
+.label, .legend { font-weight: 600; font-size: 0.9375rem; padding: 0; letter-spacing: 0; }
+.hint { margin: 0; font-size: var(--small); letter-spacing: 0.01em; color: var(--text-2); }
 .error { margin: 0; font-size: 0.875rem; font-weight: 600; color: var(--error-text); }
-.status { margin: 0; font-size: 0.8125rem; color: var(--text-2); min-height: 1.3em; }
+.status { margin: 0; font-size: var(--small); letter-spacing: 0.01em; color: var(--text-2); min-height: 1.3em; }
 
 .postcode {
   width: 100%;
-  min-height: 3rem;
+  height: 3rem;                       /* 48 */
   padding: 0 var(--space-16);
-  border: 1px solid var(--line);
+  border: 1px solid #d6d2c9;
   border-radius: var(--radius-sm);
-  background: var(--soft);
+  background: var(--card);
   color: var(--text);
   font: inherit;
-  font-size: 1.375rem;
+  font-size: 1.25rem;
   font-weight: 600;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  transition: background-color 200ms var(--ease), border-color 200ms var(--ease);
+  transition: border-color 200ms var(--ease);
 }
-.postcode:hover { border-color: #cfd4da; }
-.postcode:focus { background: var(--card); }
+.postcode::placeholder { text-transform: none; font-weight: 400; letter-spacing: 0; color: #8a9097; }
+.postcode:hover { border-color: #bdb8ad; }
 .postcode:focus-visible { box-shadow: var(--ring); outline: 3px solid transparent; }
-.hasError .postcode { border-color: var(--error); background: #fdf0ef; }
+.hasError .postcode { border-color: var(--error); }
 
-.group { border: 0; margin: 0; padding: 0; min-width: 0; display: grid; gap: var(--space-8); }
+.group { border: 0; margin: 0; padding: 0; display: grid; gap: var(--space-8); }
 
-.chips { display: flex; flex-wrap: wrap; gap: var(--space-8); }
-.even { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-4); }
-.even .chip span { width: 100%; justify-content: center; padding: 0 var(--space-4); }
+/* Specialty: two equal columns of choice buttons. */
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-8); }
 
-.chip { position: relative; display: inline-flex; cursor: pointer; }
+.chip { position: relative; display: grid; cursor: pointer; }
 .chip input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
 .chip span {
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   min-height: var(--tap);
-  padding: 0 var(--space-12);
-  border-radius: 999px;
+  padding: var(--space-8) var(--space-12);
+  border-radius: var(--radius-sm);
   background: var(--card);
-  box-shadow: inset 0 0 0 1px var(--line);
+  border: 1px solid var(--line);
   font-size: 0.875rem;
   font-weight: 500;
+  line-height: 1.25;
   color: var(--text);
-  white-space: nowrap;
-  transition: background-color 200ms var(--ease), color 200ms var(--ease), transform 200ms var(--ease);
+  transition: background-color 200ms var(--ease), color 200ms var(--ease), transform 100ms var(--ease);
 }
-.chip:hover span { background: var(--soft); }
+.chip:hover span { background: var(--page); }
 .chip:active span { transform: scale(0.98); }
-.chip input:checked + span { background: var(--ink); color: #fff; box-shadow: none; font-weight: 600; }
+.chip input:checked + span { background: var(--ink); border-color: var(--ink); color: #fff; font-weight: 600; }
 .chip input:focus-visible + span { box-shadow: var(--ring); }
 
-/* Segmented control: one rounded track, selected half is near black. */
+/* Distance and priority: one full-width segmented control, equal segments. */
 .segmented {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: var(--space-4);
-  border-radius: 999px;
-  background: var(--soft);
-  box-shadow: inset 0 0 0 1px var(--line);
+  grid-auto-columns: minmax(0, 1fr);
+  grid-auto-flow: column;
   gap: var(--space-4);
+  padding: var(--space-4);
+  border-radius: var(--radius-sm);
+  background: var(--page);
+  border: 1px solid var(--line);
 }
-.segmented .chip span { width: 100%; justify-content: center; background: transparent; box-shadow: none; min-height: 2.5rem; }
-.segmented .chip:hover span { background: rgba(17, 20, 24, 0.04); }
+.segmented .chip span { border: 0; background: transparent; border-radius: 0.5rem; padding: var(--space-8) var(--space-4); }
+.segmented .chip:hover span { background: rgba(20, 24, 27, 0.05); }
 .segmented .chip input:checked + span { background: var(--ink); color: #fff; }
-.segmented .chip input:focus-visible + span { box-shadow: var(--ring); }
-.segmented .chip { min-height: var(--tap); align-items: center; }
 
 .more { border-top: 1px solid var(--line); padding-top: var(--space-16); display: grid; gap: var(--space-4); }
 .more summary {
   cursor: pointer;
-  color: var(--accent);
+  color: var(--text);
   font-size: 0.9375rem;
   font-weight: 600;
   min-height: var(--tap);
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  border-radius: 999px;
+  border-radius: var(--radius-sm);
 }
 .check { display: flex; gap: var(--space-12); align-items: center; min-height: var(--tap); font-size: 0.9375rem; cursor: pointer; padding: var(--space-4) 0; }
 .check input { width: 1.25rem; height: 1.25rem; margin: 0; flex: none; accent-color: var(--ink); }
@@ -96,7 +96,4 @@
 
 @media (min-width: 61.875em) {
   .submit { display: none; }
-}
-@media (max-width: 22em) {
-  .form { padding: var(--space-16); }
 }

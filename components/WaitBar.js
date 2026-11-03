@@ -1,6 +1,6 @@
 import styles from './WaitBar.module.css';
 
-// Hatched bar for "waiting so far", scaled to the longest wait in the
+// Bar for "waiting so far", scaled to the longest wait in the
 // current results. Decorative only: the value is always written as text.
 export default function WaitBar({ weeks, max, size = 'md' }) {
   const pct = max > 0 ? Math.max(4, Math.min(100, (weeks / max) * 100)) : 0;

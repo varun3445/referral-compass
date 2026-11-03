@@ -136,3 +136,21 @@ Restyle only. No ranking, data or copy changes, apart from the delta lines the b
 - "Seen within 18 weeks" didn't fit a half-width tile at 390px and pushed its bar past the edge. Copy couldn't change, so the two small tiles drop their icons and use a 12px label on phones.
 - At 320px the one-line phone banner (nowrap) widened the results grid and the page scrolled sideways. Fixed with `minmax(0, 1fr)` on the results column.
 - The new 5-column weights table on /data scrolls inside its box on phones; axe flagged the scroll area as not keyboard reachable. Both table wrappers are now labelled, focusable regions.
+
+## M4d layout fixes + visual finish (3 Nov 2026)
+
+**Job 1, layout (own commit).** The tile bugs (label touching the edge, bar overrunning padding, units off the baseline, tiles with different rhythm) came from patches: fixed text-column widths, nowrap labels, sibling margins, ellipsis clipping. Removed the causes instead:
+- `box-sizing: border-box` and `min-width: 0` on every element; spacing only through flex/grid gap on one scale (4, 8, 12, 16, 24, 32, 48). No sibling margins left (only `margin: 0` resets and `margin: 0 auto` centring).
+- Labels may wrap; nothing clips. Number + unit is one baseline-aligned, nowrap inline-flex.
+- Stat tiles use a container query: side by side only when each tile gets 200px (3 × 200 + 2 × 12 = 624px), otherwise stacked full width. Side by side, they use `subgrid` rows so label, number and context line up across tiles. Each tile has exactly three rows; the info icon and "486 waiting" footnote are gone.
+- `checks/layout-check.mjs` (playwright-core, driving the installed Chrome; dev dependency only) checks every element for scrollWidth > clientWidth, children outside the parent's content box, and page width > viewport, on the console, the Evidence panel and /summary at 320, 390, 768, 1024, 1440. Baseline failed at 4 widths (the reported tile overrun at 1024 and 1440, clipped text at 320 and 390); after the fix all pass.
+
+**Job 2, look.** Warmer and calmer: canvas #F6F5F2, white cards with a #E6E3DC hairline and no shadow at rest, ink #14181B, one accent #1F7A5A used only for data and the focus ring. The top result is the only tinted surface (mint #EAF4EE, 28px name, 48px wait); other options are plain rows in one white card with hairline dividers. Specialty is a 2-column grid of equal buttons; distance and priority are full-width segmented controls. Empty state fills the results column with one sentence and "Try an example: WC2N, Rheumatology". Container 1200, sticky 340px input card.
+
+**Conflicts in the brief, resolved and flagged**
+- "No gradients" + "one accent" ruled out the M4c lime diagonal hatch (it was a CSS gradient). Wait bars are now solid accent.
+- Accent reserved for data and focus, so links became near-black underlined text.
+- 20px card padding on phones is off the 4/8/12/16/24/32/48 scale; kept as one named exception (`--pad-card`).
+- At 1024 the tiles stack (the hero is narrower than 624px there), which is the container rule working as specified.
+
+**Capture note:** Playwright full-page and element screenshots paint the sticky summary bar mid-page. The screenshot script un-sticks it during capture only; the app is unchanged.

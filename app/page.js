@@ -31,6 +31,7 @@ export default function ReferralConsole() {
   const [pcStatus, setPcStatus] = useState({ loading: false, error: null, kind: null, resolved: memory.origin?.outcode || null });
   const [evidenceFor, setEvidenceFor] = useState(null); // odsCode
   const resultsRef = useRef(null);
+  const runExample = useRef(false); // fold the inputs once the example resolves
 
   useEffect(() => { memory = { inputs, origin, collapsed }; }, [inputs, origin, collapsed]);
 
@@ -55,6 +56,11 @@ export default function ReferralConsole() {
         const loc = await lookupOutcode(outcode, ctrl.signal);
         setOrigin(loc);
         setPcStatus({ loading: false, error: null, kind: null, resolved: loc.outcode });
+        if (runExample.current) {
+          runExample.current = false;
+          setCollapsed(true);
+          setTimeout(() => resultsRef.current?.focus(), 0);
+        }
       } catch (e) {
         if (e.name === 'AbortError') return;
         setOrigin(null);
@@ -87,6 +93,11 @@ export default function ReferralConsole() {
     setCollapsed(true);
     setTimeout(() => resultsRef.current?.focus(), 0);
   }
+  // "Try an example": fill the form with WC2N + Rheumatology and run it.
+  function tryExample() {
+    runExample.current = true;
+    setInputs({ ...inputs, postcode: 'WC2N', specialty: '410' });
+  }
   function editSearch() {
     setCollapsed(false);
     setTimeout(() => document.getElementById('postcode')?.focus(), 0);
@@ -108,7 +119,7 @@ export default function ReferralConsole() {
               <strong>{origin.outcode}</strong> · {specialtyName} · {inputs.maxKm} km{inputs.includeQuality ? ' · CQC on' : ''}
             </p>
             <button type="button" className={styles.edit} onClick={editSearch}>
-              <Icon name="pencil" size={18} /> Edit<span className="visually-hidden"> search</span>
+              Edit<span className="visually-hidden"> search</span>
             </button>
           </div>
         )}
@@ -123,10 +134,15 @@ export default function ReferralConsole() {
           />
         </aside>
 
-        <section className={styles.results} aria-labelledby="results-heading" ref={resultsRef} tabIndex={-1}>
+        <section
+          className={`${styles.results} ${top ? '' : styles.resultsFill}`}
+          aria-labelledby="results-heading"
+          ref={resultsRef}
+          tabIndex={-1}
+        >
           <h2 id="results-heading" className="visually-hidden">Results</h2>
 
-          <p className={styles.count} aria-live="polite">
+          <p className={top ? styles.count : 'visually-hidden'} aria-live="polite">
             {ranking && results.length > 0 &&
               `${ranking.consideredCount} trust${ranking.consideredCount === 1 ? '' : 's'} with ${specialtyName} data within ${inputs.maxKm} km of ${origin.outcode} · NHS data ${meta.rttLabel}`}
           </p>
@@ -138,6 +154,7 @@ export default function ReferralConsole() {
             origin={origin}
             nextDistance={nextDistance}
             onWiden={(d) => setInputs({ ...inputs, maxKm: d })}
+            onExample={tryExample}
           />
 
           {top && (
@@ -220,13 +237,20 @@ export default function ReferralConsole() {
 }
 
 // One friendly sentence for every state that is not a list of results.
-function ResultState({ pcStatus, ranking, inputs, origin, nextDistance, onWiden }) {
+function ResultState({ pcStatus, ranking, inputs, origin, nextDistance, onWiden, onExample }) {
   let text = null;
   let action = null;
 
   if (pcStatus.loading) text = 'Finding trusts near this postcode…';
   else if (pcStatus.error) text = pcStatus.error;
-  else if (!inputs.postcode.trim()) text = 'Enter the patient’s postcode to compare trusts for this referral.';
+  else if (!inputs.postcode.trim()) {
+    text = 'Enter the patient’s postcode to compare trusts for this referral.';
+    action = (
+      <button type="button" className="btn btn-primary" onClick={onExample}>
+        Try an example: WC2N, Rheumatology
+      </button>
+    );
+  }
   else if (!origin) text = 'Keep typing the postcode. Results appear as soon as we recognise it.';
   else if (ranking && ranking.results.length === 0) {
     const anywhere = rankProviders({ providers, origin, ...inputs, maxKm: 80 }).consideredCount > 0;

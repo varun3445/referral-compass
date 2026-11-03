@@ -2,36 +2,37 @@
    Calm grey canvas, white cards, one green accent. Plain language and
    accessibility rules unchanged. Sizes in rem (16px base). */
 :root {
-  --page: #eceef1;
+  /* Warm, calm surfaces. Edges come from hairlines, not shadows. */
+  --page: #f6f5f2;
   --card: #ffffff;
-  --line: #e3e6ea;                 /* hairlines and pill borders */
-  --shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 8px 24px rgba(16, 24, 40, 0.05);
-  --shadow-lift: 0 2px 4px rgba(16, 24, 40, 0.05), 0 14px 32px rgba(16, 24, 40, 0.09);
+  --line: #e6e3dc;                 /* hairline on cards, dividers, inputs */
+  --shadow: none;                  /* nothing at rest */
+  --shadow-lift: 0 2px 4px rgba(20, 24, 27, 0.04), 0 12px 28px rgba(20, 24, 27, 0.08);
+  --shadow-panel: -2px 0 6px rgba(20, 24, 27, 0.04), -16px 0 48px rgba(20, 24, 27, 0.10);
 
-  --text: #111418;
-  --text-2: #5b6470;               /* 5.9:1 on white, 5.1:1 on canvas */
-  --ink: #111418;                  /* primary buttons, selected chips */
+  --text: #14181b;
+  --text-2: #5a626b;               /* 5.7:1 on canvas, 6.0:1 on white, 5.5:1 on mint */
+  --ink: #14181b;                  /* primary buttons, selected choices */
 
-  --accent: #1f7a5a;               /* deep green: links, data accent */
-  --accent-hover: #17604a;
-  --mint: #e6f4ec;                 /* pale tint */
-  --hatch: #b8e06a;                /* lime hatch for wait bars */
-  --hatch-2: #e3f3c4;
-  --track: #f1f3f5;
-  --soft: #f5f6f8;                 /* inner tiles */
+  /* One accent, only for data (bars, positive states) and the focus ring. */
+  --accent: #1f7a5a;
+  --mint: #eaf4ee;                 /* hero tint */
+  --mint-line: #cfe5d8;
+  --track: #ebe8e1;
+  --soft: #f6f5f2;                 /* inner tiles and insets on white */
 
-  --amber-bg: #fdf3e1;
-  --amber-text: #7a4a00;
-  --amber-icon: #c27c0e;
+  --amber-bg: #fbf1de;
+  --amber-text: #6e4300;
+  --amber-icon: #a8650a;
   --error: #c4362b;
   --error-text: #a3261c;
 
-  /* CQC tags: tinted pill + dot + text, all text above 4.5:1 on its tint */
-  --cqc-outstanding: #145c3f; --cqc-outstanding-bg: #e3f4ea; --cqc-outstanding-dot: #1f7a5a;
-  --cqc-good: #1e4e8c;        --cqc-good-bg: #e7effa;        --cqc-good-dot: #3b76d1;
-  --cqc-ri: #7a4a00;          --cqc-ri-bg: #fdf1dc;          --cqc-ri-dot: #d99a1e;
-  --cqc-inadequate: #8f1d1d;  --cqc-inadequate-bg: #fbe8e8;  --cqc-inadequate-dot: #d64545;
-  --cqc-none: #4a525c;        --cqc-none-bg: #eef0f3;        --cqc-none-dot: #9aa2ad;
+  /* CQC tags: tinted pill + dot + text label, all text above 4.5:1 on its tint */
+  --cqc-outstanding: #145c3f; --cqc-outstanding-bg: #e3f1e8; --cqc-outstanding-dot: #1f7a5a;
+  --cqc-good: #1e4e8c;        --cqc-good-bg: #e8eef7;        --cqc-good-dot: #3b76d1;
+  --cqc-ri: #6e4300;          --cqc-ri-bg: #fbf1de;          --cqc-ri-dot: #c98a1a;
+  --cqc-inadequate: #8f1d1d;  --cqc-inadequate-bg: #f9e7e5;  --cqc-inadequate-dot: #d64545;
+  --cqc-none: #4a525c;        --cqc-none-bg: #efede8;        --cqc-none-dot: #9aa2ad;
 
   /* One spacing scale: 4, 8, 12, 16, 24, 32, 48. */
   --space-4: 0.25rem;
@@ -43,25 +44,28 @@
   --space-48: 3rem;
   /* Card padding is the one value off the scale, as briefed: 24 desktop, 20 phones. */
   --pad-card: 1.5rem;
+  --gutter: 1.5rem;                /* page side padding: 24, 16 on phones */
 
-  --radius: 1.25rem;     /* 20: cards */
-  --radius-sm: 0.875rem; /* 14: inner tiles, banner */
-  --radius-lg: 1.5rem;   /* 24: panels */
+  --radius: 1rem;        /* cards */
+  --radius-sm: 0.75rem;  /* tiles, buttons, inputs */
+  --radius-lg: 1.5rem;   /* evidence panel */
   --tap: 2.75rem;        /* 44px */
 
-  --h1: 1.875rem;
-  --h2: 1.5rem;
-  --h3: 1.1875rem;
+  /* Type (apple-design section 15): display tight, body at 0 tracking. */
+  --display: 3rem;       /* 48 */
+  --display-2: 2.5rem;   /* 40 */
+  --h1: 1.75rem;         /* 28 */
+  --h2: 1.75rem;         /* 28 */
+  --h3: 1.25rem;         /* 20 */
+  --small: 0.8125rem;    /* 13 */
 
   --font: var(--font-inter), system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
   --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
-  --ring: 0 0 0 2px #fff, 0 0 0 5px var(--ink);   /* 3px dark ring, white gap */
+  --ring: 0 0 0 2px #fff, 0 0 0 5px var(--accent);   /* 3px accent ring, white gap */
 }
 
-/* Layout rules: border-box everywhere, and every flex or grid child may
-   shrink below its content (min-width: 0), so nothing forces overflow. */
 *, *::before, *::after { box-sizing: border-box; min-width: 0; }
 html { font-size: 100%; -webkit-text-size-adjust: 100%; }
 
@@ -73,21 +77,20 @@ body {
   font-size: 1rem;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  font-feature-settings: 'cv11', 'ss01';
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
-@media (min-width: 40.0625em) { body { font-size: 1.0625rem; } }
-@media (max-width: 40em) { :root { --pad-card: 1.25rem; } }
+@media (max-width: 40em) { :root { --pad-card: 1.25rem; --gutter: 1rem; } }
 
-h1, h2, h3 { margin: 0; line-height: 1.2; font-weight: 600; }
-h1 { font-size: var(--h1); letter-spacing: -0.025em; }
-h2 { font-size: var(--h2); letter-spacing: -0.02em; }
-h3 { font-size: var(--h3); letter-spacing: -0.01em; }
+h1, h2, h3 { margin: 0; line-height: 1.2; font-weight: 600; letter-spacing: -0.02em; text-wrap: balance; }
+h1 { font-size: var(--h1); }
+h2 { font-size: var(--h2); }
+h3 { font-size: var(--h3); }
+p { text-wrap: pretty; }
 
-a { color: var(--accent); text-underline-offset: 0.18em; text-decoration-thickness: 1px; }
-a:hover { color: var(--accent-hover); text-decoration-thickness: 2px; }
+a { color: var(--text); text-underline-offset: 0.18em; text-decoration-thickness: 1px; text-decoration-color: rgba(20, 24, 27, 0.4); }
+a:hover { color: var(--text); text-decoration-color: currentColor; }
 
 /* Focus: 3px dark ring with a white gap, on every interactive element. */
 :focus-visible { outline: 3px solid transparent; outline-offset: 2px; box-shadow: var(--ring); border-radius: 0.375rem; }
@@ -110,22 +113,21 @@ button { font: inherit; color: inherit; }
   gap: var(--space-8);
   min-height: var(--tap);
   padding: var(--space-12) var(--space-24);
-  border-radius: 999px;
+  border-radius: var(--radius-sm);
   border: 0;
   font-size: 0.9375rem;
   font-weight: 600;
   line-height: 1.2;
   text-decoration: none;
-  white-space: nowrap;
   cursor: pointer;
-  transition: transform 200ms var(--ease), background-color 200ms var(--ease), box-shadow 200ms var(--ease);
+  transition: transform 100ms var(--ease), background-color 200ms var(--ease), box-shadow 200ms var(--ease);
   -webkit-tap-highlight-color: transparent;
 }
 .btn:active { transform: scale(0.98); }
 .btn-primary { background: var(--ink); color: #fff; }
-.btn-primary:hover { background: #2a3037; color: #fff; }
+.btn-primary:hover { background: #2b3136; color: #fff; }
 .btn-secondary { background: var(--card); color: var(--text); box-shadow: inset 0 0 0 1px var(--line); }
-.btn-secondary:hover { background: var(--soft); color: var(--text); }
+.btn-secondary:hover { background: var(--page); color: var(--text); }
 .btn:focus-visible { box-shadow: var(--ring); }
 .btn svg { flex: none; }
 
@@ -136,7 +138,7 @@ button { font: inherit; color: inherit; }
   gap: var(--space-12);
   background: var(--amber-bg);
   color: var(--amber-text);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius);
   padding: var(--space-12) var(--space-16);
   margin: 0;
 }
@@ -144,7 +146,8 @@ button { font: inherit; color: inherit; }
 
 /* Quiet inset text for notes. */
 .inset {
-  background: var(--soft);
+  background: var(--card);
+  border: 1px solid var(--line);
   border-radius: var(--radius-sm);
   padding: var(--space-12) var(--space-16);
   margin: 0;
@@ -152,9 +155,9 @@ button { font: inherit; color: inherit; }
 
 .site-footer { padding-top: var(--space-48); }
 .site-footer p {
-  max-width: 65rem;
+  max-width: 75rem;
   margin: 0 auto;
-  padding: var(--space-24) var(--space-16) var(--space-32);
+  padding: var(--space-24) var(--gutter) var(--space-32);
   font-size: 0.875rem;
   color: var(--text-2);
 }

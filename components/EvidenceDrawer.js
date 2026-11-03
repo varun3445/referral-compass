@@ -17,7 +17,7 @@ const RANK_SOURCE = { label: 'Worked out here from the numbers below', date: met
 
 const n2 = (x) => x.toFixed(2);
 const k1 = (x) => x.toFixed(1); // formulas use 1 decimal so the arithmetic checks out
-const CLOSE_MS = 200;
+const CLOSE_MS = 250;
 const AGE = ratingAgeRange(providers);
 
 function Source({ s }) {
@@ -236,7 +236,7 @@ export default function EvidenceDrawer({ result, ranking, outcode, specialtyName
             </section>
 
             <section className={styles.section}>
-              <h3>Quality</h3>
+              <h3><Icon name="calendar" size={18} />Quality</h3>
               <dl className={styles.facts}>
                 <Fact
                   label="CQC overall rating"
@@ -258,7 +258,7 @@ export default function EvidenceDrawer({ result, ranking, outcode, specialtyName
             </section>
 
             <section className={styles.section}>
-              <h3>Location</h3>
+              <h3><Icon name="map-pin" size={18} />Location</h3>
               <dl className={styles.facts}>
                 <Fact
                   label="Distance to trust HQ"
