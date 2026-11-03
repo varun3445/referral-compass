@@ -224,3 +224,9 @@ Checks: layout-check passes at 5 widths; axe 0 issues on 8 states; verify-rankin
 Checks: layout-check passes at 5 widths; axe 0 issues on 8 states; verify-ranking identical; summary prints on 1 A4 page.
 
 **Real time (system clock):** started 15:52:57, deployed and confirmed live at 15:55:52.
+
+## M4m favicon (3 Nov 2026)
+
+- app/icon.svg: the header mark (graphite #0F1B2D rounded square, white compass). Next serves it as the site icon, which fixes the /favicon.ico console 404 seen in M4l.
+- Title "Referral Compass"; meta description "Compare NHS trusts for a routine referral by waiting so far and distance. Independent prototype, not an NHS service."
+- Checks: layout-check passes at 5 widths; verify-ranking identical.

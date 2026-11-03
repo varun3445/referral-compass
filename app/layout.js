@@ -8,7 +8,7 @@ const sans = Plus_Jakarta_Sans({ subsets: ['latin'], weight: ['400', '500', '600
 
 export const metadata = {
   title: 'Referral Compass',
-  description: 'Compare NHS trusts for a routine referral: waiting so far, CQC rating and distance.',
+  description: 'Compare NHS trusts for a routine referral by waiting so far and distance. Independent prototype, not an NHS service.',
 };
 
 export const viewport = { width: 'device-width', initialScale: 1 };
