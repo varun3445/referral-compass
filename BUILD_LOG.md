@@ -174,3 +174,19 @@ Checks: layout-check passes at 320/390/768/1024/1440; axe 0 issues on empty and 
 - README.md: screenshot, live link, what it is for, ranking (0.55 / 0.45 by default, CQC optional and why), sources with dates, limits, run and check instructions.
 - **Brief PDF check:** `git log --all -- "*.pdf"` lists only the app's own printed summaries in `docs/`. The Palantir brief has never been in the repo or its history; it lives in `~/Downloads`, outside the project. `.gitignore` now blocks `*Palantir*` / `*palantir*` anywhere in the repo as a guard.
 - Checks: layout-check passes at 5 widths, axe 0 issues on 10 page states, verify-ranking output unchanged.
+
+## M4g M4h trust wording and designer comments (3 Nov 2026)
+
+**Look:** mid-round, the reference became a light fitness-style dashboard. The canvas is neutral light grey (#F2F2F1, not the briefed #EEF3FA), with white 28px cards, pill controls and buttons, and a round black logo. The top match is the one black card, with bright green (#1FDB78) bars and a primary button. Its wait number is 56px italic bold. Bright green is used only for fills and marks, never as text on white. There are no gradients, glass or photos.
+
+- **Wording:** "Top match for your settings"; /summary leads with "Provider option to discuss with your GP" and "About this option". "Distance to trust HQ" everywhere with an info note. The 18 week tile has an info note with the real N. CQC is shown as "Good · Published Jul 2019". The date is the CQC file's **Publication Date** column (scripts/build-data.mjs). Ratings older than 2 years get a lighter outlined tag. A missing rating shows "Not available" with the reason from the data.
+- **How ranking works** disclosure under Priority, with no weights.
+- **Distances** are 5, 10, 15 and 25 km, default 10. Outside the coverage area (more than the data radius from central London): "This postcode is outside the London area covered by this prototype."
+- **Summary:** a comparison table with the trust plus the next 2 results, passed as ODS:km pairs in the URL (no postcode), and a ruled notes box. It prints on 1 A4 page: the notes box drops to 2 lines and print spacing is tighter. The table is unchanged.
+- **Evidence:** plain sentences, no formulas or score bars. New rows for the CQC match method and the location source. The formulas and a worked example (WC2N, 10 km) are on Data and limits under "How the ranking is worked out".
+- **Data and limits** opens as a native modal (X, Esc, scrim, focus return; full screen on phones), and /data shows the same content. On the desktop console the button sits at the top right of the results area; on phones it stays in the header. **Deviation:** "New search" was removed at the user's request; the logo link still clears the search.
+- **Stat tiles:** the same bar on all three, and each phone row has its bar. **Font:** Plus Jakarta Sans 400 to 700, including print.
+
+Checks: layout-check passes at 5 widths; axe 0 issues on console with the popover open, Evidence, modal and /summary at 390 and 1440; verify-ranking output identical; summary prints on 1 A4 page; Impeccable detector found nothing.
+
+**Real time (system clock):** started 15:19, finished 15:32:24 (before commit and deploy).

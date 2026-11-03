@@ -1,9 +1,10 @@
 import Link from 'next/link';
 import CqcBadge from './CqcBadge';
-import Icon from './Icon';
+import InfoTip from './InfoTip';
 import WaitBar from './WaitBar';
 import { nav } from '@/lib/nav';
-import { weeks, km, count } from '@/lib/format';
+import { weeks, km, count, DISTANCE_LABEL, DISTANCE_NOTE } from '@/lib/format';
+import meta from '@/data/meta.json';
 import { whySentence, closeCallName } from '@/lib/explain';
 import styles from './HeroResult.module.css';
 
@@ -17,9 +18,10 @@ function Value({ number, unit, size }) {
   );
 }
 
-// The one clear suggestion: rank 1, three numbers, one reason, two actions.
-// Each stat tile has exactly three rows: label, number, one line of context.
-export default function HeroResult({ result, ranking, maxWait, summaryHref, onEvidence }) {
+// The top match for the chosen settings: three numbers, one reason, two actions.
+// Each stat tile has four rows: label, number, bar, one line of context.
+// Bars: wait vs the longest wait shown, 18 weeks vs 100%, distance vs the limit.
+export default function HeroResult({ result, ranking, maxWait, maxKm, summaryHref, onEvidence }) {
   const { provider, wait, distanceKm } = result;
   const runnerUp = closeCallName(ranking);
   const within18 = Math.round(wait.pctWithin18);
@@ -31,7 +33,7 @@ export default function HeroResult({ result, ranking, maxWait, summaryHref, onEv
   return (
     <article className={styles.card} aria-labelledby="hero-name">
       <div className={styles.titleBlock}>
-        <p className={styles.kicker}>Suggested for this patient</p>
+        <p className={styles.kicker}>Top match for your settings</p>
         <h2 id="hero-name" className={styles.name}>{provider.name}</h2>
         {provider.isSpecialist && <p className={styles.specialist}>Specialist or community service</p>}
       </div>
@@ -41,20 +43,30 @@ export default function HeroResult({ result, ranking, maxWait, summaryHref, onEv
           <div className={`${styles.tile} ${styles.waitTile}`}>
             <dt className={styles.label}>Waiting so far</dt>
             <dd className={styles.row}><Value number={weeks(wait.medianWeeks)} unit="weeks" size="xl" /></dd>
-            <dd className={styles.context}>
-              <WaitBar weeks={wait.medianWeeks} max={maxWait} />
-              <span className="visually-hidden">{waitContext}</span>
-            </dd>
+            <dd className={styles.bar}><WaitBar value={wait.medianWeeks} max={maxWait} /></dd>
+            <dd className={styles.context}>{waitContext}</dd>
           </div>
           <div className={styles.tile}>
-            <dt className={styles.label}>Waiting under 18 weeks</dt>
+            <dt className={styles.label}>
+              Waiting under 18 weeks
+              <InfoTip label="waiting under 18 weeks">
+                Share of the {count(wait.totalWaiting)} people on this trust’s waiting list for this specialty who
+                have waited under 18 weeks so far. NHS England RTT, incomplete pathways, {meta.rttLabel}. This is not
+                people who have already been seen. Trusts with under {meta.minWaitingForRanking} waiting are not ranked.
+              </InfoTip>
+            </dt>
             <dd className={styles.row}><Value number={within18} unit="%" /></dd>
-            <dd className={`${styles.context} ${styles.contextText}`}>of {count(wait.totalWaiting)} waiting</dd>
+            <dd className={styles.bar}><WaitBar value={within18} max={100} /></dd>
+            <dd className={styles.context}>of {count(wait.totalWaiting)} waiting</dd>
           </div>
           <div className={styles.tile}>
-            <dt className={styles.label}>Distance</dt>
+            <dt className={styles.label}>
+              {DISTANCE_LABEL}
+              <InfoTip label="distance to trust HQ">{DISTANCE_NOTE}</InfoTip>
+            </dt>
             <dd className={styles.row}><Value number={km(distanceKm)} unit="km" /></dd>
-            <dd className={`${styles.context} ${styles.contextText}`}>{kmContext}</dd>
+            <dd className={styles.bar}><WaitBar value={distanceKm} max={maxKm} /></dd>
+            <dd className={styles.context}>{kmContext}</dd>
           </div>
         </dl>
       </div>

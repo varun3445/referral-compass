@@ -5,7 +5,8 @@ import { ratingAgeRange } from '@/lib/explain';
 import Icon from './Icon';
 import styles from './ConsoleInputs.module.css';
 
-export const DISTANCES = [10, 25, 50, 80];
+import { DISTANCES } from '@/lib/nav';
+export { DISTANCES };
 const AGE = ratingAgeRange(providers);
 export const PRIORITIES = [
   ['fastest', 'Shortest wait'],
@@ -101,6 +102,21 @@ export default function ConsoleInputs({ value, onChange, postcodeStatus, onSubmi
         onChange={set('priority')}
         layout="segmented"
       />
+
+      <details className={`${styles.more} ${styles.how}`}>
+        <summary>
+          How ranking works
+          <Icon name="chevron-down" size={18} className={styles.chevron} />
+        </summary>
+        <ul className={styles.howList}>
+          <li>Shortest wait leans towards the trust where people have waited the least so far, and still takes distance into account.</li>
+          <li>Balanced weighs waiting so far and distance more evenly.</li>
+          <li>Scores compare only the trusts in this search, so a trust can rank differently in another search.</li>
+          <li>CQC ratings are optional and off by default, because the ratings in this data are several years old and cover the whole trust, not the specialty. You can include them under More options.</li>
+          <li>Trusts with under {meta.minWaitingForRanking} people waiting are not ranked, because a few patients make the figure unreliable.</li>
+          <li>If a trust has no CQC overall rating, it shows as Not available.</li>
+        </ul>
+      </details>
 
       <details className={styles.more}>
         <summary>

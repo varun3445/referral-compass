@@ -1,4 +1,4 @@
-/* The top result is the hero: tinted mint with a hairline border. Hierarchy
+/* The top result is the hero: the one black card (see the override at the end). Hierarchy
    comes from contrast with the plain white cards around it. */
 .card {
   display: grid;
@@ -27,7 +27,7 @@
 .tiles { margin: 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-12); }
 .tile {
   display: grid;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: auto auto auto auto;
   align-content: start;
   gap: var(--space-12);
   padding: var(--space-16);
@@ -36,22 +36,22 @@
   border: 1px solid var(--mint-line);
 }
 @container (min-width: 39rem) {
-  .tiles { grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: auto auto auto; }
-  /* Shared rows: label, number and context line up across all three tiles. */
-  .tile { grid-row: span 3; grid-template-rows: subgrid; }
+  .tiles { grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: auto auto auto auto; }
+  /* Shared rows: label, number, bar and context line up across all three tiles. */
+  .tile { grid-row: span 4; grid-template-rows: subgrid; }
 }
 
-.label { font-size: var(--small); font-weight: 500; letter-spacing: 0.01em; color: var(--text-2); }
-.row, .context { margin: 0; }
-.context { display: flex; align-items: center; min-height: 1.25rem; }
-.contextText { font-size: 0.875rem; color: var(--text-2); }
+.label { position: relative; display: flex; align-items: center; gap: var(--space-8); min-height: 1.25rem; font-size: var(--small); font-weight: 500; letter-spacing: 0.01em; color: var(--text-2); }
+.row, .bar, .context { margin: 0; }
+.bar { display: flex; align-items: center; }
+.context { font-size: 0.875rem; color: var(--text-2); }
 
 .value { display: inline-flex; align-items: baseline; gap: var(--space-4); white-space: nowrap; }
 .number {
   font-size: var(--display-2);  /* 40 */
   font-weight: 600;
   line-height: 1.05;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.035em;
   font-variant-numeric: tabular-nums;
 }
 .xl .number { font-size: var(--display); }   /* 48: the wait */
@@ -68,8 +68,8 @@
 .actions { display: flex; flex-wrap: wrap; gap: var(--space-12); }
 
 /* Phones (below 600px): one card, three rows split by hairlines, label left
-   and number right. Only the wait row keeps its bar; the other context lines
-   stay for screen readers. */
+   and number right, each row with its bar underneath. Context lines stay
+   for screen readers. */
 @media (max-width: 37.5em) {
   .tiles {
     gap: 0;
@@ -79,6 +79,7 @@
     overflow: hidden;
   }
   .tile {
+    position: relative;
     grid-template-columns: minmax(0, 1fr) auto;
     grid-template-rows: auto;
     align-items: center;
@@ -93,8 +94,8 @@
   .row { justify-self: end; }
   .number { font-size: 1.75rem; }
   .waitTile .number { font-size: var(--display-2); }
-  .waitTile .context { grid-column: 1 / -1; }
-  .tile:not(.waitTile) .context {
+  .tile .bar { grid-column: 1 / -1; }
+  .tile .context {
     position: absolute; width: 1px; height: 1px; overflow: hidden;
     clip: rect(0 0 0 0); white-space: nowrap; min-height: 0;
   }
@@ -109,3 +110,38 @@
 @media (prefers-reduced-motion: reduce) {
   .card, .card:hover { transform: none; transition: box-shadow 200ms ease; }
 }
+
+/* Reference look: the top match is the one black card on the page.
+   Text on black: white, #a8a8a6 secondary (8.6:1), bright green for data. */
+.card {
+  --hero-2: #a8a8a6;
+  --hero-tile: #161616;
+  --hero-line: #2a2a2a;
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #fff;
+}
+.card .kicker { color: var(--accent-bright); }
+.card .label, .card .unit, .card .context { color: var(--hero-2); }
+.card .tile { background: var(--hero-tile); border-color: var(--hero-line); }
+.card .number { color: #fff; }
+.xl .number { font-style: italic; font-weight: 700; letter-spacing: -0.045em; }
+.card :global(.info-btn) { color: var(--hero-2); }
+.card :global(.info-btn):hover, .card :global(.info-btn)[aria-expanded='true'] { color: #fff; }
+.card :global(.info-btn):focus-visible { box-shadow: 0 0 0 2px var(--ink), 0 0 0 5px var(--accent-bright); }
+.card :global(.info-pop) { color: var(--text); }
+.card :global([aria-hidden='true'][class*='track']) { background: var(--hero-line); }
+.card .close { background: var(--hero-tile); border-color: var(--hero-line); color: #fff; }
+.card :global(.btn-primary) { background: var(--accent-bright); color: var(--ink); }
+.card :global(.btn-primary):hover { background: #4be592; color: var(--ink); }
+.card :global(.btn-secondary) { background: transparent; color: #fff; box-shadow: inset 0 0 0 1px #4a4a48; }
+.card :global(.btn-secondary):hover { background: var(--hero-tile); color: #fff; }
+.card :global(.btn):focus-visible { box-shadow: 0 0 0 2px var(--ink), 0 0 0 5px var(--accent-bright); }
+.card a:focus-visible { box-shadow: 0 0 0 2px var(--ink), 0 0 0 5px var(--accent-bright); }
+.card:hover { box-shadow: 0 2px 4px rgba(11, 11, 11, 0.06), 0 16px 36px rgba(11, 11, 11, 0.16); }
+@media (max-width: 37.5em) {
+  .card .tiles { background: var(--hero-tile); border-color: var(--hero-line); }
+  .card .tile + .tile { border-top-color: var(--hero-line); }
+}
+/* CQC date and reason text inside the black card. */
+.card [class*='CqcBadge'][class*='__meta'] { color: var(--hero-2); }

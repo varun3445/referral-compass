@@ -3,22 +3,19 @@ import providers from '@/data/providers.json';
 import meta from '@/data/meta.json';
 import PrintButton from '@/components/PrintButton';
 import BackButton from '@/components/BackButton';
-import CqcBadge from '@/components/CqcBadge';
-import { weeks, monthYear, isOlderThan2Years } from '@/lib/format';
-import { ratingAgeRange } from '@/lib/explain';
+import { weeks, km as fmtKm, monthYear, trustName, DISTANCE_LABEL } from '@/lib/format';
 import styles from './summary.module.css';
 
 export const metadata = { title: 'Referral summary · Referral Compass' };
-
-const AGE = ratingAgeRange(providers);
 
 const CHOICE_URL = 'https://www.nhs.uk/using-the-nhs/about-the-nhs/your-choices-in-the-nhs/';
 const CHOICE_SHORT = 'nhs.uk/using-the-nhs/about-the-nhs/your-choices-in-the-nhs';
 
 // Printable, plain-language summary for the patient.
-// URL carries only: provider (ODS code), specialty, km. No postcode, no name.
+// URL carries only: provider (ODS code), specialty, km, and compare (ODS:km
+// pairs for the next results). No postcode, no name.
 export default async function SummaryPage({ searchParams }) {
-  const { provider: ods, specialty, km: kmParam } = await searchParams;
+  const { provider: ods, specialty, km: kmParam, compare = '' } = await searchParams;
   const p = providers.find((x) => x.odsCode === ods);
   const w = p?.specialties[specialty];
   const km = Number(kmParam);
@@ -36,7 +33,15 @@ export default async function SummaryPage({ searchParams }) {
 
   const specialtyName = meta.specialties[specialty];
   const rating = p.cqc.rating;
-  const ratingYear = rating ? p.cqc.date.slice(0, 4) : null;
+  // Comparison rows: the selected trust, then the next results as passed in the URL.
+  const rows = [{ p, w, km, selected: true }].concat(
+    String(compare).split(',').filter(Boolean).slice(0, 2).map((pair) => {
+      const [code, k] = pair.split(':');
+      const q = providers.find((x) => x.odsCode === code);
+      const qw = q?.specialties[specialty];
+      return q && qw && !qw.smallNumbers ? { p: q, w: qw, km: Number(k) } : null;
+    }).filter(Boolean)
+  );
 
   return (
     <main className={styles.wrap}>
@@ -48,7 +53,7 @@ export default async function SummaryPage({ searchParams }) {
       <article className={styles.card}>
         <div className={styles.titleBlock}>
           <p className={styles.kicker}>{specialtyName} referral</p>
-          <h1 className={styles.lead}>Your GP has suggested asking for a referral to:</h1>
+          <h1 className={styles.lead}>Provider option to discuss with your GP</h1>
           <p className={styles.trust}>{p.name}</p>
         </div>
 
@@ -68,42 +73,63 @@ export default async function SummaryPage({ searchParams }) {
             <dd>
               {rating ? (
                 <>
-                  <span className={styles.screenOnly}><CqcBadge cqc={p.cqc} /></span>
-                  <span className={styles.printOnly}><strong>{rating}</strong> (rated in {ratingYear})</span>
-                  {isOlderThan2Years(p.cqc.date) && (
-                    <span className={styles.small}>CQC ratings in this data are {AGE.min} to {AGE.max} years old. This one covers the whole trust.</span>
-                  )}
+                  <span className={styles.rating}>{rating}</span>
+                  <span className={styles.small}>Published {monthYear(p.cqc.date)} · Trust wide rating</span>
                 </>
               ) : (
                 <>
-                  <strong>No overall rating published</strong>
-                  {p.cqc.wellLed && (
-                    <span className={styles.small}>
-                      The CQC rated how well the trust is led as {p.cqc.wellLed.rating} ({monthYear(p.cqc.wellLed.date)}).
-                    </span>
-                  )}
+                  <span className={styles.rating}>Not available</span>
+                  <span className={styles.small}>{p.cqc.unavailableReason}</span>
                 </>
               )}
             </dd>
           </div>
           {Number.isFinite(km) && km > 0 && (
             <div className={styles.fact}>
-              <dt>Distance</dt>
+              <dt>{DISTANCE_LABEL}</dt>
               <dd>
                 <span className={styles.big}>About {Math.max(1, Math.round(km))} km</span>
-                <span className={styles.small}>From your area to the trust’s main office. Your appointment may be at another of its hospitals.</span>
+                <span className={styles.small}>Straight line from your area to the trust’s recorded main office. Your appointment may be at another hospital or clinic.</span>
               </dd>
             </div>
           )}
         </dl>
 
+        {rows.length > 1 && (
+          <section className={styles.section} aria-labelledby="compare-head">
+            <h2 id="compare-head">How it compares</h2>
+            <table className={styles.compare}>
+              <thead>
+                <tr><th scope="col">Trust</th><th scope="col">Waiting so far</th><th scope="col">{DISTANCE_LABEL}</th></tr>
+              </thead>
+              <tbody>
+                {rows.map((x) => (
+                  <tr key={x.p.odsCode} className={x.selected ? styles.selected : ''}>
+                    <th scope="row">{trustName(x.p.name)}{x.selected && <span className={styles.this}> (this option)</span>}</th>
+                    <td>{weeks(x.w.medianWeeks)} weeks</td>
+                    <td>{Number.isFinite(x.km) ? `${fmtKm(x.km)} km` : 'Not available'}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <p className={styles.small}>Trust level data. Waiting so far is not an appointment date.</p>
+          </section>
+        )}
+
         <section className={styles.section}>
-        <h2>Why this option</h2>
+        <h2>About this option</h2>
         <p>
           Half of the people on this trust’s {specialtyName.toLowerCase()} waiting list have waited{' '}
           {weeks(w.medianWeeks)} weeks or less so far, and {Math.round(w.pctWithin18)} in 100 have waited under 18 weeks.
-          Your GP has weighed this against the trust’s rating and how far you would need to travel.
+          It came top for the search settings your GP used, which compare waiting so far and distance to trust HQ.
         </p>
+        </section>
+
+        <section className={`${styles.section} ${styles.notes}`} aria-labelledby="notes-head">
+          <h2 id="notes-head">Patient preferences and travel notes <span className={styles.optional}>(optional)</span></h2>
+          <div className={styles.ruled} aria-hidden="true">
+            <span /><span /><span /><span />
+          </div>
         </section>
 
         <section className={styles.section}>

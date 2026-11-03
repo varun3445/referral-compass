@@ -24,9 +24,14 @@
 .none { color: var(--cqc-none); background: var(--cqc-none-bg); }
 .none .dot { background: var(--cqc-none-dot); }
 
-.meta { font-size: 0.8125rem; color: var(--text-2); }
+.meta { font-size: 0.8125rem; font-weight: 500; color: var(--text-2); }
+.date { white-space: nowrap; }
 
 .highest {
   font-size: 0.8125rem; font-weight: 600; color: var(--accent);
   padding: 0.125rem 0.5rem; border-radius: 999px; background: var(--mint);
 }
+
+/* Older than 2 years: same text colour (AA holds), white fill, tinted outline. */
+.aged { background: var(--card); box-shadow: inset 0 0 0 1px var(--line); }
+.aged .dot { opacity: 0.55; }

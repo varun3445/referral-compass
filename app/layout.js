@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import './globals.css';
-import { Inter } from 'next/font/google';
+import { Plus_Jakarta_Sans } from 'next/font/google';
 import TopBar from '@/components/TopBar';
 
-// Inter via next/font (built into Next, no extra dependency), self-hosted at build time.
-const inter = Inter({ subsets: ['latin'], display: 'swap', variable: '--font-inter' });
+// Plus Jakarta Sans via next/font (built into Next, no extra dependency), self-hosted at build time.
+const sans = Plus_Jakarta_Sans({ subsets: ['latin'], weight: ['400', '500', '600', '700'], display: 'swap', variable: '--font-sans' });
 
 export const metadata = {
   title: 'Referral Compass',
@@ -15,7 +15,7 @@ export const viewport = { width: 'device-width', initialScale: 1 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en-GB" className={inter.variable}>
+    <html lang="en-GB" className={sans.variable}>
       <body>
         <TopBar />
         {children}

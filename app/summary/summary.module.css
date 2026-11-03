@@ -52,7 +52,23 @@
 .sources { margin: 0; padding-left: 1.25rem; font-size: 0.9375rem; color: var(--text-2); display: grid; gap: var(--space-4); }
 .footer { font-size: 0.9375rem; color: var(--text-2); }
 
-.printOnly { display: none; }
+
+.rating { font-size: 1.25rem; font-weight: 600; }
+
+.compare { width: 100%; border-collapse: collapse; font-size: 0.9375rem; font-variant-numeric: tabular-nums; }
+.compare th, .compare td { text-align: left; vertical-align: top; padding: var(--space-8) var(--space-12) var(--space-8) 0; border-bottom: 1px solid var(--line); }
+.compare thead th { font-size: var(--small); font-weight: 500; color: var(--text-2); }
+.compare tbody th { font-weight: 500; }
+.compare td { white-space: nowrap; }
+.compare td:last-child, .compare th:last-child { padding-right: 0; }
+.selected th, .selected td { font-weight: 700; }
+.this { font-weight: 500; color: var(--text-2); }
+
+/* Empty ruled box for handwriting. Lines are borders, no gradients. */
+.optional { font-weight: 400; color: var(--text-2); font-size: 0.9375rem; }
+.ruled { display: grid; border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 0 var(--space-16); }
+.ruled span { display: block; height: 2.25rem; border-bottom: 1px solid var(--line); }
+.ruled span:last-child { border-bottom: 0; }
 
 @media (max-width: 40em) {
   .wrap { padding-top: var(--space-16); }
@@ -66,11 +82,20 @@
 @media print {
   .wrap { max-width: none; padding: 0; margin: 0; }
   .toolbar { display: none; }
-  .card { border: 0; box-shadow: none; padding: 0; font-size: 13pt; gap: 12pt; }
-  .fact { background: none; border-top: 1px solid #b1b4b6; border-radius: 0; padding: 8pt 0; }
+  .card { border: 0; box-shadow: none; padding: 0; font-size: 11pt; gap: 6pt; line-height: 1.4; }
+  .card h2 { font-size: 12pt; }
+  .titleBlock { gap: 2pt; }
+  .section { gap: 4pt; }
+  .facts { gap: 0; }
+  .fact { background: none; border-top: 1px solid #b1b4b6; border-radius: 0; padding: 5pt 0; }
+  .big { font-size: 17pt; }
+  .trust { font-size: 18pt; }
+  .small, .sources, .footer { font-size: 9.5pt; }
   .trust { color: #000; }
-  .screenOnly { display: none; }
-  .printOnly { display: inline; }
+  .compare th, .compare td { border-bottom-color: #b1b4b6; padding-top: 4pt; padding-bottom: 4pt; }
+  .ruled { border-color: #b1b4b6; border-radius: 4pt; }
+  .ruled span { height: 18pt; border-bottom-color: #b1b4b6; }
+  .ruled span:nth-child(n+3) { display: none; }
   .card a { color: #000; text-decoration: none; }
   .url { display: block; white-space: nowrap; overflow-wrap: normal; }
 }

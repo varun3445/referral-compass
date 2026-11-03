@@ -1,0 +1,6 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    { "name": "referral-compass", "runtimeExecutable": "npx", "runtimeArgs": ["next", "dev", "-p", "3040"], "port": 3040 }
+  ]
+}

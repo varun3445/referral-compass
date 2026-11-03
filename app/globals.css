@@ -3,23 +3,24 @@
    accessibility rules unchanged. Sizes in rem (16px base). */
 :root {
   /* Warm, calm surfaces. Edges come from hairlines, not shadows. */
-  --page: #f6f5f2;
+  --page: #f2f2f1;                 /* neutral light grey canvas */
   --card: #ffffff;
-  --line: #e6e3dc;                 /* hairline on cards, dividers, inputs */
+  --line: #e6e6e4;                 /* hairline on cards, dividers, inputs */
   --shadow: none;                  /* nothing at rest */
   --shadow-lift: 0 2px 4px rgba(20, 24, 27, 0.04), 0 12px 28px rgba(20, 24, 27, 0.08);
   --shadow-panel: -2px 0 6px rgba(20, 24, 27, 0.04), -16px 0 48px rgba(20, 24, 27, 0.10);
 
-  --text: #14181b;
-  --text-2: #5a626b;               /* 5.7:1 on canvas, 6.0:1 on white, 5.5:1 on mint */
-  --ink: #14181b;                  /* primary buttons, selected choices */
+  --text: #0b0b0b;
+  --text-2: #595957;               /* 6.3:1 on canvas, 7.0:1 on white */
+  --ink: #0b0b0b;                  /* primary buttons, selected choices */
 
   /* One accent, only for data (bars, positive states) and the focus ring. */
-  --accent: #1f7a5a;
+  --accent: #0b7a43;               /* text-safe green, 5.4:1 on white */
+  --accent-bright: #1fdb78;        /* bars and marks only, never text on white */
   --mint: #eaf4ee;                 /* hero tint */
   --mint-line: #cfe5d8;
-  --track: #ebe8e1;
-  --soft: #f6f5f2;                 /* inner tiles and insets on white */
+  --track: #ececea;
+  --soft: #f5f5f4;                 /* inner tiles and insets on white */
 
   --amber-bg: #fbf1de;
   --amber-text: #6e4300;
@@ -32,7 +33,7 @@
   --cqc-good: #1e4e8c;        --cqc-good-bg: #e8eef7;        --cqc-good-dot: #3b76d1;
   --cqc-ri: #6e4300;          --cqc-ri-bg: #fbf1de;          --cqc-ri-dot: #c98a1a;
   --cqc-inadequate: #8f1d1d;  --cqc-inadequate-bg: #f9e7e5;  --cqc-inadequate-dot: #d64545;
-  --cqc-none: #4a525c;        --cqc-none-bg: #efede8;        --cqc-none-dot: #9aa2ad;
+  --cqc-none: #4a525c;        --cqc-none-bg: #efefed;        --cqc-none-dot: #9aa2ad;
 
   /* One spacing scale: 4, 8, 12, 16, 24, 32, 48. */
   --space-4: 0.25rem;
@@ -46,20 +47,20 @@
   --pad-card: 1.5rem;
   --gutter: 1.5rem;                /* page side padding: 24, 16 on phones */
 
-  --radius: 1rem;        /* cards */
-  --radius-sm: 0.75rem;  /* tiles, buttons, inputs */
+  --radius: 1.75rem;     /* cards: 28px, soft and large */
+  --radius-sm: 1rem;     /* tiles and inputs */
   --radius-lg: 1.5rem;   /* evidence panel */
   --tap: 2.75rem;        /* 44px */
 
   /* Type (apple-design section 15): display tight, body at 0 tracking. */
-  --display: 3rem;       /* 48 */
+  --display: 3.5rem;     /* 56 */
   --display-2: 2.5rem;   /* 40 */
   --h1: 1.75rem;         /* 28 */
   --h2: 1.75rem;         /* 28 */
   --h3: 1.25rem;         /* 20 */
   --small: 0.8125rem;    /* 13 */
 
-  --font: var(--font-inter), system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font: var(--font-sans), system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
   --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -83,13 +84,13 @@ body {
 }
 @media (max-width: 40em) { :root { --pad-card: 1.25rem; --gutter: 1rem; } }
 
-h1, h2, h3 { margin: 0; line-height: 1.2; font-weight: 600; letter-spacing: -0.02em; text-wrap: balance; }
+h1, h2, h3 { margin: 0; line-height: 1.2; font-weight: 600; letter-spacing: -0.025em; text-wrap: balance; }
 h1 { font-size: var(--h1); }
 h2 { font-size: var(--h2); }
 h3 { font-size: var(--h3); }
 p { text-wrap: pretty; }
 
-a { color: var(--text); text-underline-offset: 0.18em; text-decoration-thickness: 1px; text-decoration-color: rgba(20, 24, 27, 0.4); }
+a { color: var(--text); text-underline-offset: 0.18em; text-decoration-thickness: 1px; text-decoration-color: rgba(11, 11, 11, 0.4); }
 a:hover { color: var(--text); text-decoration-color: currentColor; }
 
 /* Focus: 3px dark ring with a white gap, on every interactive element. */
@@ -113,7 +114,7 @@ button { font: inherit; color: inherit; }
   gap: var(--space-8);
   min-height: var(--tap);
   padding: var(--space-12) var(--space-24);
-  border-radius: var(--radius-sm);
+  border-radius: 999px;
   border: 0;
   font-size: 0.9375rem;
   font-weight: 600;
@@ -125,9 +126,12 @@ button { font: inherit; color: inherit; }
 }
 .btn:active { transform: scale(0.98); }
 .btn-primary { background: var(--ink); color: #fff; }
-.btn-primary:hover { background: #2b3136; color: #fff; }
+.btn-primary:hover { background: #262626; color: #fff; }
 .btn-secondary { background: var(--card); color: var(--text); box-shadow: inset 0 0 0 1px var(--line); }
-.btn-secondary:hover { background: var(--page); color: var(--text); }
+.btn-secondary:hover { background: var(--soft); color: var(--text); }
+/* Text button: no fill until hover. */
+.btn-text { background: none; color: var(--text); padding-inline: var(--space-12); }
+.btn-text:hover { background: var(--soft); color: var(--text); }
 .btn:focus-visible { box-shadow: var(--ring); }
 .btn svg { flex: none; }
 
@@ -162,6 +166,23 @@ button { font: inherit; color: inherit; }
   color: var(--text-2);
 }
 
+/* Small info button: a 44px target around an 18px icon. */
+.info-btn {
+  display: inline-grid; place-items: center; flex: none;
+  width: var(--tap); height: var(--tap); margin: -0.8125rem 0 -0.8125rem -0.5rem;
+  padding: 0; border: 0; border-radius: 999px; background: none; color: var(--text-2); cursor: pointer;
+}
+.info-btn:hover, .info-btn[aria-expanded='true'] { color: var(--text); }
+.info-pop {
+  position: absolute; z-index: 5; top: calc(100% + var(--space-8)); left: 0;
+  width: min(20rem, calc(100vw - 2 * var(--gutter)));
+  padding: var(--space-12) var(--space-16);
+  background: var(--card); color: var(--text); border: 1px solid var(--line); border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-lift); font-size: 0.875rem; font-weight: 400; line-height: 1.5; letter-spacing: 0;
+}
+.info-pop p { margin: 0; }
+.info-pop p + p { margin-top: var(--space-8); }
+
 @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
 
 @media (prefers-reduced-motion: reduce) {
@@ -170,5 +191,6 @@ button { font: inherit; color: inherit; }
 
 @media print {
   html, body { background: #fff; }
+  body { min-height: 0; display: block; }
   .site-footer { display: none; }
 }

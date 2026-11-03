@@ -4,11 +4,11 @@
 
 Live: **https://referral-compass.vercel.app**
 
-![Referral Compass showing results for WC2N and Rheumatology](docs/readme-1440-results.png)
+![Referral Compass showing results for WC2N and Rheumatology](docs/m4g-after-1440-results.png)
 
 ## What it does
 
-Referral Compass helps a GP in England choose where to suggest a routine outpatient referral, during a 10 minute appointment. The GP enters the patient's postcode, picks a specialty and a distance, and gets one suggested NHS trust plus up to four other options. Each one shows how long people on its list have waited so far, how many are waiting under 18 weeks, its CQC rating and how far away it is. One tap opens the evidence behind every number, and the GP can print a plain language summary for the patient. It covers 41 NHS trusts within 80 km of central London and five specialties: Cardiology, Dermatology, Gastroenterology, Rheumatology, and Trauma and Orthopaedics.
+Referral Compass helps a GP in England compare NHS trusts for a routine outpatient referral, during a 10 minute appointment. The GP enters the patient's postcode, picks a specialty and a distance (5, 10, 15 or 25 km), and gets the top match for those settings plus up to four other options. Each one shows how long people on its list have waited so far, how many are waiting under 18 weeks, its CQC rating and its distance to the trust HQ. One tap opens the evidence behind every number, and the GP can print a plain language summary for the patient. It covers 41 NHS trusts in and around London and five specialties: Cardiology, Dermatology, Gastroenterology, Rheumatology, and Trauma and Orthopaedics.
 
 ## How the ranking works
 
@@ -40,7 +40,7 @@ Contains public sector information licensed under the [Open Government Licence v
 - **Hospital trusts, not GP surgeries or single hospitals.** NHS England publishes waiting times per trust. A trust can run several hospitals with different waits.
 - **CQC ratings are 3 to 8 years old** and cover the whole trust, not the specialty.
 - **Distance is a straight line** from the centre of the patient's postcode area to the trust's registered address. The clinic may be at another site.
-- **London area only:** 41 trusts within 80 km of central London. Specialist and community trusts are hidden unless the GP turns them on, and trust and specialty pairs with fewer than 50 people waiting are not ranked.
+- **London area only:** 41 trusts in and around London. Specialist and community trusts are hidden unless the GP turns them on, and trust and specialty pairs with fewer than 50 people waiting are not ranked.
 - **Privacy:** only the first part of the postcode (for example WC2N) is sent to postcodes.io. Nothing is stored, and the summary link carries no postcode.
 
 ## Run it locally

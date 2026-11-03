@@ -20,7 +20,7 @@
   width: 100%;
   height: 3rem;                       /* 48 */
   padding: 0 var(--space-16);
-  border: 1px solid #d6d2c9;
+  border: 1px solid #cfcfcc;
   border-radius: var(--radius-sm);
   background: var(--card);
   color: var(--text);
@@ -32,7 +32,7 @@
   transition: border-color 200ms var(--ease);
 }
 .postcode::placeholder { text-transform: none; font-weight: 400; letter-spacing: 0; color: #8a9097; }
-.postcode:hover { border-color: #bdb8ad; }
+.postcode:hover { border-color: #b5b5b2; }
 .postcode:focus-visible { box-shadow: var(--ring); outline: 3px solid transparent; }
 .hasError .postcode { border-color: var(--error); }
 
@@ -50,7 +50,7 @@
   text-align: center;
   min-height: var(--tap);
   padding: var(--space-8) var(--space-12);
-  border-radius: var(--radius-sm);
+  border-radius: 999px;
   background: var(--card);
   border: 1px solid var(--line);
   font-size: 0.875rem;
@@ -71,13 +71,13 @@
   grid-auto-flow: column;
   gap: var(--space-4);
   padding: var(--space-4);
-  border-radius: var(--radius-sm);
-  background: var(--page);
+  border-radius: 999px;
+  background: var(--soft);
   border: 1px solid var(--line);
 }
-.segmented .chip span { border: 0; background: transparent; border-radius: 0.5rem; padding: var(--space-8) var(--space-4); }
-.segmented .chip:hover span { background: rgba(20, 24, 27, 0.05); }
-.segmented .chip input:checked + span { background: var(--ink); color: #fff; }
+.segmented .chip span { border: 0; background: transparent; border-radius: 999px; padding: var(--space-8) var(--space-4); color: var(--text-2); }
+.segmented .chip:hover span { background: rgba(11, 11, 11, 0.05); color: var(--text); }
+.segmented .chip input:checked + span { background: var(--card); color: var(--text); box-shadow: 0 1px 2px rgba(11, 11, 11, 0.08), 0 0 0 1px var(--line); }
 
 .more { border-top: 1px solid var(--line); padding-top: var(--space-8); display: grid; }
 .more[open] { gap: var(--space-4); }
@@ -114,3 +114,7 @@
 @media (min-width: 61.875em) {
   .submit { display: none; }
 }
+
+/* "How ranking works": same disclosure, sits under Priority without a rule. */
+.how { border-top: 0; padding-top: 0; margin-top: calc(-1 * var(--space-8)); }
+.howList { margin: 0 0 var(--space-8); padding-left: 1.125rem; display: grid; gap: var(--space-8); font-size: 0.875rem; color: var(--text-2); }

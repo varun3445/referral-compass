@@ -2,12 +2,14 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import providers from '@/data/providers.json';
 import meta from '@/data/meta.json';
-import ConsoleInputs, { DISTANCES } from '@/components/ConsoleInputs';
+import ConsoleInputs from '@/components/ConsoleInputs';
 import HeroResult from '@/components/HeroResult';
 import OptionRow from '@/components/OptionRow';
 import EvidenceDrawer from '@/components/EvidenceDrawer';
 import Icon from '@/components/Icon';
-import { lookupOutcode, toOutcode } from '@/lib/geo';
+import DataButton from '@/components/DataButton';
+import { lookupOutcode, toOutcode, distanceKm } from '@/lib/geo';
+import { DISTANCES, DEFAULT_INPUTS, session, RESET_EVENT } from '@/lib/nav';
 import { rankProviders } from '@/lib/rank';
 import { ratingAgeRange } from '@/lib/explain';
 import { count, isOlderThan2Years } from '@/lib/format';
@@ -16,28 +18,33 @@ import styles from './page.module.css';
 // CQC rating ages, worked out from the data (same source as the checkbox label).
 const AGE = ratingAgeRange(providers);
 
-// The summary link carries only trust, specialty and distance. No postcode.
-const summaryHref = (r, specialty) =>
-  `/summary?provider=${r.provider.odsCode}&specialty=${specialty}&km=${r.distanceKm.toFixed(1)}`;
-
-// Kept in memory only (never written to storage), so "Back" from the
-// summary returns to the same search within this tab.
-let memory = {
-  inputs: { postcode: '', specialty: '410', maxKm: 25, priority: 'balanced', includeSpecialist: false, includeQuality: false },
-  origin: null,
-  collapsed: false,
+// The summary link carries trust codes, specialty and distances only. No postcode.
+// compare: the next two results as ODS:km pairs, for the comparison table.
+const summaryHref = (r, others, specialty) => {
+  const compare = others.slice(0, 2).map((o) => `${o.provider.odsCode}:${o.distanceKm.toFixed(1)}`).join(',');
+  return `/summary?provider=${r.provider.odsCode}&specialty=${specialty}&km=${r.distanceKm.toFixed(1)}${compare ? `&compare=${compare}` : ''}`;
 };
 
 export default function ReferralConsole() {
-  const [inputs, setInputs] = useState(memory.inputs);
-  const [origin, setOrigin] = useState(memory.origin);
-  const [collapsed, setCollapsed] = useState(memory.collapsed);
-  const [pcStatus, setPcStatus] = useState({ loading: false, error: null, kind: null, resolved: memory.origin?.outcode || null });
+  const [inputs, setInputs] = useState(session.inputs);
+  const [origin, setOrigin] = useState(session.origin);
+  const [collapsed, setCollapsed] = useState(session.collapsed);
+  const [pcStatus, setPcStatus] = useState({ loading: false, error: null, kind: null, resolved: session.origin?.outcode || null });
   const [evidenceFor, setEvidenceFor] = useState(null); // odsCode
   const resultsRef = useRef(null);
   const runExample = useRef(false); // fold the inputs once the example resolves
 
-  useEffect(() => { memory = { inputs, origin, collapsed }; }, [inputs, origin, collapsed]);
+  useEffect(() => { Object.assign(session, { inputs, origin, collapsed }); }, [inputs, origin, collapsed]);
+
+  // "New search" in the header clears everything back to the defaults.
+  useEffect(() => {
+    const reset = () => {
+      setInputs(DEFAULT_INPUTS); setOrigin(null); setCollapsed(false); setEvidenceFor(null);
+      setPcStatus({ loading: false, error: null, kind: null, resolved: null });
+    };
+    window.addEventListener(RESET_EVENT, reset);
+    return () => window.removeEventListener(RESET_EVENT, reset);
+  }, []);
 
   // Debounced lookup of the outcode only (e.g. "WC2N"), never the full postcode.
   const outcode = toOutcode(inputs.postcode);
@@ -114,6 +121,7 @@ export default function ReferralConsole() {
       <header className={`${styles.head} ${collapsed && origin ? styles.headCompact : ''}`}>
         <h1>Compare trusts for this referral</h1>
         <p>Waiting so far, ratings and distance for {providers.length} London area trusts. Routine referrals only.</p>
+        <DataButton placement="page" className={styles.headData} />
       </header>
 
       <div className={styles.layout}>
@@ -184,7 +192,8 @@ export default function ReferralConsole() {
                 result={top}
                 ranking={ranking}
                 maxWait={maxWait}
-                summaryHref={summaryHref(top, inputs.specialty)}
+                maxKm={inputs.maxKm}
+                summaryHref={summaryHref(top, others, inputs.specialty)}
                 onEvidence={() => setEvidenceFor(top.provider.odsCode)}
               />
 
@@ -201,8 +210,8 @@ export default function ReferralConsole() {
 
               {ranking.excludedSpecialist.length > 0 && (
                 <p className={`inset ${styles.quiet}`}>
-                  Specialist and community services are hidden: {ranking.excludedSpecialist.map((s) => s.provider.name).join(', ')}.
-                  Turn them on under More options.
+                  Some specialist and community trusts are hidden because they may not offer routine referrals for
+                  this specialty. Turn them on under More options to see them.
                 </p>
               )}
               {ranking.smallNumbers.length > 0 && (
@@ -214,7 +223,7 @@ export default function ReferralConsole() {
 
               <p className={styles.footnote}>
                 Waiting times are for each NHS trust, not a single hospital, and are not an appointment date.
-                Distance is a straight line to the trust’s main office.
+                Distance to trust HQ is a straight line to the trust’s recorded main office.
               </p>
             </div>
           )}
@@ -251,11 +260,12 @@ function ResultState({ pcStatus, ranking, inputs, origin, nextDistance, onWiden,
   }
   else if (!origin) text = 'Keep typing the postcode. Results appear as soon as we recognise it.';
   else if (ranking && ranking.results.length === 0) {
-    const anywhere = rankProviders({ providers, origin, ...inputs, maxKm: 80 }).consideredCount > 0;
-    if (!anywhere) {
-      text = `There are no trusts in this prototype near ${origin.outcode}. It only covers trusts within ${meta.radiusKm} km of central London.`;
+    // Outside the area the data covers: no point suggesting a larger distance.
+    if (distanceKm(origin, meta.center) > meta.radiusKm) {
+      text = 'This postcode is outside the London area covered by this prototype.';
     } else {
-      text = `No trusts with published data within ${inputs.maxKm} km of ${origin.outcode}.`;
+      const name = meta.specialties[inputs.specialty];
+      text = `No trusts with ${name} data within ${inputs.maxKm} km.${nextDistance ? ' Try a larger distance.' : ''} This prototype covers London area trusts only.`;
       if (nextDistance) action = (
         <button type="button" className="btn btn-secondary" onClick={() => onWiden(nextDistance)}>
           Search within {nextDistance} km
