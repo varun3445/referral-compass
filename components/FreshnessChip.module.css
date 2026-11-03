@@ -1,11 +1,20 @@
+/* Two-part status pill: NHS RTT month | CQC file month. */
 .chip {
   display: inline-flex;
-  align-items: center;
-  gap: var(--space-8);
-  color: var(--text-2);
+  align-items: stretch;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--card);
   font-size: var(--small);
   font-weight: 500;
-  letter-spacing: 0.01em;
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  overflow: hidden;
 }
-.dot { width: 0.4375rem; height: 0.4375rem; border-radius: 50%; background: var(--accent); flex: none; }
+.part { display: inline-flex; align-items: center; gap: var(--space-8); padding: var(--space-8) var(--space-12); }
+.part + .part { border-left: 1px solid var(--line); }
+.key { color: var(--text-2); }
+/* Status dot: the data snapshot is loaded. */
+.dot { width: 0.4375rem; height: 0.4375rem; border-radius: 50%; background: #1a7f4b; flex: none; }
 @media (max-width: 30em) { .extra { display: none; } }

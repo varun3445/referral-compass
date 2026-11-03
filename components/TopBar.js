@@ -14,8 +14,11 @@ export default function TopBar() {
     <header className={styles.bar}>
       <div className={styles.inner}>
         <Link href="/" className={styles.brand} onClick={resetSession}>
-          <span className={styles.logo}><Icon name="compass" size={20} /></span>
-          <span className={styles.brandName}>Referral Compass</span>
+          <span className={styles.logo}><Icon name="compass" size={18} /></span>
+          <span className={styles.brandText}>
+            <span className={styles.brandName}>Referral Compass</span>
+            <span className={styles.brandSub}>GP referral console</span>
+          </span>
         </Link>
         <div className={styles.right}>
           <FreshnessChip />

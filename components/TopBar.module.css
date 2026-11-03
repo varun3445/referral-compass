@@ -1,4 +1,5 @@
-.bar { border-bottom: 1px solid var(--line); background: var(--page); }
+/* Sticky white bar, 64px, hairline underneath. */
+.bar { position: sticky; top: 0; z-index: 20; background: var(--card); border-bottom: 1px solid var(--line); }
 .inner {
   max-width: 75rem;
   height: 4rem;                       /* 64px */
@@ -9,21 +10,14 @@
   justify-content: space-between;
   gap: var(--space-16);
 }
-.brand {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-12);
-  min-height: var(--tap);
-  font-weight: 700;
-  font-size: 1.0625rem;
-  letter-spacing: -0.02em;
-  color: var(--text);
-  text-decoration: none;
-}
+.brand { display: inline-flex; align-items: center; gap: var(--space-12); min-height: var(--tap); color: var(--text); text-decoration: none; }
 .brand:hover { color: var(--text); }
-/* Round black mark, like an app icon. */
-.logo { display: inline-grid; place-items: center; width: 2.25rem; height: 2.25rem; border-radius: 999px; background: var(--accent); color: #fff; flex: none; }
-.right { display: flex; align-items: center; gap: var(--space-8); }
+/* Square mark with soft corners, graphite. */
+.logo { display: inline-grid; place-items: center; width: 2rem; height: 2rem; border-radius: 0.625rem; background: var(--ink); color: #fff; flex: none; }
+.brandText { display: grid; line-height: 1.15; }
+.brandName { font-size: 0.9375rem; font-weight: 700; letter-spacing: -0.02em; }
+.brandSub { font-size: 0.75rem; font-weight: 500; color: var(--text-2); }
+.right { display: flex; align-items: center; gap: var(--space-12); }
 .btn { padding-inline: var(--space-16); font-size: 0.875rem; }
 
 /* Modal: centred sheet on desktop, full height sheet on phones. */
@@ -54,7 +48,7 @@
 
 @media (max-width: 40em) {
   .right :global(.chip-hide-mobile) { display: none; }
-  .brandName { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .brandSub { display: none; }
   .btn { padding-inline: var(--space-12); }
   .dialog { width: 100vw; max-width: 100vw; height: 100dvh; max-height: 100dvh; border-radius: 0; }
 }

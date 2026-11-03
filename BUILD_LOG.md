@@ -201,3 +201,12 @@ Feedback: the reference was meant for its visual approach, not its colours. This
 - **Clashes fixed:** the CQC tag in the rows could run into the wait bar. Rows now use the stacked badge (date on its own line), switch to the 4-column grid only from a 46rem card (was 40rem), and use 24px column gaps. Rows get a rank number in a soft circle.
 
 Checks: layout-check passes at 5 widths; axe 0 issues on 8 states; verify-ranking identical; summary prints on 1 A4 page; detector clean. Not yet deployed.
+
+## M4j neutral canvas, graphite data, new nav (3 Nov 2026)
+
+- **Background:** the blue was dropped. The canvas is a neutral cool off-white #F4F5F7 with #E3E6EA hairlines. The hero is a white card with a soft lift, and its tiles and why panel sit on #F7F8FA.
+- **Data marks:** graphite #1F2937 for bars, captions and focus (14:1 on white). Strip dots are smaller: other trusts are 8px grey (#C3C8D0), this trust is 14px near black. The line is now 4px.
+- **Why panel:** 24px padding on every side (24/16 on phones).
+- **Nav:** sticky white 64px bar with a hairline. A graphite square mark sits next to "Referral Compass" with a "GP referral console" subtitle, and a two-part status pill on the right (NHS RTT Aug 2026 | CQC Oct 2026). The phone summary bar and the desktop input card now stick below the nav, and anchors scroll clear of it.
+
+Checks: layout-check passes at 5 widths; axe 0 issues on 8 states; verify-ranking identical; summary prints on 1 A4 page; detector clean. Not yet deployed.

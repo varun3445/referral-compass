@@ -1,12 +1,14 @@
-/* The top result is the hero: tinted soft blue with a hairline border. Hierarchy
+/* The top result is the hero: white, a hairline and a soft lift; its tiles and
+   the why panel sit on the soft grey so it reads as one instrument. Hierarchy
    comes from contrast with the plain white cards around it. */
 .card {
   display: grid;
   gap: var(--space-24);
   padding: var(--pad-card);
-  background: var(--mint);
-  border: 1px solid var(--mint-line);
+  background: var(--card);
+  border: 1px solid var(--line);
   border-radius: var(--radius);
+  box-shadow: 0 1px 2px rgba(15, 27, 45, 0.04), 0 8px 24px rgba(15, 27, 45, 0.05);
   transition: transform 200ms var(--ease), box-shadow 200ms var(--ease);
 }
 .card:hover { transform: translateY(-2px); box-shadow: var(--shadow-lift); }
@@ -32,8 +34,8 @@
   gap: var(--space-12);
   padding: var(--space-16);
   border-radius: var(--radius-sm);
-  background: var(--card);
-  border: 1px solid var(--mint-line);
+  background: var(--soft);
+  border: 1px solid transparent;
 }
 @container (min-width: 39rem) {
   .tiles { grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: auto auto auto auto; }
@@ -73,8 +75,8 @@
 @media (max-width: 37.5em) {
   .tiles {
     gap: 0;
-    background: var(--card);
-    border: 1px solid var(--mint-line);
+    background: var(--soft);
+    border: 1px solid transparent;
     border-radius: var(--radius-sm);
     overflow: hidden;
   }
@@ -117,10 +119,9 @@
   container-type: inline-size;
   display: grid;
   gap: var(--space-16);
-  padding: var(--space-16) var(--space-24) var(--space-16);
+  padding: var(--space-24);
   border-radius: var(--radius-sm);
-  background: var(--card);
-  border: 1px solid var(--mint-line);
+  background: var(--soft);
 }
 .whyText { display: grid; gap: var(--space-4); }
 .whyHead { font-size: 1rem; letter-spacing: -0.01em; }
@@ -128,6 +129,6 @@
 @container (min-width: 39rem) { .strips { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-32); } }
 .legend { margin: 0; display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-4) var(--space-8); font-size: var(--small); color: var(--text-2); }
 .keyThis, .keyOther { display: inline-block; border-radius: 50%; flex: none; }
-.keyThis { width: 0.75rem; height: 0.75rem; background: var(--accent); }
-.keyOther { width: 0.5rem; height: 0.5rem; background: var(--dot); margin-left: var(--space-8); }
-@media (max-width: 40em) { .whyBox { padding: var(--space-16); } }
+.keyThis { width: 0.625rem; height: 0.625rem; background: var(--accent); }
+.keyOther { width: 0.4375rem; height: 0.4375rem; background: var(--dot); margin-left: var(--space-8); }
+@media (max-width: 40em) { .whyBox { padding: var(--space-24) var(--space-16); } }

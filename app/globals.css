@@ -3,25 +3,25 @@
    accessibility rules unchanged. Sizes in rem (16px base). */
 :root {
   /* Warm, calm surfaces. Edges come from hairlines, not shadows. */
-  --page: #eef3fa;                 /* very light blue canvas */
+  --page: #f4f5f7;                 /* neutral cool off-white canvas */
   --card: #ffffff;
-  --line: #dde6f0;                 /* hairline on cards, dividers, inputs */
+  --line: #e3e6ea;                 /* hairline on cards, dividers, inputs */
   --shadow: none;                  /* nothing at rest */
   --shadow-lift: 0 2px 4px rgba(20, 24, 27, 0.04), 0 12px 28px rgba(20, 24, 27, 0.08);
   --shadow-panel: -2px 0 6px rgba(20, 24, 27, 0.04), -16px 0 48px rgba(20, 24, 27, 0.10);
 
   --text: #0f1b2d;                 /* navy ink */
-  --text-2: #4e5b6e;               /* 6.2:1 on canvas, 6.9:1 on white, 6.1:1 on the blue tint */
+  --text-2: #535c69;               /* 6.0:1 on canvas, 6.6:1 on white */
   --ink: #0f1b2d;                  /* primary buttons, selected choices */
 
   /* One accent, only for data (bars, positive states) and the focus ring. */
-  --accent: #2457c5;               /* one blue for data, links in charts and focus: 6.3:1 on white */
-  --accent-bright: #2457c5;
-  --dot: #b4c3d9;                  /* other trusts in the charts */
-  --mint: #eaf1fd;                 /* hero tint: soft blue */
-  --mint-line: #d2def3;
-  --track: #e4ebf5;
-  --soft: #f4f7fc;                 /* inner tiles and insets on white */
+  --accent: #1f2937;               /* graphite: data marks, captions and focus (14:1 on white) */
+  --accent-bright: #1f2937;
+  --dot: #c3c8d0;                  /* other trusts in the charts */
+  --mint: #eef0f3;                 /* quiet grey chip fill (rank, highest rated) */
+  --mint-line: #e3e6ea;
+  --track: #eceef1;
+  --soft: #f7f8fa;                 /* inner tiles and insets on white */
 
   --amber-bg: #fbf1de;
   --amber-text: #6e4300;
@@ -34,7 +34,7 @@
   --cqc-good: #1e4e8c;        --cqc-good-bg: #e8eef7;        --cqc-good-dot: #3b76d1;
   --cqc-ri: #6e4300;          --cqc-ri-bg: #fbf1de;          --cqc-ri-dot: #c98a1a;
   --cqc-inadequate: #8f1d1d;  --cqc-inadequate-bg: #f9e7e5;  --cqc-inadequate-dot: #d64545;
-  --cqc-none: #4a525c;        --cqc-none-bg: #eef1f5;        --cqc-none-dot: #9aa2ad;
+  --cqc-none: #4a525c;        --cqc-none-bg: #eef0f3;        --cqc-none-dot: #9aa2ad;
 
   /* One spacing scale: 4, 8, 12, 16, 24, 32, 48. */
   --space-4: 0.25rem;
@@ -69,7 +69,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; min-width: 0; }
-html { font-size: 100%; -webkit-text-size-adjust: 100%; }
+html { font-size: 100%; -webkit-text-size-adjust: 100%; scroll-padding-top: 5rem; }
 
 body {
   margin: 0;
