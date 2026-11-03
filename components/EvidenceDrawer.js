@@ -2,6 +2,7 @@
 import { useCallback, useEffect, useRef } from 'react';
 import meta from '@/data/meta.json';
 import CqcBadge from './CqcBadge';
+import PositionStrip from './PositionStrip';
 import Icon from './Icon';
 import { weeks, km, count, monthYear, yearsAgo, isOlderThan2Years, DISTANCE_LABEL, DISTANCE_NOTE } from '@/lib/format';
 import styles from './EvidenceDrawer.module.css';
@@ -163,6 +164,12 @@ export default function EvidenceDrawer({ result, ranking, outcode, specialtyName
                 <li>{kmLine}</li>
                 <li>{cqcLine}</li>
               </ul>
+              {consideredCount > 1 && (
+                <div className={styles.strips}>
+                  <PositionStrip label="Waiting so far" values={ranking.results.map((x) => x.wait.medianWeeks)} current={w.medianWeeks} format={(v) => `${weeks(v)} wks`} best="shortest" worst="longest" />
+                  <PositionStrip label={DISTANCE_LABEL} values={ranking.results.map((x) => x.distanceKm)} current={r.distanceKm} format={(v) => `${km(v)} km`} best="closest" worst="furthest" />
+                </div>
+              )}
               <p className={styles.note}>
                 Ranked {r.rank} of {consideredCount} trusts for these settings. How the ranking is worked out, with the full
                 working, is under Data and limits.

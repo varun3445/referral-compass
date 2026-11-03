@@ -1,5 +1,6 @@
 .wrap { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 0.5rem; }
-.compact { flex-direction: column; align-items: flex-start; gap: 2px; }
+.compact { flex-direction: column; align-items: flex-start; gap: var(--space-4); }
+.compact .sep { display: none; }
 
 .tag {
   display: inline-flex;

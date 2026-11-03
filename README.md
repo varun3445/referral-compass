@@ -4,7 +4,7 @@
 
 Live: **https://referral-compass.vercel.app**
 
-![Referral Compass showing results for WC2N and Rheumatology](docs/m4g-after-1440-results.png)
+![Referral Compass showing results for WC2N and Rheumatology](docs/m4i-1440-results.png)
 
 ## What it does
 

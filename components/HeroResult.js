@@ -2,6 +2,7 @@ import Link from 'next/link';
 import CqcBadge from './CqcBadge';
 import InfoTip from './InfoTip';
 import WaitBar from './WaitBar';
+import PositionStrip from './PositionStrip';
 import { nav } from '@/lib/nav';
 import { weeks, km, count, DISTANCE_LABEL, DISTANCE_NOTE } from '@/lib/format';
 import meta from '@/data/meta.json';
@@ -71,9 +72,40 @@ export default function HeroResult({ result, ranking, maxWait, maxKm, summaryHre
         </dl>
       </div>
 
+      {ranking.consideredCount > 1 && (
+        <section className={styles.whyBox} aria-labelledby="why-head">
+          <div className={styles.whyText}>
+            <h3 id="why-head" className={styles.whyHead}>Why it is the top match</h3>
+            <p className={styles.why}>{whySentence(result, ranking)}</p>
+          </div>
+          <div className={styles.strips}>
+            <PositionStrip
+              label="Waiting so far"
+              values={ranking.results.map((r) => r.wait.medianWeeks)}
+              current={wait.medianWeeks}
+              format={(v) => `${weeks(v)} wks`}
+              best="shortest"
+              worst="longest"
+            />
+            <PositionStrip
+              label={DISTANCE_LABEL}
+              values={ranking.results.map((r) => r.distanceKm)}
+              current={distanceKm}
+              format={(v) => `${km(v)} km`}
+              best="closest"
+              worst="furthest"
+            />
+          </div>
+          <p className={styles.legend}>
+            <span className={styles.keyThis} aria-hidden="true" /> This trust
+            <span className={styles.keyOther} aria-hidden="true" /> Other trusts in this search
+          </p>
+        </section>
+      )}
+
       <div className={styles.meta}>
         <CqcBadge cqc={provider.cqc} highest={result.badges.highestRated} />
-        <p className={styles.why}>{whySentence(result, ranking)}</p>
+        {ranking.consideredCount === 1 && <p className={styles.why}>{whySentence(result, ranking)}</p>}
       </div>
 
       {runnerUp && (

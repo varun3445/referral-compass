@@ -83,11 +83,13 @@ export default function ReferralConsole() {
   }, [outcode, inputs.postcode]);
 
   const ranking = useMemo(
-    () => origin && rankProviders({ providers, origin, ...inputs }),
+    () => origin && rankProviders({ providers, origin, ...inputs, limit: Infinity }),
     [origin, inputs]
   );
 
-  const results = ranking?.results || [];
+  // Every trust in the search (for the charts); the list shows the top 5.
+  const pool = ranking?.results || [];
+  const results = pool.slice(0, 5);
   const [top, ...others] = results;
   // Wait bars are scaled to the longest wait among the results shown.
   const maxWait = results.length ? Math.max(...results.map((r) => r.wait.medianWeeks)) : 0;

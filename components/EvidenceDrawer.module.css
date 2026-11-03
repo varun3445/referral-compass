@@ -127,3 +127,4 @@
 }
 .plainList { margin: 0; padding-left: 1.125rem; display: grid; gap: var(--space-8); font-size: 1rem; }
 .detail { font-size: 0.9375rem; color: var(--text-2); }
+.strips { display: grid; gap: var(--space-16); padding: var(--space-16); border-radius: var(--radius-sm); background: var(--soft); }

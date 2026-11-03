@@ -1,4 +1,4 @@
-/* The top result is the hero: the one black card (see the override at the end). Hierarchy
+/* The top result is the hero: tinted soft blue with a hairline border. Hierarchy
    comes from contrast with the plain white cards around it. */
 .card {
   display: grid;
@@ -111,37 +111,23 @@
   .card, .card:hover { transform: none; transition: box-shadow 200ms ease; }
 }
 
-/* Reference look: the top match is the one black card on the page.
-   Text on black: white, #a8a8a6 secondary (8.6:1), bright green for data. */
-.card {
-  --hero-2: #a8a8a6;
-  --hero-tile: #161616;
-  --hero-line: #2a2a2a;
-  background: var(--ink);
-  border-color: var(--ink);
-  color: #fff;
+
+/* "Why it is the top match": one white panel, sentence then two dot charts. */
+.whyBox {
+  container-type: inline-size;
+  display: grid;
+  gap: var(--space-16);
+  padding: var(--space-16) var(--space-24) var(--space-16);
+  border-radius: var(--radius-sm);
+  background: var(--card);
+  border: 1px solid var(--mint-line);
 }
-.card .kicker { color: var(--accent-bright); }
-.card .label, .card .unit, .card .context { color: var(--hero-2); }
-.card .tile { background: var(--hero-tile); border-color: var(--hero-line); }
-.card .number { color: #fff; }
-.xl .number { font-style: italic; font-weight: 700; letter-spacing: -0.045em; }
-.card :global(.info-btn) { color: var(--hero-2); }
-.card :global(.info-btn):hover, .card :global(.info-btn)[aria-expanded='true'] { color: #fff; }
-.card :global(.info-btn):focus-visible { box-shadow: 0 0 0 2px var(--ink), 0 0 0 5px var(--accent-bright); }
-.card :global(.info-pop) { color: var(--text); }
-.card :global([aria-hidden='true'][class*='track']) { background: var(--hero-line); }
-.card .close { background: var(--hero-tile); border-color: var(--hero-line); color: #fff; }
-.card :global(.btn-primary) { background: var(--accent-bright); color: var(--ink); }
-.card :global(.btn-primary):hover { background: #4be592; color: var(--ink); }
-.card :global(.btn-secondary) { background: transparent; color: #fff; box-shadow: inset 0 0 0 1px #4a4a48; }
-.card :global(.btn-secondary):hover { background: var(--hero-tile); color: #fff; }
-.card :global(.btn):focus-visible { box-shadow: 0 0 0 2px var(--ink), 0 0 0 5px var(--accent-bright); }
-.card a:focus-visible { box-shadow: 0 0 0 2px var(--ink), 0 0 0 5px var(--accent-bright); }
-.card:hover { box-shadow: 0 2px 4px rgba(11, 11, 11, 0.06), 0 16px 36px rgba(11, 11, 11, 0.16); }
-@media (max-width: 37.5em) {
-  .card .tiles { background: var(--hero-tile); border-color: var(--hero-line); }
-  .card .tile + .tile { border-top-color: var(--hero-line); }
-}
-/* CQC date and reason text inside the black card. */
-.card [class*='CqcBadge'][class*='__meta'] { color: var(--hero-2); }
+.whyText { display: grid; gap: var(--space-4); }
+.whyHead { font-size: 1rem; letter-spacing: -0.01em; }
+.strips { display: grid; gap: var(--space-16); }
+@container (min-width: 39rem) { .strips { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-32); } }
+.legend { margin: 0; display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-4) var(--space-8); font-size: var(--small); color: var(--text-2); }
+.keyThis, .keyOther { display: inline-block; border-radius: 50%; flex: none; }
+.keyThis { width: 0.75rem; height: 0.75rem; background: var(--accent); }
+.keyOther { width: 0.5rem; height: 0.5rem; background: var(--dot); margin-left: var(--space-8); }
+@media (max-width: 40em) { .whyBox { padding: var(--space-16); } }

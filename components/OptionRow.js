@@ -11,9 +11,12 @@ export default function OptionRow({ result, maxWait, onEvidence }) {
   return (
     <li className={styles.row}>
       <div className={styles.main}>
-        <h3 className={styles.name}>{provider.name}</h3>
+        <h3 className={styles.name}>
+          <span className={styles.rank}><span className="visually-hidden">Rank </span>{result.rank}</span>
+          <span>{provider.name}</span>
+        </h3>
         {provider.isSpecialist && <span className={styles.specialist}>Specialist or community service</span>}
-        <CqcBadge cqc={provider.cqc} highest={result.badges.highestRated} />
+        <CqcBadge cqc={provider.cqc} highest={result.badges.highestRated} compact />
       </div>
       <div className={styles.wait}>
         <span className={styles.value}>

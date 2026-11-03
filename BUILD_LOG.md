@@ -191,3 +191,13 @@ Checks: layout-check passes at 5 widths; axe 0 issues on console with the popove
 
 **Real time (system clock):** started 15:19, finished 15:32:24 (before commit and deploy).
 Deployed and confirmed live at https://referral-compass.vercel.app at 15:33:15, so about **14 minutes** from start to live.
+
+## M4i clinical look and "why" visuals (3 Nov 2026)
+
+Feedback: the reference was meant for its visual approach, not its colours. This is a GP tool, so it should look fresh and clean and show *why* a trust is the top match.
+
+- **Palette:** very light blue canvas #EEF3FA, white cards, #DDE6F0 hairlines, navy ink #0F1B2D, and one blue #2457C5 for data, charts and focus (6.3:1 on white). The top match is a soft blue tint (#EAF1FD) instead of black, and the italic numbers are gone. Pill controls and large radii stay.
+- **"Why it is the top match":** a white panel in the hero with the plain sentence and two dot strips. Every trust in the search is plotted by waiting so far and by distance to trust HQ, with this trust highlighted. The caption says the same in words ("3rd shortest of 11", "Closest of 11"), and a key sits underneath. The same strips are in the Evidence panel. The ranking is unchanged: the page asks for every ranked trust and lists the top 5, and the top 5 order is identical.
+- **Clashes fixed:** the CQC tag in the rows could run into the wait bar. Rows now use the stacked badge (date on its own line), switch to the 4-column grid only from a 46rem card (was 40rem), and use 24px column gaps. Rows get a rank number in a soft circle.
+
+Checks: layout-check passes at 5 widths; axe 0 issues on 8 states; verify-ranking identical; summary prints on 1 A4 page; detector clean. Not yet deployed.
