@@ -65,8 +65,9 @@
 .edit:active { transform: scale(0.98); }
 
 .results { display: grid; grid-template-columns: minmax(0, 1fr); align-content: start; gap: var(--space-16); outline: none; }
-/* No results yet: the state panel fills the column height. */
-.resultsFill { grid-template-rows: 1fr; align-content: stretch; }
+/* No results yet: the state panel fills the column to the input card's
+   height, with its content pinned to the top. */
+.resultsFill { grid-template-rows: 1fr; }
 .count { margin: 0; font-size: var(--small); letter-spacing: 0.01em; color: var(--text-2); }
 
 .fade { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-16); animation: fade-in 200ms ease-out; }
@@ -93,18 +94,19 @@
 .footnote { margin: 0; padding: 0 var(--space-4); font-size: 0.875rem; color: var(--text-2); }
 
 /* Calm panel for every non-results state. */
+/* Every non-results state: content top-aligned, any action filling the
+   width like the form controls. */
 .state {
   display: grid;
-  gap: var(--space-24);
-  align-content: center;
-  justify-items: start;
-  min-height: 20rem;
-  padding: var(--space-48) var(--pad-card);
+  gap: var(--space-16);
+  align-content: start;
+  padding: var(--pad-card);
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: var(--radius);
 }
-.state p { margin: 0; font-size: 1.125rem; max-width: 32rem; text-wrap: balance; }
+.state p { margin: 0; font-size: 1.125rem; text-wrap: pretty; }
+.state :global(.btn) { width: 100%; }
 .stateError p { color: var(--error-text); font-weight: 600; }
 
 @media (max-width: 40em) {
@@ -118,7 +120,6 @@
   .banner { font-size: 0.875rem; }
   .bannerFull { display: none; }
   .bannerShort { display: inline; }
-  .state { min-height: 14rem; padding: var(--space-32) var(--pad-card); }
 }
 
 @media (prefers-reduced-motion: reduce) {

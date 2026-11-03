@@ -10,6 +10,8 @@
 .field { display: grid; gap: var(--space-4); }
 .inputWrap { display: grid; padding-top: var(--space-4); }
 .label, .legend { font-weight: 600; font-size: 0.9375rem; padding: 0; letter-spacing: 0; }
+/* A legend ignores its fieldset's grid gap, so the 8px sits on the legend. */
+.legend { padding-bottom: var(--space-8); }
 .hint { margin: 0; font-size: var(--small); letter-spacing: 0.01em; color: var(--text-2); }
 .error { margin: 0; font-size: 0.875rem; font-weight: 600; color: var(--error-text); }
 .status { margin: 0; font-size: var(--small); letter-spacing: 0.01em; color: var(--text-2); min-height: 1.3em; }
