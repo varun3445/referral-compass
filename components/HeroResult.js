@@ -47,7 +47,7 @@ export default function HeroResult({ result, ranking, summaryHref, onEvidence })
         </div>
       </dl>
 
-      <div className={styles.cqc}><CqcBadge cqc={provider.cqc} /></div>
+      <div className={styles.cqc}><CqcBadge cqc={provider.cqc} highest={result.badges.highestRated} /></div>
 
       <p className={styles.why}>{whySentence(result, ranking)}</p>
 

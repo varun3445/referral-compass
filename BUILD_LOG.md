@@ -106,3 +106,17 @@ Presentation and copy only. `lib/rank.js`, `scripts/` and `data/` untouched (che
 - Printed NHS link broke at a hyphen mid-URL. Now prints on its own line, unbroken.
 - Evidence panel used `requestAnimationFrame` to start its slide, which never fires in a background tab, and close relied on a timer that hidden tabs throttle. Now forces a style flush to open and finishes closing on `transitionend` with a timer fallback; reopening cancels a pending close.
 - No short NHS choice URL exists (`nhs.uk/your-choices` is a 404), so the summary prints the real path without `https://www.`.
+
+## M4b ranking on fresh data (3 Nov 2026)
+
+**Decision: stale data no longer drives the ranking.** Every CQC overall rating in scope is 3 to 8 years old (newest Nov 2023, oldest Mar 2018). Waiting times are from Aug 2026 and distance is computed live. Letting a 2018 inspection move a trust above or below one with a shorter wait *this* quarter would give an old judgement the same authority as current data, and the GP couldn't see that from the order. So by default the ranking uses only the two fresh signals:
+- Shortest wait: wait 0.75, distance 0.25
+- Balanced: wait 0.55, distance 0.45
+
+CQC stays visible as context (tag, "Last rated", old ratings banner, Well-led chip, "Highest rated" badge). A GP who still wants it in the maths can tick **"Include CQC rating in the ranking (ratings are 3 to 8 years old)"**, which restores the old weights (0.6/0.2/0.2 and 0.4/0.3/0.3).
+
+- The age range in that label is worked out from the data (`ratingAgeRange` in `lib/explain.js`). The brief said "2 to 8", but the newest rating (3 Nov 2023) is exactly 3 years old today, so the label reads "3 to 8".
+- Effect on the headline search (Rheumatology, WC2N, 25 km, Balanced): **Guy's moves to #1** (0.895) ahead of Homerton (0.888), still a close call. With CQC ticked the old order returns (Homerton 0.850, Guy's 0.849).
+- `checks/verify-ranking.mjs` recomputes the pool by hand with its own distance maths and confirms the top 5 and totals match `lib/rank.js` to 9 decimals, and that the weights sum to 1 in all four modes. Output saved in `checks/verify-output.txt`.
+- The "why" sentence had to change: with Guy's first it read "2 weeks longer than the shortest wait of 18 options and the closest." Now: "Closest of 18 options, with a wait 2 weeks longer than the shortest."
+- "Highest rated" had dropped out of the UI in M4a; restored next to the CQC tag as context.

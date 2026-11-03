@@ -12,7 +12,7 @@ export default function OptionRow({ result, onEvidence }) {
       <div className={styles.main}>
         <h3 className={styles.name}>{provider.name}</h3>
         {provider.isSpecialist && <span className={styles.specialist}>Specialist or community service</span>}
-        <CqcBadge cqc={provider.cqc} />
+        <CqcBadge cqc={provider.cqc} highest={result.badges.highestRated} />
       </div>
       <div className={styles.wait}>
         <span className={styles.big}>{weeks(wait.medianWeeks)}</span>

@@ -10,7 +10,7 @@ export const CQC_TONE = {
 
 // CQC rating as a text tag (never colour alone) plus when it was rated.
 // No overall rating: says so, and shows any Well-led-only rating as context.
-export default function CqcBadge({ cqc, compact = false }) {
+export default function CqcBadge({ cqc, compact = false, highest = false }) {
   if (!cqc.rating) {
     return (
       <span className={`${styles.wrap} ${compact ? styles.compact : ''}`}>
@@ -32,6 +32,7 @@ export default function CqcBadge({ cqc, compact = false }) {
         <span className="visually-hidden">CQC rating: </span>{cqc.rating}
       </span>
       <span className={styles.meta}>Last rated {monthYear(cqc.date)}</span>
+      {highest && <span className={styles.highest}>Highest rated</span>}
     </span>
   );
 }

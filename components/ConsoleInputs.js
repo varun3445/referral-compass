@@ -1,8 +1,11 @@
 'use client';
 import meta from '@/data/meta.json';
+import providers from '@/data/providers.json';
+import { ratingAgeRange } from '@/lib/explain';
 import styles from './ConsoleInputs.module.css';
 
 export const DISTANCES = [10, 25, 50, 80];
+const AGE = ratingAgeRange(providers);
 export const PRIORITIES = [
   ['fastest', 'Shortest wait'],
   ['balanced', 'Balanced'],
@@ -93,7 +96,7 @@ export default function ConsoleInputs({ value, onChange, postcodeStatus, onSubmi
         segmented
       />
 
-      <details className={styles.more} open={value.includeSpecialist || undefined}>
+      <details className={styles.more} open={value.includeSpecialist || value.includeQuality || undefined}>
         <summary>More options</summary>
         <label className={styles.check}>
           <input
@@ -102,6 +105,14 @@ export default function ConsoleInputs({ value, onChange, postcodeStatus, onSubmi
             onChange={(e) => set('includeSpecialist')(e.target.checked)}
           />
           <span>Include specialist and community services</span>
+        </label>
+        <label className={styles.check}>
+          <input
+            type="checkbox"
+            checked={value.includeQuality}
+            onChange={(e) => set('includeQuality')(e.target.checked)}
+          />
+          <span>Include CQC rating in the ranking (ratings are {AGE.min} to {AGE.max} years old)</span>
         </label>
       </details>
 

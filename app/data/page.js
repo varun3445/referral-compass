@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import providers from '@/data/providers.json';
 import meta from '@/data/meta.json';
-import { WEIGHTS, QUALITY_SCORE, UNRATED_QUALITY_SCORE, CLOSE_CALL } from '@/lib/rank';
+import { WEIGHTS, WEIGHTS_WITH_QUALITY, QUALITY_SCORE, UNRATED_QUALITY_SCORE, CLOSE_CALL } from '@/lib/rank';
+import { ratingAgeRange } from '@/lib/explain';
 import { monthYear, isOlderThan2Years } from '@/lib/format';
 import styles from './data.module.css';
 
@@ -20,6 +21,9 @@ const STATS = {
   specialist: providers.filter((p) => p.isSpecialist).map((p) => p.name),
   smallPairs: providers.flatMap((p) => Object.values(p.specialties)).filter((s) => s.smallNumbers).length,
 };
+
+const AGE = ratingAgeRange(providers);
+const PRIORITY_LABEL = { fastest: 'Shortest wait', balanced: 'Balanced' };
 
 const OGL = 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/';
 
@@ -62,8 +66,8 @@ const LIMITS = [
   ['Trust, not hospital site', 'NHS England publishes waiting times per trust. A trust may run several hospitals with different waits.'],
   ['“Waiting so far”, not time to appointment', 'The median is how long people currently on the list have waited so far. It is not a prediction of when a new patient will be seen.'],
   ['Distance is approximate', 'A straight line from the centre of the patient’s postcode area (e.g. WC2N) to the trust’s registered headquarters. The clinic may be at another site, and travel time is not measured.'],
-  ['CQC ratings are trust-wide and old', `A rating covers the whole trust, not the specialty. ${STATS.allRatingsOld ? 'Every' : 'Most'} overall rating in this data set is over 2 years old (oldest ${STATS.oldest}, newest ${STATS.newest}). The console shows one banner when this is true.`],
-  ['Well-led-only trusts', `${STATS.wellLedOnly} trusts have only a trust-level Well-led rating from CQC’s newer approach, with no overall rating. They show “Rating unavailable” plus a “Well-led only” chip, and are given a neutral quality score of ${UNRATED_QUALITY_SCORE} in the maths. Well-led is never used as a stand-in for the overall rating.`],
+  ['CQC ratings are trust-wide and old', `A rating covers the whole trust, not the specialty. ${STATS.allRatingsOld ? 'Every' : 'Most'} overall rating in this data set is over 2 years old: they are ${AGE.min} to ${AGE.max} years old (oldest ${STATS.oldest}, newest ${STATS.newest}). Because of this, CQC ratings are shown as context but are not used in the ranking unless the GP ticks “Include CQC rating in the ranking”.`],
+  ['Well-led-only trusts', `${STATS.wellLedOnly} trusts have only a trust-level Well-led rating from CQC’s newer approach, with no overall rating. They show “Rating unavailable” plus a “Well-led only” chip, and, only when CQC is included in the ranking, are given a neutral quality score of ${UNRATED_QUALITY_SCORE}. Well-led is never used as a stand-in for the overall rating.`],
   ['Small numbers', `Trust and specialty pairs with fewer than ${meta.minWaitingForRanking} people waiting are not ranked (a median from a handful of patients is noise). They are listed under the shortlist. There are ${STATS.smallPairs} such pairs.`],
   ['Specialist and community services', `${STATS.specialist.length} trusts are tagged as specialist or community services (${STATS.specialist.join(', ')}). They are hidden from the ranking unless the GP ticks “Include specialist and community services”, and keep their tag when shown.`],
   ['London area only', `Only the ${STATS.trusts} NHS trusts within ${meta.radiusKm} km of central London are included, to keep the data reviewable. Independent sector providers are not included.`],
@@ -153,35 +157,40 @@ export default function DataPage() {
       <section id="ranking" className={styles.section}>
         <h2>Ranking</h2>
         <p>
-          Trusts with data for the chosen specialty within the chosen distance are scored from 0 to 1 on three factors.
-          Scores are relative to the trusts in that search: the best gets 1, the worst gets 0.
+          Trusts with data for the chosen specialty within the chosen distance are scored from 0 to 1. By default the
+          ranking uses <strong>waiting time and distance only</strong>. CQC ratings are {AGE.min} to {AGE.max} years
+          old, so they are shown next to each trust but do not change the order unless the GP ticks “Include CQC
+          rating in the ranking” under More options. Scores are relative to the trusts in that search: the best gets 1,
+          the worst gets 0.
         </p>
         <ul className={styles.list}>
           <li><strong>Wait:</strong> <code>(longest median − this median) ÷ (longest − shortest)</code></li>
           <li>
-            <strong>Quality:</strong>{' '}
+            <strong>Quality (only when CQC is included):</strong>{' '}
             {Object.entries(QUALITY_SCORE).map(([k, v]) => `${k} ${v}`).join(' · ')} · no overall rating {UNRATED_QUALITY_SCORE} (flagged)
           </li>
           <li><strong>Distance:</strong> <code>(furthest − this) ÷ (furthest − nearest)</code></li>
         </ul>
         <div className={styles.tableWrap}>
           <table className={`${styles.table} ${styles.weights}`}>
-            <caption className="visually-hidden">Ranking weights by priority</caption>
+            <caption className="visually-hidden">Ranking weights by priority and CQC setting</caption>
             <thead>
-              <tr><th scope="col">Priority</th><th scope="col">Wait</th><th scope="col">Quality</th><th scope="col">Distance</th></tr>
+              <tr><th scope="col">Priority</th><th scope="col">CQC in ranking</th><th scope="col">Wait</th><th scope="col">Quality</th><th scope="col">Distance</th></tr>
             </thead>
             <tbody>
-              {Object.entries(WEIGHTS).map(([k, w]) => (
-                <tr key={k}>
-                  <th scope="row">{k === 'fastest' ? 'Fastest' : 'Balanced'}</th>
-                  <td>{w.wait}</td><td>{w.quality}</td><td>{w.distance}</td>
-                </tr>
-              ))}
+              {[[WEIGHTS, 'No (default)'], [WEIGHTS_WITH_QUALITY, 'Yes']].flatMap(([set, label]) =>
+                Object.entries(set).map(([k, w]) => (
+                  <tr key={`${k}-${label}`}>
+                    <th scope="row">{PRIORITY_LABEL[k]}</th>
+                    <td>{label}</td><td>{w.wait}</td><td>{w.quality}</td><td>{w.distance}</td>
+                  </tr>
+                ))
+              )}
             </tbody>
           </table>
         </div>
         <p>
-          Overall score = wait × weight + quality × weight + distance × weight. The top 5 are shown. If the top two are
+          Overall score = wait × weight + distance × weight (+ quality × weight when CQC is included). The top 5 are shown. If the top two are
           within {CLOSE_CALL} of each other, both are labelled “Close call”. Each result also has a plain-language
           trade-off against the nearest trust.
         </p>

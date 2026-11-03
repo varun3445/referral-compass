@@ -11,7 +11,7 @@ export const FACTORS = [
 export default function ScoreBars({ scores, weights, qualityFlagged }) {
   return (
     <ul className={styles.bars}>
-      {FACTORS.map(([key, label]) => {
+      {FACTORS.filter(([key]) => weights[key] > 0).map(([key, label]) => {
         const value = Math.round(scores[key] * 100);
         const flagged = key === 'quality' && qualityFlagged;
         return (

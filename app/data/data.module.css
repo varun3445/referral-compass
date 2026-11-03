@@ -28,7 +28,7 @@
 .table tbody tr:last-child th, .table tbody tr:last-child td { border-bottom: 0; }
 .table thead th { font-size: 0.9375rem; color: var(--text-2); font-weight: 600; background: var(--page); }
 .table tbody th { font-weight: 600; }
-.weights { max-width: 26rem; }
+.weights { max-width: 36rem; }
 .weights td { font-variant-numeric: tabular-nums; }
 
 .defs { margin: 0; display: grid; }

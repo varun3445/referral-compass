@@ -6,6 +6,8 @@ import ScoreBars from './ScoreBars';
 import Icon from './Icon';
 import { QUALITY_SCORE, UNRATED_QUALITY_SCORE } from '@/lib/rank';
 import { weeks, km, count, monthYear, yearsAgo, isOlderThan2Years } from '@/lib/format';
+import { ratingAgeRange } from '@/lib/explain';
+import providers from '@/data/providers.json';
 import styles from './EvidenceDrawer.module.css';
 
 const RTT_SOURCE = { label: 'NHS England RTT, patients still waiting', date: meta.rttLabel, href: meta.rttSourceUrl };
@@ -16,6 +18,7 @@ const RANK_SOURCE = { label: 'Worked out here from the numbers below', date: met
 const n2 = (x) => x.toFixed(2);
 const k1 = (x) => x.toFixed(1); // formulas use 1 decimal so the arithmetic checks out
 const CLOSE_MS = 200;
+const AGE = ratingAgeRange(providers);
 
 function Source({ s }) {
   return (
@@ -117,12 +120,14 @@ export default function EvidenceDrawer({ result, ranking, outcode, specialtyName
   const r = result;
   const p = r?.provider;
   const w = r?.wait;
-  const { range, weights, consideredCount } = ranking || {};
+  const { range, weights, consideredCount, includeQuality } = ranking || {};
 
   const gaps = r ? [
     'Waiting times are for the whole trust, not one hospital or clinic.',
     'The median is how long people currently on the list have waited so far, not the time to an appointment.',
-    !p.cqc.rating && `No CQC overall rating: ${p.cqc.unavailableReason}. A neutral quality score (${UNRATED_QUALITY_SCORE}) is used.`,
+    !p.cqc.rating && (includeQuality
+      ? `No CQC overall rating: ${p.cqc.unavailableReason}. A neutral quality score (${UNRATED_QUALITY_SCORE}) is used.`
+      : `No CQC overall rating: ${p.cqc.unavailableReason}.`),
     p.cqc.rating && isOlderThan2Years(p.cqc.date) && `The CQC rating is ${yearsAgo(p.cqc.date)} years old. The trust may have changed since.`,
     'The CQC rating covers the whole trust, not this specialty.',
     p.isSpecialist && `${p.specialistNote}. It may not accept routine referrals for every condition.`,
@@ -158,6 +163,12 @@ export default function EvidenceDrawer({ result, ranking, outcode, specialtyName
               <h3>Why it is ranked {r.rank === 1 ? 'first' : `number ${r.rank}`}</h3>
               <p className={styles.plain}>Ranked {r.rank} of {consideredCount} trusts. {r.tradeOff}</p>
               <ScoreBars scores={r.scores} weights={weights} qualityFlagged={r.qualityFlagged} />
+              {!includeQuality && (
+                <p className={styles.plain}>
+                  <strong>CQC rating: not used in the ranking.</strong> Ratings are {AGE.min} to {AGE.max} years old.
+                  You can include them under More options.
+                </p>
+              )}
               <p className={styles.note}>
                 Scores are relative to the options shown here: 100 is the best of them, 0 the worst. Overall score{' '}
                 <strong>{Math.round(r.total * 100)}</strong>.
@@ -168,13 +179,15 @@ export default function EvidenceDrawer({ result, ranking, outcode, specialtyName
                   value={Math.round(r.scores.wait * 100)}
                   formula={`(longest ${weeks(range.maxWait)} − this ${weeks(w.medianWeeks)}) ÷ (longest ${weeks(range.maxWait)} − shortest ${weeks(range.minWait)}) = ${n2(r.scores.wait)}`}
                 />
-                <Fact
-                  label="Quality score"
-                  value={Math.round(r.scores.quality * 100)}
-                  formula={p.cqc.rating
-                    ? `${p.cqc.rating} = ${QUALITY_SCORE[p.cqc.rating]} (Outstanding 1, Good 0.75, Requires improvement 0.35, Inadequate 0)`
-                    : `No overall rating = neutral ${UNRATED_QUALITY_SCORE}`}
-                />
+                {includeQuality && (
+                  <Fact
+                    label="Quality score"
+                    value={Math.round(r.scores.quality * 100)}
+                    formula={p.cqc.rating
+                      ? `${p.cqc.rating} = ${QUALITY_SCORE[p.cqc.rating]} (Outstanding 1, Good 0.75, Requires improvement 0.35, Inadequate 0)`
+                      : `No overall rating = neutral ${UNRATED_QUALITY_SCORE}`}
+                  />
+                )}
                 <Fact
                   label="Distance score"
                   value={Math.round(r.scores.distance * 100)}
@@ -183,7 +196,10 @@ export default function EvidenceDrawer({ result, ranking, outcode, specialtyName
                 <Fact
                   label="Overall score"
                   value={Math.round(r.total * 100)}
-                  formula={`${weights.wait} × ${n2(r.scores.wait)} + ${weights.quality} × ${n2(r.scores.quality)} + ${weights.distance} × ${n2(r.scores.distance)} = ${n2(r.total)}`}
+                  formula={`${[['wait', 'wait'], ['quality', 'quality'], ['distance', 'distance']]
+                    .filter(([k]) => weights[k] > 0)
+                    .map(([k]) => `${weights[k]} × ${n2(r.scores[k])}`)
+                    .join(' + ')} = ${n2(r.total)}`}
                   source={RANK_SOURCE}
                 />
               </dl>
@@ -226,7 +242,7 @@ export default function EvidenceDrawer({ result, ranking, outcode, specialtyName
                   label="CQC overall rating"
                   value={<CqcBadge cqc={p.cqc} />}
                   formula={p.cqc.rating
-                    ? `Published ${monthYear(p.cqc.date)}, ${yearsAgo(p.cqc.date)} years ago${isOlderThan2Years(p.cqc.date) ? ', older than 2 years' : ''}. Covers the whole trust, not ${specialtyName}.`
+                    ? `Published ${monthYear(p.cqc.date)}, ${yearsAgo(p.cqc.date)} years ago${isOlderThan2Years(p.cqc.date) ? ', older than 2 years' : ''}. Covers the whole trust, not ${specialtyName}. ${includeQuality ? 'Used in the ranking.' : 'Not used in the ranking.'}`
                     : p.cqc.unavailableReason}
                   source={{ ...CQC_SOURCE, href: p.cqc.url || CQC_SOURCE.href, label: p.cqc.url ? 'CQC page for this trust' : CQC_SOURCE.label }}
                 />

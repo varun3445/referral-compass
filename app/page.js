@@ -19,7 +19,7 @@ const summaryHref = (r, specialty) =>
 // Kept in memory only (never written to storage), so "Back" from the
 // summary returns to the same search within this tab.
 let memory = {
-  inputs: { postcode: '', specialty: '410', maxKm: 25, priority: 'balanced', includeSpecialist: false },
+  inputs: { postcode: '', specialty: '410', maxKm: 25, priority: 'balanced', includeSpecialist: false, includeQuality: false },
   origin: null,
   collapsed: false,
 };
@@ -90,7 +90,7 @@ export default function ReferralConsole() {
     setTimeout(() => document.getElementById('postcode')?.focus(), 0);
   }
 
-  const resultKey = `${origin?.outcode}|${inputs.specialty}|${inputs.maxKm}|${inputs.priority}|${inputs.includeSpecialist}`;
+  const resultKey = `${origin?.outcode}|${inputs.specialty}|${inputs.maxKm}|${inputs.priority}|${inputs.includeSpecialist}|${inputs.includeQuality}`;
 
   return (
     <main className={styles.main}>
@@ -103,7 +103,7 @@ export default function ReferralConsole() {
         {collapsed && origin && (
           <div className={styles.summaryBar}>
             <p>
-              <strong>{origin.outcode}</strong> · {specialtyName} · {inputs.maxKm} km
+              <strong>{origin.outcode}</strong> · {specialtyName} · {inputs.maxKm} km{inputs.includeQuality ? ' · CQC on' : ''}
             </p>
             <button type="button" className={styles.edit} onClick={editSearch}>
               <Icon name="pencil" size={18} /> Edit<span className="visually-hidden"> search</span>
