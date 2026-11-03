@@ -72,6 +72,8 @@ export default function ReferralConsole() {
 
   const results = ranking?.results || [];
   const [top, ...others] = results;
+  // Wait bars are scaled to the longest wait among the results shown.
+  const maxWait = results.length ? Math.max(...results.map((r) => r.wait.medianWeeks)) : 0;
   const evidence = results.find((r) => r.provider.odsCode === evidenceFor) || null;
   const specialtyName = meta.specialties[inputs.specialty];
 
@@ -94,7 +96,7 @@ export default function ReferralConsole() {
 
   return (
     <main className={styles.main}>
-      <header className={styles.head}>
+      <header className={`${styles.head} ${collapsed && origin ? styles.headCompact : ''}`}>
         <h1>Compare trusts for this referral</h1>
         <p>Waiting so far, ratings and distance for {providers.length} London area trusts. Routine referrals only.</p>
       </header>
@@ -142,6 +144,8 @@ export default function ReferralConsole() {
             <div key={resultKey} className={styles.fade}>
               {oldCount > 0 && (
                 <p className={`callout ${styles.banner}`}>
+                  <Icon name="triangle-alert" size={18} />
+                  <span className={styles.bannerText}>
                   <strong>Important</strong>{' '}
                   <span className={styles.bannerFull}>
                     {oldCount === rated.length
@@ -151,6 +155,7 @@ export default function ReferralConsole() {
                   </span>
                   <span className={styles.bannerShort} aria-hidden="true">
                     {oldCount === rated.length ? 'All CQC ratings are over 2 years old.' : `${oldCount} of ${rated.length} ratings are over 2 years old.`}
+                  </span>
                   </span>
                 </p>
               )}
@@ -165,6 +170,7 @@ export default function ReferralConsole() {
               <HeroResult
                 result={top}
                 ranking={ranking}
+                maxWait={maxWait}
                 summaryHref={summaryHref(top, inputs.specialty)}
                 onEvidence={() => setEvidenceFor(top.provider.odsCode)}
               />
@@ -174,7 +180,7 @@ export default function ReferralConsole() {
                   <h2 className={styles.othersHead}>Other options</h2>
                   <ul className={styles.rows}>
                     {others.slice(0, 4).map((r) => (
-                      <OptionRow key={r.provider.odsCode} result={r} onEvidence={() => setEvidenceFor(r.provider.odsCode)} />
+                      <OptionRow key={r.provider.odsCode} result={r} maxWait={maxWait} onEvidence={() => setEvidenceFor(r.provider.odsCode)} />
                     ))}
                   </ul>
                 </div>

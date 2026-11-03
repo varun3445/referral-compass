@@ -1,11 +1,12 @@
 import CqcBadge from './CqcBadge';
 import Icon from './Icon';
+import WaitBar from './WaitBar';
 import { weeks, km } from '@/lib/format';
 import styles from './OptionRow.module.css';
 
-// A compact "other option". The Evidence button stretches over the whole
-// row, so the row is one big tap target with one accessible name.
-export default function OptionRow({ result, onEvidence }) {
+// A compact "other option" card. The Evidence button stretches over the
+// whole card, so it is one big tap target with one accessible name.
+export default function OptionRow({ result, maxWait, onEvidence }) {
   const { provider, wait, distanceKm } = result;
   return (
     <li className={styles.row}>
@@ -15,10 +16,16 @@ export default function OptionRow({ result, onEvidence }) {
         <CqcBadge cqc={provider.cqc} highest={result.badges.highestRated} />
       </div>
       <div className={styles.wait}>
-        <span className={styles.big}>{weeks(wait.medianWeeks)}</span>
-        <span className={styles.unit}>weeks</span>
+        <span className={styles.value}>
+          <span className={styles.big}>{weeks(wait.medianWeeks)}</span>
+          <span className={styles.unit}>weeks</span>
+        </span>
+        <WaitBar weeks={wait.medianWeeks} max={maxWait} size="sm" />
       </div>
-      <div className={styles.km}>{km(distanceKm)} km</div>
+      <div className={styles.km}>
+        <Icon name="map-pin" size={16} />
+        <span className="nowrap">{km(distanceKm)} km</span>
+      </div>
       <button type="button" className={styles.evidence} onClick={onEvidence} aria-haspopup="dialog">
         Evidence<span className="visually-hidden"> for {provider.name}</span>
         <Icon name="chevron-right" size={18} />

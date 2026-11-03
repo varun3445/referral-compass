@@ -1,0 +1,11 @@
+.track { display: block; width: 100%; background: var(--track); border-radius: 999px; overflow: hidden; }
+.md { height: 0.625rem; }
+.sm { height: 0.5rem; }
+.fill {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: repeating-linear-gradient(135deg, var(--hatch) 0 2px, var(--hatch-2) 2px 5px);
+  box-shadow: inset 0 0 0 1px rgba(31, 122, 90, 0.18);
+}
+@media (forced-colors: active) { .fill { background: CanvasText; } }

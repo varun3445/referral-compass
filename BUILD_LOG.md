@@ -120,3 +120,19 @@ CQC stays visible as context (tag, "Last rated", old ratings banner, Well-led ch
 - `checks/verify-ranking.mjs` recomputes the pool by hand with its own distance maths and confirms the top 5 and totals match `lib/rank.js` to 9 decimals, and that the weights sum to 1 in all four modes. Output saved in `checks/verify-output.txt`.
 - The "why" sentence had to change: with Guy's first it read "2 weeks longer than the shortest wait of 18 options and the closest." Now: "Closest of 18 options, with a wait 2 weeks longer than the shortest."
 - "Highest rated" had dropped out of the UI in M4a; restored next to the CQC tag as context.
+
+## M4c visual finish (3 Nov 2026)
+
+Restyle only. No ranking, data or copy changes, apart from the delta lines the brief asked for ("+2.3 weeks vs shortest", "+6 km vs closest", "Closest option").
+
+- **Dropped the NHS look**, kept NHS plain language and accessibility. Pale grey canvas (#ECEEF1), borderless white cards (radius 20, two-layer soft shadow), deep green #1F7A5A as the only data accent, near-black pill for primary actions, white outlined pills for secondary, near-black selected chips. Inter via `next/font` (part of Next, no new dependency).
+- **Signature: hatched wait bars.** Every result has a lime diagonal-hatch bar for "waiting so far", scaled to the longest wait in the results shown. The number is always written next to it; the bar is `aria-hidden`.
+- **One big number per tile** (44px, weight 600, -0.03em, tabular), unit and label small and muted, delta line with a tiny Lucide icon. "Other options" are now separate lifting cards.
+- CQC tags: tinted pill + dot + text label. Old ratings banner: soft amber, radius 14, small icon.
+- Focus: 3px dark ring with a 2px white gap (replaces the NHS yellow). Motion: 2px hover lift, 0.98 press, 200ms ease-out, panels exit the way they enter; reduced motion drops the lift and slides.
+- **Phones:** numbers never wrap from their units; the wait tile is full width with the other two side by side; after a search the intro paragraph hides and the headline shrinks, so the wait number sits at 490px of an 844px screen.
+
+**Mistakes caught**
+- "Seen within 18 weeks" didn't fit a half-width tile at 390px and pushed its bar past the edge. Copy couldn't change, so the two small tiles drop their icons and use a 12px label on phones.
+- At 320px the one-line phone banner (nowrap) widened the results grid and the page scrolled sideways. Fixed with `minmax(0, 1fr)` on the results column.
+- The new 5-column weights table on /data scrolls inside its box on phones; axe flagged the scroll area as not keyboard reachable. Both table wrappers are now labelled, focusable regions.

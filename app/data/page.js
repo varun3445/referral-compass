@@ -97,7 +97,7 @@ export default function DataPage() {
 
       <section id="sources" className={styles.section}>
         <h2>Sources</h2>
-        <div className={styles.tableWrap}>
+        <div className={styles.tableWrap} role="region" aria-label="Sources table, scrolls sideways on small screens" tabIndex={0}>
           <table className={styles.table}>
             <thead>
               <tr><th scope="col">Data</th><th scope="col">Source</th><th scope="col">Date</th><th scope="col">What we use</th></tr>
@@ -171,7 +171,7 @@ export default function DataPage() {
           </li>
           <li><strong>Distance:</strong> <code>(furthest − this) ÷ (furthest − nearest)</code></li>
         </ul>
-        <div className={styles.tableWrap}>
+        <div className={styles.tableWrap} role="region" aria-label="Ranking weights table, scrolls sideways on small screens" tabIndex={0}>
           <table className={`${styles.table} ${styles.weights}`}>
             <caption className="visually-hidden">Ranking weights by priority and CQC setting</caption>
             <thead>

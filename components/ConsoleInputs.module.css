@@ -2,40 +2,43 @@
   display: grid;
   gap: var(--s4);
   background: var(--card);
-  border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   padding: var(--s4);
 }
 
 .field { display: grid; gap: var(--s1); }
-.label, .legend { font-weight: 600; font-size: 1rem; padding: 0; }
-.hint { margin: 0; font-size: 0.9375rem; color: var(--text-2); }
-.error { margin: 0; font-size: 0.9375rem; font-weight: 600; color: var(--error-text); }
-.status { margin: 0; font-size: 0.875rem; color: var(--text-2); min-height: 1.3em; }
+.label, .legend { font-weight: 600; font-size: 0.9375rem; padding: 0; letter-spacing: -0.005em; }
+.hint { margin: 0; font-size: 0.875rem; color: var(--text-2); }
+.error { margin: 0; font-size: 0.875rem; font-weight: 600; color: var(--error-text); }
+.status { margin: 0; font-size: 0.8125rem; color: var(--text-2); min-height: 1.3em; }
 
 .postcode {
   margin-top: var(--s1);
   width: 100%;
-  min-height: 3.5rem;
+  min-height: 3.25rem;
   padding: 0 var(--s3);
-  border: 2px solid var(--text-2);
+  border: 1px solid var(--line);
   border-radius: var(--radius-sm);
-  background: var(--card);
+  background: var(--soft);
   color: var(--text);
   font: inherit;
-  font-size: 1.5rem;
+  font-size: 1.375rem;
   font-weight: 600;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
+  transition: background-color 200ms var(--ease), border-color 200ms var(--ease);
 }
-.hasError .postcode { border-color: var(--error); }
+.postcode:hover { border-color: #cfd4da; }
+.postcode:focus { background: var(--card); }
+.postcode:focus-visible { box-shadow: var(--ring); outline: 3px solid transparent; }
+.hasError .postcode { border-color: var(--error); background: #fdf0ef; }
 
 .group { border: 0; margin: 0; padding: 0; min-width: 0; display: grid; gap: var(--s2); }
 
-.chips { display: flex; flex-wrap: wrap; gap: var(--s2); }
+.chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 .even { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.375rem; }
-.even .chip span { width: 100%; justify-content: center; padding: 0 0.25rem; white-space: nowrap; }
+.even .chip span { width: 100%; justify-content: center; padding: 0 0.25rem; }
 
 .chip { position: relative; display: inline-flex; cursor: pointer; }
 .chip input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
@@ -46,75 +49,54 @@
   padding: 0 0.875rem;
   border-radius: 999px;
   background: var(--card);
-  box-shadow: inset 0 0 0 1px var(--border);
-  font-size: 0.9375rem;
+  box-shadow: inset 0 0 0 1px var(--line);
+  font-size: 0.875rem;
   font-weight: 500;
   color: var(--text);
-  transition: background-color 100ms ease-out, transform 100ms ease-out;
+  white-space: nowrap;
+  transition: background-color 200ms var(--ease), color 200ms var(--ease), transform 200ms var(--ease);
 }
-.chip:hover span { box-shadow: inset 0 0 0 1.5px var(--accent); }
+.chip:hover span { background: var(--soft); }
 .chip:active span { transform: scale(0.98); }
-.chip input:checked + span {
-  background: var(--accent);
-  color: #fff;
-  box-shadow: none;
-  font-weight: 600;
-}
-.chip input:focus-visible + span {
-  background: var(--focus);
-  color: var(--focus-text);
-  box-shadow: 0 4px 0 var(--focus-text);
-}
+.chip input:checked + span { background: var(--ink); color: #fff; box-shadow: none; font-weight: 600; }
+.chip input:focus-visible + span { box-shadow: var(--ring); }
 
-/* Segmented control: two equal halves in one rounded track. */
+/* Segmented control: one rounded track, selected half is near black. */
 .segmented {
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 0.25rem;
-  border-radius: var(--radius-sm);
-  background: var(--page);
+  border-radius: 999px;
+  background: var(--soft);
+  box-shadow: inset 0 0 0 1px var(--line);
   gap: 0.25rem;
 }
-.segmented .chip span {
-  width: 100%;
-  justify-content: center;
-  border-radius: 0.5rem;
-  background: transparent;
-  box-shadow: none;
-}
-.segmented .chip input:checked + span { background: var(--card); color: var(--text); box-shadow: var(--shadow), 0 0 0 1px var(--border); }
-.segmented .chip input:focus-visible + span { background: var(--focus); box-shadow: 0 4px 0 var(--focus-text); }
+.segmented .chip span { width: 100%; justify-content: center; background: transparent; box-shadow: none; min-height: 2.5rem; }
+.segmented .chip:hover span { background: rgba(17, 20, 24, 0.04); }
+.segmented .chip input:checked + span { background: var(--ink); color: #fff; }
+.segmented .chip input:focus-visible + span { box-shadow: var(--ring); }
+.segmented .chip { min-height: var(--tap); align-items: center; }
 
-.more { border-top: 1px solid var(--border); padding-top: var(--s3); }
+.more { border-top: 1px solid var(--line); padding-top: var(--s3); }
 .more summary {
   cursor: pointer;
-  color: var(--link);
-  font-size: 1rem;
+  color: var(--accent);
+  font-size: 0.9375rem;
+  font-weight: 600;
   min-height: var(--tap);
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  text-decoration: underline;
-  text-underline-offset: 0.15em;
+  border-radius: 999px;
 }
-.more summary:focus-visible {
-  outline: 4px solid transparent;
-  background: var(--focus);
-  color: var(--focus-text);
-  box-shadow: 0 4px 0 var(--focus-text);
-  text-decoration: none;
-}
-.check { display: flex; gap: 0.75rem; align-items: flex-start; font-size: 1rem; cursor: pointer; padding: var(--s2) 0; }
-.check input { width: 1.5rem; height: 1.5rem; margin: 0; flex: none; accent-color: var(--accent); }
+.check { display: flex; gap: 0.75rem; align-items: flex-start; font-size: 0.9375rem; cursor: pointer; padding: var(--s2) 0; }
+.check input { width: 1.25rem; height: 1.25rem; margin: 0.125rem 0 0; flex: none; accent-color: var(--ink); }
 
 .submit { width: 100%; }
-.submit:disabled { opacity: 0.5; cursor: not-allowed; }
+.submit:disabled { opacity: 0.45; cursor: not-allowed; }
 
-/* Desktop: results update live, so no submit button. */
 @media (min-width: 61.875em) {
   .submit { display: none; }
-  .form { padding: var(--s4) var(--s4) var(--s3); }
 }
-
 @media (max-width: 22em) {
   .form { padding: var(--s3); }
 }

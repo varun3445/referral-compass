@@ -2,10 +2,11 @@
   width: 100%;
   max-width: 65rem;      /* 1040 */
   margin: 0 auto;
-  padding: var(--s5) var(--s3) 0;
+  padding: var(--s4) var(--s3) 0;
 }
 
-.head { display: grid; gap: var(--s2); margin-bottom: var(--s4); }
+.head { display: grid; gap: var(--s1); margin-bottom: var(--s4); }
+.head h1 { font-size: 2rem; letter-spacing: -0.03em; }
 .head p { margin: 0; color: var(--text-2); max-width: 40rem; }
 
 .layout { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--s4); align-items: start; }
@@ -30,20 +31,19 @@
 
 .summaryBar {
   position: sticky;
-  top: 0;
+  top: var(--s2);
   z-index: 5;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: var(--s3);
-  padding: var(--s2) var(--s2) var(--s2) var(--s3);
+  padding: 0.375rem 0.375rem 0.375rem var(--s3);
   background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: 0 2px 6px rgba(33, 43, 50, 0.08);
+  border-radius: 999px;
+  box-shadow: var(--shadow-lift);
   min-width: 0;
 }
-.summaryBar p { margin: 0; font-size: 1rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+.summaryBar p { margin: 0; font-size: 0.9375rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
 .edit {
   display: inline-flex;
   align-items: center;
@@ -51,42 +51,36 @@
   min-height: var(--tap);
   padding: 0 var(--s3);
   border: 0;
-  border-radius: 0.625rem;
-  background: var(--accent-soft);
-  color: var(--link);
+  border-radius: 999px;
+  background: var(--ink);
+  color: #fff;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.9375rem;
   cursor: pointer;
   flex: none;
-  transition: transform 100ms ease-out;
+  transition: transform 200ms var(--ease);
 }
 .edit:active { transform: scale(0.98); }
 
-.results { display: grid; gap: var(--s3); min-width: 0; outline: none; }
-.count { margin: 0; font-size: 0.9375rem; color: var(--text-2); min-height: 1.4em; }
+.results { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--s3); min-width: 0; outline: none; }
+.count { margin: 0; font-size: 0.875rem; color: var(--text-2); min-height: 1.4em; }
 
-.fade { display: grid; gap: var(--s3); animation: fade-in 150ms ease-out; }
+.fade { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--s3); animation: fade-in 200ms ease-out; }
+.fade > * { min-width: 0; }
 
-.banner { font-size: 1rem; }
+.banner { font-size: 0.9375rem; }
+.bannerText { min-width: 0; }
 .bannerShort { display: none; }
-.note, .quiet { display: flex; gap: 0.625rem; align-items: flex-start; font-size: 1rem; }
-.note svg { color: var(--cqc-ri); flex: none; margin-top: 0.125rem; }
-.quiet { display: block; font-size: 0.9375rem; color: var(--text-2); }
+.note, .quiet { display: flex; gap: 0.625rem; align-items: flex-start; font-size: 0.9375rem; }
+.note { background: var(--amber-bg); color: var(--amber-text); }
+.note svg { color: var(--amber-icon); flex: none; margin-top: 0.15em; }
+.quiet { display: block; font-size: 0.875rem; color: var(--text-2); background: transparent; padding: 0 var(--s1); }
 
-.others { display: grid; gap: var(--s2); margin-top: var(--s2); }
-.othersHead { font-size: var(--h3); }
-.rows {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  overflow: hidden;
-}
+.others { display: grid; gap: 0.75rem; margin-top: var(--s3); }
+.othersHead { font-size: 1.125rem; padding: 0 var(--s1); }
+.rows { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.75rem; }
 
-.footnote { margin: 0; font-size: 0.9375rem; color: var(--text-2); }
+.footnote { margin: var(--s2) 0 0; padding: 0 var(--s1); font-size: 0.875rem; color: var(--text-2); }
 
 .state {
   display: grid;
@@ -94,24 +88,30 @@
   justify-items: start;
   padding: var(--s5) var(--s4);
   background: var(--card);
-  border: 1px solid var(--border);
   border-radius: var(--radius);
+  box-shadow: var(--shadow);
 }
-.state p { margin: 0; font-size: 1.0625rem; }
+.state p { margin: 0; font-size: 1rem; }
 .stateError p { color: var(--error-text); font-weight: 600; }
 
-/* On phones the CQC banner stays to one short line. */
 @media (max-width: 40em) {
   .main { padding-top: var(--s3); }
-  .head { margin-bottom: var(--s3); gap: var(--s1); }
+  .head { margin-bottom: var(--s3); }
   .head h1 { font-size: 1.5rem; }
   .head p { font-size: 0.9375rem; }
-  .banner { font-size: 0.9375rem; padding: 0.625rem 0.75rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  /* After a search: hide the intro and shrink the headline so the hero
+     card's wait number is visible without scrolling. */
+  .headCompact { margin-bottom: var(--s2); }
+  .headCompact h1 { font-size: 1.125rem; letter-spacing: -0.015em; }
+  .headCompact p { display: none; }
+  .layout { gap: var(--s3); }
+  .banner { font-size: 0.875rem; padding: 0.625rem 0.75rem; }
+  .bannerText { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .bannerFull { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
   .bannerShort { display: inline; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .fade { animation-duration: 150ms; }
+  .fade { animation-duration: 200ms; }
   .edit:active { transform: none; }
 }

@@ -15,6 +15,7 @@ export default function CqcBadge({ cqc, compact = false, highest = false }) {
     return (
       <span className={`${styles.wrap} ${compact ? styles.compact : ''}`}>
         <span className={`${styles.tag} ${styles.none}`}>
+          <span className={styles.dot} aria-hidden="true" />
           <span className="visually-hidden">CQC: </span>No rating
         </span>
         {cqc.wellLed && (
@@ -29,6 +30,7 @@ export default function CqcBadge({ cqc, compact = false, highest = false }) {
   return (
     <span className={`${styles.wrap} ${compact ? styles.compact : ''}`}>
       <span className={`${styles.tag} ${styles[CQC_TONE[cqc.rating]]}`}>
+        <span className={styles.dot} aria-hidden="true" />
         <span className="visually-hidden">CQC rating: </span>{cqc.rating}
       </span>
       <span className={styles.meta}>Last rated {monthYear(cqc.date)}</span>

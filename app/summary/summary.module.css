@@ -16,7 +16,6 @@
 
 .card {
   background: var(--card);
-  border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   padding: var(--s5);
@@ -24,9 +23,9 @@
 .card h2 { font-size: var(--h3); margin: var(--s4) 0 var(--s2); }
 .card p { margin: 0 0 var(--s3); }
 
-.kicker { font-size: 0.9375rem; font-weight: 600; color: var(--text-2); margin-bottom: var(--s2) !important; }
+.kicker { font-size: 0.875rem; font-weight: 500; color: var(--text-2); margin-bottom: var(--s2) !important; }
 .lead { font-size: var(--h3); font-weight: 600; letter-spacing: 0; }
-.trust { margin: var(--s2) 0 var(--s4) !important; font-size: var(--h1); font-weight: 700; line-height: 1.2; letter-spacing: -0.015em; color: var(--accent); }
+.trust { margin: var(--s2) 0 var(--s4) !important; font-size: 2rem; font-weight: 600; line-height: 1.15; letter-spacing: -0.03em; color: var(--text); }
 
 .facts { margin: 0 0 var(--s2); display: grid; gap: var(--s2); }
 .fact {
@@ -35,12 +34,12 @@
   gap: var(--s3);
   padding: var(--s3);
   border-radius: var(--radius-sm);
-  background: var(--page);
+  background: var(--soft);
 }
-.fact dt { font-size: 1rem; color: var(--text-2); font-weight: 600; }
+.fact dt { font-size: 0.875rem; color: var(--text-2); font-weight: 500; }
 .fact dd { margin: 0; display: grid; gap: var(--s1); justify-items: start; }
-.big { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.02em; line-height: 1.2; }
-.small { display: block; font-size: 1rem; color: var(--text-2); }
+.big { font-size: 1.75rem; font-weight: 600; letter-spacing: -0.03em; line-height: 1.15; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.small { display: block; font-size: 0.9375rem; color: var(--text-2); }
 
 .url { font-weight: 600; overflow-wrap: anywhere; }
 .disclaimer { margin-top: var(--s3) !important; }
