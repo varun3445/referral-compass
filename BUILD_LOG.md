@@ -46,3 +46,27 @@ Reviewer recomputed all 180 trust×specialty pairs from the raw CSV: PASS with 4
 - Tested: invalid postcode, Scottish postcode (England-only message), empty state at 5 km in rural Sussex, Fastest vs Balanced reorder, Well-led chip (Hillingdon), specialist tags (RNOH, Kent Community), small-numbers note (Royal Marsden, 4 waiting).
 - **Observation for video:** T&O at 80 km, Fastest: Kent Community Health appears at #4, 78 km away. The specialist tag is what stops a GP being misled.
 - Gate screenshot: `docs/gate-m2-rheumatology-wc2n.jpg`.
+
+## G2 review → M2 fixes, console UI, M3 (3 Nov 2026)
+
+**GitHub:** gh's active account was the *work* account. Stopped and asked; Varun chose to switch the active gh account to `varun3445`. Repo-local git identity uses the GitHub noreply email so no personal or work email goes into public history.
+
+**M2 fixes**
+- **Close call:** top two within 0.03 → both get "Close call: similar overall score"; header says "Scores are relative to the options shown here."
+- **Specialist toggle**, default off. Off = excluded from ranking and listed in a "Hidden" note so nothing silently disappears.
+- **"Fastest option has a lower CQC rating"** did not exist before; added. Fires in 79 origin×specialty combinations (e.g. Romford RM7, Rheumatology, 10 km → Barking, Havering & Redbridge, RI).
+- **Privacy: outcode only.** The browser sends just `/outcodes/WC2N` to postcodes.io; the full postcode never leaves the page. Verified in the network log; no cookies or storage. `/summary` URL carries `provider`, `specialty`, `km` only.
+- **Side effect worth saying on video:** the outcode centre of WC2N is ~0.4 km further from Guy's than the exact postcode was, so Homerton and Guy's are now tied at 85, and the new "Close call" label shows up right away on the headline search.
+
+**Console UI**
+- Badges: Nearest, Fastest, Highest rated ("Highest rated" only shown when ≤ 2 trusts share the best rating, otherwise it means nothing).
+- Factor labels and weights shown once in the header; cards show bars + numbers only, plus overall score.
+- Per-card amber age warnings replaced by one banner ("All CQC ratings shown are over 2 years old"); cards keep a quiet grey "Last rated Jul 2019".
+- Minimum 13px everywhere (grep-checked). Evidence and Select for summary sit in a right-hand column, visible at 1440×900 on the first cards.
+
+**M3**
+- Evidence drawer is a native `<dialog>`: Esc closes, focus is trapped while open and returns to the Evidence button afterwards (tested with keyboard only).
+- Every number shows its working. The pipeline now saves each percentile's inputs, so the drawer shows the real arithmetic, e.g. Homerton median: target 197 × 0.5 = 98.5 → week 3 + (98.5 − 89) ÷ 23 = 3.4 weeks.
+- **Mistake caught:** distance formulas first printed 24.6 km as "25", so the arithmetic didn't check. Formulas now use 1 decimal place.
+- **Mistake caught:** CSS Modules reject bare element selectors (`section h3`); moved to classes.
+- Patient summary printed with headless Chrome to a real PDF: **1 page, A4** (595 × 842 pt). `docs/d-summary-homerton.pdf`.

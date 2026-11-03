@@ -1,11 +1,10 @@
-.bars { margin: 0; display: grid; gap: 5px; min-width: 190px; }
-.row { display: grid; grid-template-columns: 62px 1fr; align-items: center; gap: var(--space-2); }
-.row dt { font-size: 12px; color: var(--grey-600); }
-.row dd { margin: 0; display: grid; grid-template-columns: 1fr 26px 30px; align-items: center; gap: 6px; }
+/* Same column widths as the score header in ShortlistCard.module.css */
+.cells { display: grid; grid-template-columns: repeat(3, 1fr) 52px; gap: var(--space-3); align-items: start; }
+.cell { display: flex; flex-direction: column; gap: 5px; }
+.value { font-size: 14px; font-weight: 600; color: var(--grey-800); font-variant-numeric: tabular-nums; }
 .track { height: 6px; background: var(--grey-100); border-radius: 3px; overflow: hidden; }
 .fill { display: block; height: 100%; background: var(--accent); border-radius: 3px; }
 .flagged {
-  background: repeating-linear-gradient(135deg, var(--grey-400) 0 3px, var(--grey-200) 3px 6px);
+  background: repeating-linear-gradient(135deg, var(--grey-600) 0 3px, var(--grey-200) 3px 6px);
 }
-.value { font-size: 12px; font-weight: 600; text-align: right; color: var(--grey-800); }
-.weight { font-size: 11px; color: var(--grey-600); }
+.total .value { font-size: 18px; font-weight: 700; color: var(--grey-900); }

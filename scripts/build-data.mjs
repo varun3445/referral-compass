@@ -113,6 +113,21 @@ function percentileWeeks(buckets, total, p) {
   return null;
 }
 
+// The inputs behind a percentile, so the UI can show the working:
+// weeks = lowerWeek + (target - before) / inBucket
+function percentileWorking(buckets, total, p) {
+  const target = total * p;
+  let cum = 0;
+  for (let i = 0; i < buckets.length; i++) {
+    const n = buckets[i];
+    if (n > 0 && cum + n >= target) {
+      return { target: round1(target), lowerWeek: i, before: cum, inBucket: n, openEnded: i === buckets.length - 1 };
+    }
+    cum += n;
+  }
+  return null;
+}
+
 // Name normalisation for fuzzy matching.
 const STOP = new Set(['nhs', 'foundation', 'trust', 'the', 'and', 'of', 'ft', 'university', 'hospitals', 'hospital']);
 function nameTokens(name) {
@@ -196,6 +211,9 @@ async function loadRtt() {
       p92Weeks: round1(percentileWeeks(a.buckets, a.total, 0.92)),
       pctWithin18: round1((within18 / a.total) * 100),
       totalWaiting: a.total,
+      within18,
+      medianWorking: percentileWorking(a.buckets, a.total, 0.5),
+      p92Working: percentileWorking(a.buckets, a.total, 0.92),
       smallNumbers: a.total < CONFIG.minWaitingForRanking,
     };
   }

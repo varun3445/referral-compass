@@ -1,14 +1,29 @@
-.card {
+/* Shared by the header row and every card, so columns line up. */
+.grid {
   display: grid;
-  grid-template-columns: 32px minmax(220px, 1.6fr) 150px 170px 90px minmax(190px, 1fr);
-  gap: var(--space-5);
+  grid-template-columns: 28px minmax(200px, 1.5fr) 140px 150px 80px 250px 172px;
+  gap: var(--space-4);
   align-items: start;
-  padding: var(--space-4) var(--space-5);
+  padding: 0 var(--space-4);
+}
+
+.header {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--grey-600);
+  padding-bottom: 2px;
+}
+.scoreHead { display: grid; grid-template-columns: repeat(3, 1fr) 52px; gap: var(--space-3); }
+.scoreHead b { font-weight: 500; }
+
+.card {
+  padding-top: var(--space-4);
+  padding-bottom: var(--space-4);
   background: var(--grey-0);
   border: 1px solid var(--grey-200);
   border-radius: var(--radius);
 }
-.card:first-child { border-color: var(--accent); }
+.first { border-color: var(--accent); }
 
 .rank {
   width: 28px; height: 28px;
@@ -19,41 +34,52 @@
   font-size: 14px;
   color: var(--grey-800);
 }
-.card:first-child .rank { background: var(--accent); color: var(--grey-0); }
+.first .rank { background: var(--accent); color: var(--grey-0); }
 
-.name { margin: 0; font-size: 16px; font-weight: 650; line-height: 1.3; letter-spacing: -0.005em; }
+.name { margin: 0; font-size: 16px; font-weight: 650; line-height: 1.3; }
 .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
 .tags:empty { display: none; }
 .tag {
-  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;
-  padding: 2px 6px; border-radius: 4px;
+  font-size: 13px; font-weight: 600; line-height: 1.3;
+  padding: 1px 7px; border-radius: 4px;
   background: var(--accent-soft); color: var(--accent);
 }
+.close { background: var(--grey-100); color: var(--grey-800); }
 .specialist { background: var(--warn-bg); color: var(--warn); }
 .tradeOff { margin: var(--space-2) 0 0; font-size: 14px; color: var(--grey-800); }
 
 .big { display: flex; align-items: baseline; gap: 4px; }
 .big > span:first-child { font-size: 30px; font-weight: 700; line-height: 1; letter-spacing: -0.02em; }
 .unit { font-size: 14px; font-weight: 600; color: var(--grey-600); }
-.caption { font-size: 11px; color: var(--grey-600); margin-top: 4px; line-height: 1.3; }
-.sub { font-size: 12px; color: var(--grey-600); margin-top: 4px; }
+.sub { font-size: 13px; color: var(--grey-600); margin-top: 4px; line-height: 1.35; }
+.km { font-size: 18px; font-weight: 650; line-height: 1.2; }
 
-.label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; color: var(--grey-600); margin-bottom: 6px; }
-.km { font-size: 18px; font-weight: 650; }
+.actions { display: flex; flex-direction: column; gap: 6px; }
+.primary, .secondary {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 36px; padding: 0 var(--space-3);
+  border-radius: 6px; font-size: 14px; font-weight: 600; white-space: nowrap;
+  text-decoration: none; cursor: pointer;
+}
+.primary { background: var(--accent); color: var(--grey-0); border: 1px solid var(--accent); }
+.primary:hover { background: var(--accent-hover); color: var(--grey-0); }
+.secondary { background: var(--grey-0); color: var(--accent); border: 1px solid var(--grey-400); }
+.secondary:hover { border-color: var(--accent); }
 
-@media (max-width: 1100px) {
-  .card {
-    grid-template-columns: 32px 1fr 1fr 1fr;
+@media (max-width: 1240px) {
+  .header { display: none; }
+  .grid {
+    grid-template-columns: 28px 1fr 1fr 1fr;
     grid-template-areas:
-      'rank identity identity identity'
+      'rank identity identity actions'
       '.    wait     cqc      distance'
       '.    scores   scores   scores';
-    gap: var(--space-4);
   }
-  .rank { grid-area: rank; }
-  .identity { grid-area: identity; }
-  .wait { grid-area: wait; }
-  .cqc { grid-area: cqc; }
-  .distance { grid-area: distance; }
-  .scores { grid-area: scores; }
+  .grid > :nth-child(1) { grid-area: rank; }
+  .grid > :nth-child(2) { grid-area: identity; }
+  .grid > :nth-child(3) { grid-area: wait; }
+  .grid > :nth-child(4) { grid-area: cqc; }
+  .grid > :nth-child(5) { grid-area: distance; }
+  .grid > :nth-child(6) { grid-area: scores; }
+  .grid > :nth-child(7) { grid-area: actions; }
 }

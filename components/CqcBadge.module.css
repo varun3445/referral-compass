@@ -6,7 +6,6 @@
   border-radius: 4px;
   font-size: 13px;
   font-weight: 600;
-  white-space: nowrap;
 }
 .outstanding { color: var(--cqc-outstanding); background: var(--cqc-outstanding-bg); }
 .good { color: var(--cqc-good); background: var(--cqc-good-bg); }
@@ -15,8 +14,6 @@
 .none { color: var(--cqc-none); background: var(--cqc-none-bg); }
 
 /* Well-led-only: outlined so it is clearly not the overall rating. */
-.outline { background: transparent; border: 1px solid currentColor; font-weight: 500; font-size: 12px; }
+.outline { background: transparent; border: 1px solid currentColor; font-weight: 500; }
 
-.age { font-size: 12px; color: var(--grey-600); }
-.old { color: var(--warn); }
-.old::before { content: '⚠ '; }
+.age { font-size: 13px; color: var(--grey-600); }

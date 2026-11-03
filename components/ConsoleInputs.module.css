@@ -1,12 +1,17 @@
-.row {
-  display: grid;
-  grid-template-columns: minmax(180px, 1.1fr) minmax(180px, 1fr) minmax(200px, 1.2fr) auto;
-  gap: var(--space-5);
-  align-items: start;
+.form {
   padding: var(--space-4) var(--space-5);
   background: var(--grey-0);
   border: 1px solid var(--grey-200);
   border-radius: var(--radius);
+  display: grid;
+  gap: var(--space-3);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: minmax(200px, 1.1fr) minmax(180px, 1fr) minmax(200px, 1.2fr) auto;
+  gap: var(--space-5);
+  align-items: start;
 }
 
 .field { display: flex; flex-direction: column; gap: 6px; min-width: 0; border: 0; margin: 0; padding: 0; }
@@ -31,11 +36,11 @@
   color: var(--grey-900);
 }
 input.input { text-transform: uppercase; font-family: var(--mono); letter-spacing: 0.02em; }
-input.input::placeholder { text-transform: none; font-family: var(--font); color: var(--grey-400); letter-spacing: 0; }
+input.input::placeholder { text-transform: none; font-family: var(--font); color: var(--grey-600); letter-spacing: 0; }
 .input:focus-visible { border-color: var(--accent); }
 .invalid { border-color: var(--error); background: var(--error-bg); }
 
-.hint { font-size: 12px; color: var(--grey-600); min-height: 17px; }
+.hint { font-size: 13px; color: var(--grey-600); min-height: 18px; }
 .error { font-size: 13px; color: var(--error); font-weight: 600; }
 
 .slider input[type='range'] { height: 40px; accent-color: var(--accent); width: 100%; }
@@ -61,6 +66,17 @@ input.input::placeholder { text-transform: none; font-family: var(--font); color
 .toggle label.on { background: var(--accent); color: var(--grey-0); }
 .toggle input { position: absolute; opacity: 0; width: 1px; height: 1px; }
 .toggle label:has(input:focus-visible) { box-shadow: inset var(--focus); }
+
+.check {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 14px;
+  color: var(--grey-800);
+  cursor: pointer;
+  justify-self: start;
+}
+.check input { width: 18px; height: 18px; accent-color: var(--accent); margin: 0; }
 
 @media (max-width: 900px) {
   .row { grid-template-columns: 1fr 1fr; }

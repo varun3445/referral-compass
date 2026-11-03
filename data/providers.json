@@ -25,6 +25,21 @@
         "p92Weeks": 38.2,
         "pctWithin18": 66.5,
         "totalWaiting": 7920,
+        "within18": 5263,
+        "medianWorking": {
+          "target": 3960,
+          "lowerWeek": 12,
+          "before": 3769,
+          "inBucket": 318,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 7286.4,
+          "lowerWeek": 38,
+          "before": 7274,
+          "inBucket": 51,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "301": {
@@ -33,6 +48,21 @@
         "p92Weeks": 27.9,
         "pctWithin18": 73.2,
         "totalWaiting": 1798,
+        "within18": 1317,
+        "medianWorking": {
+          "target": 899,
+          "lowerWeek": 10,
+          "before": 839,
+          "inBucket": 77,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 1654.2,
+          "lowerWeek": 27,
+          "before": 1627,
+          "inBucket": 30,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "320": {
@@ -41,6 +71,21 @@
         "p92Weeks": 34.6,
         "pctWithin18": 64.7,
         "totalWaiting": 2404,
+        "within18": 1556,
+        "medianWorking": {
+          "target": 1202,
+          "lowerWeek": 13,
+          "before": 1198,
+          "inBucket": 65,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 2211.7,
+          "lowerWeek": 34,
+          "before": 2204,
+          "inBucket": 13,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "330": {
@@ -49,6 +94,21 @@
         "p92Weeks": 34.2,
         "pctWithin18": 65.1,
         "totalWaiting": 5734,
+        "within18": 3731,
+        "medianWorking": {
+          "target": 2867,
+          "lowerWeek": 12,
+          "before": 2852,
+          "inBucket": 208,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 5275.3,
+          "lowerWeek": 34,
+          "before": 5270,
+          "inBucket": 33,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "410": {
@@ -57,6 +117,21 @@
         "p92Weeks": 29.3,
         "pctWithin18": 64.8,
         "totalWaiting": 375,
+        "within18": 243,
+        "medianWorking": {
+          "target": 187.5,
+          "lowerWeek": 11,
+          "before": 177,
+          "inBucket": 12,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 345,
+          "lowerWeek": 29,
+          "before": 344,
+          "inBucket": 3,
+          "openEnded": false
+        },
         "smallNumbers": false
       }
     }
@@ -87,6 +162,21 @@
         "p92Weeks": 38.3,
         "pctWithin18": 60,
         "totalWaiting": 4364,
+        "within18": 2620,
+        "medianWorking": {
+          "target": 2182,
+          "lowerWeek": 15,
+          "before": 2165,
+          "inBucket": 143,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 4014.9,
+          "lowerWeek": 38,
+          "before": 4006,
+          "inBucket": 35,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "301": {
@@ -95,6 +185,21 @@
         "p92Weeks": 25.5,
         "pctWithin18": 83.5,
         "totalWaiting": 4194,
+        "within18": 3500,
+        "medianWorking": {
+          "target": 2097,
+          "lowerWeek": 8,
+          "before": 2071,
+          "inBucket": 244,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 3858.5,
+          "lowerWeek": 25,
+          "before": 3841,
+          "inBucket": 36,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "320": {
@@ -103,6 +208,21 @@
         "p92Weeks": 25.2,
         "pctWithin18": 73.6,
         "totalWaiting": 4283,
+        "within18": 3154,
+        "medianWorking": {
+          "target": 2141.5,
+          "lowerWeek": 11,
+          "before": 2025,
+          "inBucket": 164,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 3940.4,
+          "lowerWeek": 25,
+          "before": 3928,
+          "inBucket": 81,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "330": {
@@ -111,6 +231,21 @@
         "p92Weeks": 38.2,
         "pctWithin18": 61.4,
         "totalWaiting": 3184,
+        "within18": 1956,
+        "medianWorking": {
+          "target": 1592,
+          "lowerWeek": 12,
+          "before": 1491,
+          "inBucket": 109,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 2929.3,
+          "lowerWeek": 38,
+          "before": 2919,
+          "inBucket": 43,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "410": {
@@ -119,6 +254,21 @@
         "p92Weeks": 28.4,
         "pctWithin18": 67.5,
         "totalWaiting": 1266,
+        "within18": 854,
+        "medianWorking": {
+          "target": 633,
+          "lowerWeek": 12,
+          "before": 597,
+          "inBucket": 52,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 1164.7,
+          "lowerWeek": 28,
+          "before": 1156,
+          "inBucket": 20,
+          "openEnded": false
+        },
         "smallNumbers": false
       }
     }
@@ -149,6 +299,21 @@
         "p92Weeks": 39.7,
         "pctWithin18": 55.5,
         "totalWaiting": 8893,
+        "within18": 4937,
+        "medianWorking": {
+          "target": 4446.5,
+          "lowerWeek": 15,
+          "before": 4221,
+          "inBucket": 263,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 8181.6,
+          "lowerWeek": 39,
+          "before": 8108,
+          "inBucket": 102,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "301": {
@@ -157,6 +322,21 @@
         "p92Weeks": 37.4,
         "pctWithin18": 64.7,
         "totalWaiting": 8819,
+        "within18": 5707,
+        "medianWorking": {
+          "target": 4409.5,
+          "lowerWeek": 12,
+          "before": 4317,
+          "inBucket": 294,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 8113.5,
+          "lowerWeek": 37,
+          "before": 8085,
+          "inBucket": 74,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "320": {
@@ -165,6 +345,21 @@
         "p92Weeks": 29.5,
         "pctWithin18": 76.5,
         "totalWaiting": 8277,
+        "within18": 6329,
+        "medianWorking": {
+          "target": 4138.5,
+          "lowerWeek": 10,
+          "before": 4068,
+          "inBucket": 361,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 7614.8,
+          "lowerWeek": 29,
+          "before": 7577,
+          "inBucket": 82,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "330": {
@@ -173,6 +368,21 @@
         "p92Weeks": 40.6,
         "pctWithin18": 57.9,
         "totalWaiting": 7442,
+        "within18": 4312,
+        "medianWorking": {
+          "target": 3721,
+          "lowerWeek": 14,
+          "before": 3606,
+          "inBucket": 184,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 6846.6,
+          "lowerWeek": 40,
+          "before": 6778,
+          "inBucket": 112,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "410": {
@@ -181,6 +391,21 @@
         "p92Weeks": 26.1,
         "pctWithin18": 75.3,
         "totalWaiting": 1262,
+        "within18": 950,
+        "medianWorking": {
+          "target": 631,
+          "lowerWeek": 10,
+          "before": 623,
+          "inBucket": 55,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 1161,
+          "lowerWeek": 26,
+          "before": 1160,
+          "inBucket": 12,
+          "openEnded": false
+        },
         "smallNumbers": false
       }
     }
@@ -211,6 +436,21 @@
         "p92Weeks": 50.3,
         "pctWithin18": 45.5,
         "totalWaiting": 7426,
+        "within18": 3382,
+        "medianWorking": {
+          "target": 3713,
+          "lowerWeek": 20,
+          "before": 3620,
+          "inBucket": 117,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 6831.9,
+          "lowerWeek": 50,
+          "before": 6807,
+          "inBucket": 82,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "301": {
@@ -219,6 +459,21 @@
         "p92Weeks": 37.2,
         "pctWithin18": 73.6,
         "totalWaiting": 3110,
+        "within18": 2290,
+        "medianWorking": {
+          "target": 1555,
+          "lowerWeek": 10,
+          "before": 1533,
+          "inBucket": 121,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 2861.2,
+          "lowerWeek": 37,
+          "before": 2855,
+          "inBucket": 27,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "320": {
@@ -227,6 +482,21 @@
         "p92Weeks": 36.3,
         "pctWithin18": 58.7,
         "totalWaiting": 6634,
+        "within18": 3891,
+        "medianWorking": {
+          "target": 3317,
+          "lowerWeek": 15,
+          "before": 3224,
+          "inBucket": 190,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 6103.3,
+          "lowerWeek": 36,
+          "before": 6077,
+          "inBucket": 102,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "330": {
@@ -235,6 +505,21 @@
         "p92Weeks": 41.8,
         "pctWithin18": 54.1,
         "totalWaiting": 8467,
+        "within18": 4583,
+        "medianWorking": {
+          "target": 4233.5,
+          "lowerWeek": 16,
+          "before": 4134,
+          "inBucket": 202,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 7789.6,
+          "lowerWeek": 41,
+          "before": 7698,
+          "inBucket": 109,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "410": {
@@ -243,6 +528,21 @@
         "p92Weeks": 19.3,
         "pctWithin18": 90.4,
         "totalWaiting": 1158,
+        "within18": 1047,
+        "medianWorking": {
+          "target": 579,
+          "lowerWeek": 8,
+          "before": 536,
+          "inBucket": 69,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 1065.4,
+          "lowerWeek": 19,
+          "before": 1051,
+          "inBucket": 44,
+          "openEnded": false
+        },
         "smallNumbers": false
       }
     }
@@ -273,6 +573,21 @@
         "p92Weeks": 40.2,
         "pctWithin18": 56.1,
         "totalWaiting": 4881,
+        "within18": 2740,
+        "medianWorking": {
+          "target": 2440.5,
+          "lowerWeek": 16,
+          "before": 2437,
+          "inBucket": 157,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 4490.5,
+          "lowerWeek": 40,
+          "before": 4478,
+          "inBucket": 57,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "301": {
@@ -281,6 +596,21 @@
         "p92Weeks": 35.1,
         "pctWithin18": 65.8,
         "totalWaiting": 3771,
+        "within18": 2481,
+        "medianWorking": {
+          "target": 1885.5,
+          "lowerWeek": 12,
+          "before": 1854,
+          "inBucket": 166,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 3469.3,
+          "lowerWeek": 35,
+          "before": 3467,
+          "inBucket": 31,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "320": {
@@ -289,6 +619,21 @@
         "p92Weeks": 32.2,
         "pctWithin18": 62.9,
         "totalWaiting": 2766,
+        "within18": 1740,
+        "medianWorking": {
+          "target": 1383,
+          "lowerWeek": 14,
+          "before": 1348,
+          "inBucket": 59,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 2544.7,
+          "lowerWeek": 32,
+          "before": 2533,
+          "inBucket": 47,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "330": {
@@ -297,6 +642,21 @@
         "p92Weeks": 34.7,
         "pctWithin18": 71.9,
         "totalWaiting": 3634,
+        "within18": 2613,
+        "medianWorking": {
+          "target": 1817,
+          "lowerWeek": 11,
+          "before": 1735,
+          "inBucket": 111,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 3343.3,
+          "lowerWeek": 34,
+          "before": 3336,
+          "inBucket": 11,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "410": {
@@ -305,6 +665,21 @@
         "p92Weeks": 18.6,
         "pctWithin18": 90.8,
         "totalWaiting": 465,
+        "within18": 422,
+        "medianWorking": {
+          "target": 232.5,
+          "lowerWeek": 8,
+          "before": 223,
+          "inBucket": 20,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 427.8,
+          "lowerWeek": 18,
+          "before": 422,
+          "inBucket": 9,
+          "openEnded": false
+        },
         "smallNumbers": false
       }
     }
@@ -335,6 +710,21 @@
         "p92Weeks": 39.6,
         "pctWithin18": 58,
         "totalWaiting": 4462,
+        "within18": 2590,
+        "medianWorking": {
+          "target": 2231,
+          "lowerWeek": 15,
+          "before": 2222,
+          "inBucket": 133,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 4105,
+          "lowerWeek": 39,
+          "before": 4078,
+          "inBucket": 43,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "301": {
@@ -343,6 +733,21 @@
         "p92Weeks": 22.8,
         "pctWithin18": 88.4,
         "totalWaiting": 1563,
+        "within18": 1381,
+        "medianWorking": {
+          "target": 781.5,
+          "lowerWeek": 5,
+          "before": 723,
+          "inBucket": 115,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 1438,
+          "lowerWeek": 22,
+          "before": 1422,
+          "inBucket": 21,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "320": {
@@ -351,6 +756,21 @@
         "p92Weeks": 39.5,
         "pctWithin18": 58,
         "totalWaiting": 2906,
+        "within18": 1686,
+        "medianWorking": {
+          "target": 1453,
+          "lowerWeek": 14,
+          "before": 1376,
+          "inBucket": 77,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 2673.5,
+          "lowerWeek": 39,
+          "before": 2656,
+          "inBucket": 34,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "330": {
@@ -359,6 +779,21 @@
         "p92Weeks": 38.2,
         "pctWithin18": 64.5,
         "totalWaiting": 4084,
+        "within18": 2635,
+        "medianWorking": {
+          "target": 2042,
+          "lowerWeek": 10,
+          "before": 1978,
+          "inBucket": 105,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 3757.3,
+          "lowerWeek": 38,
+          "before": 3749,
+          "inBucket": 40,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "410": {
@@ -367,6 +802,21 @@
         "p92Weeks": 23.1,
         "pctWithin18": 85.1,
         "totalWaiting": 1824,
+        "within18": 1553,
+        "medianWorking": {
+          "target": 912,
+          "lowerWeek": 7,
+          "before": 847,
+          "inBucket": 112,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 1678.1,
+          "lowerWeek": 23,
+          "before": 1677,
+          "inBucket": 20,
+          "openEnded": false
+        },
         "smallNumbers": false
       }
     }
@@ -397,6 +847,21 @@
         "p92Weeks": 44.6,
         "pctWithin18": 55.7,
         "totalWaiting": 5459,
+        "within18": 3042,
+        "medianWorking": {
+          "target": 2729.5,
+          "lowerWeek": 15,
+          "before": 2562,
+          "inBucket": 179,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 5022.3,
+          "lowerWeek": 44,
+          "before": 4990,
+          "inBucket": 56,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "301": {
@@ -405,6 +870,21 @@
         "p92Weeks": 22.6,
         "pctWithin18": 85.3,
         "totalWaiting": 1698,
+        "within18": 1448,
+        "medianWorking": {
+          "target": 849,
+          "lowerWeek": 8,
+          "before": 837,
+          "inBucket": 55,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 1562.2,
+          "lowerWeek": 22,
+          "before": 1554,
+          "inBucket": 13,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "320": {
@@ -413,6 +893,21 @@
         "p92Weeks": 17.2,
         "pctWithin18": 96.2,
         "totalWaiting": 1804,
+        "within18": 1736,
+        "medianWorking": {
+          "target": 902,
+          "lowerWeek": 9,
+          "before": 890,
+          "inBucket": 117,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 1659.7,
+          "lowerWeek": 17,
+          "before": 1645,
+          "inBucket": 91,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "330": {
@@ -421,6 +916,21 @@
         "p92Weeks": 26.5,
         "pctWithin18": 77.8,
         "totalWaiting": 5115,
+        "within18": 3981,
+        "medianWorking": {
+          "target": 2557.5,
+          "lowerWeek": 9,
+          "before": 2400,
+          "inBucket": 196,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 4705.8,
+          "lowerWeek": 26,
+          "before": 4676,
+          "inBucket": 62,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "410": {
@@ -429,6 +939,21 @@
         "p92Weeks": 27.4,
         "pctWithin18": 76.6,
         "totalWaiting": 1168,
+        "within18": 895,
+        "medianWorking": {
+          "target": 584,
+          "lowerWeek": 10,
+          "before": 553,
+          "inBucket": 35,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 1074.6,
+          "lowerWeek": 27,
+          "before": 1067,
+          "inBucket": 19,
+          "openEnded": false
+        },
         "smallNumbers": false
       }
     }
@@ -459,6 +984,21 @@
         "p92Weeks": 29.9,
         "pctWithin18": 80.1,
         "totalWaiting": 3706,
+        "within18": 2967,
+        "medianWorking": {
+          "target": 1853,
+          "lowerWeek": 8,
+          "before": 1701,
+          "inBucket": 157,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 3409.5,
+          "lowerWeek": 29,
+          "before": 3378,
+          "inBucket": 36,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "301": {
@@ -467,6 +1007,21 @@
         "p92Weeks": 29.7,
         "pctWithin18": 78.5,
         "totalWaiting": 2257,
+        "within18": 1772,
+        "medianWorking": {
+          "target": 1128.5,
+          "lowerWeek": 10,
+          "before": 1086,
+          "inBucket": 95,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 2076.4,
+          "lowerWeek": 29,
+          "before": 2064,
+          "inBucket": 18,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "320": {
@@ -475,6 +1030,21 @@
         "p92Weeks": 29.5,
         "pctWithin18": 78.3,
         "totalWaiting": 1467,
+        "within18": 1148,
+        "medianWorking": {
+          "target": 733.5,
+          "lowerWeek": 10,
+          "before": 717,
+          "inBucket": 72,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 1349.6,
+          "lowerWeek": 29,
+          "before": 1344,
+          "inBucket": 11,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "330": {
@@ -483,6 +1053,21 @@
         "p92Weeks": 44.6,
         "pctWithin18": 65.3,
         "totalWaiting": 2875,
+        "within18": 1877,
+        "medianWorking": {
+          "target": 1437.5,
+          "lowerWeek": 12,
+          "before": 1347,
+          "inBucket": 115,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 2645,
+          "lowerWeek": 44,
+          "before": 2631,
+          "inBucket": 24,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "410": {
@@ -491,6 +1076,21 @@
         "p92Weeks": 33.8,
         "pctWithin18": 66.7,
         "totalWaiting": 1146,
+        "within18": 764,
+        "medianWorking": {
+          "target": 573,
+          "lowerWeek": 12,
+          "before": 534,
+          "inBucket": 48,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 1054.3,
+          "lowerWeek": 33,
+          "before": 1043,
+          "inBucket": 15,
+          "openEnded": false
+        },
         "smallNumbers": false
       }
     }
@@ -521,6 +1121,21 @@
         "p92Weeks": 48,
         "pctWithin18": 50.8,
         "totalWaiting": 5003,
+        "within18": 2541,
+        "medianWorking": {
+          "target": 2501.5,
+          "lowerWeek": 17,
+          "before": 2423,
+          "inBucket": 118,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 4602.8,
+          "lowerWeek": 47,
+          "before": 4567,
+          "inBucket": 37,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "301": {
@@ -529,6 +1144,21 @@
         "p92Weeks": 31.1,
         "pctWithin18": 65.6,
         "totalWaiting": 2202,
+        "within18": 1444,
+        "medianWorking": {
+          "target": 1101,
+          "lowerWeek": 12,
+          "before": 1098,
+          "inBucket": 78,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 2025.8,
+          "lowerWeek": 31,
+          "before": 2021,
+          "inBucket": 34,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "320": {
@@ -537,6 +1167,21 @@
         "p92Weeks": 36.8,
         "pctWithin18": 61,
         "totalWaiting": 1975,
+        "within18": 1204,
+        "medianWorking": {
+          "target": 987.5,
+          "lowerWeek": 14,
+          "before": 932,
+          "inBucket": 56,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 1817,
+          "lowerWeek": 36,
+          "before": 1801,
+          "inBucket": 21,
+          "openEnded": false
+        },
         "smallNumbers": false
       }
     }
@@ -567,6 +1212,21 @@
         "p92Weeks": 49,
         "pctWithin18": 47.7,
         "totalWaiting": 4917,
+        "within18": 2345,
+        "medianWorking": {
+          "target": 2458.5,
+          "lowerWeek": 19,
+          "before": 2434,
+          "inBucket": 90,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 4523.6,
+          "lowerWeek": 49,
+          "before": 4523,
+          "inBucket": 45,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "301": {
@@ -575,6 +1235,21 @@
         "p92Weeks": 42.9,
         "pctWithin18": 64.7,
         "totalWaiting": 2256,
+        "within18": 1460,
+        "medianWorking": {
+          "target": 1128,
+          "lowerWeek": 11,
+          "before": 1058,
+          "inBucket": 86,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 2075.5,
+          "lowerWeek": 42,
+          "before": 2054,
+          "inBucket": 25,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "320": {
@@ -583,6 +1258,21 @@
         "p92Weeks": 16.1,
         "pctWithin18": 94.5,
         "totalWaiting": 3785,
+        "within18": 3578,
+        "medianWorking": {
+          "target": 1892.5,
+          "lowerWeek": 8,
+          "before": 1813,
+          "inBucket": 280,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 3482.2,
+          "lowerWeek": 16,
+          "before": 3477,
+          "inBucket": 59,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "330": {
@@ -591,6 +1281,21 @@
         "p92Weeks": 47.5,
         "pctWithin18": 57.9,
         "totalWaiting": 1912,
+        "within18": 1107,
+        "medianWorking": {
+          "target": 956,
+          "lowerWeek": 13,
+          "before": 943,
+          "inBucket": 31,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 1759,
+          "lowerWeek": 47,
+          "before": 1750,
+          "inBucket": 20,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "410": {
@@ -599,6 +1304,21 @@
         "p92Weeks": 33.6,
         "pctWithin18": 57.7,
         "totalWaiting": 1375,
+        "within18": 793,
+        "medianWorking": {
+          "target": 687.5,
+          "lowerWeek": 15,
+          "before": 677,
+          "inBucket": 37,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 1265,
+          "lowerWeek": 33,
+          "before": 1251,
+          "inBucket": 24,
+          "openEnded": false
+        },
         "smallNumbers": false
       }
     }
@@ -629,6 +1349,21 @@
         "p92Weeks": 36.8,
         "pctWithin18": 61.9,
         "totalWaiting": 6885,
+        "within18": 4263,
+        "medianWorking": {
+          "target": 3442.5,
+          "lowerWeek": 13,
+          "before": 3382,
+          "inBucket": 163,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 6334.2,
+          "lowerWeek": 36,
+          "before": 6271,
+          "inBucket": 76,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "301": {
@@ -637,6 +1372,21 @@
         "p92Weeks": 40.2,
         "pctWithin18": 66.5,
         "totalWaiting": 3491,
+        "within18": 2320,
+        "medianWorking": {
+          "target": 1745.5,
+          "lowerWeek": 11,
+          "before": 1742,
+          "inBucket": 102,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 3211.7,
+          "lowerWeek": 40,
+          "before": 3205,
+          "inBucket": 34,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "320": {
@@ -645,6 +1395,21 @@
         "p92Weeks": 40,
         "pctWithin18": 63.9,
         "totalWaiting": 3442,
+        "within18": 2200,
+        "medianWorking": {
+          "target": 1721,
+          "lowerWeek": 13,
+          "before": 1645,
+          "inBucket": 109,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 3166.6,
+          "lowerWeek": 40,
+          "before": 3166,
+          "inBucket": 32,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "330": {
@@ -653,6 +1418,21 @@
         "p92Weeks": 41.8,
         "pctWithin18": 55.7,
         "totalWaiting": 3861,
+        "within18": 2150,
+        "medianWorking": {
+          "target": 1930.5,
+          "lowerWeek": 15,
+          "before": 1928,
+          "inBucket": 85,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 3552.1,
+          "lowerWeek": 41,
+          "before": 3517,
+          "inBucket": 46,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "410": {
@@ -661,6 +1441,21 @@
         "p92Weeks": 26.8,
         "pctWithin18": 80.3,
         "totalWaiting": 659,
+        "within18": 529,
+        "medianWorking": {
+          "target": 329.5,
+          "lowerWeek": 10,
+          "before": 323,
+          "inBucket": 35,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 606.3,
+          "lowerWeek": 26,
+          "before": 597,
+          "inBucket": 12,
+          "openEnded": false
+        },
         "smallNumbers": false
       }
     }
@@ -691,6 +1486,21 @@
         "p92Weeks": 43.9,
         "pctWithin18": 53.7,
         "totalWaiting": 12240,
+        "within18": 6572,
+        "medianWorking": {
+          "target": 6120,
+          "lowerWeek": 16,
+          "before": 5979,
+          "inBucket": 321,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 11260.8,
+          "lowerWeek": 43,
+          "before": 11149,
+          "inBucket": 118,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "301": {
@@ -699,6 +1509,21 @@
         "p92Weeks": 38.2,
         "pctWithin18": 71.1,
         "totalWaiting": 1830,
+        "within18": 1302,
+        "medianWorking": {
+          "target": 915,
+          "lowerWeek": 8,
+          "before": 852,
+          "inBucket": 69,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 1683.6,
+          "lowerWeek": 38,
+          "before": 1679,
+          "inBucket": 20,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "320": {
@@ -707,6 +1532,21 @@
         "p92Weeks": 29.4,
         "pctWithin18": 70.8,
         "totalWaiting": 2714,
+        "within18": 1921,
+        "medianWorking": {
+          "target": 1357,
+          "lowerWeek": 9,
+          "before": 1294,
+          "inBucket": 78,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 2496.9,
+          "lowerWeek": 29,
+          "before": 2485,
+          "inBucket": 28,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "330": {
@@ -715,6 +1555,21 @@
         "p92Weeks": 29.4,
         "pctWithin18": 68.2,
         "totalWaiting": 4627,
+        "within18": 3155,
+        "medianWorking": {
+          "target": 2313.5,
+          "lowerWeek": 11,
+          "before": 2217,
+          "inBucket": 160,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 4256.8,
+          "lowerWeek": 29,
+          "before": 4238,
+          "inBucket": 48,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "410": {
@@ -723,6 +1578,21 @@
         "p92Weeks": 18.1,
         "pctWithin18": 91.9,
         "totalWaiting": 554,
+        "within18": 509,
+        "medianWorking": {
+          "target": 277,
+          "lowerWeek": 5,
+          "before": 266,
+          "inBucket": 45,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 509.7,
+          "lowerWeek": 18,
+          "before": 509,
+          "inBucket": 5,
+          "openEnded": false
+        },
         "smallNumbers": false
       }
     }
@@ -753,6 +1623,21 @@
         "p92Weeks": 37.7,
         "pctWithin18": 61.4,
         "totalWaiting": 5150,
+        "within18": 3163,
+        "medianWorking": {
+          "target": 2575,
+          "lowerWeek": 13,
+          "before": 2498,
+          "inBucket": 107,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 4738,
+          "lowerWeek": 37,
+          "before": 4701,
+          "inBucket": 51,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "301": {
@@ -761,6 +1646,21 @@
         "p92Weeks": 27,
         "pctWithin18": 76.7,
         "totalWaiting": 3034,
+        "within18": 2327,
+        "medianWorking": {
+          "target": 1517,
+          "lowerWeek": 9,
+          "before": 1511,
+          "inBucket": 119,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 2791.3,
+          "lowerWeek": 27,
+          "before": 2790,
+          "inBucket": 30,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "320": {
@@ -769,6 +1669,21 @@
         "p92Weeks": 41.4,
         "pctWithin18": 58.6,
         "totalWaiting": 10822,
+        "within18": 6338,
+        "medianWorking": {
+          "target": 5411,
+          "lowerWeek": 14,
+          "before": 5259,
+          "inBucket": 295,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 9956.2,
+          "lowerWeek": 41,
+          "before": 9913,
+          "inBucket": 99,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "330": {
@@ -777,6 +1692,21 @@
         "p92Weeks": 26.5,
         "pctWithin18": 74.6,
         "totalWaiting": 7531,
+        "within18": 5615,
+        "medianWorking": {
+          "target": 3765.5,
+          "lowerWeek": 10,
+          "before": 3654,
+          "inBucket": 319,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 6928.5,
+          "lowerWeek": 26,
+          "before": 6889,
+          "inBucket": 78,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "410": {
@@ -785,6 +1715,21 @@
         "p92Weeks": 15.1,
         "pctWithin18": 95.5,
         "totalWaiting": 486,
+        "within18": 464,
+        "medianWorking": {
+          "target": 243,
+          "lowerWeek": 5,
+          "before": 218,
+          "inBucket": 35,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 447.1,
+          "lowerWeek": 15,
+          "before": 446,
+          "inBucket": 8,
+          "openEnded": false
+        },
         "smallNumbers": false
       }
     }
@@ -815,6 +1760,21 @@
         "p92Weeks": 40.8,
         "pctWithin18": 60.7,
         "totalWaiting": 5901,
+        "within18": 3583,
+        "medianWorking": {
+          "target": 2950.5,
+          "lowerWeek": 14,
+          "before": 2916,
+          "inBucket": 174,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 5428.9,
+          "lowerWeek": 40,
+          "before": 5398,
+          "inBucket": 41,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "301": {
@@ -823,6 +1783,21 @@
         "p92Weeks": 45,
         "pctWithin18": 60.5,
         "totalWaiting": 2951,
+        "within18": 1786,
+        "medianWorking": {
+          "target": 1475.5,
+          "lowerWeek": 12,
+          "before": 1416,
+          "inBucket": 69,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 2714.9,
+          "lowerWeek": 44,
+          "before": 2696,
+          "inBucket": 19,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "320": {
@@ -831,6 +1806,21 @@
         "p92Weeks": 39.5,
         "pctWithin18": 53.5,
         "totalWaiting": 4020,
+        "within18": 2152,
+        "medianWorking": {
+          "target": 2010,
+          "lowerWeek": 16,
+          "before": 1928,
+          "inBucket": 94,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 3698.4,
+          "lowerWeek": 39,
+          "before": 3676,
+          "inBucket": 49,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "330": {
@@ -839,6 +1829,21 @@
         "p92Weeks": 41.8,
         "pctWithin18": 69.7,
         "totalWaiting": 3200,
+        "within18": 2230,
+        "medianWorking": {
+          "target": 1600,
+          "lowerWeek": 11,
+          "before": 1584,
+          "inBucket": 101,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 2944,
+          "lowerWeek": 41,
+          "before": 2926,
+          "inBucket": 24,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "410": {
@@ -847,6 +1852,21 @@
         "p92Weeks": 39.5,
         "pctWithin18": 57.1,
         "totalWaiting": 1409,
+        "within18": 805,
+        "medianWorking": {
+          "target": 704.5,
+          "lowerWeek": 14,
+          "before": 677,
+          "inBucket": 45,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 1296.3,
+          "lowerWeek": 39,
+          "before": 1289,
+          "inBucket": 14,
+          "openEnded": false
+        },
         "smallNumbers": false
       }
     }
@@ -877,6 +1897,21 @@
         "p92Weeks": 41.8,
         "pctWithin18": 58.7,
         "totalWaiting": 2580,
+        "within18": 1514,
+        "medianWorking": {
+          "target": 1290,
+          "lowerWeek": 14,
+          "before": 1236,
+          "inBucket": 66,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 2373.6,
+          "lowerWeek": 41,
+          "before": 2351,
+          "inBucket": 27,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "301": {
@@ -885,6 +1920,21 @@
         "p92Weeks": 17.8,
         "pctWithin18": 92.5,
         "totalWaiting": 1010,
+        "within18": 934,
+        "medianWorking": {
+          "target": 505,
+          "lowerWeek": 6,
+          "before": 457,
+          "inBucket": 71,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 929.2,
+          "lowerWeek": 17,
+          "before": 911,
+          "inBucket": 23,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "320": {
@@ -893,6 +1943,21 @@
         "p92Weeks": 29.8,
         "pctWithin18": 65.1,
         "totalWaiting": 1372,
+        "within18": 893,
+        "medianWorking": {
+          "target": 686,
+          "lowerWeek": 13,
+          "before": 665,
+          "inBucket": 34,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 1262.2,
+          "lowerWeek": 29,
+          "before": 1245,
+          "inBucket": 21,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "330": {
@@ -901,6 +1966,21 @@
         "p92Weeks": 27.1,
         "pctWithin18": 74,
         "totalWaiting": 1764,
+        "within18": 1306,
+        "medianWorking": {
+          "target": 882,
+          "lowerWeek": 9,
+          "before": 847,
+          "inBucket": 56,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 1622.9,
+          "lowerWeek": 27,
+          "before": 1620,
+          "inBucket": 24,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "410": {
@@ -909,6 +1989,21 @@
         "p92Weeks": 9.1,
         "pctWithin18": 99,
         "totalWaiting": 197,
+        "within18": 195,
+        "medianWorking": {
+          "target": 98.5,
+          "lowerWeek": 3,
+          "before": 89,
+          "inBucket": 23,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 181.2,
+          "lowerWeek": 9,
+          "before": 181,
+          "inBucket": 3,
+          "openEnded": false
+        },
         "smallNumbers": false
       }
     }
@@ -939,6 +2034,21 @@
         "p92Weeks": 35.4,
         "pctWithin18": 64.5,
         "totalWaiting": 3215,
+        "within18": 2073,
+        "medianWorking": {
+          "target": 1607.5,
+          "lowerWeek": 12,
+          "before": 1549,
+          "inBucket": 104,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 2957.8,
+          "lowerWeek": 35,
+          "before": 2952,
+          "inBucket": 14,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "301": {
@@ -947,6 +2057,21 @@
         "p92Weeks": 17.9,
         "pctWithin18": 92.4,
         "totalWaiting": 2764,
+        "within18": 2553,
+        "medianWorking": {
+          "target": 1382,
+          "lowerWeek": 7,
+          "before": 1256,
+          "inBucket": 138,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 2542.9,
+          "lowerWeek": 17,
+          "before": 2443,
+          "inBucket": 110,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "320": {
@@ -955,6 +2080,21 @@
         "p92Weeks": 33.8,
         "pctWithin18": 66.9,
         "totalWaiting": 8185,
+        "within18": 5477,
+        "medianWorking": {
+          "target": 4092.5,
+          "lowerWeek": 11,
+          "before": 3810,
+          "inBucket": 289,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 7530.2,
+          "lowerWeek": 33,
+          "before": 7456,
+          "inBucket": 98,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "330": {
@@ -963,6 +2103,21 @@
         "p92Weeks": 29.6,
         "pctWithin18": 71.7,
         "totalWaiting": 4140,
+        "within18": 2969,
+        "medianWorking": {
+          "target": 2070,
+          "lowerWeek": 10,
+          "before": 2019,
+          "inBucket": 141,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 3808.8,
+          "lowerWeek": 29,
+          "before": 3779,
+          "inBucket": 47,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "410": {
@@ -971,6 +2126,21 @@
         "p92Weeks": 24.8,
         "pctWithin18": 86,
         "totalWaiting": 613,
+        "within18": 527,
+        "medianWorking": {
+          "target": 306.5,
+          "lowerWeek": 7,
+          "before": 277,
+          "inBucket": 46,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 564,
+          "lowerWeek": 24,
+          "before": 559,
+          "inBucket": 6,
+          "openEnded": false
+        },
         "smallNumbers": false
       }
     }
@@ -1001,6 +2171,21 @@
         "p92Weeks": 15,
         "pctWithin18": 99.7,
         "totalWaiting": 3828,
+        "within18": 3817,
+        "medianWorking": {
+          "target": 1914,
+          "lowerWeek": 7,
+          "before": 1878,
+          "inBucket": 248,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 3521.8,
+          "lowerWeek": 15,
+          "before": 3520,
+          "inBucket": 139,
+          "openEnded": false
+        },
         "smallNumbers": false
       }
     }
@@ -1034,6 +2219,21 @@
         "p92Weeks": 40.2,
         "pctWithin18": 61.8,
         "totalWaiting": 3861,
+        "within18": 2388,
+        "medianWorking": {
+          "target": 1930.5,
+          "lowerWeek": 13,
+          "before": 1849,
+          "inBucket": 92,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 3552.1,
+          "lowerWeek": 40,
+          "before": 3543,
+          "inBucket": 40,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "301": {
@@ -1042,6 +2242,21 @@
         "p92Weeks": 35.8,
         "pctWithin18": 71.9,
         "totalWaiting": 2755,
+        "within18": 1981,
+        "medianWorking": {
+          "target": 1377.5,
+          "lowerWeek": 10,
+          "before": 1319,
+          "inBucket": 84,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 2534.6,
+          "lowerWeek": 35,
+          "before": 2530,
+          "inBucket": 6,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "320": {
@@ -1050,6 +2265,21 @@
         "p92Weeks": 37.2,
         "pctWithin18": 67.6,
         "totalWaiting": 5068,
+        "within18": 3428,
+        "medianWorking": {
+          "target": 2534,
+          "lowerWeek": 12,
+          "before": 2467,
+          "inBucket": 155,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 4662.6,
+          "lowerWeek": 37,
+          "before": 4654,
+          "inBucket": 52,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "330": {
@@ -1058,6 +2288,21 @@
         "p92Weeks": 31.4,
         "pctWithin18": 71.8,
         "totalWaiting": 3625,
+        "within18": 2604,
+        "medianWorking": {
+          "target": 1812.5,
+          "lowerWeek": 11,
+          "before": 1796,
+          "inBucket": 159,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 3335,
+          "lowerWeek": 31,
+          "before": 3316,
+          "inBucket": 46,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "410": {
@@ -1066,6 +2311,21 @@
         "p92Weeks": 26.3,
         "pctWithin18": 78.4,
         "totalWaiting": 1087,
+        "within18": 852,
+        "medianWorking": {
+          "target": 543.5,
+          "lowerWeek": 10,
+          "before": 502,
+          "inBucket": 63,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 1000,
+          "lowerWeek": 26,
+          "before": 996,
+          "inBucket": 15,
+          "openEnded": false
+        },
         "smallNumbers": false
       }
     }
@@ -1096,6 +2356,21 @@
         "p92Weeks": 37.4,
         "pctWithin18": 56.6,
         "totalWaiting": 2776,
+        "within18": 1570,
+        "medianWorking": {
+          "target": 1388,
+          "lowerWeek": 15,
+          "before": 1298,
+          "inBucket": 92,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 2553.9,
+          "lowerWeek": 37,
+          "before": 2537,
+          "inBucket": 41,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "301": {
@@ -1104,6 +2379,21 @@
         "p92Weeks": 36.7,
         "pctWithin18": 60,
         "totalWaiting": 3071,
+        "within18": 1843,
+        "medianWorking": {
+          "target": 1535.5,
+          "lowerWeek": 15,
+          "before": 1519,
+          "inBucket": 123,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 2825.3,
+          "lowerWeek": 36,
+          "before": 2801,
+          "inBucket": 35,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "320": {
@@ -1112,6 +2402,21 @@
         "p92Weeks": 32.1,
         "pctWithin18": 68.2,
         "totalWaiting": 1807,
+        "within18": 1233,
+        "medianWorking": {
+          "target": 903.5,
+          "lowerWeek": 11,
+          "before": 843,
+          "inBucket": 66,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 1662.4,
+          "lowerWeek": 32,
+          "before": 1661,
+          "inBucket": 28,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "330": {
@@ -1120,6 +2425,21 @@
         "p92Weeks": 36.7,
         "pctWithin18": 63,
         "totalWaiting": 3434,
+        "within18": 2165,
+        "medianWorking": {
+          "target": 1717,
+          "lowerWeek": 12,
+          "before": 1656,
+          "inBucket": 123,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 3159.3,
+          "lowerWeek": 36,
+          "before": 3122,
+          "inBucket": 51,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "410": {
@@ -1128,6 +2448,21 @@
         "p92Weeks": 9.6,
         "pctWithin18": 99.3,
         "totalWaiting": 425,
+        "within18": 422,
+        "medianWorking": {
+          "target": 212.5,
+          "lowerWeek": 5,
+          "before": 194,
+          "inBucket": 78,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 391,
+          "lowerWeek": 9,
+          "before": 388,
+          "inBucket": 5,
+          "openEnded": false
+        },
         "smallNumbers": false
       }
     }
@@ -1158,6 +2493,21 @@
         "p92Weeks": 45.2,
         "pctWithin18": 62.5,
         "totalWaiting": 5996,
+        "within18": 3748,
+        "medianWorking": {
+          "target": 2998,
+          "lowerWeek": 13,
+          "before": 2996,
+          "inBucket": 119,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 5516.3,
+          "lowerWeek": 45,
+          "before": 5504,
+          "inBucket": 58,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "301": {
@@ -1166,6 +2516,21 @@
         "p92Weeks": 40.4,
         "pctWithin18": 65.4,
         "totalWaiting": 6339,
+        "within18": 4146,
+        "medianWorking": {
+          "target": 3169.5,
+          "lowerWeek": 11,
+          "before": 2964,
+          "inBucket": 228,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 5831.9,
+          "lowerWeek": 40,
+          "before": 5807,
+          "inBucket": 68,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "320": {
@@ -1174,6 +2539,21 @@
         "p92Weeks": 36,
         "pctWithin18": 70.3,
         "totalWaiting": 3123,
+        "within18": 2194,
+        "medianWorking": {
+          "target": 1561.5,
+          "lowerWeek": 11,
+          "before": 1499,
+          "inBucket": 134,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 2873.2,
+          "lowerWeek": 36,
+          "before": 2872,
+          "inBucket": 24,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "330": {
@@ -1182,6 +2562,21 @@
         "p92Weeks": 20,
         "pctWithin18": 89.5,
         "totalWaiting": 2917,
+        "within18": 2612,
+        "medianWorking": {
+          "target": 1458.5,
+          "lowerWeek": 6,
+          "before": 1390,
+          "inBucket": 195,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 2683.6,
+          "lowerWeek": 19,
+          "before": 2650,
+          "inBucket": 35,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "410": {
@@ -1190,6 +2585,21 @@
         "p92Weeks": 25.1,
         "pctWithin18": 80.8,
         "totalWaiting": 610,
+        "within18": 493,
+        "medianWorking": {
+          "target": 305,
+          "lowerWeek": 8,
+          "before": 296,
+          "inBucket": 23,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 561.2,
+          "lowerWeek": 25,
+          "before": 561,
+          "inBucket": 4,
+          "openEnded": false
+        },
         "smallNumbers": false
       }
     }
@@ -1220,6 +2630,21 @@
         "p92Weeks": 40.3,
         "pctWithin18": 59.5,
         "totalWaiting": 6566,
+        "within18": 3908,
+        "medianWorking": {
+          "target": 3283,
+          "lowerWeek": 15,
+          "before": 3271,
+          "inBucket": 245,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 6040.7,
+          "lowerWeek": 40,
+          "before": 6018,
+          "inBucket": 69,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "301": {
@@ -1228,6 +2653,21 @@
         "p92Weeks": 34.5,
         "pctWithin18": 69.1,
         "totalWaiting": 6832,
+        "within18": 4718,
+        "medianWorking": {
+          "target": 3416,
+          "lowerWeek": 11,
+          "before": 3401,
+          "inBucket": 255,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 6285.4,
+          "lowerWeek": 34,
+          "before": 6270,
+          "inBucket": 32,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "320": {
@@ -1236,6 +2676,21 @@
         "p92Weeks": 37.1,
         "pctWithin18": 67.3,
         "totalWaiting": 4804,
+        "within18": 3233,
+        "medianWorking": {
+          "target": 2402,
+          "lowerWeek": 13,
+          "before": 2392,
+          "inBucket": 93,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 4419.7,
+          "lowerWeek": 37,
+          "before": 4417,
+          "inBucket": 27,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "330": {
@@ -1244,6 +2699,21 @@
         "p92Weeks": 36.2,
         "pctWithin18": 61.9,
         "totalWaiting": 3044,
+        "within18": 1883,
+        "medianWorking": {
+          "target": 1522,
+          "lowerWeek": 12,
+          "before": 1493,
+          "inBucket": 67,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 2800.5,
+          "lowerWeek": 36,
+          "before": 2793,
+          "inBucket": 45,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "410": {
@@ -1252,6 +2722,21 @@
         "p92Weeks": 14.7,
         "pctWithin18": 96.3,
         "totalWaiting": 981,
+        "within18": 945,
+        "medianWorking": {
+          "target": 490.5,
+          "lowerWeek": 6,
+          "before": 479,
+          "inBucket": 83,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 902.5,
+          "lowerWeek": 14,
+          "before": 891,
+          "inBucket": 17,
+          "openEnded": false
+        },
         "smallNumbers": false
       }
     }
@@ -1282,6 +2767,21 @@
         "p92Weeks": 28.1,
         "pctWithin18": 75.6,
         "totalWaiting": 4271,
+        "within18": 3229,
+        "medianWorking": {
+          "target": 2135.5,
+          "lowerWeek": 10,
+          "before": 1963,
+          "inBucket": 204,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 3929.3,
+          "lowerWeek": 28,
+          "before": 3925,
+          "inBucket": 47,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "301": {
@@ -1290,6 +2790,21 @@
         "p92Weeks": 31.8,
         "pctWithin18": 62.9,
         "totalWaiting": 2806,
+        "within18": 1766,
+        "medianWorking": {
+          "target": 1403,
+          "lowerWeek": 14,
+          "before": 1355,
+          "inBucket": 124,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 2581.5,
+          "lowerWeek": 31,
+          "before": 2557,
+          "inBucket": 31,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "320": {
@@ -1298,6 +2813,21 @@
         "p92Weeks": 25.9,
         "pctWithin18": 78.4,
         "totalWaiting": 2268,
+        "within18": 1779,
+        "medianWorking": {
+          "target": 1134,
+          "lowerWeek": 10,
+          "before": 1076,
+          "inBucket": 114,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 2086.6,
+          "lowerWeek": 25,
+          "before": 2067,
+          "inBucket": 23,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "410": {
@@ -1306,6 +2836,21 @@
         "p92Weeks": 10.7,
         "pctWithin18": 100,
         "totalWaiting": 446,
+        "within18": 446,
+        "medianWorking": {
+          "target": 223,
+          "lowerWeek": 4,
+          "before": 199,
+          "inBucket": 49,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 410.3,
+          "lowerWeek": 10,
+          "before": 394,
+          "inBucket": 24,
+          "openEnded": false
+        },
         "smallNumbers": false
       }
     }
@@ -1336,6 +2881,21 @@
         "p92Weeks": 37.9,
         "pctWithin18": 54.1,
         "totalWaiting": 3116,
+        "within18": 1685,
+        "medianWorking": {
+          "target": 1558,
+          "lowerWeek": 16,
+          "before": 1496,
+          "inBucket": 77,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 2866.7,
+          "lowerWeek": 37,
+          "before": 2840,
+          "inBucket": 31,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "301": {
@@ -1344,6 +2904,21 @@
         "p92Weeks": 32.5,
         "pctWithin18": 64.3,
         "totalWaiting": 2663,
+        "within18": 1713,
+        "medianWorking": {
+          "target": 1331.5,
+          "lowerWeek": 11,
+          "before": 1285,
+          "inBucket": 80,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 2450,
+          "lowerWeek": 32,
+          "before": 2427,
+          "inBucket": 43,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "320": {
@@ -1352,6 +2927,21 @@
         "p92Weeks": 43.1,
         "pctWithin18": 47.7,
         "totalWaiting": 3322,
+        "within18": 1584,
+        "medianWorking": {
+          "target": 1661,
+          "lowerWeek": 19,
+          "before": 1658,
+          "inBucket": 97,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 3056.2,
+          "lowerWeek": 43,
+          "before": 3054,
+          "inBucket": 29,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "410": {
@@ -1360,6 +2950,21 @@
         "p92Weeks": 54,
         "pctWithin18": 32.1,
         "totalWaiting": 3226,
+        "within18": 1035,
+        "medianWorking": {
+          "target": 1613,
+          "lowerWeek": 29,
+          "before": 1588,
+          "inBucket": 56,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 2967.9,
+          "lowerWeek": 53,
+          "before": 2921,
+          "inBucket": 49,
+          "openEnded": false
+        },
         "smallNumbers": false
       }
     }
@@ -1393,6 +2998,21 @@
         "p92Weeks": 66.6,
         "pctWithin18": 28.7,
         "totalWaiting": 11377,
+        "within18": 3260,
+        "medianWorking": {
+          "target": 5688.5,
+          "lowerWeek": 30,
+          "before": 5517,
+          "inBucket": 206,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 10466.8,
+          "lowerWeek": 66,
+          "before": 10413,
+          "inBucket": 84,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "301": {
@@ -1401,6 +3021,21 @@
         "p92Weeks": 47,
         "pctWithin18": 51.7,
         "totalWaiting": 10047,
+        "within18": 5199,
+        "medianWorking": {
+          "target": 5023.5,
+          "lowerWeek": 17,
+          "before": 4976,
+          "inBucket": 223,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 9243.2,
+          "lowerWeek": 46,
+          "before": 9164,
+          "inBucket": 80,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "320": {
@@ -1409,6 +3044,21 @@
         "p92Weeks": 33,
         "pctWithin18": 66.8,
         "totalWaiting": 11056,
+        "within18": 7382,
+        "medianWorking": {
+          "target": 5528,
+          "lowerWeek": 12,
+          "before": 5394,
+          "inBucket": 406,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 10171.5,
+          "lowerWeek": 32,
+          "before": 10072,
+          "inBucket": 101,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "330": {
@@ -1417,6 +3067,21 @@
         "p92Weeks": 55.5,
         "pctWithin18": 47.9,
         "totalWaiting": 10264,
+        "within18": 4920,
+        "medianWorking": {
+          "target": 5132,
+          "lowerWeek": 20,
+          "before": 5127,
+          "inBucket": 75,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 9442.9,
+          "lowerWeek": 55,
+          "before": 9381,
+          "inBucket": 130,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "410": {
@@ -1425,6 +3090,21 @@
         "p92Weeks": 56.4,
         "pctWithin18": 44.7,
         "totalWaiting": 2057,
+        "within18": 920,
+        "medianWorking": {
+          "target": 1028.5,
+          "lowerWeek": 22,
+          "before": 1026,
+          "inBucket": 45,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 1892.4,
+          "lowerWeek": 56,
+          "before": 1885,
+          "inBucket": 20,
+          "openEnded": false
+        },
         "smallNumbers": false
       }
     }
@@ -1455,6 +3135,21 @@
         "p92Weeks": 44.2,
         "pctWithin18": 56.8,
         "totalWaiting": 3071,
+        "within18": 1743,
+        "medianWorking": {
+          "target": 1535.5,
+          "lowerWeek": 15,
+          "before": 1494,
+          "inBucket": 77,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 2825.3,
+          "lowerWeek": 44,
+          "before": 2820,
+          "inBucket": 29,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "301": {
@@ -1463,6 +3158,21 @@
         "p92Weeks": 21.2,
         "pctWithin18": 80.9,
         "totalWaiting": 1719,
+        "within18": 1390,
+        "medianWorking": {
+          "target": 859.5,
+          "lowerWeek": 10,
+          "before": 859,
+          "inBucket": 92,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 1581.5,
+          "lowerWeek": 21,
+          "before": 1573,
+          "inBucket": 45,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "320": {
@@ -1471,6 +3181,21 @@
         "p92Weeks": 27.1,
         "pctWithin18": 74.7,
         "totalWaiting": 1989,
+        "within18": 1486,
+        "medianWorking": {
+          "target": 994.5,
+          "lowerWeek": 10,
+          "before": 969,
+          "inBucket": 74,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 1829.9,
+          "lowerWeek": 27,
+          "before": 1829,
+          "inBucket": 11,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "330": {
@@ -1479,6 +3204,21 @@
         "p92Weeks": 11.7,
         "pctWithin18": 96.9,
         "totalWaiting": 1427,
+        "within18": 1383,
+        "medianWorking": {
+          "target": 713.5,
+          "lowerWeek": 5,
+          "before": 685,
+          "inBucket": 142,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 1312.8,
+          "lowerWeek": 11,
+          "before": 1302,
+          "inBucket": 15,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "410": {
@@ -1487,6 +3227,21 @@
         "p92Weeks": 49.9,
         "pctWithin18": 45.1,
         "totalWaiting": 1409,
+        "within18": 635,
+        "medianWorking": {
+          "target": 704.5,
+          "lowerWeek": 20,
+          "before": 692,
+          "inBucket": 29,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 1296.3,
+          "lowerWeek": 49,
+          "before": 1290,
+          "inBucket": 7,
+          "openEnded": false
+        },
         "smallNumbers": false
       }
     }
@@ -1517,6 +3272,21 @@
         "p92Weeks": 33.6,
         "pctWithin18": 65.8,
         "totalWaiting": 222,
+        "within18": 146,
+        "medianWorking": {
+          "target": 111,
+          "lowerWeek": 11,
+          "before": 108,
+          "inBucket": 6,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 204.2,
+          "lowerWeek": 33,
+          "before": 199,
+          "inBucket": 9,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "410": {
@@ -1525,6 +3295,21 @@
         "p92Weeks": 19,
         "pctWithin18": 88,
         "totalWaiting": 75,
+        "within18": 66,
+        "medianWorking": {
+          "target": 37.5,
+          "lowerWeek": 9,
+          "before": 37,
+          "inBucket": 3,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 69,
+          "lowerWeek": 18,
+          "before": 66,
+          "inBucket": 3,
+          "openEnded": false
+        },
         "smallNumbers": false
       }
     }
@@ -1555,6 +3340,21 @@
         "p92Weeks": 22.6,
         "pctWithin18": 82.9,
         "totalWaiting": 2231,
+        "within18": 1849,
+        "medianWorking": {
+          "target": 1115.5,
+          "lowerWeek": 10,
+          "before": 1113,
+          "inBucket": 119,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 2052.5,
+          "lowerWeek": 22,
+          "before": 2032,
+          "inBucket": 36,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "301": {
@@ -1563,6 +3363,21 @@
         "p92Weeks": 24.5,
         "pctWithin18": 82,
         "totalWaiting": 3905,
+        "within18": 3203,
+        "medianWorking": {
+          "target": 1952.5,
+          "lowerWeek": 9,
+          "before": 1769,
+          "inBucket": 220,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 3592.6,
+          "lowerWeek": 24,
+          "before": 3565,
+          "inBucket": 59,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "320": {
@@ -1571,6 +3386,21 @@
         "p92Weeks": 23.2,
         "pctWithin18": 82.3,
         "totalWaiting": 2834,
+        "within18": 2333,
+        "medianWorking": {
+          "target": 1417,
+          "lowerWeek": 10,
+          "before": 1248,
+          "inBucket": 182,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 2607.3,
+          "lowerWeek": 23,
+          "before": 2600,
+          "inBucket": 44,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "330": {
@@ -1579,6 +3409,21 @@
         "p92Weeks": 23.7,
         "pctWithin18": 82.6,
         "totalWaiting": 2620,
+        "within18": 2164,
+        "medianWorking": {
+          "target": 1310,
+          "lowerWeek": 8,
+          "before": 1156,
+          "inBucket": 160,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 2410.4,
+          "lowerWeek": 23,
+          "before": 2391,
+          "inBucket": 29,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "410": {
@@ -1587,6 +3432,21 @@
         "p92Weeks": 24.8,
         "pctWithin18": 78.7,
         "totalWaiting": 521,
+        "within18": 410,
+        "medianWorking": {
+          "target": 260.5,
+          "lowerWeek": 9,
+          "before": 242,
+          "inBucket": 34,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 479.3,
+          "lowerWeek": 24,
+          "before": 468,
+          "inBucket": 14,
+          "openEnded": false
+        },
         "smallNumbers": false
       }
     }
@@ -1617,6 +3477,21 @@
         "p92Weeks": 46.2,
         "pctWithin18": 54.4,
         "totalWaiting": 9609,
+        "within18": 5224,
+        "medianWorking": {
+          "target": 4804.5,
+          "lowerWeek": 16,
+          "before": 4735,
+          "inBucket": 199,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 8840.3,
+          "lowerWeek": 46,
+          "before": 8824,
+          "inBucket": 94,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "301": {
@@ -1625,6 +3500,21 @@
         "p92Weeks": 33,
         "pctWithin18": 70.6,
         "totalWaiting": 9393,
+        "within18": 6634,
+        "medianWorking": {
+          "target": 4696.5,
+          "lowerWeek": 11,
+          "before": 4658,
+          "inBucket": 350,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 8641.6,
+          "lowerWeek": 33,
+          "before": 8638,
+          "inBucket": 98,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "320": {
@@ -1633,6 +3523,21 @@
         "p92Weeks": 33.9,
         "pctWithin18": 58.5,
         "totalWaiting": 8245,
+        "within18": 4827,
+        "medianWorking": {
+          "target": 4122.5,
+          "lowerWeek": 15,
+          "before": 4084,
+          "inBucket": 253,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 7585.4,
+          "lowerWeek": 33,
+          "before": 7490,
+          "inBucket": 110,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "330": {
@@ -1641,6 +3546,21 @@
         "p92Weeks": 25.6,
         "pctWithin18": 81.2,
         "totalWaiting": 9039,
+        "within18": 7336,
+        "medianWorking": {
+          "target": 4519.5,
+          "lowerWeek": 8,
+          "before": 4430,
+          "inBucket": 405,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 8315.9,
+          "lowerWeek": 25,
+          "before": 8255,
+          "inBucket": 107,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "410": {
@@ -1649,6 +3569,21 @@
         "p92Weeks": 35.5,
         "pctWithin18": 57,
         "totalWaiting": 3450,
+        "within18": 1965,
+        "medianWorking": {
+          "target": 1725,
+          "lowerWeek": 15,
+          "before": 1678,
+          "inBucket": 94,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 3174,
+          "lowerWeek": 35,
+          "before": 3160,
+          "inBucket": 29,
+          "openEnded": false
+        },
         "smallNumbers": false
       }
     }
@@ -1679,6 +3614,21 @@
         "p92Weeks": 28.7,
         "pctWithin18": 77.8,
         "totalWaiting": 4774,
+        "within18": 3712,
+        "medianWorking": {
+          "target": 2387,
+          "lowerWeek": 9,
+          "before": 2365,
+          "inBucket": 211,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 4392.1,
+          "lowerWeek": 28,
+          "before": 4357,
+          "inBucket": 51,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "301": {
@@ -1687,6 +3637,21 @@
         "p92Weeks": 14.7,
         "pctWithin18": 95.2,
         "totalWaiting": 21,
+        "within18": 20,
+        "medianWorking": {
+          "target": 10.5,
+          "lowerWeek": 4,
+          "before": 6,
+          "inBucket": 6,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 19.3,
+          "lowerWeek": 14,
+          "before": 18,
+          "inBucket": 2,
+          "openEnded": false
+        },
         "smallNumbers": true
       },
       "410": {
@@ -1695,6 +3660,21 @@
         "p92Weeks": 23.1,
         "pctWithin18": 84.7,
         "totalWaiting": 581,
+        "within18": 492,
+        "medianWorking": {
+          "target": 290.5,
+          "lowerWeek": 8,
+          "before": 274,
+          "inBucket": 37,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 534.5,
+          "lowerWeek": 23,
+          "before": 534,
+          "inBucket": 4,
+          "openEnded": false
+        },
         "smallNumbers": false
       }
     }
@@ -1725,6 +3705,21 @@
         "p92Weeks": 37.7,
         "pctWithin18": 61.3,
         "totalWaiting": 2099,
+        "within18": 1287,
+        "medianWorking": {
+          "target": 1049.5,
+          "lowerWeek": 13,
+          "before": 1016,
+          "inBucket": 52,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 1931.1,
+          "lowerWeek": 37,
+          "before": 1908,
+          "inBucket": 31,
+          "openEnded": false
+        },
         "smallNumbers": false
       }
     }
@@ -1758,6 +3753,21 @@
         "p92Weeks": 41.7,
         "pctWithin18": 62.7,
         "totalWaiting": 5951,
+        "within18": 3732,
+        "medianWorking": {
+          "target": 2975.5,
+          "lowerWeek": 13,
+          "before": 2925,
+          "inBucket": 131,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 5474.9,
+          "lowerWeek": 41,
+          "before": 5445,
+          "inBucket": 41,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "301": {
@@ -1766,6 +3776,21 @@
         "p92Weeks": 44.3,
         "pctWithin18": 57.2,
         "totalWaiting": 1415,
+        "within18": 809,
+        "medianWorking": {
+          "target": 707.5,
+          "lowerWeek": 14,
+          "before": 682,
+          "inBucket": 33,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 1301.8,
+          "lowerWeek": 44,
+          "before": 1300,
+          "inBucket": 6,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "320": {
@@ -1774,6 +3799,21 @@
         "p92Weeks": 38.5,
         "pctWithin18": 67.1,
         "totalWaiting": 1089,
+        "within18": 731,
+        "medianWorking": {
+          "target": 544.5,
+          "lowerWeek": 11,
+          "before": 542,
+          "inBucket": 21,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 1001.9,
+          "lowerWeek": 38,
+          "before": 993,
+          "inBucket": 17,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "410": {
@@ -1782,6 +3822,21 @@
         "p92Weeks": 17.8,
         "pctWithin18": 92.5,
         "totalWaiting": 308,
+        "within18": 285,
+        "medianWorking": {
+          "target": 154,
+          "lowerWeek": 7,
+          "before": 152,
+          "inBucket": 14,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 283.4,
+          "lowerWeek": 17,
+          "before": 277,
+          "inBucket": 8,
+          "openEnded": false
+        },
         "smallNumbers": false
       }
     }
@@ -1815,6 +3870,21 @@
         "p92Weeks": 32.9,
         "pctWithin18": 67.8,
         "totalWaiting": 4118,
+        "within18": 2791,
+        "medianWorking": {
+          "target": 2059,
+          "lowerWeek": 11,
+          "before": 1946,
+          "inBucket": 164,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 3788.6,
+          "lowerWeek": 32,
+          "before": 3750,
+          "inBucket": 44,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "301": {
@@ -1823,6 +3893,21 @@
         "p92Weeks": 31.8,
         "pctWithin18": 70.4,
         "totalWaiting": 2751,
+        "within18": 1937,
+        "medianWorking": {
+          "target": 1375.5,
+          "lowerWeek": 10,
+          "before": 1374,
+          "inBucket": 81,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 2530.9,
+          "lowerWeek": 31,
+          "before": 2510,
+          "inBucket": 25,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "320": {
@@ -1831,6 +3916,21 @@
         "p92Weeks": 39.4,
         "pctWithin18": 61.8,
         "totalWaiting": 5695,
+        "within18": 3520,
+        "medianWorking": {
+          "target": 2847.5,
+          "lowerWeek": 13,
+          "before": 2770,
+          "inBucket": 112,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 5239.4,
+          "lowerWeek": 39,
+          "before": 5217,
+          "inBucket": 50,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "330": {
@@ -1839,6 +3939,21 @@
         "p92Weeks": 40,
         "pctWithin18": 67.3,
         "totalWaiting": 5427,
+        "within18": 3653,
+        "medianWorking": {
+          "target": 2713.5,
+          "lowerWeek": 11,
+          "before": 2642,
+          "inBucket": 201,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 4992.8,
+          "lowerWeek": 39,
+          "before": 4956,
+          "inBucket": 37,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "410": {
@@ -1847,6 +3962,21 @@
         "p92Weeks": 33.1,
         "pctWithin18": 74.7,
         "totalWaiting": 1531,
+        "within18": 1144,
+        "medianWorking": {
+          "target": 765.5,
+          "lowerWeek": 10,
+          "before": 693,
+          "inBucket": 73,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 1408.5,
+          "lowerWeek": 33,
+          "before": 1408,
+          "inBucket": 7,
+          "openEnded": false
+        },
         "smallNumbers": false
       }
     }
@@ -1880,6 +4010,21 @@
         "p92Weeks": 44,
         "pctWithin18": 52.7,
         "totalWaiting": 3068,
+        "within18": 1618,
+        "medianWorking": {
+          "target": 1534,
+          "lowerWeek": 17,
+          "before": 1533,
+          "inBucket": 85,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 2822.6,
+          "lowerWeek": 43,
+          "before": 2791,
+          "inBucket": 32,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "301": {
@@ -1888,6 +4033,21 @@
         "p92Weeks": 37.1,
         "pctWithin18": 65.7,
         "totalWaiting": 4526,
+        "within18": 2975,
+        "medianWorking": {
+          "target": 2263,
+          "lowerWeek": 12,
+          "before": 2168,
+          "inBucket": 149,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 4163.9,
+          "lowerWeek": 37,
+          "before": 4158,
+          "inBucket": 42,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "320": {
@@ -1896,6 +4056,21 @@
         "p92Weeks": 21,
         "pctWithin18": 88.3,
         "totalWaiting": 2782,
+        "within18": 2456,
+        "medianWorking": {
+          "target": 1391,
+          "lowerWeek": 8,
+          "before": 1349,
+          "inBucket": 150,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 2559.4,
+          "lowerWeek": 21,
+          "before": 2559,
+          "inBucket": 22,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "330": {
@@ -1904,6 +4079,21 @@
         "p92Weeks": 51.2,
         "pctWithin18": 54.2,
         "totalWaiting": 4853,
+        "within18": 2628,
+        "medianWorking": {
+          "target": 2426.5,
+          "lowerWeek": 15,
+          "before": 2339,
+          "inBucket": 100,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 4464.8,
+          "lowerWeek": 51,
+          "before": 4458,
+          "inBucket": 40,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "410": {
@@ -1912,6 +4102,21 @@
         "p92Weeks": 28.3,
         "pctWithin18": 75.1,
         "totalWaiting": 879,
+        "within18": 660,
+        "medianWorking": {
+          "target": 439.5,
+          "lowerWeek": 10,
+          "before": 433,
+          "inBucket": 23,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 808.7,
+          "lowerWeek": 28,
+          "before": 805,
+          "inBucket": 11,
+          "openEnded": false
+        },
         "smallNumbers": false
       }
     }
@@ -1942,6 +4147,21 @@
         "p92Weeks": 41.9,
         "pctWithin18": 60.9,
         "totalWaiting": 14239,
+        "within18": 8667,
+        "medianWorking": {
+          "target": 7119.5,
+          "lowerWeek": 13,
+          "before": 6763,
+          "inBucket": 367,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 13099.9,
+          "lowerWeek": 41,
+          "before": 12981,
+          "inBucket": 138,
+          "openEnded": false
+        },
         "smallNumbers": false
       }
     }
@@ -1975,6 +4195,21 @@
         "p92Weeks": 38.3,
         "pctWithin18": 59.8,
         "totalWaiting": 5993,
+        "within18": 3584,
+        "medianWorking": {
+          "target": 2996.5,
+          "lowerWeek": 14,
+          "before": 2959,
+          "inBucket": 178,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 5513.6,
+          "lowerWeek": 38,
+          "before": 5492,
+          "inBucket": 76,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "301": {
@@ -1983,6 +4218,21 @@
         "p92Weeks": 32.4,
         "pctWithin18": 74.6,
         "totalWaiting": 1027,
+        "within18": 766,
+        "medianWorking": {
+          "target": 513.5,
+          "lowerWeek": 8,
+          "before": 490,
+          "inBucket": 54,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 944.8,
+          "lowerWeek": 32,
+          "before": 939,
+          "inBucket": 14,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "320": {
@@ -1991,6 +4241,21 @@
         "p92Weeks": 40,
         "pctWithin18": 45.9,
         "totalWaiting": 1945,
+        "within18": 893,
+        "medianWorking": {
+          "target": 972.5,
+          "lowerWeek": 19,
+          "before": 941,
+          "inBucket": 52,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 1789.4,
+          "lowerWeek": 39,
+          "before": 1755,
+          "inBucket": 35,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "330": {
@@ -1999,6 +4264,21 @@
         "p92Weeks": 20.5,
         "pctWithin18": 86.9,
         "totalWaiting": 1154,
+        "within18": 1003,
+        "medianWorking": {
+          "target": 577,
+          "lowerWeek": 6,
+          "before": 509,
+          "inBucket": 77,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 1061.7,
+          "lowerWeek": 20,
+          "before": 1053,
+          "inBucket": 18,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "410": {
@@ -2007,6 +4287,21 @@
         "p92Weeks": 26.4,
         "pctWithin18": 77.1,
         "totalWaiting": 423,
+        "within18": 326,
+        "medianWorking": {
+          "target": 211.5,
+          "lowerWeek": 9,
+          "before": 206,
+          "inBucket": 11,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 389.2,
+          "lowerWeek": 26,
+          "before": 388,
+          "inBucket": 3,
+          "openEnded": false
+        },
         "smallNumbers": false
       }
     }
@@ -2040,6 +4335,21 @@
         "p92Weeks": 42.8,
         "pctWithin18": 54,
         "totalWaiting": 5501,
+        "within18": 2973,
+        "medianWorking": {
+          "target": 2750.5,
+          "lowerWeek": 16,
+          "before": 2685,
+          "inBucket": 131,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 5060.9,
+          "lowerWeek": 42,
+          "before": 5016,
+          "inBucket": 57,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "301": {
@@ -2048,6 +4358,21 @@
         "p92Weeks": 36.6,
         "pctWithin18": 59.8,
         "totalWaiting": 3060,
+        "within18": 1831,
+        "medianWorking": {
+          "target": 1530,
+          "lowerWeek": 14,
+          "before": 1462,
+          "inBucket": 115,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 2815.2,
+          "lowerWeek": 36,
+          "before": 2792,
+          "inBucket": 36,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "320": {
@@ -2056,6 +4381,21 @@
         "p92Weeks": 31.2,
         "pctWithin18": 65.4,
         "totalWaiting": 3930,
+        "within18": 2570,
+        "medianWorking": {
+          "target": 1965,
+          "lowerWeek": 13,
+          "before": 1887,
+          "inBucket": 97,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 3615.6,
+          "lowerWeek": 31,
+          "before": 3607,
+          "inBucket": 45,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "330": {
@@ -2064,6 +4404,21 @@
         "p92Weeks": 21.3,
         "pctWithin18": 87,
         "totalWaiting": 2714,
+        "within18": 2362,
+        "medianWorking": {
+          "target": 1357,
+          "lowerWeek": 7,
+          "before": 1252,
+          "inBucket": 105,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 2496.9,
+          "lowerWeek": 21,
+          "before": 2484,
+          "inBucket": 45,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "410": {
@@ -2072,6 +4427,21 @@
         "p92Weeks": 33.8,
         "pctWithin18": 66.8,
         "totalWaiting": 1153,
+        "within18": 770,
+        "medianWorking": {
+          "target": 576.5,
+          "lowerWeek": 12,
+          "before": 552,
+          "inBucket": 26,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 1060.8,
+          "lowerWeek": 33,
+          "before": 1055,
+          "inBucket": 7,
+          "openEnded": false
+        },
         "smallNumbers": false
       }
     }
@@ -2102,6 +4472,21 @@
         "p92Weeks": 19.2,
         "pctWithin18": 89.1,
         "totalWaiting": 46,
+        "within18": 41,
+        "medianWorking": {
+          "target": 23,
+          "lowerWeek": 4,
+          "before": 19,
+          "inBucket": 4,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 42.3,
+          "lowerWeek": 19,
+          "before": 42,
+          "inBucket": 2,
+          "openEnded": false
+        },
         "smallNumbers": true
       },
       "330": {
@@ -2110,6 +4495,21 @@
         "p92Weeks": 21.7,
         "pctWithin18": 50,
         "totalWaiting": 4,
+        "within18": 2,
+        "medianWorking": {
+          "target": 2,
+          "lowerWeek": 9,
+          "before": 1,
+          "inBucket": 1,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 3.7,
+          "lowerWeek": 21,
+          "before": 3,
+          "inBucket": 1,
+          "openEnded": false
+        },
         "smallNumbers": true
       }
     }
@@ -2140,6 +4540,21 @@
         "p92Weeks": 31.8,
         "pctWithin18": 73.6,
         "totalWaiting": 3449,
+        "within18": 2540,
+        "medianWorking": {
+          "target": 1724.5,
+          "lowerWeek": 9,
+          "before": 1712,
+          "inBucket": 129,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 3173.1,
+          "lowerWeek": 31,
+          "before": 3140,
+          "inBucket": 42,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "301": {
@@ -2148,6 +4563,21 @@
         "p92Weeks": 25.3,
         "pctWithin18": 80.2,
         "totalWaiting": 3932,
+        "within18": 3153,
+        "medianWorking": {
+          "target": 1966,
+          "lowerWeek": 9,
+          "before": 1848,
+          "inBucket": 164,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 3617.4,
+          "lowerWeek": 25,
+          "before": 3604,
+          "inBucket": 49,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "320": {
@@ -2156,6 +4586,21 @@
         "p92Weeks": 27.5,
         "pctWithin18": 72.5,
         "totalWaiting": 806,
+        "within18": 584,
+        "medianWorking": {
+          "target": 403,
+          "lowerWeek": 9,
+          "before": 374,
+          "inBucket": 36,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 741.5,
+          "lowerWeek": 27,
+          "before": 734,
+          "inBucket": 16,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "330": {
@@ -2164,6 +4609,21 @@
         "p92Weeks": 38.1,
         "pctWithin18": 65.3,
         "totalWaiting": 2808,
+        "within18": 1835,
+        "medianWorking": {
+          "target": 1404,
+          "lowerWeek": 11,
+          "before": 1385,
+          "inBucket": 81,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 2583.4,
+          "lowerWeek": 38,
+          "before": 2581,
+          "inBucket": 18,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "410": {
@@ -2172,6 +4632,21 @@
         "p92Weeks": 38.2,
         "pctWithin18": 64.2,
         "totalWaiting": 827,
+        "within18": 531,
+        "medianWorking": {
+          "target": 413.5,
+          "lowerWeek": 12,
+          "before": 400,
+          "inBucket": 28,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 760.8,
+          "lowerWeek": 38,
+          "before": 760,
+          "inBucket": 4,
+          "openEnded": false
+        },
         "smallNumbers": false
       }
     }
@@ -2205,6 +4680,21 @@
         "p92Weeks": 48.9,
         "pctWithin18": 48.4,
         "totalWaiting": 7875,
+        "within18": 3812,
+        "medianWorking": {
+          "target": 3937.5,
+          "lowerWeek": 18,
+          "before": 3812,
+          "inBucket": 150,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 7245,
+          "lowerWeek": 48,
+          "before": 7167,
+          "inBucket": 86,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "301": {
@@ -2213,6 +4703,21 @@
         "p92Weeks": 40.1,
         "pctWithin18": 52.2,
         "totalWaiting": 5176,
+        "within18": 2700,
+        "medianWorking": {
+          "target": 2588,
+          "lowerWeek": 16,
+          "before": 2503,
+          "inBucket": 89,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 4761.9,
+          "lowerWeek": 40,
+          "before": 4757,
+          "inBucket": 33,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "320": {
@@ -2221,6 +4726,21 @@
         "p92Weeks": 39.4,
         "pctWithin18": 55.4,
         "totalWaiting": 7763,
+        "within18": 4301,
+        "medianWorking": {
+          "target": 3881.5,
+          "lowerWeek": 15,
+          "before": 3651,
+          "inBucket": 254,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 7142,
+          "lowerWeek": 39,
+          "before": 7115,
+          "inBucket": 77,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "330": {
@@ -2229,6 +4749,21 @@
         "p92Weeks": 55.6,
         "pctWithin18": 61.4,
         "totalWaiting": 9006,
+        "within18": 5528,
+        "medianWorking": {
+          "target": 4503,
+          "lowerWeek": 10,
+          "before": 4233,
+          "inBucket": 283,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 8285.5,
+          "lowerWeek": 55,
+          "before": 8245,
+          "inBucket": 71,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "410": {
@@ -2237,6 +4772,21 @@
         "p92Weeks": 37.4,
         "pctWithin18": 61.6,
         "totalWaiting": 1082,
+        "within18": 667,
+        "medianWorking": {
+          "target": 541,
+          "lowerWeek": 13,
+          "before": 535,
+          "inBucket": 17,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 995.4,
+          "lowerWeek": 37,
+          "before": 990,
+          "inBucket": 15,
+          "openEnded": false
+        },
         "smallNumbers": false
       }
     }
@@ -2267,6 +4817,21 @@
         "p92Weeks": 43.5,
         "pctWithin18": 53.2,
         "totalWaiting": 5047,
+        "within18": 2687,
+        "medianWorking": {
+          "target": 2523.5,
+          "lowerWeek": 16,
+          "before": 2436,
+          "inBucket": 99,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 4643.2,
+          "lowerWeek": 43,
+          "before": 4615,
+          "inBucket": 54,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "301": {
@@ -2275,6 +4840,21 @@
         "p92Weeks": 18.3,
         "pctWithin18": 91.7,
         "totalWaiting": 3428,
+        "within18": 3142,
+        "medianWorking": {
+          "target": 1714,
+          "lowerWeek": 8,
+          "before": 1600,
+          "inBucket": 188,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 3153.8,
+          "lowerWeek": 18,
+          "before": 3142,
+          "inBucket": 42,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "320": {
@@ -2283,6 +4863,21 @@
         "p92Weeks": 26.5,
         "pctWithin18": 77.7,
         "totalWaiting": 4564,
+        "within18": 3544,
+        "medianWorking": {
+          "target": 2282,
+          "lowerWeek": 10,
+          "before": 2092,
+          "inBucket": 241,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 4198.9,
+          "lowerWeek": 26,
+          "before": 4167,
+          "inBucket": 58,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "330": {
@@ -2291,6 +4886,21 @@
         "p92Weeks": 23,
         "pctWithin18": 82.1,
         "totalWaiting": 3602,
+        "within18": 2956,
+        "medianWorking": {
+          "target": 1801,
+          "lowerWeek": 9,
+          "before": 1749,
+          "inBucket": 145,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 3313.8,
+          "lowerWeek": 22,
+          "before": 3242,
+          "inBucket": 75,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "410": {
@@ -2299,6 +4909,21 @@
         "p92Weeks": 27.5,
         "pctWithin18": 74.8,
         "totalWaiting": 937,
+        "within18": 701,
+        "medianWorking": {
+          "target": 468.5,
+          "lowerWeek": 10,
+          "before": 459,
+          "inBucket": 32,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 862,
+          "lowerWeek": 27,
+          "before": 856,
+          "inBucket": 11,
+          "openEnded": false
+        },
         "smallNumbers": false
       }
     }
@@ -2329,6 +4954,21 @@
         "p92Weeks": 28.9,
         "pctWithin18": 78.1,
         "totalWaiting": 2089,
+        "within18": 1632,
+        "medianWorking": {
+          "target": 1044.5,
+          "lowerWeek": 8,
+          "before": 1007,
+          "inBucket": 74,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 1921.9,
+          "lowerWeek": 28,
+          "before": 1905,
+          "inBucket": 18,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "301": {
@@ -2337,6 +4977,21 @@
         "p92Weeks": 24.6,
         "pctWithin18": 86.1,
         "totalWaiting": 1108,
+        "within18": 954,
+        "medianWorking": {
+          "target": 554,
+          "lowerWeek": 6,
+          "before": 538,
+          "inBucket": 59,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 1019.4,
+          "lowerWeek": 24,
+          "before": 1013,
+          "inBucket": 11,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "320": {
@@ -2345,6 +5000,21 @@
         "p92Weeks": 26.4,
         "pctWithin18": 75.1,
         "totalWaiting": 953,
+        "within18": 716,
+        "medianWorking": {
+          "target": 476.5,
+          "lowerWeek": 10,
+          "before": 444,
+          "inBucket": 33,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 876.8,
+          "lowerWeek": 26,
+          "before": 871,
+          "inBucket": 13,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "330": {
@@ -2353,6 +5023,21 @@
         "p92Weeks": 44.8,
         "pctWithin18": 38.7,
         "totalWaiting": 1748,
+        "within18": 676,
+        "medianWorking": {
+          "target": 874,
+          "lowerWeek": 28,
+          "before": 857,
+          "inBucket": 57,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 1608.2,
+          "lowerWeek": 44,
+          "before": 1570,
+          "inBucket": 47,
+          "openEnded": false
+        },
         "smallNumbers": false
       },
       "410": {
@@ -2361,6 +5046,21 @@
         "p92Weeks": 15,
         "pctWithin18": 97.4,
         "totalWaiting": 305,
+        "within18": 297,
+        "medianWorking": {
+          "target": 152.5,
+          "lowerWeek": 5,
+          "before": 140,
+          "inBucket": 25,
+          "openEnded": false
+        },
+        "p92Working": {
+          "target": 280.6,
+          "lowerWeek": 14,
+          "before": 269,
+          "inBucket": 12,
+          "openEnded": false
+        },
         "smallNumbers": false
       }
     }

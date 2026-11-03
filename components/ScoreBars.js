@@ -1,37 +1,35 @@
 import styles from './ScoreBars.module.css';
 
-const ROWS = [
+export const FACTORS = [
   ['wait', 'Wait'],
   ['quality', 'Quality'],
   ['distance', 'Distance'],
 ];
 
-// Three small bars: how this trust scored on each factor (0 to 1) and the
-// weight that factor carries for the chosen priority.
-export default function ScoreBars({ scores, weights, qualityFlagged }) {
+// One bar per factor (0–100). Labels and weights live once in the
+// shortlist header, so each card only shows the bars and numbers.
+export default function ScoreBars({ scores, weights, total, qualityFlagged }) {
   return (
-    <dl className={styles.bars}>
-      {ROWS.map(([key, label]) => (
-        <div key={key} className={styles.row}>
-          <dt>
-            {label}
-            {key === 'quality' && qualityFlagged && <span title="No CQC overall rating: neutral score used"> *</span>}
-          </dt>
-          <dd>
+    <div className={styles.cells}>
+      {FACTORS.map(([key, label]) => {
+        const flagged = key === 'quality' && qualityFlagged;
+        const value = Math.round(scores[key] * 100);
+        return (
+          <div key={key} className={styles.cell}>
+            <span className="visually-hidden">{label} score, weight {Math.round(weights[key] * 100)}%:</span>
+            <span className={styles.value}>
+              {value}{flagged && <span title="No CQC overall rating: neutral score used">*</span>}
+            </span>
             <span className={styles.track} aria-hidden="true">
-              <span
-                className={`${styles.fill} ${key === 'quality' && qualityFlagged ? styles.flagged : ''}`}
-                style={{ width: `${Math.round(scores[key] * 100)}%` }}
-              />
+              <span className={`${styles.fill} ${flagged ? styles.flagged : ''}`} style={{ width: `${value}%` }} />
             </span>
-            <span className={`${styles.value} tabular`}>
-              {Math.round(scores[key] * 100)}
-              <span className="visually-hidden"> out of 100, weight {Math.round(weights[key] * 100)}%</span>
-            </span>
-            <span className={styles.weight} aria-hidden="true">×{weights[key]}</span>
-          </dd>
-        </div>
-      ))}
-    </dl>
+          </div>
+        );
+      })}
+      <div className={`${styles.cell} ${styles.total}`}>
+        <span className="visually-hidden">Overall score:</span>
+        <span className={styles.value}>{Math.round(total * 100)}</span>
+      </div>
+    </div>
   );
 }
