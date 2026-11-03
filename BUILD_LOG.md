@@ -190,3 +190,4 @@ Checks: layout-check passes at 320/390/768/1024/1440; axe 0 issues on empty and 
 Checks: layout-check passes at 5 widths; axe 0 issues on console with the popover open, Evidence, modal and /summary at 390 and 1440; verify-ranking output identical; summary prints on 1 A4 page; Impeccable detector found nothing.
 
 **Real time (system clock):** started 15:19, finished 15:32:24 (before commit and deploy).
+Deployed and confirmed live at https://referral-compass.vercel.app at 15:33:15, so about **14 minutes** from start to live.
