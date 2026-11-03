@@ -3,7 +3,7 @@ import providers from '@/data/providers.json';
 import meta from '@/data/meta.json';
 import { WEIGHTS, WEIGHTS_WITH_QUALITY, QUALITY_SCORE, UNRATED_QUALITY_SCORE, CLOSE_CALL } from '@/lib/rank';
 import { ratingAgeRange } from '@/lib/explain';
-import { monthYear, isOlderThan2Years } from '@/lib/format';
+import { monthYear } from '@/lib/format';
 import styles from './data.module.css';
 
 export const metadata = { title: 'Data and limits · Referral Compass' };
@@ -14,7 +14,6 @@ const ratingDates = rated.map((p) => p.cqc.date).sort();
 const STATS = {
   trusts: providers.length,
   rated: rated.length,
-  allRatingsOld: rated.every((p) => isOlderThan2Years(p.cqc.date)),
   oldest: monthYear(ratingDates[0]),
   newest: monthYear(ratingDates.at(-1)),
   wellLedOnly: providers.filter((p) => !p.cqc.rating && p.cqc.wellLed).length,
@@ -66,7 +65,7 @@ const LIMITS = [
   ['Trust, not hospital site', 'NHS England publishes waiting times per trust. A trust may run several hospitals with different waits.'],
   ['“Waiting so far”, not time to appointment', 'The median is how long people currently on the list have waited so far. It is not a prediction of when a new patient will be seen.'],
   ['Distance is approximate', 'A straight line from the centre of the patient’s postcode area (e.g. WC2N) to the trust’s registered headquarters. The clinic may be at another site, and travel time is not measured.'],
-  ['CQC ratings are trust-wide and old', `A rating covers the whole trust, not the specialty. ${STATS.allRatingsOld ? 'Every' : 'Most'} overall rating in this data set is over 2 years old: they are ${AGE.min} to ${AGE.max} years old (oldest ${STATS.oldest}, newest ${STATS.newest}). Because of this, CQC ratings are shown as context but are not used in the ranking unless the GP ticks “Include CQC rating in the ranking”.`],
+  ['CQC ratings are trust-wide and old', `A rating covers the whole trust, not the specialty. Overall ratings in this data set are ${AGE.min} to ${AGE.max} years old (oldest ${STATS.oldest}, newest ${STATS.newest}). Because of this, CQC ratings are shown as context but are not used in the ranking unless the GP ticks “Include CQC rating in the ranking”.`],
   ['Well-led-only trusts', `${STATS.wellLedOnly} trusts have only a trust-level Well-led rating from CQC’s newer approach, with no overall rating. They show “Rating unavailable” plus a “Well-led only” chip, and, only when CQC is included in the ranking, are given a neutral quality score of ${UNRATED_QUALITY_SCORE}. Well-led is never used as a stand-in for the overall rating.`],
   ['Small numbers', `Trust and specialty pairs with fewer than ${meta.minWaitingForRanking} people waiting are not ranked (a median from a handful of patients is noise). They are listed under the shortlist. There are ${STATS.smallPairs} such pairs.`],
   ['Specialist and community services', `${STATS.specialist.length} trusts are tagged as specialist or community services (${STATS.specialist.join(', ')}). They are hidden from the ranking unless the GP ticks “Include specialist and community services”, and keep their tag when shown.`],
@@ -136,7 +135,7 @@ export default function DataPage() {
             <dd>The same method with target = people waiting × 0.92. This is the measure behind the NHS 18-week standard.</dd>
           </div>
           <div>
-            <dt>% within 18 weeks</dt>
+            <dt>Waiting under 18 weeks</dt>
             <dd><code>people in weeks 0 to 18 ÷ people waiting × 100</code></dd>
           </div>
           <div>

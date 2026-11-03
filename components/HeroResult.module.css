@@ -67,6 +67,39 @@
 
 .actions { display: flex; flex-wrap: wrap; gap: var(--space-12); }
 
+/* Phones (below 600px): one card, three rows split by hairlines, label left
+   and number right. Only the wait row keeps its bar; the other context lines
+   stay for screen readers. */
+@media (max-width: 37.5em) {
+  .tiles {
+    gap: 0;
+    background: var(--card);
+    border: 1px solid var(--mint-line);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+  }
+  .tile {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-rows: auto;
+    align-items: center;
+    gap: var(--space-8) var(--space-12);
+    padding: var(--space-12) var(--space-16);
+    background: none;
+    border: 0;
+    border-radius: 0;
+  }
+  .tile + .tile { border-top: 1px solid var(--mint-line); }
+  .label { font-size: 0.875rem; }
+  .row { justify-self: end; }
+  .number { font-size: 1.75rem; }
+  .waitTile .number { font-size: var(--display-2); }
+  .waitTile .context { grid-column: 1 / -1; }
+  .tile:not(.waitTile) .context {
+    position: absolute; width: 1px; height: 1px; overflow: hidden;
+    clip: rect(0 0 0 0); white-space: nowrap; min-height: 0;
+  }
+}
+
 @media (max-width: 40em) {
   .card { gap: var(--space-16); }
   .name { font-size: 1.375rem; }

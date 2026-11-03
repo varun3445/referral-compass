@@ -14,7 +14,7 @@
 .legend { padding-bottom: var(--space-8); }
 .hint { margin: 0; font-size: var(--small); letter-spacing: 0.01em; color: var(--text-2); }
 .error { margin: 0; font-size: 0.875rem; font-weight: 600; color: var(--error-text); }
-.status { margin: 0; font-size: var(--small); letter-spacing: 0.01em; color: var(--text-2); min-height: 1.3em; }
+.status { margin: 0; font-size: var(--small); letter-spacing: 0.01em; color: var(--text-2); }
 
 .postcode {
   width: 100%;
@@ -79,22 +79,37 @@
 .segmented .chip:hover span { background: rgba(20, 24, 27, 0.05); }
 .segmented .chip input:checked + span { background: var(--ink); color: #fff; }
 
-.more { border-top: 1px solid var(--line); padding-top: var(--space-16); display: grid; gap: var(--space-4); }
+.more { border-top: 1px solid var(--line); padding-top: var(--space-8); display: grid; }
+.more[open] { gap: var(--space-4); }
+/* A proper disclosure: full-width row, chevron on the right that turns when open. */
 .more summary {
+  list-style: none;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-8);
+  min-height: var(--tap);
   color: var(--text);
   font-size: 0.9375rem;
   font-weight: 600;
-  min-height: var(--tap);
-  display: flex;
-  align-items: center;
   border-radius: var(--radius-sm);
 }
+.more summary::-webkit-details-marker { display: none; }
+.more summary:hover .chevron { color: var(--text); }
+.chevron { color: var(--text-2); flex: none; transition: transform 200ms var(--ease); }
+.more[open] .chevron { transform: rotate(180deg); }
+@media (prefers-reduced-motion: reduce) { .chevron { transition: none; } }
 .check { display: flex; gap: var(--space-12); align-items: center; min-height: var(--tap); font-size: 0.9375rem; cursor: pointer; padding: var(--space-4) 0; }
 .check input { width: 1.25rem; height: 1.25rem; margin: 0; flex: none; accent-color: var(--ink); }
 
 .submit { width: 100%; }
-.submit:disabled { opacity: 0.45; cursor: not-allowed; }
+.submit:disabled {
+  background: transparent;
+  color: var(--text-2);
+  box-shadow: inset 0 0 0 1px var(--line);
+  cursor: not-allowed;
+}
 
 @media (min-width: 61.875em) {
   .submit { display: none; }

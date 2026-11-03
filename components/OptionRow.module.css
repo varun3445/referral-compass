@@ -1,11 +1,15 @@
 /* Plain rows inside one white card (see .rows in page.module.css),
-   separated by hairline dividers. */
+   separated by hairline dividers. Narrow: stacked (name, wait, then
+   distance and link). When the rows card is 640px or wider (every screen
+   from 900px where the column has room): one fixed grid, so bars,
+   distances and links line up across rows. */
 .row {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) auto auto;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas: 'main main' 'wait wait' 'km link';
   align-items: center;
-  gap: var(--space-16);
+  gap: var(--space-12) var(--space-16);
   padding: var(--space-16) var(--pad-card);
   background: var(--card);
   transition: background-color 200ms var(--ease);
@@ -14,16 +18,16 @@
 .row:hover { background: #fbfaf8; }
 .row:active { background: var(--page); }
 
-.main { display: grid; gap: var(--space-8); justify-items: start; }
+.main { grid-area: main; display: grid; gap: var(--space-8); justify-items: start; }
 .name { font-size: 1rem; font-weight: 600; line-height: 1.3; letter-spacing: -0.01em; }
 .specialist { font-size: var(--small); font-weight: 500; letter-spacing: 0.01em; padding: 0 var(--space-8); border-radius: 999px; background: var(--amber-bg); color: var(--amber-text); }
 
-.wait { display: grid; gap: var(--space-8); }
+.wait { grid-area: wait; display: grid; gap: var(--space-8); }
 .value { display: inline-flex; align-items: baseline; gap: var(--space-4); white-space: nowrap; }
 .big { font-size: 1.75rem; font-weight: 600; letter-spacing: -0.03em; line-height: 1.05; font-variant-numeric: tabular-nums; }
 .unit { font-size: 1rem; color: var(--text-2); }
 
-.km { display: inline-flex; align-items: center; gap: var(--space-4); white-space: nowrap; justify-self: end; font-size: 0.9375rem; color: var(--text-2); font-variant-numeric: tabular-nums; }
+.km { display: inline-flex; align-items: center; gap: var(--space-4); white-space: nowrap; grid-area: km; justify-self: start; font-size: 0.9375rem; color: var(--text-2); font-variant-numeric: tabular-nums; }
 .km svg { color: var(--text-2); flex: none; }
 
 .evidence {
@@ -38,6 +42,8 @@
   color: var(--text);
   font-size: 0.9375rem;
   font-weight: 600;
+  grid-area: link;
+  justify-self: end;
   text-decoration: underline;
   text-decoration-color: rgba(20, 24, 27, 0.4);
   text-underline-offset: 0.18em;
@@ -48,14 +54,11 @@
 .evidence:focus-visible { box-shadow: none; }
 .evidence:focus-visible::after { box-shadow: inset 0 0 0 3px var(--accent); }
 
-@media (max-width: 40em) {
+@container (min-width: 40rem) {
   .row {
-    grid-template-columns: minmax(0, 1fr) auto;
-    grid-template-areas: 'main main' 'wait wait' 'km link';
-    gap: var(--space-12) var(--space-16);
+    grid-template-columns: minmax(0, 1fr) 200px 96px 120px;
+    grid-template-areas: 'main wait km link';
+    gap: var(--space-16);
   }
-  .main { grid-area: main; }
-  .wait { grid-area: wait; }
-  .km { grid-area: km; justify-self: start; }
-  .evidence { grid-area: link; justify-self: end; }
+  .km { justify-self: start; }
 }

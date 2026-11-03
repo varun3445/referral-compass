@@ -2,6 +2,7 @@
 import meta from '@/data/meta.json';
 import providers from '@/data/providers.json';
 import { ratingAgeRange } from '@/lib/explain';
+import Icon from './Icon';
 import styles from './ConsoleInputs.module.css';
 
 export const DISTANCES = [10, 25, 50, 80];
@@ -69,8 +70,9 @@ export default function ConsoleInputs({ value, onChange, postcodeStatus, onSubmi
           aria-describedby={`postcode-hint postcode-status${error ? ' postcode-error' : ''}`}
         />
         </div>
-        <p id="postcode-status" className={styles.status} aria-live="polite">
-          {loading ? 'Checking…' : resolved ? `Using ${resolved}` : ' '}
+        {/* Takes no space when empty, but stays in the page for screen readers. */}
+        <p id="postcode-status" className={loading || resolved ? styles.status : 'visually-hidden'} aria-live="polite">
+          {loading ? 'Checking…' : resolved ? `Using ${resolved}` : ''}
         </p>
       </div>
 
@@ -100,8 +102,11 @@ export default function ConsoleInputs({ value, onChange, postcodeStatus, onSubmi
         layout="segmented"
       />
 
-      <details className={styles.more} open={value.includeSpecialist || value.includeQuality || undefined}>
-        <summary>More options</summary>
+      <details className={styles.more}>
+        <summary>
+          More options
+          <Icon name="chevron-down" size={18} className={styles.chevron} />
+        </summary>
         <label className={styles.check}>
           <input
             type="checkbox"

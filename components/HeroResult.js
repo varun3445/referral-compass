@@ -38,7 +38,7 @@ export default function HeroResult({ result, ranking, maxWait, summaryHref, onEv
 
       <div className={styles.tilesWrap}>
         <dl className={styles.tiles}>
-          <div className={styles.tile}>
+          <div className={`${styles.tile} ${styles.waitTile}`}>
             <dt className={styles.label}>Waiting so far</dt>
             <dd className={styles.row}><Value number={weeks(wait.medianWeeks)} unit="weeks" size="xl" /></dd>
             <dd className={styles.context}>
@@ -47,13 +47,9 @@ export default function HeroResult({ result, ranking, maxWait, summaryHref, onEv
             </dd>
           </div>
           <div className={styles.tile}>
-            <dt className={styles.label}>Seen within 18 weeks</dt>
+            <dt className={styles.label}>Waiting under 18 weeks</dt>
             <dd className={styles.row}><Value number={within18} unit="%" /></dd>
-            <dd className={styles.context}>
-              <span className={styles.track} aria-hidden="true">
-                <span className={styles.fill} style={{ width: `${within18}%` }} />
-              </span>
-            </dd>
+            <dd className={`${styles.context} ${styles.contextText}`}>{within18} in 100 on the list</dd>
           </div>
           <div className={styles.tile}>
             <dt className={styles.label}>Distance</dt>

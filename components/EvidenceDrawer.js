@@ -221,7 +221,7 @@ export default function EvidenceDrawer({ result, ranking, outcode, specialtyName
                   source={RTT_SOURCE}
                 />
                 <Fact
-                  label="Seen within 18 weeks"
+                  label="Waiting under 18 weeks"
                   value={`${w.pctWithin18}%`}
                   formula={`${count(w.within18)} ÷ ${count(w.totalWaiting)} × 100 = ${w.pctWithin18}%`}
                   source={RTT_SOURCE}

@@ -33,8 +33,8 @@ export default function CqcBadge({ cqc, compact = false, highest = false }) {
         <span className={styles.dot} aria-hidden="true" />
         <span className="visually-hidden">CQC rating: </span>{cqc.rating}
       </span>
-      <span className={styles.meta}>Last rated {monthYear(cqc.date)}</span>
       {highest && <span className={styles.highest}>Highest rated</span>}
+      <span className={styles.meta}>Last rated {monthYear(cqc.date)}</span>
     </span>
   );
 }

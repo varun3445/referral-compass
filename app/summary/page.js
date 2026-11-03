@@ -5,9 +5,12 @@ import PrintButton from '@/components/PrintButton';
 import BackButton from '@/components/BackButton';
 import CqcBadge from '@/components/CqcBadge';
 import { weeks, monthYear, isOlderThan2Years } from '@/lib/format';
+import { ratingAgeRange } from '@/lib/explain';
 import styles from './summary.module.css';
 
 export const metadata = { title: 'Referral summary · Referral Compass' };
+
+const AGE = ratingAgeRange(providers);
 
 const CHOICE_URL = 'https://www.nhs.uk/using-the-nhs/about-the-nhs/your-choices-in-the-nhs/';
 const CHOICE_SHORT = 'nhs.uk/using-the-nhs/about-the-nhs/your-choices-in-the-nhs';
@@ -68,7 +71,7 @@ export default async function SummaryPage({ searchParams }) {
                   <span className={styles.screenOnly}><CqcBadge cqc={p.cqc} /></span>
                   <span className={styles.printOnly}><strong>{rating}</strong> (rated in {ratingYear})</span>
                   {isOlderThan2Years(p.cqc.date) && (
-                    <span className={styles.small}>This rating is more than 2 years old. It covers the whole trust.</span>
+                    <span className={styles.small}>CQC ratings in this data are {AGE.min} to {AGE.max} years old. This one covers the whole trust.</span>
                   )}
                 </>
               ) : (

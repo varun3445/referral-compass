@@ -154,3 +154,16 @@ Restyle only. No ranking, data or copy changes, apart from the delta lines the b
 - At 1024 the tiles stack (the hero is narrower than 624px there), which is the container rule working as specified.
 
 **Capture note:** Playwright full-page and element screenshots paint the sticky summary bar mid-page. The screenshot script un-sticks it during capture only; the app is unchanged.
+
+## M4e polish (3 Nov 2026)
+
+1. **Wording, data accuracy.** "Seen within 18 weeks" was wrong: the figure is the share of people *still waiting* who have waited under 18 weeks, not people seen. Now "Waiting under 18 weeks" with context "96 in 100 on the list", in the console, Evidence panel and /data (/summary already said "have waited under 18 weeks").
+2. **CQC age.** The console banner and /summary now say "3 to 8 years old", computed from the data by the same `ratingAgeRange` as the checkbox label. Mid-round request: the console banner is one sentence, no bold "Important": "CQC ratings are 3 to 8 years old and not used in the ranking." (or "...and are used in the ranking." when the CQC box is ticked). It is one line on desktop; at 390px the sentence is longer than a phone line, so it wraps to two.
+3. **Option rows.** Fixed grid (name 1fr, wait 200px, distance 96px, action 120px), centre-aligned, so bars, distances and links line up. **Deviation:** triggered by the rows card being 640px or wider (a container query), not by a 900px viewport. At a 1024px window the results column is ~612px, and the fixed columns would have left the trust name ~100px. Every screen 900px or wider where the column has room gets the fixed grid. "Highest rated" now sits right after the rating chip.
+4. **Dead space.** The postcode status line takes no space when empty (stays in the page for screen readers). "More options" is a proper disclosure with a chevron, closed by default. Disabled "Show results" is a light outlined state.
+5. **Phones below 600px.** The three stats are one card with three hairline rows, label left and number right; only the wait row has a bar. At 390x844 the trust name ends at 427px and the wait number at 498px.
+6. **Desktop empty state.** Centred in the column, with "For each trust you will see waiting so far, CQC rating and distance." under the button.
+
+Checks: layout-check passes at 320/390/768/1024/1440; axe 0 issues on empty and results at 390 and 1440; verify-ranking output byte-identical to M4b; summary prints on 1 A4 page.
+
+**Real time for this round (system clock):** started 12:02:24, all changes and checks done 12:05:26, so **3 minutes**, plus the commit, push and deploy that follow. Timestamps from `date` on this machine at the start and end of the round, not estimates.

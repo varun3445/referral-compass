@@ -73,7 +73,6 @@
 .fade { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-16); animation: fade-in 200ms ease-out; }
 
 .banner { font-size: 0.9375rem; }
-.bannerShort { display: none; }
 .note { display: flex; align-items: center; gap: var(--space-12); font-size: 0.9375rem; background: var(--amber-bg); color: var(--amber-text); border: 0; }
 .note svg { color: var(--amber-icon); flex: none; }
 .quiet { font-size: 0.875rem; color: var(--text-2); background: transparent; border: 0; padding: 0 var(--space-4); }
@@ -81,6 +80,7 @@
 .others { display: grid; gap: var(--space-12); }
 .othersHead { font-size: var(--h3); padding: 0 var(--space-4); }
 .rows {
+  container-type: inline-size;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -105,8 +105,17 @@
   border: 1px solid var(--line);
   border-radius: var(--radius);
 }
+.stateInner { display: grid; gap: var(--space-16); }
 .state p { margin: 0; font-size: 1.125rem; text-wrap: pretty; }
 .state :global(.btn) { width: 100%; }
+.state .stateNote { font-size: 0.875rem; color: var(--text-2); }
+
+/* Desktop empty state: content centred in the column. */
+@media (min-width: 61.875em) {
+  .stateEmpty { align-content: center; justify-items: center; }
+  .stateEmpty .stateInner { width: 100%; max-width: 26rem; text-align: center; }
+  .stateEmpty p { text-wrap: balance; }
+}
 .stateError p { color: var(--error-text); font-weight: 600; }
 
 @media (max-width: 40em) {
@@ -118,8 +127,6 @@
   .headCompact h1 { font-size: 1.125rem; }
   .headCompact p { display: none; }
   .banner { font-size: 0.875rem; }
-  .bannerFull { display: none; }
-  .bannerShort { display: inline; }
 }
 
 @media (prefers-reduced-motion: reduce) {

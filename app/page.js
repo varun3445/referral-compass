@@ -9,8 +9,12 @@ import EvidenceDrawer from '@/components/EvidenceDrawer';
 import Icon from '@/components/Icon';
 import { lookupOutcode, toOutcode } from '@/lib/geo';
 import { rankProviders } from '@/lib/rank';
+import { ratingAgeRange } from '@/lib/explain';
 import { count, isOlderThan2Years } from '@/lib/format';
 import styles from './page.module.css';
+
+// CQC rating ages, worked out from the data (same source as the checkbox label).
+const AGE = ratingAgeRange(providers);
 
 // The summary link carries only trust, specialty and distance. No postcode.
 const summaryHref = (r, specialty) =>
@@ -162,17 +166,9 @@ export default function ReferralConsole() {
               {oldCount > 0 && (
                 <p className={`callout ${styles.banner}`}>
                   <Icon name="triangle-alert" size={18} />
-                  <span className={styles.bannerText}>
-                  <strong>Important</strong>{' '}
-                  <span className={styles.bannerFull}>
-                    {oldCount === rated.length
-                      ? 'All CQC ratings shown are over 2 years old.'
-                      : `${oldCount} of ${rated.length} CQC ratings shown are over 2 years old.`}
-                    {' '}A trust may have improved or declined since.
-                  </span>
-                  <span className={styles.bannerShort}>
-                    {oldCount === rated.length ? 'All CQC ratings are over 2 years old.' : `${oldCount} of ${rated.length} ratings are over 2 years old.`}
-                  </span>
+                  <span>
+                    CQC ratings are {AGE.min} to {AGE.max} years old and{' '}
+                    {inputs.includeQuality ? 'are used in the ranking.' : 'not used in the ranking.'}
                   </span>
                 </p>
               )}
@@ -240,6 +236,7 @@ export default function ReferralConsole() {
 function ResultState({ pcStatus, ranking, inputs, origin, nextDistance, onWiden, onExample }) {
   let text = null;
   let action = null;
+  let note = null;
 
   if (pcStatus.loading) text = 'Finding trusts near this postcode…';
   else if (pcStatus.error) text = pcStatus.error;
@@ -250,6 +247,7 @@ function ResultState({ pcStatus, ranking, inputs, origin, nextDistance, onWiden,
         Try an example: WC2N, Rheumatology
       </button>
     );
+    note = 'For each trust you will see waiting so far, CQC rating and distance.';
   }
   else if (!origin) text = 'Keep typing the postcode. Results appear as soon as we recognise it.';
   else if (ranking && ranking.results.length === 0) {
@@ -269,9 +267,12 @@ function ResultState({ pcStatus, ranking, inputs, origin, nextDistance, onWiden,
 
   const tone = pcStatus.error ? styles.stateError : '';
   return (
-    <div className={`${styles.state} ${tone}`}>
-      <p>{text}</p>
-      {action}
+    <div className={`${styles.state} ${tone} ${note ? styles.stateEmpty : ''}`}>
+      <div className={styles.stateInner}>
+        <p>{text}</p>
+        {action}
+        {note && <p className={styles.stateNote}>{note}</p>}
+      </div>
     </div>
   );
 }
