@@ -1,0 +1,11 @@
+.bars { margin: 0; display: grid; gap: 5px; min-width: 190px; }
+.row { display: grid; grid-template-columns: 62px 1fr; align-items: center; gap: var(--space-2); }
+.row dt { font-size: 12px; color: var(--grey-600); }
+.row dd { margin: 0; display: grid; grid-template-columns: 1fr 26px 30px; align-items: center; gap: 6px; }
+.track { height: 6px; background: var(--grey-100); border-radius: 3px; overflow: hidden; }
+.fill { display: block; height: 100%; background: var(--accent); border-radius: 3px; }
+.flagged {
+  background: repeating-linear-gradient(135deg, var(--grey-400) 0 3px, var(--grey-200) 3px 6px);
+}
+.value { font-size: 12px; font-weight: 600; text-align: right; color: var(--grey-800); }
+.weight { font-size: 11px; color: var(--grey-600); }

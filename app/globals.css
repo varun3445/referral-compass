@@ -1,0 +1,70 @@
+/* Design tokens. Calm, clinical, dense. One accent (deep blue). */
+:root {
+  --grey-0: #ffffff;
+  --grey-50: #f6f7f9;
+  --grey-100: #eceef2;
+  --grey-200: #d9dde4;
+  --grey-400: #8a93a3;
+  --grey-600: #545d6c;   /* AA on white for small text */
+  --grey-800: #252b36;
+  --grey-900: #12161d;
+
+  --accent: #0b3d91;
+  --accent-hover: #082e6e;
+  --accent-soft: #e7eefb;
+
+  /* CQC semantic colours: text colour on a tinted background, all AA. */
+  --cqc-outstanding: #0a6b3d;  --cqc-outstanding-bg: #e3f4ea;
+  --cqc-good: #0b4f9c;         --cqc-good-bg: #e4eefb;
+  --cqc-ri: #8a4b00;           --cqc-ri-bg: #fdf0dc;
+  --cqc-inadequate: #a4161a;   --cqc-inadequate-bg: #fbe5e5;
+  --cqc-none: #545d6c;         --cqc-none-bg: #eceef2;
+
+  --warn: #8a4b00;
+  --warn-bg: #fdf0dc;
+  --error: #a4161a;
+  --error-bg: #fbe5e5;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+
+  --radius: 8px;
+  --focus: 0 0 0 3px #ffbf47; /* NHS-style high-visibility focus */
+
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  background: var(--grey-50);
+  color: var(--grey-900);
+  font-family: var(--font);
+  font-size: 15px;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--accent); }
+a:hover { color: var(--accent-hover); }
+
+:focus-visible {
+  outline: none;
+  box-shadow: var(--focus);
+  border-radius: 4px;
+}
+
+button { font: inherit; }
+
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap;
+}
+
+.tabular { font-variant-numeric: tabular-nums; }
