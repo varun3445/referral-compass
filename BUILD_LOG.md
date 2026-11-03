@@ -70,3 +70,18 @@ Reviewer recomputed all 180 trust×specialty pairs from the raw CSV: PASS with 4
 - **Mistake caught:** distance formulas first printed 24.6 km as "25", so the arithmetic didn't check. Formulas now use 1 decimal place.
 - **Mistake caught:** CSS Modules reject bare element selectors (`section h3`); moved to classes.
 - Patient summary printed with headless Chrome to a real PDF: **1 page, A4** (595 × 842 pt). `docs/d-summary-homerton.pdf`.
+
+## M3 fixes + M4 (3 Nov 2026)
+
+**M3 fixes:** summary label "Waiting so far" with a plain explanation; prototype line and "not for urgent or suspected cancer referrals"; the printed NHS link now shows the full URL as text (the old `::after` suffix broke mid-word).
+- **Mistake caught:** `git push --follow-tags` only pushes *annotated* tags, and `m3` was lightweight, so it didn't go up. Pushed it explicitly.
+- gh account: switched back to WQA per instruction, then a follow-up said leave it on `varun3445`, so it's back on `varun3445`.
+
+**M4**
+- `/data`: sources table with links and dates, calculation methods, ranking weights (read live from `lib/rank.js` so they can't drift), 10 known limits with counts worked out from the data, privacy, and licence.
+- Open Government Licence v3.0 attribution for NHS England, CQC and ODS data on `/data`, plus a one-line footer on every page. postcodes.io (OS / Royal Mail / ONS) attribution also on `/data`.
+- Console hero: one question as the headline, scope line, and "Prototype · routine referrals only".
+- Deployed with `vercel whoami` = `varun3445`, scope `varunbuilds` (Hobby, the personal account; no WQA team on this login). `.vercelignore` keeps the 110 MB of raw downloads out of the upload.
+- Lighthouse accessibility (live site, desktop): **100 / 100 / 100** on `/`, `/data`, `/summary`.
+- **Caveat caught:** Lighthouse scores `/` in its empty state, so it never sees the cards or drawer. Ran Lighthouse's own axe-core 4.14 on the filled-in console and the open Evidence drawer: 0 violations.
+- **200% zoom** (720 CSS px): no horizontal scroll on any page. Found and fixed two issues: score bars lost their labels once the shared header hid, and the priority toggle stretched into an empty box.

@@ -59,6 +59,14 @@ export default function ReferralConsole() {
 
   return (
     <main className={styles.main}>
+      <header className={styles.hero}>
+        <h1>Which NHS trust could see your patient soonest?</h1>
+        <p>
+          Waiting times, CQC ratings and distance for {Object.keys(meta.specialties).length} specialties across{' '}
+          {providers.length} London-area trusts, from NHS data for {meta.rttLabel}.{' '}
+          <span className={styles.caveat}>Prototype · routine referrals only, not urgent or suspected cancer.</span>
+        </p>
+      </header>
       <ConsoleInputs value={inputs} onChange={setInputs} postcodeStatus={pcStatus} />
 
       <section className={styles.results} aria-live="polite" aria-label="Shortlist">

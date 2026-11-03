@@ -47,6 +47,7 @@ input.input::placeholder { text-transform: none; font-family: var(--font); color
 
 .toggle {
   display: inline-flex;
+  align-self: flex-start;
   height: 40px;
   border: 1px solid var(--grey-400);
   border-radius: 6px;

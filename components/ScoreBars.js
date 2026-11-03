@@ -17,6 +17,8 @@ export default function ScoreBars({ scores, weights, total, qualityFlagged }) {
         return (
           <div key={key} className={styles.cell}>
             <span className="visually-hidden">{label} score, weight {Math.round(weights[key] * 100)}%:</span>
+            {/* Visible only on narrow screens, where the shared header is hidden */}
+            <span className={styles.mini} aria-hidden="true">{label} ×{weights[key]}</span>
             <span className={styles.value}>
               {value}{flagged && <span title="No CQC overall rating: neutral score used">*</span>}
             </span>
@@ -28,6 +30,7 @@ export default function ScoreBars({ scores, weights, total, qualityFlagged }) {
       })}
       <div className={`${styles.cell} ${styles.total}`}>
         <span className="visually-hidden">Overall score:</span>
+        <span className={styles.mini} aria-hidden="true">Score</span>
         <span className={styles.value}>{Math.round(total * 100)}</span>
       </div>
     </div>

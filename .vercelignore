@@ -1,0 +1,6 @@
+data/raw/
+.next/
+node_modules/
+.impeccable/
+docs/
+.env*

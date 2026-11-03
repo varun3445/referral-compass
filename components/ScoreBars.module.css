@@ -8,3 +8,8 @@
   background: repeating-linear-gradient(135deg, var(--grey-600) 0 3px, var(--grey-200) 3px 6px);
 }
 .total .value { font-size: 18px; font-weight: 700; color: var(--grey-900); }
+
+.mini { display: none; font-size: 13px; color: var(--grey-600); }
+@media (max-width: 1240px) {
+  .mini { display: block; }
+}

@@ -72,3 +72,12 @@ button { font: inherit; }
 @media print {
   html, body { background: #fff; }
 }
+
+.site-footer {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: var(--space-5) var(--space-5) var(--space-6);
+  font-size: 13px;
+  color: var(--grey-600);
+}
+@media print { .site-footer { display: none; } }
