@@ -149,7 +149,7 @@ export default function EvidenceDrawer({ result, ranking, outcode, specialtyName
             <span />
           </div>
           <header className={styles.head}>
-            <div>
+            <div className={styles.headText}>
               <p className={styles.kicker}>Evidence · {specialtyName}</p>
               <h2 id="evidence-title" className={styles.title}>{p.name}</h2>
             </div>

@@ -52,6 +52,7 @@ export default function ConsoleInputs({ value, onChange, postcodeStatus, onSubmi
             <span className="visually-hidden">Error: </span>{error}
           </p>
         )}
+        <div className={styles.inputWrap}>
         <input
           id="postcode"
           className={styles.postcode}
@@ -65,6 +66,7 @@ export default function ConsoleInputs({ value, onChange, postcodeStatus, onSubmi
           aria-invalid={Boolean(error)}
           aria-describedby={`postcode-hint postcode-status${error ? ' postcode-error' : ''}`}
         />
+        </div>
         <p id="postcode-status" className={styles.status} aria-live="polite">
           {loading ? 'Checking…' : resolved ? `Using ${resolved}` : ' '}
         </p>

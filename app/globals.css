@@ -33,7 +33,16 @@
   --cqc-inadequate: #8f1d1d;  --cqc-inadequate-bg: #fbe8e8;  --cqc-inadequate-dot: #d64545;
   --cqc-none: #4a525c;        --cqc-none-bg: #eef0f3;        --cqc-none-dot: #9aa2ad;
 
-  --s1: 0.25rem;  --s2: 0.5rem;  --s3: 1rem;  --s4: 1.5rem;  --s5: 2rem;  --s6: 3rem;
+  /* One spacing scale: 4, 8, 12, 16, 24, 32, 48. */
+  --space-4: 0.25rem;
+  --space-8: 0.5rem;
+  --space-12: 0.75rem;
+  --space-16: 1rem;
+  --space-24: 1.5rem;
+  --space-32: 2rem;
+  --space-48: 3rem;
+  /* Card padding is the one value off the scale, as briefed: 24 desktop, 20 phones. */
+  --pad-card: 1.5rem;
 
   --radius: 1.25rem;     /* 20: cards */
   --radius-sm: 0.875rem; /* 14: inner tiles, banner */
@@ -51,7 +60,9 @@
   --ring: 0 0 0 2px #fff, 0 0 0 5px var(--ink);   /* 3px dark ring, white gap */
 }
 
-* { box-sizing: border-box; }
+/* Layout rules: border-box everywhere, and every flex or grid child may
+   shrink below its content (min-width: 0), so nothing forces overflow. */
+*, *::before, *::after { box-sizing: border-box; min-width: 0; }
 html { font-size: 100%; -webkit-text-size-adjust: 100%; }
 
 body {
@@ -68,6 +79,7 @@ body {
   flex-direction: column;
 }
 @media (min-width: 40.0625em) { body { font-size: 1.0625rem; } }
+@media (max-width: 40em) { :root { --pad-card: 1.25rem; } }
 
 h1, h2, h3 { margin: 0; line-height: 1.2; font-weight: 600; }
 h1 { font-size: var(--h1); letter-spacing: -0.025em; }
@@ -95,9 +107,9 @@ button { font: inherit; color: inherit; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--s2);
+  gap: var(--space-8);
   min-height: var(--tap);
-  padding: 0.625rem 1.25rem;
+  padding: var(--space-12) var(--space-24);
   border-radius: 999px;
   border: 0;
   font-size: 0.9375rem;
@@ -120,29 +132,29 @@ button { font: inherit; color: inherit; }
 /* Soft amber note (old ratings banner and similar). */
 .callout {
   display: flex;
-  align-items: flex-start;
-  gap: 0.625rem;
+  align-items: center;
+  gap: var(--space-12);
   background: var(--amber-bg);
   color: var(--amber-text);
   border-radius: var(--radius-sm);
-  padding: 0.75rem var(--s3);
+  padding: var(--space-12) var(--space-16);
   margin: 0;
 }
-.callout svg { color: var(--amber-icon); flex: none; margin-top: 0.15em; }
+.callout svg { color: var(--amber-icon); flex: none; }
 
 /* Quiet inset text for notes. */
 .inset {
   background: var(--soft);
   border-radius: var(--radius-sm);
-  padding: 0.75rem var(--s3);
+  padding: var(--space-12) var(--space-16);
   margin: 0;
 }
 
-.site-footer { margin-top: var(--s6); }
+.site-footer { padding-top: var(--space-48); }
 .site-footer p {
   max-width: 65rem;
   margin: 0 auto;
-  padding: var(--s4) var(--s3) var(--s5);
+  padding: var(--space-24) var(--space-16) var(--space-32);
   font-size: 0.875rem;
   color: var(--text-2);
 }

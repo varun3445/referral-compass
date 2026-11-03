@@ -2,11 +2,11 @@
 .inner {
   max-width: 65rem;
   margin: 0 auto;
-  padding: var(--s3) var(--s3) 0;
+  padding: var(--space-16) var(--space-16) 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--s3);
+  gap: var(--space-16);
 }
 .brand {
   display: inline-flex;
@@ -33,7 +33,7 @@
   display: inline-flex;
   align-items: center;
   min-height: var(--tap);
-  padding: 0 var(--s3);
+  padding: 0 var(--space-16);
   border-radius: 999px;
   background: var(--card);
   box-shadow: var(--shadow);
@@ -46,7 +46,7 @@
 .link:hover { color: var(--text); background: var(--soft); }
 
 @media (max-width: 40em) {
-  .inner { padding-top: var(--s2); }
+  .inner { padding-top: var(--space-8); }
   .right :global(.chip-hide-mobile) { display: none; }
   .brand { font-size: 1rem; }
 }

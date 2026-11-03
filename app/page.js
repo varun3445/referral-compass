@@ -153,7 +153,7 @@ export default function ReferralConsole() {
                       : `${oldCount} of ${rated.length} CQC ratings shown are over 2 years old.`}
                     {' '}A trust may have improved or declined since.
                   </span>
-                  <span className={styles.bannerShort} aria-hidden="true">
+                  <span className={styles.bannerShort}>
                     {oldCount === rated.length ? 'All CQC ratings are over 2 years old.' : `${oldCount} of ${rated.length} ratings are over 2 years old.`}
                   </span>
                   </span>

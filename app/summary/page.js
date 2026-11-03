@@ -43,9 +43,11 @@ export default async function SummaryPage({ searchParams }) {
       </div>
 
       <article className={styles.card}>
-        <p className={styles.kicker}>{specialtyName} referral</p>
-        <h1 className={styles.lead}>Your GP has suggested asking for a referral to:</h1>
-        <p className={styles.trust}>{p.name}</p>
+        <div className={styles.titleBlock}>
+          <p className={styles.kicker}>{specialtyName} referral</p>
+          <h1 className={styles.lead}>Your GP has suggested asking for a referral to:</h1>
+          <p className={styles.trust}>{p.name}</p>
+        </div>
 
         <dl className={styles.facts}>
           <div className={styles.fact}>
@@ -92,30 +94,37 @@ export default async function SummaryPage({ searchParams }) {
           )}
         </dl>
 
+        <section className={styles.section}>
         <h2>Why this option</h2>
         <p>
           Half of the people on this trust’s {specialtyName.toLowerCase()} waiting list have waited{' '}
           {weeks(w.medianWeeks)} weeks or less so far, and {Math.round(w.pctWithin18)} in 100 have waited under 18 weeks.
           Your GP has weighed this against the trust’s rating and how far you would need to travel.
         </p>
+        </section>
 
+        <section className={styles.section}>
         <h2>You may be able to choose your provider</h2>
         <p>
           Patients may be able to choose their provider for a first outpatient appointment with an eligible
           consultant-led service. Find out more at <a href={CHOICE_URL} className={styles.url}>{CHOICE_SHORT}</a>
         </p>
 
+        </section>
+
         <p className={`${styles.small} ${styles.disclaimer}`}>
           This summary is not medical advice. Talk to your GP if anything changes. It is not for urgent or suspected
           cancer referrals, which follow faster routes.
         </p>
 
+        <section className={styles.section}>
         <h2 className={styles.sourcesHead}>Sources</h2>
         <ul className={styles.sources}>
           <li>Waiting times: NHS England Referral to Treatment statistics, {meta.rttLabel} (patients still waiting).</li>
           <li>Rating: Care Quality Commission, ratings file {monthYear(meta.cqcFileDate)}{rating ? `; rating published ${monthYear(p.cqc.date)}` : ''}.</li>
           <li>Location: NHS Organisation Data Service and postcodes.io.</li>
         </ul>
+        </section>
         <p className={styles.footer}>
           Made with Referral Compass, an independent prototype built from public NHS data. Not an NHS service. No personal information is stored.
         </p>
