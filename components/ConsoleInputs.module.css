@@ -1,84 +1,120 @@
 .form {
-  padding: var(--space-4) var(--space-5);
-  background: var(--grey-0);
-  border: 1px solid var(--grey-200);
+  display: grid;
+  gap: var(--s4);
+  background: var(--card);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
-  display: grid;
-  gap: var(--space-3);
+  box-shadow: var(--shadow);
+  padding: var(--s4);
 }
 
-.row {
-  display: grid;
-  grid-template-columns: minmax(200px, 1.1fr) minmax(180px, 1fr) minmax(200px, 1.2fr) auto;
-  gap: var(--space-5);
-  align-items: start;
-}
+.field { display: grid; gap: var(--s1); }
+.label, .legend { font-weight: 600; font-size: 1rem; padding: 0; }
+.hint { margin: 0; font-size: 0.9375rem; color: var(--text-2); }
+.error { margin: 0; font-size: 0.9375rem; font-weight: 600; color: var(--error-text); }
+.status { margin: 0; font-size: 0.875rem; color: var(--text-2); min-height: 1.3em; }
 
-.field { display: flex; flex-direction: column; gap: 6px; min-width: 0; border: 0; margin: 0; padding: 0; }
-.field > label, .field legend {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--grey-800);
-  padding: 0;
-  display: flex;
-  justify-content: space-between;
-}
-.field strong { color: var(--accent); }
-
-.input {
-  height: 40px;
-  padding: 0 var(--space-3);
-  border: 1px solid var(--grey-400);
-  border-radius: 6px;
-  background: var(--grey-0);
+.postcode {
+  margin-top: var(--s1);
+  width: 100%;
+  min-height: 3.5rem;
+  padding: 0 var(--s3);
+  border: 2px solid var(--text-2);
+  border-radius: var(--radius-sm);
+  background: var(--card);
+  color: var(--text);
   font: inherit;
-  font-size: 15px;
-  color: var(--grey-900);
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
-input.input { text-transform: uppercase; font-family: var(--mono); letter-spacing: 0.02em; }
-input.input::placeholder { text-transform: none; font-family: var(--font); color: var(--grey-600); letter-spacing: 0; }
-.input:focus-visible { border-color: var(--accent); }
-.invalid { border-color: var(--error); background: var(--error-bg); }
+.hasError .postcode { border-color: var(--error); }
 
-.hint { font-size: 13px; color: var(--grey-600); min-height: 18px; }
-.error { font-size: 13px; color: var(--error); font-weight: 600; }
+.group { border: 0; margin: 0; padding: 0; min-width: 0; display: grid; gap: var(--s2); }
 
-.slider input[type='range'] { height: 40px; accent-color: var(--accent); width: 100%; }
+.chips { display: flex; flex-wrap: wrap; gap: var(--s2); }
+.even { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.375rem; }
+.even .chip span { width: 100%; justify-content: center; padding: 0 0.25rem; white-space: nowrap; }
 
-.toggle {
+.chip { position: relative; display: inline-flex; cursor: pointer; }
+.chip input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+.chip span {
   display: inline-flex;
-  align-self: flex-start;
-  height: 40px;
-  border: 1px solid var(--grey-400);
-  border-radius: 6px;
-  overflow: hidden;
+  align-items: center;
+  min-height: var(--tap);
+  padding: 0 0.875rem;
+  border-radius: 999px;
+  background: var(--card);
+  box-shadow: inset 0 0 0 1px var(--border);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--text);
+  transition: background-color 100ms ease-out, transform 100ms ease-out;
 }
-.toggle label {
+.chip:hover span { box-shadow: inset 0 0 0 1.5px var(--accent); }
+.chip:active span { transform: scale(0.98); }
+.chip input:checked + span {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: none;
+  font-weight: 600;
+}
+.chip input:focus-visible + span {
+  background: var(--focus);
+  color: var(--focus-text);
+  box-shadow: 0 4px 0 var(--focus-text);
+}
+
+/* Segmented control: two equal halves in one rounded track. */
+.segmented {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0.25rem;
+  border-radius: var(--radius-sm);
+  background: var(--page);
+  gap: 0.25rem;
+}
+.segmented .chip span {
+  width: 100%;
+  justify-content: center;
+  border-radius: 0.5rem;
+  background: transparent;
+  box-shadow: none;
+}
+.segmented .chip input:checked + span { background: var(--card); color: var(--text); box-shadow: var(--shadow), 0 0 0 1px var(--border); }
+.segmented .chip input:focus-visible + span { background: var(--focus); box-shadow: 0 4px 0 var(--focus-text); }
+
+.more { border-top: 1px solid var(--border); padding-top: var(--s3); }
+.more summary {
+  cursor: pointer;
+  color: var(--link);
+  font-size: 1rem;
+  min-height: var(--tap);
   display: flex;
   align-items: center;
-  padding: 0 var(--space-4);
-  font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
-  color: var(--grey-800);
-  background: var(--grey-0);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
 }
-.toggle label + label { border-left: 1px solid var(--grey-400); }
-.toggle label.on { background: var(--accent); color: var(--grey-0); }
-.toggle input { position: absolute; opacity: 0; width: 1px; height: 1px; }
-.toggle label:has(input:focus-visible) { box-shadow: inset var(--focus); }
-
-.check {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
-  font-size: 14px;
-  color: var(--grey-800);
-  cursor: pointer;
-  justify-self: start;
+.more summary:focus-visible {
+  outline: 4px solid transparent;
+  background: var(--focus);
+  color: var(--focus-text);
+  box-shadow: 0 4px 0 var(--focus-text);
+  text-decoration: none;
 }
-.check input { width: 18px; height: 18px; accent-color: var(--accent); margin: 0; }
+.check { display: flex; gap: 0.75rem; align-items: flex-start; font-size: 1rem; cursor: pointer; padding: var(--s2) 0; }
+.check input { width: 1.5rem; height: 1.5rem; margin: 0; flex: none; accent-color: var(--accent); }
 
-@media (max-width: 900px) {
-  .row { grid-template-columns: 1fr 1fr; }
+.submit { width: 100%; }
+.submit:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* Desktop: results update live, so no submit button. */
+@media (min-width: 61.875em) {
+  .submit { display: none; }
+  .form { padding: var(--s4) var(--s4) var(--s3); }
+}
+
+@media (max-width: 22em) {
+  .form { padding: var(--s3); }
 }

@@ -1,42 +1,74 @@
-/* Large, calm type for a tired patient. Fits one A4 page when printed. */
-.page {
-  max-width: 720px;
-  margin: var(--space-6) auto;
-  padding: var(--space-6);
-  background: var(--grey-0);
-  border: 1px solid var(--grey-200);
-  border-radius: var(--radius);
-  font-size: 18px;
-  line-height: 1.5;
-  color: var(--grey-900);
+.wrap {
+  width: 100%;
+  max-width: 45rem;   /* 720 */
+  margin: 0 auto;
+  padding: var(--s4) var(--s3) 0;
 }
 
-.toolbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-5); font-size: 16px; }
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--s3);
+  flex-wrap: wrap;
+  margin-bottom: var(--s3);
+}
 
-.kicker { margin: 0; font-size: 15px; font-weight: 600; color: var(--grey-600); text-transform: uppercase; letter-spacing: 0.04em; }
-.page h1 { margin: var(--space-2) 0 0; font-size: 22px; font-weight: 600; }
-.trust { margin: var(--space-2) 0 var(--space-5); font-size: 28px; font-weight: 700; line-height: 1.25; color: var(--accent); }
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: var(--s5);
+}
+.card h2 { font-size: var(--h3); margin: var(--s4) 0 var(--s2); }
+.card p { margin: 0 0 var(--s3); }
 
-.facts { margin: 0 0 var(--space-5); display: grid; gap: var(--space-4); }
-.facts > div { display: grid; grid-template-columns: 200px 1fr; gap: var(--space-4); padding-top: var(--space-3); border-top: 1px solid var(--grey-200); }
-.facts dt { font-size: 16px; color: var(--grey-600); font-weight: 600; }
-.facts dd { margin: 0; }
-.small { display: block; font-size: 15px; color: var(--grey-600); margin-top: 2px; }
+.kicker { font-size: 0.9375rem; font-weight: 600; color: var(--text-2); margin-bottom: var(--s2) !important; }
+.lead { font-size: var(--h3); font-weight: 600; letter-spacing: 0; }
+.trust { margin: var(--s2) 0 var(--s4) !important; font-size: var(--h1); font-weight: 700; line-height: 1.2; letter-spacing: -0.015em; color: var(--accent); }
 
-.page h2 { font-size: 19px; margin: var(--space-5) 0 var(--space-2); }
-.page p { margin: 0 0 var(--space-3); }
+.facts { margin: 0 0 var(--s2); display: grid; gap: var(--s2); }
+.fact {
+  display: grid;
+  grid-template-columns: 12rem minmax(0, 1fr);
+  gap: var(--s3);
+  padding: var(--s3);
+  border-radius: var(--radius-sm);
+  background: var(--page);
+}
+.fact dt { font-size: 1rem; color: var(--text-2); font-weight: 600; }
+.fact dd { margin: 0; display: grid; gap: var(--s1); justify-items: start; }
+.big { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.02em; line-height: 1.2; }
+.small { display: block; font-size: 1rem; color: var(--text-2); }
 
-.sourcesHead { font-size: 15px !important; color: var(--grey-600); }
-.sources { margin: 0; padding-left: 20px; font-size: 14px; color: var(--grey-600); }
-.url { display: block; margin-top: 2px; font-weight: 600; overflow-wrap: anywhere; }
-.footer { margin-top: var(--space-4) !important; font-size: 14px; color: var(--grey-600); }
+.url { font-weight: 600; overflow-wrap: anywhere; }
+.disclaimer { margin-top: var(--s3) !important; }
 
-@page { size: A4; margin: 16mm; }
+.sourcesHead { font-size: 1rem !important; color: var(--text-2); }
+.sources { margin: 0; padding-left: 1.25rem; font-size: 0.9375rem; color: var(--text-2); display: grid; gap: var(--s1); }
+.footer { margin-top: var(--s3) !important; font-size: 0.9375rem; color: var(--text-2); }
+
+.printOnly { display: none; }
+
+@media (max-width: 40em) {
+  .wrap { padding-top: var(--s3); }
+  .card { padding: var(--s4) var(--s3); }
+  .fact { grid-template-columns: 1fr; gap: var(--s1); }
+  .trust { font-size: 1.625rem; }
+  .toolbar > * { flex: 1 1 auto; }
+}
+
+@page { size: A4; margin: 15mm; }
 
 @media print {
-  .page { margin: 0; padding: 0; border: 0; max-width: none; font-size: 15pt; }
+  .wrap { max-width: none; padding: 0; margin: 0; }
   .toolbar { display: none; }
+  .card { border: 0; box-shadow: none; padding: 0; font-size: 13pt; }
+  .fact { background: none; border-top: 1px solid #b1b4b6; border-radius: 0; padding: 8pt 0; }
   .trust { color: #000; }
-  .page a { color: #000; }
-  .url { text-decoration: none; }
+  .screenOnly { display: none; }
+  .printOnly { display: inline; }
+  .card a { color: #000; text-decoration: none; }
+  .url { display: block; white-space: nowrap; overflow-wrap: normal; margin-top: 2pt; }
 }

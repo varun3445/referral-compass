@@ -8,27 +8,30 @@ export const CQC_TONE = {
   Inadequate: 'inadequate',
 };
 
-// CQC overall rating with the month it was published, so an old rating
-// never reads as current. If there is no overall rating, says so, and
-// shows a Well-led-only rating if one exists.
-export default function CqcBadge({ cqc }) {
+// CQC rating as a text tag (never colour alone) plus when it was rated.
+// No overall rating: says so, and shows any Well-led-only rating as context.
+export default function CqcBadge({ cqc, compact = false }) {
   if (!cqc.rating) {
     return (
-      <div className={styles.wrap}>
-        <span className={`${styles.badge} ${styles.none}`}>Rating unavailable</span>
+      <span className={`${styles.wrap} ${compact ? styles.compact : ''}`}>
+        <span className={`${styles.tag} ${styles.none}`}>
+          <span className="visually-hidden">CQC: </span>No rating
+        </span>
         {cqc.wellLed && (
-          <span className={`${styles.badge} ${styles.outline} ${styles[CQC_TONE[cqc.wellLed.rating]]}`}>
+          <span className={styles.meta}>
             Well-led only: {cqc.wellLed.rating} ({monthYear(cqc.wellLed.date)})
           </span>
         )}
-      </div>
+      </span>
     );
   }
 
   return (
-    <div className={styles.wrap}>
-      <span className={`${styles.badge} ${styles[CQC_TONE[cqc.rating]]}`}>{cqc.rating}</span>
-      <span className={styles.age}>Last rated {monthYear(cqc.date)}</span>
-    </div>
+    <span className={`${styles.wrap} ${compact ? styles.compact : ''}`}>
+      <span className={`${styles.tag} ${styles[CQC_TONE[cqc.rating]]}`}>
+        <span className="visually-hidden">CQC rating: </span>{cqc.rating}
+      </span>
+      <span className={styles.meta}>Last rated {monthYear(cqc.date)}</span>
+    </span>
   );
 }

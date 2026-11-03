@@ -1,83 +1,180 @@
-/* Design tokens. Calm, clinical, dense. One accent (deep blue). */
+/* Referral Compass design tokens.
+   NHS design system patterns, soft and quiet. Sizes in rem (16px base). */
 :root {
-  --grey-0: #ffffff;
-  --grey-50: #f6f7f9;
-  --grey-100: #eceef2;
-  --grey-200: #d9dde4;
-  --grey-400: #8a93a3;
-  --grey-600: #545d6c;   /* AA on white for small text */
-  --grey-800: #252b36;
-  --grey-900: #12161d;
+  --page: #f0f4f5;
+  --card: #ffffff;
+  --border: #d8dde0;
+  --shadow: 0 1px 2px rgba(33, 43, 50, 0.08);
 
-  --accent: #0b3d91;
-  --accent-hover: #082e6e;
-  --accent-soft: #e7eefb;
+  --text: #212b32;
+  --text-2: #4c6272;
+  --link: #005eb8;
+  --link-hover: #7c2855;
+  --accent: #005eb8;          /* the one data accent */
+  --accent-soft: #e8f1fa;
+  --track: #e3e9ec;
+  --soft: #f4f7f8;            /* inset and quiet panels */
 
-  /* CQC semantic colours: text colour on a tinted background, all AA. */
-  --cqc-outstanding: #0a6b3d;  --cqc-outstanding-bg: #e3f4ea;
-  --cqc-good: #0b4f9c;         --cqc-good-bg: #e4eefb;
-  --cqc-ri: #8a4b00;           --cqc-ri-bg: #fdf0dc;
-  --cqc-inadequate: #a4161a;   --cqc-inadequate-bg: #fbe5e5;
-  --cqc-none: #545d6c;         --cqc-none-bg: #eceef2;
+  --primary: #007f3b;         /* green: primary buttons only */
+  --primary-hover: #00662f;
+  --primary-shadow: #00401e;
 
-  --warn: #8a4b00;
-  --warn-bg: #fdf0dc;
-  --error: #a4161a;
-  --error-bg: #fbe5e5;
+  --focus: #ffeb3b;
+  --focus-text: #212b32;
 
-  --space-1: 4px;
-  --space-2: 8px;
-  --space-3: 12px;
-  --space-4: 16px;
-  --space-5: 24px;
-  --space-6: 32px;
+  /* CQC tags: dark text on a light tint */
+  --cqc-outstanding: #00401e; --cqc-outstanding-bg: #cce5d6;
+  --cqc-good: #003d78;        --cqc-good-bg: #d5e6f6;
+  --cqc-ri: #6b2c00;          --cqc-ri-bg: #ffdcc2;
+  --cqc-inadequate: #6b140e;  --cqc-inadequate-bg: #f6d7d2;
+  --cqc-none: #2f3d47;        --cqc-none-bg: #dde1e4;
 
-  --radius: 8px;
-  --focus: 0 0 0 3px #ffbf47; /* NHS-style high-visibility focus */
+  --warn-bg: #fff9c4;
+  --warn-border: #e0cf3a;
+  --error: #d5281b;
+  --error-text: #a01e14;
 
-  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
-  --mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+  --s1: 0.25rem;  /* 4 */
+  --s2: 0.5rem;   /* 8 */
+  --s3: 1rem;     /* 16 */
+  --s4: 1.5rem;   /* 24 */
+  --s5: 2rem;     /* 32 */
+  --s6: 3rem;     /* 48 */
+
+  --radius: 1rem;      /* 16 */
+  --radius-sm: 0.75rem;
+  --tap: 2.75rem;      /* 44px minimum touch target */
+
+  --h1: 2rem;          /* 32 */
+  --h2: 1.6875rem;     /* 27 */
+  --h3: 1.375rem;      /* 22 */
+
+  --font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Frutiger, "Frutiger Linotype", Arial, sans-serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-in: cubic-bezier(0.8, 0.2, 0.8, 0.2);
 }
 
 * { box-sizing: border-box; }
 
-html, body {
+html { font-size: 100%; -webkit-text-size-adjust: 100%; }
+
+body {
   margin: 0;
-  background: var(--grey-50);
-  color: var(--grey-900);
+  background: var(--page);
+  color: var(--text);
   font-family: var(--font);
-  font-size: 15px;
-  line-height: 1.45;
+  font-size: 1rem;      /* 16px on mobile */
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 40.0625em) {
+  body { font-size: 1.1875rem; } /* 19px on larger screens */
 }
 
-a { color: var(--accent); }
-a:hover { color: var(--accent-hover); }
-
-:focus-visible {
-  outline: none;
-  box-shadow: var(--focus);
-  border-radius: 4px;
+h1, h2, h3 { line-height: 1.2; margin: 0; }
+h1 { font-size: var(--h1); letter-spacing: -0.015em; }
+h2 { font-size: var(--h2); letter-spacing: -0.01em; }
+h3 { font-size: var(--h3); }
+@media (max-width: 40em) {
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.375rem; }
+  h3 { font-size: 1.1875rem; }
 }
 
-button { font: inherit; }
+a { color: var(--link); text-underline-offset: 0.15em; }
+a:hover { color: var(--link-hover); text-decoration-thickness: 0.15em; }
+
+/* NHS focus: yellow fill with a dark underline. */
+a:focus-visible,
+button:focus-visible {
+  outline: 4px solid transparent;
+  background-color: var(--focus) !important;
+  color: var(--focus-text) !important;
+  box-shadow: 0 -2px var(--focus), 0 4px var(--focus-text) !important;
+  text-decoration: none;
+}
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 0;
+  box-shadow: inset 0 0 0 2px var(--focus-text);
+}
+
+button { font: inherit; color: inherit; }
 
 .visually-hidden {
-  position: absolute; width: 1px; height: 1px; overflow: hidden;
-  clip: rect(0 0 0 0); white-space: nowrap;
+  position: absolute !important; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap; margin: -1px; padding: 0; border: 0;
 }
-
 .tabular { font-variant-numeric: tabular-nums; }
 
-@media print {
-  html, body { background: #fff; }
+/* Buttons. Green is only ever the primary action. */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s2);
+  min-height: var(--tap);
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.625rem;
+  border: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 100ms ease-out, background-color 100ms ease-out;
+  -webkit-tap-highlight-color: transparent;
+}
+.btn:active { transform: scale(0.98); }
+.btn-primary { background: var(--primary); color: #fff; box-shadow: 0 3px 0 var(--primary-shadow); }
+.btn-primary:hover { background: var(--primary-hover); color: #fff; }
+.btn-secondary { background: var(--card); color: var(--link); box-shadow: inset 0 0 0 1.5px var(--link); }
+.btn-secondary:hover { background: var(--accent-soft); color: var(--link); }
+.btn svg { flex: none; }
+
+/* NHS warning callout, without the side stripe. */
+.callout {
+  background: var(--warn-bg);
+  border: 1px solid var(--warn-border);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem var(--s3);
+  margin: 0;
+}
+
+/* Quiet inset text for notes. */
+.inset {
+  background: var(--soft);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem var(--s3);
+  margin: 0;
 }
 
 .site-footer {
-  max-width: 1320px;
-  margin: 0 auto;
-  padding: var(--space-5) var(--space-5) var(--space-6);
-  font-size: 13px;
-  color: var(--grey-600);
+  margin-top: var(--s6);
+  border-top: 1px solid var(--border);
+  background: var(--card);
 }
-@media print { .site-footer { display: none; } }
+.site-footer p {
+  max-width: 65rem;
+  margin: 0 auto;
+  padding: var(--s4) var(--s3);
+  font-size: 0.875rem;
+  color: var(--text-2);
+}
+
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .btn, .btn:active { transition: none; transform: none; }
+}
+
+@media print {
+  html, body { background: #fff; }
+  .site-footer { display: none; }
+}

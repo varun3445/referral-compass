@@ -85,3 +85,24 @@ Reviewer recomputed all 180 trust×specialty pairs from the raw CSV: PASS with 4
 - Lighthouse accessibility (live site, desktop): **100 / 100 / 100** on `/`, `/data`, `/summary`.
 - **Caveat caught:** Lighthouse scores `/` in its empty state, so it never sees the cards or drawer. Ran Lighthouse's own axe-core 4.14 on the filled-in console and the open Evidence drawer: 0 violations.
 - **200% zoom** (720 CSS px): no horizontal scroll on any page. Found and fixed two issues: score bars lost their labels once the shared header hid, and the priority toggle stretched into an empty box.
+
+## M4a UI redesign (3 Nov 2026)
+
+Presentation and copy only. `lib/rank.js`, `scripts/` and `data/` untouched (checked with `git diff --stat`).
+
+**Decision: decision first, evidence on demand.** Score numbers, score bars and the weights column are **removed from the result cards**. A GP in a 10 minute appointment needs one suggestion and three numbers they understand (waiting so far, seen within 18 weeks, distance), not a scoring table. The score breakdown, weights, formulas and "scores are relative to the options shown here" now live only in the Evidence panel, one tap away. Nothing is hidden, it just moved.
+
+**What changed**
+- NHS design system patterns, apple-design principles (response, spatial consistency, reduced motion, size-specific tracking, simplicity). Tokens in `globals.css`: page #F0F4F5, white 16px-radius cards, NHS blue as the only data accent, NHS green for primary buttons only, NHS yellow focus.
+- Reference image (finance dashboard): took only the quiet cues (grey page, white rounded cards, one big number per tile, muted captions, one thin progress line on "Seen within 18 weeks"). Did not take the palette, widgets or density.
+- Console: sticky 320px input panel on desktop; on tablet and phone the inputs fold into "WC2N · Rheumatology · 25 km · Edit" after "Show results". Specialty and distance are chips, priority is a segmented control ("Shortest wait" | "Balanced"), specialist toggle under More options.
+- Results: one hero card "Suggested for this patient" with a plain why sentence built in `lib/explain.js` (e.g. "Shortest wait of 18 options and 6 km further than the closest."), close call as an inset note, then up to 4 compact "Other options" rows where the whole row opens Evidence.
+- Evidence: native `<dialog>`, right panel on desktop, 85% bottom sheet with drag handle on phones. Enters and exits on the same path (200ms); reduced motion = cross-fade.
+- Copy: no "median" in the main view (rank.js's trade-off line uses it, so that line now only appears inside Evidence), no "typical", "weeks" not "wks", no dashes, sentence case.
+- Back from the summary keeps the search: inputs are held in JS memory for the tab only, never in storage.
+
+**Mistakes caught**
+- Summary bar's one-line text stretched the grid at 320px (page scrolled sideways). Fixed with `minmax(0, 1fr)`.
+- Printed NHS link broke at a hyphen mid-URL. Now prints on its own line, unbroken.
+- Evidence panel used `requestAnimationFrame` to start its slide, which never fires in a background tab, and close relied on a timer that hidden tabs throttle. Now forces a style flush to open and finishes closing on `transitionend` with a timer fallback; reopening cancels a pending close.
+- No short NHS choice URL exists (`nhs.uk/your-choices` is a 404), so the summary prints the real path without `https://www.`.

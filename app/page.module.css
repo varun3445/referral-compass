@@ -1,42 +1,117 @@
 .main {
-  max-width: 1320px;
+  width: 100%;
+  max-width: 65rem;      /* 1040 */
   margin: 0 auto;
-  padding: var(--space-5);
-  display: grid;
-  gap: var(--space-4);
+  padding: var(--s5) var(--s3) 0;
 }
 
-.hero { display: grid; gap: var(--space-1); }
-.hero h1 { margin: 0; font-size: 24px; font-weight: 700; letter-spacing: -0.015em; line-height: 1.25; }
-.hero p { margin: 0; font-size: 15px; color: var(--grey-600); max-width: 900px; }
-.caveat { color: var(--grey-800); font-weight: 500; }
+.head { display: grid; gap: var(--s2); margin-bottom: var(--s4); }
+.head p { margin: 0; color: var(--text-2); max-width: 40rem; }
 
-.results { display: grid; gap: var(--space-3); }
+.layout { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--s4); align-items: start; }
 
-.summary { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-2) var(--space-4); flex-wrap: wrap; }
-.summary h2 { margin: 0; font-size: 16px; font-weight: 650; }
-.summary span { font-size: 13px; color: var(--grey-600); }
-
-.banners { display: grid; gap: var(--space-2); }
-.banner {
-  margin: 0;
-  padding: var(--space-2) var(--space-3);
-  background: var(--warn-bg);
-  color: var(--warn);
-  border-radius: 6px;
-  font-size: 14px;
+/* Desktop: sticky inputs on the left, results on the right. */
+@media (min-width: 61.875em) {
+  .layout { grid-template-columns: 20rem minmax(0, 1fr); }
+  .panel {
+    position: sticky;
+    top: var(--s3);
+    max-height: calc(100vh - 2rem);
+    overflow-y: auto;
+    border-radius: var(--radius);
+  }
+  .summaryBar { display: none !important; }
 }
 
-.list { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-2); }
+/* Tablet and phone: after "Show results", inputs fold into a one-line bar. */
+@media (max-width: 61.865em) {
+  .panelCollapsed { display: none; }
+}
 
-.prompt { margin: var(--space-6) 0; text-align: center; color: var(--grey-600); }
-
-.empty {
-  padding: var(--space-5);
-  background: var(--grey-0);
-  border: 1px dashed var(--grey-400);
+.summaryBar {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s3);
+  padding: var(--s2) var(--s2) var(--s2) var(--s3);
+  background: var(--card);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
-  text-align: center;
+  box-shadow: 0 2px 6px rgba(33, 43, 50, 0.08);
+  min-width: 0;
+}
+.summaryBar p { margin: 0; font-size: 1rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+.edit {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s1);
+  min-height: var(--tap);
+  padding: 0 var(--s3);
+  border: 0;
+  border-radius: 0.625rem;
+  background: var(--accent-soft);
+  color: var(--link);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  flex: none;
+  transition: transform 100ms ease-out;
+}
+.edit:active { transform: scale(0.98); }
+
+.results { display: grid; gap: var(--s3); min-width: 0; outline: none; }
+.count { margin: 0; font-size: 0.9375rem; color: var(--text-2); min-height: 1.4em; }
+
+.fade { display: grid; gap: var(--s3); animation: fade-in 150ms ease-out; }
+
+.banner { font-size: 1rem; }
+.bannerShort { display: none; }
+.note, .quiet { display: flex; gap: 0.625rem; align-items: flex-start; font-size: 1rem; }
+.note svg { color: var(--cqc-ri); flex: none; margin-top: 0.125rem; }
+.quiet { display: block; font-size: 0.9375rem; color: var(--text-2); }
+
+.others { display: grid; gap: var(--s2); margin-top: var(--s2); }
+.othersHead { font-size: var(--h3); }
+.rows {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
 }
 
-.note { margin: 0; font-size: 13px; color: var(--grey-600); max-width: 960px; }
+.footnote { margin: 0; font-size: 0.9375rem; color: var(--text-2); }
+
+.state {
+  display: grid;
+  gap: var(--s3);
+  justify-items: start;
+  padding: var(--s5) var(--s4);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.state p { margin: 0; font-size: 1.0625rem; }
+.stateError p { color: var(--error-text); font-weight: 600; }
+
+/* On phones the CQC banner stays to one short line. */
+@media (max-width: 40em) {
+  .main { padding-top: var(--s3); }
+  .head { margin-bottom: var(--s3); gap: var(--s1); }
+  .head h1 { font-size: 1.5rem; }
+  .head p { font-size: 0.9375rem; }
+  .banner { font-size: 0.9375rem; padding: 0.625rem 0.75rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .bannerFull { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .bannerShort { display: inline; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade { animation-duration: 150ms; }
+  .edit:active { transform: none; }
+}

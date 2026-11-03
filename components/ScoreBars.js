@@ -6,33 +6,29 @@ export const FACTORS = [
   ['distance', 'Distance'],
 ];
 
-// One bar per factor (0–100). Labels and weights live once in the
-// shortlist header, so each card only shows the bars and numbers.
-export default function ScoreBars({ scores, weights, total, qualityFlagged }) {
+// Score breakdown for the Evidence panel: one labelled bar per factor (0 to
+// 100) with the weight it carries. Not shown on the main results view.
+export default function ScoreBars({ scores, weights, qualityFlagged }) {
   return (
-    <div className={styles.cells}>
+    <ul className={styles.bars}>
       {FACTORS.map(([key, label]) => {
-        const flagged = key === 'quality' && qualityFlagged;
         const value = Math.round(scores[key] * 100);
+        const flagged = key === 'quality' && qualityFlagged;
         return (
-          <div key={key} className={styles.cell}>
-            <span className="visually-hidden">{label} score, weight {Math.round(weights[key] * 100)}%:</span>
-            {/* Visible only on narrow screens, where the shared header is hidden */}
-            <span className={styles.mini} aria-hidden="true">{label} ×{weights[key]}</span>
-            <span className={styles.value}>
-              {value}{flagged && <span title="No CQC overall rating: neutral score used">*</span>}
+          <li key={key} className={styles.row}>
+            <span className={styles.label}>
+              {label} <span className={styles.weight}>weight {weights[key]}</span>
             </span>
             <span className={styles.track} aria-hidden="true">
               <span className={`${styles.fill} ${flagged ? styles.flagged : ''}`} style={{ width: `${value}%` }} />
             </span>
-          </div>
+            <span className={styles.value}>
+              {value}<span className="visually-hidden"> out of 100</span>
+              {flagged && <span className="visually-hidden"> (no CQC overall rating, neutral score)</span>}
+            </span>
+          </li>
         );
       })}
-      <div className={`${styles.cell} ${styles.total}`}>
-        <span className="visually-hidden">Overall score:</span>
-        <span className={styles.mini} aria-hidden="true">Score</span>
-        <span className={styles.value}>{Math.round(total * 100)}</span>
-      </div>
-    </div>
+    </ul>
   );
 }

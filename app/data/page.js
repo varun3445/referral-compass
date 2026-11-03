@@ -5,7 +5,7 @@ import { WEIGHTS, QUALITY_SCORE, UNRATED_QUALITY_SCORE, CLOSE_CALL } from '@/lib
 import { monthYear, isOlderThan2Years } from '@/lib/format';
 import styles from './data.module.css';
 
-export const metadata = { title: 'Data & limits · Referral Compass' };
+export const metadata = { title: 'Data and limits · Referral Compass' };
 
 // Facts about this build, worked out from the data so the page never drifts.
 const rated = providers.filter((p) => p.cqc.rating);
@@ -74,10 +74,11 @@ const LIMITS = [
 export default function DataPage() {
   return (
     <main className={styles.page}>
+      <div className={styles.card}>
       <header className={styles.intro}>
-        <h1>Data &amp; limits</h1>
+        <h1>Data and limits</h1>
         <p>
-          Referral Compass is a prototype. Every number comes from public NHS data and is shown with its source and date.
+          Referral Compass is an independent prototype, not an NHS service. Every number comes from public NHS data and is shown with its source and date.
           This page explains where the data comes from, how each number is worked out, and what it cannot tell you.
         </p>
         <nav aria-label="On this page" className={styles.toc}>
@@ -116,7 +117,7 @@ export default function DataPage() {
         <dl className={styles.defs}>
           <div>
             <dt>People waiting</dt>
-            <dd>Sum of NHS England’s weekly groups (0–1 weeks … 104+ weeks) across all commissioners, for one trust and specialty. People with an unknown start date are left out because they cannot be placed in a week.</dd>
+            <dd>Sum of NHS England’s weekly groups (0 to 1 weeks, up to 104+ weeks) across all commissioners, for one trust and specialty. People with an unknown start date are left out because they cannot be placed in a week.</dd>
           </div>
           <div>
             <dt>Median wait so far</dt>
@@ -132,7 +133,7 @@ export default function DataPage() {
           </div>
           <div>
             <dt>% within 18 weeks</dt>
-            <dd><code>people in weeks 0–18 ÷ people waiting × 100</code></dd>
+            <dd><code>people in weeks 0 to 18 ÷ people waiting × 100</code></dd>
           </div>
           <div>
             <dt>Distance</dt>
@@ -223,6 +224,7 @@ export default function DataPage() {
           advice. <Link href="/">Back to the console</Link>.
         </p>
       </section>
+      </div>
     </main>
   );
 }

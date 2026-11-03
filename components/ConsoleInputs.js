@@ -2,84 +2,112 @@
 import meta from '@/data/meta.json';
 import styles from './ConsoleInputs.module.css';
 
-// One keyboard-friendly row: postcode, specialty, max distance, priority.
-export default function ConsoleInputs({ value, onChange, postcodeStatus }) {
-  const set = (key) => (e) => onChange({ ...value, [key]: e.target.value });
-  const errorId = 'postcode-error';
+export const DISTANCES = [10, 25, 50, 80];
+export const PRIORITIES = [
+  ['fastest', 'Shortest wait'],
+  ['balanced', 'Balanced'],
+];
+
+// A group of radio buttons styled as chips. Arrow keys move between them.
+function ChipGroup({ legend, name, options, value, onChange, segmented, even }) {
+  return (
+    <fieldset className={styles.group}>
+      <legend className={styles.legend}>{legend}</legend>
+      <div className={segmented ? styles.segmented : even ? styles.even : styles.chips}>
+        {options.map(([v, label]) => (
+          <label key={v} className={styles.chip}>
+            <input
+              type="radio"
+              name={name}
+              value={v}
+              checked={String(value) === String(v)}
+              onChange={() => onChange(v)}
+            />
+            <span>{label}</span>
+          </label>
+        ))}
+      </div>
+    </fieldset>
+  );
+}
+
+export default function ConsoleInputs({ value, onChange, postcodeStatus, onSubmit, canSubmit }) {
+  const set = (key) => (v) => onChange({ ...value, [key]: v });
+  const { error, loading, resolved } = postcodeStatus;
 
   return (
-    <form className={styles.form} onSubmit={(e) => e.preventDefault()} aria-label="Referral details">
-      <div className={styles.row}>
-        <div className={styles.field}>
-          <label htmlFor="postcode">Patient postcode</label>
-          <input
-            id="postcode"
-            className={`${styles.input} ${postcodeStatus.error ? styles.invalid : ''}`}
-            value={value.postcode}
-            onChange={set('postcode')}
-            placeholder="e.g. WC2N 5DU"
-            autoComplete="off"
-            spellCheck="false"
-            autoFocus
-            aria-invalid={Boolean(postcodeStatus.error)}
-            aria-describedby={postcodeStatus.error ? errorId : 'postcode-hint'}
-          />
-          {postcodeStatus.error ? (
-            <span id={errorId} className={styles.error} role="alert">{postcodeStatus.error}</span>
-          ) : (
-            <span id="postcode-hint" className={styles.hint} aria-live="polite">
-              {postcodeStatus.loading
-                ? 'Checking…'
-                : postcodeStatus.resolved
-                  ? `✓ Using area ${postcodeStatus.resolved} only`
-                  : 'Only the area (e.g. WC2N) is sent. Nothing stored.'}
-            </span>
-          )}
-        </div>
-
-        <div className={styles.field}>
-          <label htmlFor="specialty">Specialty</label>
-          <select id="specialty" className={styles.input} value={value.specialty} onChange={set('specialty')}>
-            {Object.entries(meta.specialties).map(([code, name]) => (
-              <option key={code} value={code}>{name}</option>
-            ))}
-          </select>
-        </div>
-
-        <div className={`${styles.field} ${styles.slider}`}>
-          <label htmlFor="maxKm">Max distance <strong className="tabular">{value.maxKm} km</strong></label>
-          <input
-            id="maxKm"
-            type="range"
-            min="5"
-            max="80"
-            step="5"
-            value={value.maxKm}
-            onChange={(e) => onChange({ ...value, maxKm: Number(e.target.value) })}
-          />
-        </div>
-
-        <fieldset className={styles.field}>
-          <legend>Priority</legend>
-          <div className={styles.toggle}>
-            {[['fastest', 'Fastest'], ['balanced', 'Balanced']].map(([v, label]) => (
-              <label key={v} className={value.priority === v ? styles.on : ''}>
-                <input type="radio" name="priority" value={v} checked={value.priority === v} onChange={set('priority')} />
-                {label}
-              </label>
-            ))}
-          </div>
-        </fieldset>
+    <form
+      className={styles.form}
+      aria-label="Referral details"
+      onSubmit={(e) => { e.preventDefault(); onSubmit(); }}
+    >
+      <div className={`${styles.field} ${error ? styles.hasError : ''}`}>
+        <label htmlFor="postcode" className={styles.label}>Patient postcode</label>
+        <p id="postcode-hint" className={styles.hint}>We only use the first part, e.g. WC2N</p>
+        {error && (
+          <p id="postcode-error" className={styles.error} role="alert">
+            <span className="visually-hidden">Error: </span>{error}
+          </p>
+        )}
+        <input
+          id="postcode"
+          className={styles.postcode}
+          value={value.postcode}
+          onChange={(e) => set('postcode')(e.target.value)}
+          autoComplete="off"
+          autoCapitalize="characters"
+          spellCheck="false"
+          inputMode="text"
+          enterKeyHint="search"
+          aria-invalid={Boolean(error)}
+          aria-describedby={`postcode-hint postcode-status${error ? ' postcode-error' : ''}`}
+        />
+        <p id="postcode-status" className={styles.status} aria-live="polite">
+          {loading ? 'Checking…' : resolved ? `Using ${resolved}` : ' '}
+        </p>
       </div>
 
-      <label className={styles.check}>
-        <input
-          type="checkbox"
-          checked={value.includeSpecialist}
-          onChange={(e) => onChange({ ...value, includeSpecialist: e.target.checked })}
-        />
-        Include specialist and community services
-      </label>
+      <ChipGroup
+        legend="Specialty"
+        name="specialty"
+        options={Object.entries(meta.specialties).sort((a, b) => a[1].localeCompare(b[1]))}
+        value={value.specialty}
+        onChange={set('specialty')}
+      />
+
+      <ChipGroup
+        legend="Distance"
+        name="maxKm"
+        options={DISTANCES.map((d) => [d, `${d} km`])}
+        value={value.maxKm}
+        onChange={(v) => set('maxKm')(Number(v))}
+        even
+      />
+
+      <ChipGroup
+        legend="Priority"
+        name="priority"
+        options={PRIORITIES}
+        value={value.priority}
+        onChange={set('priority')}
+        segmented
+      />
+
+      <details className={styles.more} open={value.includeSpecialist || undefined}>
+        <summary>More options</summary>
+        <label className={styles.check}>
+          <input
+            type="checkbox"
+            checked={value.includeSpecialist}
+            onChange={(e) => set('includeSpecialist')(e.target.checked)}
+          />
+          <span>Include specialist and community services</span>
+        </label>
+      </details>
+
+      <button type="submit" className={`btn btn-primary ${styles.submit}`} disabled={!canSubmit}>
+        Show results
+      </button>
     </form>
   );
 }
