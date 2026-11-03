@@ -28,6 +28,7 @@
 
 .sourcesHead { font-size: 15px !important; color: var(--grey-600); }
 .sources { margin: 0; padding-left: 20px; font-size: 14px; color: var(--grey-600); }
+.url { display: block; margin-top: 2px; font-weight: 600; overflow-wrap: anywhere; }
 .footer { margin-top: var(--space-4) !important; font-size: 14px; color: var(--grey-600); }
 
 @page { size: A4; margin: 16mm; }
@@ -37,5 +38,5 @@
   .toolbar { display: none; }
   .trust { color: #000; }
   .page a { color: #000; }
-  .page a[href^='http']::after { content: ' (' attr(href) ')'; font-size: 11pt; word-break: break-all; }
+  .url { text-decoration: none; }
 }

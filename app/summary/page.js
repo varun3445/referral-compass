@@ -43,10 +43,12 @@ export default async function SummaryPage({ searchParams }) {
 
       <dl className={styles.facts}>
         <div>
-          <dt>Typical wait</dt>
+          <dt>Waiting so far</dt>
           <dd>
             <strong>About {Math.round(w.medianWeeks)} weeks</strong> (NHS data, {meta.rttLabel})
-            <span className={styles.small}>This is a typical figure, not a guaranteed date.</span>
+            <span className={styles.small}>
+              Half of the people currently on this list have waited this long or less. This is a typical figure, not a guaranteed date.
+            </span>
           </dd>
         </div>
         <div>
@@ -92,10 +94,13 @@ export default async function SummaryPage({ searchParams }) {
       <h2>You may be able to choose your provider</h2>
       <p>
         Patients may be able to choose their provider for a first outpatient appointment with an eligible
-        consultant-led service. Find out more at{' '}
-        <a href={CHOICE_URL}>nhs.uk/your-choices-in-the-nhs</a>.
+        consultant-led service. Find out more at:
+        <a href={CHOICE_URL} className={styles.url}>{CHOICE_URL.replace('https://', '')}</a>
       </p>
-      <p className={styles.small}>This summary is not medical advice. Talk to your GP if anything changes.</p>
+      <p className={styles.small}>
+        This summary is not medical advice. Talk to your GP if anything changes. It does not apply to urgent
+        referrals or suspected cancer referrals, which follow faster routes.
+      </p>
 
       <h2 className={styles.sourcesHead}>Sources</h2>
       <ul className={styles.sources}>
@@ -103,7 +108,9 @@ export default async function SummaryPage({ searchParams }) {
         <li>Rating: Care Quality Commission, ratings file {monthYear(meta.cqcFileDate)}{rating ? `; rating published ${monthYear(p.cqc.date)}` : ''}.</li>
         <li>Location: NHS Organisation Data Service and postcodes.io.</li>
       </ul>
-      <p className={styles.footer}>Made with Referral Compass · No personal information is stored.</p>
+      <p className={styles.footer}>
+        Made with Referral Compass, a prototype built from public NHS data. No personal information is stored.
+      </p>
     </main>
   );
 }
