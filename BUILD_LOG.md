@@ -212,3 +212,4 @@ Checks: layout-check passes at 5 widths; axe 0 issues on 8 states; verify-rankin
 Checks: layout-check passes at 5 widths; axe 0 issues on 8 states; verify-ranking identical; summary prints on 1 A4 page; detector clean. Not yet deployed.
 
 - **M4j follow-up:** the CQC "Good" tag is bright green (#0D6B3A text on #D9F5E4, #18B464 dot, 6.0:1) and stays filled when older than 2 years; Requires improvement and Not available are unchanged. The Data and limits modal has 24px side padding on desktop.
+- **Follow-up:** the Good badge has no fill (green text and dot on a hairline outline). Option rows have 32px top padding.

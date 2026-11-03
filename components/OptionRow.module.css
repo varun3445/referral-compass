@@ -10,7 +10,8 @@
   grid-template-areas: 'main main' 'wait wait' 'km link';
   align-items: center;
   gap: var(--space-12) var(--space-16);
-  padding: var(--space-16) var(--pad-card);
+  /* 32px top (16 + 16 more); the 44px Evidence link already gives the bottom room. */
+  padding: var(--space-32) var(--pad-card) var(--space-16);
   background: var(--card);
   transition: background-color 200ms var(--ease);
 }
