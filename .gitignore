@@ -6,3 +6,7 @@ data/raw/
 .DS_Store
 .impeccable/
 next-env.d.ts
+
+# Interview brief: never commit (kept outside the repo)
+*Palantir*
+*palantir*

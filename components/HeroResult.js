@@ -3,7 +3,7 @@ import CqcBadge from './CqcBadge';
 import Icon from './Icon';
 import WaitBar from './WaitBar';
 import { nav } from '@/lib/nav';
-import { weeks, km } from '@/lib/format';
+import { weeks, km, count } from '@/lib/format';
 import { whySentence, closeCallName } from '@/lib/explain';
 import styles from './HeroResult.module.css';
 
@@ -49,7 +49,7 @@ export default function HeroResult({ result, ranking, maxWait, summaryHref, onEv
           <div className={styles.tile}>
             <dt className={styles.label}>Waiting under 18 weeks</dt>
             <dd className={styles.row}><Value number={within18} unit="%" /></dd>
-            <dd className={`${styles.context} ${styles.contextText}`}>{within18} in 100 on the list</dd>
+            <dd className={`${styles.context} ${styles.contextText}`}>of {count(wait.totalWaiting)} waiting</dd>
           </div>
           <div className={styles.tile}>
             <dt className={styles.label}>Distance</dt>

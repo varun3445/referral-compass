@@ -167,3 +167,10 @@ Restyle only. No ranking, data or copy changes, apart from the delta lines the b
 Checks: layout-check passes at 320/390/768/1024/1440; axe 0 issues on empty and results at 390 and 1440; verify-ranking output byte-identical to M4b; summary prints on 1 A4 page.
 
 **Real time for this round (system clock):** started 12:02:24, all changes and checks done 12:05:26, so **3 minutes**, plus the commit, push and deploy that follow. Timestamps from `date` on this machine at the start and end of the round, not estimates.
+
+## M4f readme (3 Nov 2026)
+
+- "Waiting under 18 weeks" context now reads "of 486 waiting" (the trust's real total for the selected specialty).
+- README.md: screenshot, live link, what it is for, ranking (0.55 / 0.45 by default, CQC optional and why), sources with dates, limits, run and check instructions.
+- **Brief PDF check:** `git log --all -- "*.pdf"` lists only the app's own printed summaries in `docs/`. The Palantir brief has never been in the repo or its history; it lives in `~/Downloads`, outside the project. `.gitignore` now blocks `*Palantir*` / `*palantir*` anywhere in the repo as a guard.
+- Checks: layout-check passes at 5 widths, axe 0 issues on 10 page states, verify-ranking output unchanged.
