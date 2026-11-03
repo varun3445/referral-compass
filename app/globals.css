@@ -31,7 +31,7 @@
 
   /* CQC tags: tinted pill + dot + text label, all text above 4.5:1 on its tint */
   --cqc-outstanding: #145c3f; --cqc-outstanding-bg: #e3f1e8; --cqc-outstanding-dot: #1f7a5a;
-  --cqc-good: #1e4e8c;        --cqc-good-bg: #e8eef7;        --cqc-good-dot: #3b76d1;
+  --cqc-good: #0d6b3a;        --cqc-good-bg: #d9f5e4;        --cqc-good-dot: #18b464;   /* 6.0:1 text on fill */
   --cqc-ri: #6e4300;          --cqc-ri-bg: #fbf1de;          --cqc-ri-dot: #c98a1a;
   --cqc-inadequate: #8f1d1d;  --cqc-inadequate-bg: #f9e7e5;  --cqc-inadequate-dot: #d64545;
   --cqc-none: #4a525c;        --cqc-none-bg: #eef0f3;        --cqc-none-dot: #9aa2ad;
