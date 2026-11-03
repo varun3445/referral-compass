@@ -222,3 +222,5 @@ Checks: layout-check passes at 5 widths; axe 0 issues on 8 states; verify-rankin
 3. **Edge cases tested** (desktop, scripted): M1 and EH1 both show "This postcode is outside the London area covered by this prototype." EH1 used to show a red "outside England" input error; a real postcode outside the area is not an input error, so it now shows the same friendly message. WC2N at 5 km gives results for all 5 specialties, with no blank screens and no page errors. The only console error is the browser's automatic /favicon.ico request (404). The app has never had a favicon, and it was left alone because this round allowed no other changes.
 
 Checks: layout-check passes at 5 widths; axe 0 issues on 8 states; verify-ranking identical; summary prints on 1 A4 page.
+
+**Real time (system clock):** started 15:52:57, deployed and confirmed live at 15:55:52.
