@@ -75,6 +75,8 @@ export default function ReferralConsole() {
       } catch (e) {
         if (e.name === 'AbortError') return;
         setOrigin(null);
+        // A real postcode outside England is not an input error: say it is outside the area covered.
+        if (e.kind === 'outside-england') return setPcStatus({ loading: false, error: null, kind: 'outside', resolved: null });
         setPcStatus({ loading: false, error: e.message, kind: e.kind || 'unavailable', resolved: null });
       }
     }, 250);
@@ -195,6 +197,7 @@ export default function ReferralConsole() {
                 ranking={ranking}
                 maxWait={maxWait}
                 maxKm={inputs.maxKm}
+                outcode={origin.outcode}
                 summaryHref={summaryHref(top, others, inputs.specialty)}
                 onEvidence={() => setEvidenceFor(top.provider.odsCode)}
               />
@@ -225,7 +228,7 @@ export default function ReferralConsole() {
 
               <p className={styles.footnote}>
                 Waiting times are for each NHS trust, not a single hospital, and are not an appointment date.
-                Distance to trust HQ is a straight line to the trust’s recorded main office.
+                Distance from {origin.outcode} is a straight line to the trust’s recorded main office.
               </p>
             </div>
           )}
@@ -260,6 +263,7 @@ function ResultState({ pcStatus, ranking, inputs, origin, nextDistance, onWiden,
     );
     note = 'For each trust you will see waiting so far, CQC rating and distance.';
   }
+  else if (pcStatus.kind === 'outside') text = 'This postcode is outside the London area covered by this prototype.';
   else if (!origin) text = 'Keep typing the postcode. Results appear as soon as we recognise it.';
   else if (ranking && ranking.results.length === 0) {
     // Outside the area the data covers: no point suggesting a larger distance.

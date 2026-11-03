@@ -3,7 +3,8 @@ import providers from '@/data/providers.json';
 import meta from '@/data/meta.json';
 import PrintButton from '@/components/PrintButton';
 import BackButton from '@/components/BackButton';
-import { weeks, km as fmtKm, monthYear, trustName, DISTANCE_LABEL } from '@/lib/format';
+import { weeks, km as fmtKm, monthYear, trustName } from '@/lib/format';
+import FromArea from '@/components/FromArea';
 import styles from './summary.module.css';
 
 export const metadata = { title: 'Referral summary · Referral Compass' };
@@ -86,10 +87,10 @@ export default async function SummaryPage({ searchParams }) {
           </div>
           {Number.isFinite(km) && km > 0 && (
             <div className={styles.fact}>
-              <dt>{DISTANCE_LABEL}</dt>
+              <dt>Distance from <FromArea /></dt>
               <dd>
-                <span className={styles.big}>About {Math.max(1, Math.round(km))} km</span>
-                <span className={styles.small}>Straight line from your area to the trust’s recorded main office. Your appointment may be at another hospital or clinic.</span>
+                <span className={styles.big}>About {Math.max(1, Math.round(km))} km from <FromArea /></span>
+                <span className={styles.small}>Straight line from <FromArea /> to the trust’s recorded main office. Your appointment may be at another hospital or clinic.</span>
               </dd>
             </div>
           )}
@@ -100,7 +101,7 @@ export default async function SummaryPage({ searchParams }) {
             <h2 id="compare-head">How it compares</h2>
             <table className={styles.compare}>
               <thead>
-                <tr><th scope="col">Trust</th><th scope="col">Waiting so far</th><th scope="col">{DISTANCE_LABEL}</th></tr>
+                <tr><th scope="col">Trust</th><th scope="col">Waiting so far</th><th scope="col">Distance from <FromArea /></th></tr>
               </thead>
               <tbody>
                 {rows.map((x) => (
@@ -121,7 +122,7 @@ export default async function SummaryPage({ searchParams }) {
         <p>
           Half of the people on this trust’s {specialtyName.toLowerCase()} waiting list have waited{' '}
           {weeks(w.medianWeeks)} weeks or less so far, and {Math.round(w.pctWithin18)} in 100 have waited under 18 weeks.
-          It came top for the search settings your GP used, which compare waiting so far and distance to trust HQ.
+          It came top for the search settings your GP used, which compare waiting so far and distance from <FromArea />.
         </p>
         </section>
 

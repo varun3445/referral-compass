@@ -4,7 +4,7 @@ import InfoTip from './InfoTip';
 import WaitBar from './WaitBar';
 import PositionStrip from './PositionStrip';
 import { nav } from '@/lib/nav';
-import { weeks, km, count, DISTANCE_LABEL, DISTANCE_NOTE } from '@/lib/format';
+import { weeks, km, count, distanceFrom, distanceNote } from '@/lib/format';
 import meta from '@/data/meta.json';
 import { whySentence, closeCallName } from '@/lib/explain';
 import styles from './HeroResult.module.css';
@@ -22,7 +22,7 @@ function Value({ number, unit, size }) {
 // The top match for the chosen settings: three numbers, one reason, two actions.
 // Each stat tile has four rows: label, number, bar, one line of context.
 // Bars: wait vs the longest wait shown, 18 weeks vs 100%, distance vs the limit.
-export default function HeroResult({ result, ranking, maxWait, maxKm, summaryHref, onEvidence }) {
+export default function HeroResult({ result, ranking, maxWait, maxKm, outcode, summaryHref, onEvidence }) {
   const { provider, wait, distanceKm } = result;
   const runnerUp = closeCallName(ranking);
   const within18 = Math.round(wait.pctWithin18);
@@ -62,8 +62,8 @@ export default function HeroResult({ result, ranking, maxWait, maxKm, summaryHre
           </div>
           <div className={styles.tile}>
             <dt className={styles.label}>
-              {DISTANCE_LABEL}
-              <InfoTip label="distance to trust HQ">{DISTANCE_NOTE}</InfoTip>
+              {distanceFrom(outcode)}
+              <InfoTip label={distanceFrom(outcode).toLowerCase()}>{distanceNote(outcode)}</InfoTip>
             </dt>
             <dd className={styles.row}><Value number={km(distanceKm)} unit="km" /></dd>
             <dd className={styles.bar}><WaitBar value={distanceKm} max={maxKm} /></dd>
@@ -88,7 +88,7 @@ export default function HeroResult({ result, ranking, maxWait, maxKm, summaryHre
               worst="longest"
             />
             <PositionStrip
-              label={DISTANCE_LABEL}
+              label={distanceFrom(outcode)}
               values={ranking.results.map((r) => r.distanceKm)}
               current={distanceKm}
               format={(v) => `${km(v)} km`}

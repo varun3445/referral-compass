@@ -65,7 +65,7 @@ const SOURCES = [
 const LIMITS = [
   ['Trust, not hospital site', 'NHS England publishes waiting times per trust. A trust may run several hospitals with different waits.'],
   ['“Waiting so far”, not time to appointment', 'Waiting so far is the middle value of how long people currently on the list have waited. It is not a prediction of when a new patient will be seen.'],
-  ['Distance to trust HQ is approximate', 'Distance to trust HQ is a straight line from the centre of the patient’s postcode area (for example WC2N) to the trust’s recorded main office. The clinic may be at another site. It does not say how long it takes to get there.'],
+  ['Distance is approximate', 'Distance from the patient’s outcode (for example “Distance from WC2N”) is a straight line from the centre of the patient’s postcode area (for example WC2N) to the trust’s recorded main office. The clinic may be at another site. It does not say how long it takes to get there.'],
   ['CQC ratings are trust-wide and old', `A rating covers the whole trust, not the specialty. Overall ratings in this data set are ${AGE.min} to ${AGE.max} years old (oldest ${STATS.oldest}, newest ${STATS.newest}). Because of this, CQC ratings are shown as context but are not used in the ranking unless the GP ticks “Include CQC rating in the ranking”.`],
   ['Well-led-only trusts', `${STATS.wellLedOnly} trusts have only a trust-level Well-led rating from CQC’s newer approach, with no overall rating. They show “Not available” with the reason, and, only when CQC is included in the ranking, are given a neutral quality score of ${UNRATED_QUALITY_SCORE}. Well-led is never used as a stand-in for the overall rating.`],
   ['Small numbers', `Trust and specialty pairs with fewer than ${meta.minWaitingForRanking} people waiting are not ranked (a figure from a handful of patients is noise). They are listed under the shortlist. There are ${STATS.smallPairs} such pairs.`],
@@ -140,7 +140,7 @@ export default function DataContent({ titleId = 'data-title', bare = false }) {
             <dd><code>people in weeks 0 to 18 ÷ people waiting × 100</code></dd>
           </div>
           <div>
-            <dt>Distance to trust HQ</dt>
+            <dt>Distance from the patient’s outcode</dt>
             <dd>Haversine (great-circle) distance in km from the centre of the patient’s postcode area to the trust’s registered postcode.</dd>
           </div>
           <div>

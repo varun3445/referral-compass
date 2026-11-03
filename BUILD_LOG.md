@@ -214,3 +214,11 @@ Checks: layout-check passes at 5 widths; axe 0 issues on 8 states; verify-rankin
 - **M4j follow-up:** the CQC "Good" tag is bright green (#0D6B3A text on #D9F5E4, #18B464 dot, 6.0:1) and stays filled when older than 2 years; Requires improvement and Not available are unchanged. The Data and limits modal has 24px side padding on desktop.
 - **Follow-up:** the Good badge has no fill (green text and dot on a hairline outline). Option rows have 32px top padding.
 - **Deployed** M4i to M4j and follow-ups to https://referral-compass.vercel.app at 15:43:45 (vercel whoami: varun3445). Screenshots: docs/m4k-1440-results.png, docs/m4k-390-results.png, docs/m4k-390-modal.png, docs/m4k-390-summary.png.
+
+## M4l final fixes (3 Nov 2026)
+
+1. **One decimal for wait gaps.** The why sentence now reads "a wait 2.3 weeks longer than the shortest", matching the tile "2.3 weeks more than the shortest".
+2. **Distance from the outcode.** "Distance to trust HQ", "to trust HQ" and "head office" are gone. Tile and Evidence: "Distance from WC2N" (the real outcode). Rows: "7.1 km away". /summary: "About 1 km from WC2N", and the table column and the About sentence use it too. The info note reads "Straight line from WC2N to the trust’s recorded main office. Your appointment may be at another hospital or clinic." The footnote, Data and limits and README were updated to match. **Privacy:** the outcode is still not put in the summary URL. /summary reads it from the in-memory search in the same tab; opened directly, it says "your area".
+3. **Edge cases tested** (desktop, scripted): M1 and EH1 both show "This postcode is outside the London area covered by this prototype." EH1 used to show a red "outside England" input error; a real postcode outside the area is not an input error, so it now shows the same friendly message. WC2N at 5 km gives results for all 5 specialties, with no blank screens and no page errors. The only console error is the browser's automatic /favicon.ico request (404). The app has never had a favicon, and it was left alone because this round allowed no other changes.
+
+Checks: layout-check passes at 5 widths; axe 0 issues on 8 states; verify-ranking identical; summary prints on 1 A4 page.

@@ -4,12 +4,12 @@ import meta from '@/data/meta.json';
 import CqcBadge from './CqcBadge';
 import PositionStrip from './PositionStrip';
 import Icon from './Icon';
-import { weeks, km, count, monthYear, yearsAgo, isOlderThan2Years, DISTANCE_LABEL, DISTANCE_NOTE } from '@/lib/format';
+import { weeks, km, count, monthYear, yearsAgo, isOlderThan2Years, distanceFrom, distanceNote } from '@/lib/format';
 import styles from './EvidenceDrawer.module.css';
 
 const RTT_SOURCE = { label: 'NHS England RTT, incomplete pathways', date: meta.rttLabel, href: meta.rttSourceUrl };
 const CQC_SOURCE = { label: 'CQC Latest ratings file', date: monthYear(meta.cqcFileDate), href: meta.cqcSourceUrl };
-const LOC_SOURCE = { label: 'NHS ODS (trust HQ postcode) and postcodes.io', date: monthYear(meta.builtAt), href: meta.odsSourceUrl };
+const LOC_SOURCE = { label: 'NHS ODS (trust main office postcode) and postcodes.io', date: monthYear(meta.builtAt), href: meta.odsSourceUrl };
 const MATCH = { 'ods-code': 'Matched by the trust’s ODS code in the CQC file' };
 
 const CLOSE_MS = 250;
@@ -116,8 +116,8 @@ export default function EvidenceDrawer({ result, ranking, outcode, specialtyName
     ? `Waiting so far ${weeks(w.medianWeeks)} weeks. The shortest ${of}.`
     : `Waiting so far ${weeks(w.medianWeeks)} weeks. The shortest ${of} is ${weeks(range.minWait)} weeks.`);
   const kmLine = r && (r === nearest || r.badges.nearest
-    ? `${DISTANCE_LABEL} ${km(r.distanceKm)} km. Closest ${of}.`
-    : `${DISTANCE_LABEL} ${km(r.distanceKm)} km. The closest ${of} is ${km(range.minKm)} km.`);
+    ? `${distanceFrom(outcode)} ${km(r.distanceKm)} km. Closest ${of}.`
+    : `${distanceFrom(outcode)} ${km(r.distanceKm)} km. The closest ${of} is ${km(range.minKm)} km.`);
   const cqcLine = includeQuality ? 'CQC rating used in the ranking.' : 'CQC rating not used in the ranking.';
 
   const gaps = r ? [
@@ -129,7 +129,7 @@ export default function EvidenceDrawer({ result, ranking, outcode, specialtyName
     p.cqc.rating && isOlderThan2Years(p.cqc.date) && `The CQC rating is ${yearsAgo(p.cqc.date)} years old. The trust may have changed since.`,
     'The CQC rating is trust wide, not for this specialty.',
     p.isSpecialist && `${p.specialistNote}. It may not accept routine referrals for every condition.`,
-    'Distance to trust HQ is a straight line from the centre of the patient’s postcode area to the trust’s recorded main office. The clinic may be elsewhere.',
+    `Distance from ${outcode} is a straight line from the centre of ${outcode} to the trust’s recorded main office. The clinic may be elsewhere.`,
   ].filter(Boolean) : [];
 
   return (
@@ -167,7 +167,7 @@ export default function EvidenceDrawer({ result, ranking, outcode, specialtyName
               {consideredCount > 1 && (
                 <div className={styles.strips}>
                   <PositionStrip label="Waiting so far" values={ranking.results.map((x) => x.wait.medianWeeks)} current={w.medianWeeks} format={(v) => `${weeks(v)} wks`} best="shortest" worst="longest" />
-                  <PositionStrip label={DISTANCE_LABEL} values={ranking.results.map((x) => x.distanceKm)} current={r.distanceKm} format={(v) => `${km(v)} km`} best="closest" worst="furthest" />
+                  <PositionStrip label={distanceFrom(outcode)} values={ranking.results.map((x) => x.distanceKm)} current={r.distanceKm} format={(v) => `${km(v)} km`} best="closest" worst="furthest" />
                 </div>
               )}
               <p className={styles.note}>
@@ -211,7 +211,7 @@ export default function EvidenceDrawer({ result, ranking, outcode, specialtyName
             <section className={styles.section}>
               <h3>Location</h3>
               <dl className={styles.facts}>
-                <Fact label={DISTANCE_LABEL} value={`${km(r.distanceKm)} km`} formula={DISTANCE_NOTE} source={LOC_SOURCE} />
+                <Fact label={distanceFrom(outcode)} value={`${km(r.distanceKm)} km`} formula={distanceNote(outcode)} source={LOC_SOURCE} />
                 <Fact
                   label="Where the location came from"
                   value={`ODS main office postcode ${p.postcode}`}

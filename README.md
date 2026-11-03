@@ -4,11 +4,11 @@
 
 Live: **https://referral-compass.vercel.app**
 
-![Referral Compass showing results for WC2N and Rheumatology](docs/m4k-1440-results.png)
+![Referral Compass showing results for WC2N and Rheumatology](docs/m4l-1440-results.png)
 
 ## What it does
 
-Referral Compass helps a GP in England compare NHS trusts for a routine outpatient referral, during a 10 minute appointment. The GP enters the patient's postcode, picks a specialty and a distance (5, 10, 15 or 25 km), and gets the top match for those settings plus up to four other options. Each one shows how long people on its list have waited so far, how many are waiting under 18 weeks, its CQC rating and its distance to the trust HQ. One tap opens the evidence behind every number, and the GP can print a plain language summary for the patient. It covers 41 NHS trusts in and around London and five specialties: Cardiology, Dermatology, Gastroenterology, Rheumatology, and Trauma and Orthopaedics.
+Referral Compass helps a GP in England compare NHS trusts for a routine outpatient referral, during a 10 minute appointment. The GP enters the patient's postcode, picks a specialty and a distance (5, 10, 15 or 25 km), and gets the top match for those settings plus up to four other options. Each one shows how long people on its list have waited so far, how many are waiting under 18 weeks, its CQC rating and its distance from the patient's outcode (for example "Distance from WC2N", a straight line to the trust's recorded main office). One tap opens the evidence behind every number, and the GP can print a plain language summary for the patient. It covers 41 NHS trusts in and around London and five specialties: Cardiology, Dermatology, Gastroenterology, Rheumatology, and Trauma and Orthopaedics.
 
 ## How the ranking works
 

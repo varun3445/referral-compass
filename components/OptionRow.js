@@ -1,7 +1,7 @@
 import CqcBadge from './CqcBadge';
 import Icon from './Icon';
 import WaitBar from './WaitBar';
-import { weeks, km, DISTANCE_LABEL } from '@/lib/format';
+import { weeks, km } from '@/lib/format';
 import styles from './OptionRow.module.css';
 
 // A compact "other option" row. The Evidence button stretches over the
@@ -26,9 +26,7 @@ export default function OptionRow({ result, maxWait, onEvidence }) {
         <WaitBar value={wait.medianWeeks} max={maxWait} size="sm" />
       </div>
       <div className={styles.km}>
-        <span className="visually-hidden">{DISTANCE_LABEL}: </span>
-        <span className={styles.kmValue}>{km(distanceKm)} km</span>
-        <span className={styles.kmNote} aria-hidden="true">to trust HQ</span>
+        <span className={styles.kmValue}>{km(distanceKm)} km away</span>
       </div>
       <button type="button" className={styles.evidence} onClick={onEvidence} aria-haspopup="dialog">
         Evidence<span className="visually-hidden"> for {provider.name}</span>
