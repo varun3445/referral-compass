@@ -230,3 +230,4 @@ Checks: layout-check passes at 5 widths; axe 0 issues on 8 states; verify-rankin
 - app/icon.svg: the header mark (graphite #0F1B2D rounded square, white compass). Next serves it as the site icon, which fixes the /favicon.ico console 404 seen in M4l.
 - Title "Referral Compass"; meta description "Compare NHS trusts for a routine referral by waiting so far and distance. Independent prototype, not an NHS service."
 - Checks: layout-check passes at 5 widths; verify-ranking identical.
+- Credit: "Built by Varun Srivathsan." at the start of the site footer, plus author and creator metadata (commit after the m4m tag). Layout-check passes at 5 widths.

@@ -8,6 +8,8 @@ const sans = Plus_Jakarta_Sans({ subsets: ['latin'], weight: ['400', '500', '600
 
 export const metadata = {
   title: 'Referral Compass',
+  authors: [{ name: 'Varun Srivathsan' }],
+  creator: 'Varun Srivathsan',
   description: 'Compare NHS trusts for a routine referral by waiting so far and distance. Independent prototype, not an NHS service.',
 };
 
@@ -21,7 +23,7 @@ export default function RootLayout({ children }) {
         {children}
         <footer className="site-footer">
           <p>
-            Independent prototype, not an NHS service. Not for urgent or suspected cancer referrals. Contains public
+            Built by Varun Srivathsan. Independent prototype, not an NHS service. Not for urgent or suspected cancer referrals. Contains public
             sector information licensed under the{' '}
             <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a>.{' '}
             <Link href="/data#licence">Full attribution</Link>.
