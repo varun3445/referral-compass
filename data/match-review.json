@@ -1,0 +1,1302 @@
+[
+  {
+    "odsCode": "R0D",
+    "rttName": "UNIVERSITY HOSPITALS DORSET NHS FOUNDATION TRUST",
+    "cqcId": "RBD",
+    "cqcName": "Dorset County Hospital NHS Foundation Trust",
+    "method": "fuzzy-name",
+    "confidence": 0.67,
+    "accepted": false,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RAJ",
+    "rttName": "MID AND SOUTH ESSEX NHS FOUNDATION TRUST",
+    "cqcId": "RAJ",
+    "cqcName": "Mid and South Essex NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": false
+  },
+  {
+    "odsCode": "RDE",
+    "rttName": "EAST SUFFOLK AND NORTH ESSEX NHS FOUNDATION TRUST",
+    "cqcId": "RDE",
+    "cqcName": "East Suffolk and North Essex NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RQW",
+    "rttName": "THE PRINCESS ALEXANDRA HOSPITAL NHS TRUST",
+    "cqcId": "RQW",
+    "cqcName": "The Princess Alexandra Hospital NHS Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": false
+  },
+  {
+    "odsCode": "RTX",
+    "rttName": "UNIVERSITY HOSPITALS OF MORECAMBE BAY NHS FOUNDATION TRUST",
+    "cqcId": "RTX",
+    "cqcName": "University Hospitals of Morecambe Bay NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RW5",
+    "rttName": "LANCASHIRE & SOUTH CUMBRIA NHS FOUNDATION TRUST",
+    "cqcId": "RW5",
+    "cqcName": "Lancashire & South Cumbria NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": false
+  },
+  {
+    "odsCode": "RXL",
+    "rttName": "BLACKPOOL TEACHING HOSPITALS NHS FOUNDATION TRUST",
+    "cqcId": "RXL",
+    "cqcName": "Blackpool Teaching Hospitals NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": false
+  },
+  {
+    "odsCode": "RXN",
+    "rttName": "LANCASHIRE TEACHING HOSPITALS NHS FOUNDATION TRUST",
+    "cqcId": "RXN",
+    "cqcName": "Lancashire Teaching Hospitals NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RXR",
+    "rttName": "EAST LANCASHIRE HOSPITALS NHS TRUST",
+    "cqcId": "RXR",
+    "cqcName": "East Lancashire Hospitals NHS Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": false
+  },
+  {
+    "odsCode": "RFF",
+    "rttName": "BARNSLEY HOSPITAL NHS FOUNDATION TRUST",
+    "cqcId": "RFF",
+    "cqcName": "Barnsley Hospital NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RFR",
+    "rttName": "THE ROTHERHAM NHS FOUNDATION TRUST",
+    "cqcId": "RFR",
+    "cqcName": "The Rotherham NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RP5",
+    "rttName": "DONCASTER AND BASSETLAW TEACHING HOSPITALS NHS FOUNDATION TRUST",
+    "cqcId": "RP5",
+    "cqcName": "Doncaster and Bassetlaw Teaching Hospitals NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "R1A",
+    "rttName": "HEREFORDSHIRE AND WORCESTERSHIRE HEALTH AND CARE NHS TRUST",
+    "cqcId": "R1A",
+    "cqcName": "Herefordshire and Worcestershire Health and Care NHS Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": false
+  },
+  {
+    "odsCode": "RLQ",
+    "rttName": "WYE VALLEY NHS TRUST",
+    "cqcId": "RLQ",
+    "cqcName": "Wye Valley NHS Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RWP",
+    "rttName": "WORCESTERSHIRE ACUTE HOSPITALS NHS TRUST",
+    "cqcId": "RWP",
+    "cqcName": "Worcestershire Acute Hospitals NHS Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RQ3",
+    "rttName": "BIRMINGHAM WOMEN'S AND CHILDREN'S NHS FOUNDATION TRUST",
+    "cqcId": "RQ3",
+    "cqcName": "Birmingham Women's and Children's NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": false
+  },
+  {
+    "odsCode": "RRJ",
+    "rttName": "THE ROYAL ORTHOPAEDIC HOSPITAL NHS FOUNDATION TRUST",
+    "cqcId": "RRJ",
+    "cqcName": "The Royal Orthopaedic Hospital NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RRK",
+    "rttName": "UNIVERSITY HOSPITALS BIRMINGHAM NHS FOUNDATION TRUST",
+    "cqcId": "RRK",
+    "cqcName": "University Hospitals Birmingham NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": false
+  },
+  {
+    "odsCode": "RYW",
+    "rttName": "BIRMINGHAM COMMUNITY HEALTHCARE NHS FOUNDATION TRUST",
+    "cqcId": "RYW",
+    "cqcName": "Birmingham Community Healthcare NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "R0B",
+    "rttName": "SOUTH TYNESIDE AND SUNDERLAND NHS FOUNDATION TRUST",
+    "cqcId": "R0B",
+    "cqcName": "South Tyneside and Sunderland NHS FT",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RNN",
+    "rttName": "NORTH CUMBRIA INTEGRATED CARE NHS FOUNDATION TRUST",
+    "cqcId": "RNN",
+    "cqcName": "North Cumbria Integrated Care NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RR7",
+    "rttName": "GATESHEAD HEALTH NHS FOUNDATION TRUST",
+    "cqcId": "RR7",
+    "cqcName": "Gateshead Health NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RTD",
+    "rttName": "THE NEWCASTLE UPON TYNE HOSPITALS NHS FOUNDATION TRUST",
+    "cqcId": "RTD",
+    "cqcName": "The Newcastle upon Tyne Hospitals NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RTF",
+    "rttName": "NORTHUMBRIA HEALTHCARE NHS FOUNDATION TRUST",
+    "cqcId": "RTF",
+    "cqcName": "Northumbria Healthcare NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RTR",
+    "rttName": "SOUTH TEES HOSPITALS NHS FOUNDATION TRUST",
+    "cqcId": "RTR",
+    "cqcName": "South Tees Hospitals NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RVW",
+    "rttName": "NORTH TEES AND HARTLEPOOL NHS FOUNDATION TRUST",
+    "cqcId": "RVW",
+    "cqcName": "North Tees and Hartlepool NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RXP",
+    "rttName": "COUNTY DURHAM AND DARLINGTON NHS FOUNDATION TRUST",
+    "cqcId": "RXP",
+    "cqcName": "County Durham and Darlington NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": false
+  },
+  {
+    "odsCode": "RFS",
+    "rttName": "CHESTERFIELD ROYAL HOSPITAL NHS FOUNDATION TRUST",
+    "cqcId": "RFS",
+    "cqcName": "Chesterfield Royal Hospital NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": false
+  },
+  {
+    "odsCode": "RTG",
+    "rttName": "UNIVERSITY HOSPITALS OF DERBY AND BURTON NHS FOUNDATION TRUST",
+    "cqcId": "RTG",
+    "cqcName": "University Hospitals of Derby and Burton NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RH8",
+    "rttName": "ROYAL DEVON UNIVERSITY HEALTHCARE NHS FOUNDATION TRUST",
+    "cqcId": "RH8",
+    "cqcName": "Royal Devon University Healthcare NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RWD",
+    "rttName": "UNITED LINCOLNSHIRE TEACHING HOSPITALS NHS TRUST",
+    "cqcId": "RWD",
+    "cqcName": "United Lincolnshire Teaching Hospitals NHS Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RWE",
+    "rttName": "UNIVERSITY HOSPITALS OF LEICESTER NHS TRUST",
+    "cqcId": "RWE",
+    "cqcName": "University Hospitals of Leicester NHS Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RJ1",
+    "rttName": "GUY'S AND ST THOMAS' NHS FOUNDATION TRUST",
+    "cqcId": "RJ1",
+    "cqcName": "Guy's and St Thomas' NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RJ2",
+    "rttName": "LEWISHAM AND GREENWICH NHS TRUST",
+    "cqcId": "RJ2",
+    "cqcName": "Lewisham and Greenwich NHS Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RJZ",
+    "rttName": "KING'S COLLEGE HOSPITAL NHS FOUNDATION TRUST",
+    "cqcId": "RJZ",
+    "cqcName": "King's College Hospital NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": false
+  },
+  {
+    "odsCode": "RN7",
+    "rttName": "DARTFORD AND GRAVESHAM NHS TRUST",
+    "cqcId": "RN7",
+    "cqcName": "Dartford and Gravesham NHS Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RPA",
+    "rttName": "MEDWAY NHS FOUNDATION TRUST",
+    "cqcId": "RPA",
+    "cqcName": "Medway NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RVV",
+    "rttName": "EAST KENT HOSPITALS UNIVERSITY NHS FOUNDATION TRUST",
+    "cqcId": "RVV",
+    "cqcName": "East Kent Hospitals University NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RWF",
+    "rttName": "MAIDSTONE AND TUNBRIDGE WELLS NHS TRUST",
+    "cqcId": "RWF",
+    "cqcName": "Maidstone and Tunbridge Wells NHS Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RYY",
+    "rttName": "KENT COMMUNITY HEALTH NHS FOUNDATION TRUST",
+    "cqcId": "RYY",
+    "cqcName": "Kent Community Health NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "R1H",
+    "rttName": "BARTS HEALTH NHS TRUST",
+    "cqcId": "R1H",
+    "cqcName": "Barts Health NHS Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RF4",
+    "rttName": "BARKING, HAVERING AND REDBRIDGE UNIVERSITY HOSPITALS NHS TRUST",
+    "cqcId": "RF4",
+    "cqcName": "Barking, Havering and Redbridge University Hospitals NHS Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RQX",
+    "rttName": "HOMERTON HEALTHCARE NHS FOUNDATION TRUST",
+    "cqcId": "RQX",
+    "cqcName": "Homerton Healthcare NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RJE",
+    "rttName": "UNIVERSITY HOSPITALS OF NORTH MIDLANDS NHS TRUST",
+    "cqcId": "RJE",
+    "cqcName": "University Hospitals of North Midlands NHS Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RRE",
+    "rttName": "MIDLANDS PARTNERSHIP UNIVERSITY NHS FOUNDATION TRUST",
+    "cqcId": "RRE",
+    "cqcName": "Midlands Partnership University NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": false
+  },
+  {
+    "odsCode": "R1D",
+    "rttName": "SHROPSHIRE COMMUNITY HEALTH NHS TRUST",
+    "cqcId": "R1D",
+    "cqcName": "Shropshire Community Health NHS Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RL1",
+    "rttName": "THE ROBERT JONES AND AGNES HUNT ORTHOPAEDIC HOSPITAL NHS FOUNDATION TRUST",
+    "cqcId": "RL1",
+    "cqcName": "The Robert Jones and Agnes Hunt Orthopaedic Hospital NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RXW",
+    "rttName": "THE SHREWSBURY AND TELFORD HOSPITAL NHS TRUST",
+    "cqcId": "RXW",
+    "cqcName": "Shrewsbury and Telford Hospital NHS Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "R0A",
+    "rttName": "MANCHESTER UNIVERSITY NHS FOUNDATION TRUST",
+    "cqcId": "R0A",
+    "cqcName": "Manchester University NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": false
+  },
+  {
+    "odsCode": "RM3",
+    "rttName": "NORTHERN CARE ALLIANCE NHS FOUNDATION TRUST",
+    "cqcId": "RM3",
+    "cqcName": "Northern Care Alliance NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RMC",
+    "rttName": "BOLTON NHS FOUNDATION TRUST",
+    "cqcId": "RMC",
+    "cqcName": "Bolton NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RMP",
+    "rttName": "TAMESIDE AND GLOSSOP INTEGRATED CARE NHS FOUNDATION TRUST",
+    "cqcId": "RMP",
+    "cqcName": "Tameside and Glossop Integrated Care NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RRF",
+    "rttName": "WRIGHTINGTON, WIGAN AND LEIGH TEACHING HOSPITALS NHS FOUNDATION TRUST",
+    "cqcId": "RRF",
+    "cqcName": "Wrightington, Wigan and Leigh Teaching Hospitals NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RWJ",
+    "rttName": "STOCKPORT NHS FOUNDATION TRUST",
+    "cqcId": "RWJ",
+    "cqcName": "Stockport NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RCB",
+    "rttName": "YORK AND SCARBOROUGH TEACHING HOSPITALS NHS FOUNDATION TRUST",
+    "cqcId": "RCB",
+    "cqcName": "York and Scarborough Teaching Hospitals NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RCD",
+    "rttName": "HARROGATE AND DISTRICT NHS FOUNDATION TRUST",
+    "cqcId": "RCD",
+    "cqcName": "Harrogate and District NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RJL",
+    "rttName": "NORTHERN LINCOLNSHIRE AND GOOLE NHS FOUNDATION TRUST",
+    "cqcId": "RJL",
+    "cqcName": "Northern Lincolnshire and Goole NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": false
+  },
+  {
+    "odsCode": "RWA",
+    "rttName": "HULL UNIVERSITY TEACHING HOSPITALS NHS TRUST",
+    "cqcId": "RWA",
+    "cqcName": "Hull University Teaching Hospitals NHS Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RD1",
+    "rttName": "ROYAL UNITED HOSPITALS BATH NHS FOUNDATION TRUST",
+    "cqcId": "RD1",
+    "cqcName": "Royal United Hospitals Bath NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RN3",
+    "rttName": "GREAT WESTERN HOSPITALS NHS FOUNDATION TRUST",
+    "cqcId": "RN3",
+    "cqcName": "Great Western Hospitals NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RNZ",
+    "rttName": "SALISBURY NHS FOUNDATION TRUST",
+    "cqcId": "RNZ",
+    "cqcName": "Salisbury NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RNQ",
+    "rttName": "KETTERING GENERAL HOSPITAL NHS FOUNDATION TRUST",
+    "cqcId": "RNQ",
+    "cqcName": "Kettering General Hospital NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RTE",
+    "rttName": "GLOUCESTERSHIRE HOSPITALS NHS FOUNDATION TRUST",
+    "cqcId": "RTE",
+    "cqcName": "Gloucestershire Hospitals NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": false
+  },
+  {
+    "odsCode": "R1F",
+    "rttName": "ISLE OF WIGHT NHS TRUST",
+    "cqcId": "R1F",
+    "cqcName": "Isle of Wight NHS Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": false
+  },
+  {
+    "odsCode": "RHM",
+    "rttName": "UNIVERSITY HOSPITAL SOUTHAMPTON NHS FOUNDATION TRUST",
+    "cqcId": "RHM",
+    "cqcName": "University Hospital Southampton NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RHU",
+    "rttName": "PORTSMOUTH HOSPITALS UNIVERSITY NHS TRUST",
+    "cqcId": "RHU",
+    "cqcName": "Portsmouth Hospitals University NHS Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RN5",
+    "rttName": "HAMPSHIRE HOSPITALS NHS FOUNDATION TRUST",
+    "cqcId": "RN5",
+    "cqcName": "Hampshire Hospitals NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RW1",
+    "rttName": "HAMPSHIRE AND ISLE OF WIGHT HEALTHCARE NHS FOUNDATION TRUST",
+    "cqcId": "RW1",
+    "cqcName": "Hampshire and Isle of Wight Healthcare NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": false
+  },
+  {
+    "odsCode": "RH5",
+    "rttName": "SOMERSET NHS FOUNDATION TRUST",
+    "cqcId": "RH5",
+    "cqcName": "Somerset NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RK5",
+    "rttName": "SHERWOOD FOREST HOSPITALS NHS FOUNDATION TRUST",
+    "cqcId": "RK5",
+    "cqcName": "Sherwood Forest Hospitals NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RX1",
+    "rttName": "NOTTINGHAM UNIVERSITY HOSPITALS NHS TRUST",
+    "cqcId": "RX1",
+    "cqcName": "Nottingham University Hospitals NHS Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "REF",
+    "rttName": "ROYAL CORNWALL HOSPITALS NHS TRUST",
+    "cqcId": "REF",
+    "cqcName": "Royal Cornwall Hospitals NHS Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RJ8",
+    "rttName": "CORNWALL PARTNERSHIP NHS FOUNDATION TRUST",
+    "cqcId": "RJ8",
+    "cqcName": "Cornwall Partnership NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": false
+  },
+  {
+    "odsCode": "RBK",
+    "rttName": "WALSALL HEALTHCARE NHS TRUST",
+    "cqcId": "RBK",
+    "cqcName": "Walsall Healthcare NHS Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RL4",
+    "rttName": "THE ROYAL WOLVERHAMPTON NHS TRUST",
+    "cqcId": "RL4",
+    "cqcName": "The Royal Wolverhampton NHS Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RNA",
+    "rttName": "THE DUDLEY GROUP NHS FOUNDATION TRUST",
+    "cqcId": "RNA",
+    "cqcName": "The Dudley Group NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RXK",
+    "rttName": "SANDWELL AND WEST BIRMINGHAM HOSPITALS NHS TRUST",
+    "cqcId": "RXK",
+    "cqcName": "Sandwell and West Birmingham Hospitals NHS Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": false
+  },
+  {
+    "odsCode": "RA7",
+    "rttName": "BRISTOL NHS FOUNDATION TRUST",
+    "cqcId": "RA7",
+    "cqcName": "Bristol NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RBD",
+    "rttName": "DORSET COUNTY HOSPITAL NHS FOUNDATION TRUST",
+    "cqcId": "RBD",
+    "cqcName": "Dorset County Hospital NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RAX",
+    "rttName": "KINGSTON AND RICHMOND NHS FOUNDATION TRUST",
+    "cqcId": "RAX",
+    "cqcName": "Kingston and Richmond NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RJ6",
+    "rttName": "CROYDON HEALTH SERVICES NHS TRUST",
+    "cqcId": "RJ6",
+    "cqcName": "Croydon Health Services NHS Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RJ7",
+    "rttName": "ST GEORGE'S UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+    "cqcId": "RJ7",
+    "cqcName": "St George's University Hospitals NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": false
+  },
+  {
+    "odsCode": "RVR",
+    "rttName": "EPSOM AND ST HELIER UNIVERSITY HOSPITALS NHS TRUST",
+    "cqcId": "RVR",
+    "cqcName": "Epsom and St Helier University Hospitals NHS Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RAE",
+    "rttName": "BRADFORD TEACHING HOSPITALS NHS FOUNDATION TRUST",
+    "cqcId": "RAE",
+    "cqcName": "Bradford Teaching Hospitals NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": false
+  },
+  {
+    "odsCode": "RCF",
+    "rttName": "AIREDALE NHS FOUNDATION TRUST",
+    "cqcId": "RCF",
+    "cqcName": "Airedale NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RR8",
+    "rttName": "LEEDS TEACHING HOSPITALS NHS TRUST",
+    "cqcId": "RR8",
+    "cqcName": "Leeds Teaching Hospitals NHS Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": false
+  },
+  {
+    "odsCode": "RWY",
+    "rttName": "CALDERDALE AND HUDDERSFIELD NHS FOUNDATION TRUST",
+    "cqcId": "RWY",
+    "cqcName": "Calderdale and Huddersfield NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": false
+  },
+  {
+    "odsCode": "RXF",
+    "rttName": "MID YORKSHIRE TEACHING NHS TRUST",
+    "cqcId": "RXF",
+    "cqcName": "Mid Yorkshire Teaching NHS Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RJC",
+    "rttName": "SOUTH WARWICKSHIRE UNIVERSITY NHS FOUNDATION TRUST",
+    "cqcId": "RJC",
+    "cqcName": "South Warwickshire University NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": false
+  },
+  {
+    "odsCode": "RKB",
+    "rttName": "UNIVERSITY HOSPITALS COVENTRY AND WARWICKSHIRE NHS TRUST",
+    "cqcId": "RKB",
+    "cqcName": "University Hospitals Coventry and Warwickshire NHS Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": false
+  },
+  {
+    "odsCode": "RLT",
+    "rttName": "GEORGE ELIOT HOSPITAL NHS TRUST",
+    "cqcId": "RLT",
+    "cqcName": "George Eliot Hospital NHS Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RBL",
+    "rttName": "WIRRAL UNIVERSITY TEACHING HOSPITAL NHS FOUNDATION TRUST",
+    "cqcId": "RBL",
+    "cqcName": "Wirral University Teaching Hospital NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RBN",
+    "rttName": "MERSEY AND WEST LANCASHIRE TEACHING HOSPITALS NHS TRUST",
+    "cqcId": "RBN",
+    "cqcName": "Mersey and West Lancashire Teaching Hospitals NHS Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RBQ",
+    "rttName": "LIVERPOOL HEART AND CHEST HOSPITAL NHS FOUNDATION TRUST",
+    "cqcId": "RBQ",
+    "cqcName": "Liverpool Heart and Chest Hospital NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RBT",
+    "rttName": "MID CHESHIRE HOSPITALS NHS FOUNDATION TRUST",
+    "cqcId": "RBT",
+    "cqcName": "Mid Cheshire Hospitals NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": false
+  },
+  {
+    "odsCode": "REM",
+    "rttName": "LIVERPOOL UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+    "cqcId": "REM",
+    "cqcName": "Liverpool University Hospitals NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": false
+  },
+  {
+    "odsCode": "RJN",
+    "rttName": "EAST CHESHIRE NHS TRUST",
+    "cqcId": "RJN",
+    "cqcName": "East Cheshire NHS Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": false
+  },
+  {
+    "odsCode": "RJR",
+    "rttName": "COUNTESS OF CHESTER HOSPITAL NHS FOUNDATION TRUST",
+    "cqcId": "RJR",
+    "cqcName": "Countess of Chester Hospital NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RWW",
+    "rttName": "NORTH CHESHIRE AND MERSEY NHS FOUNDATION TRUST",
+    "cqcId": "RWW",
+    "cqcName": "North Cheshire and Mersey NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RHW",
+    "rttName": "ROYAL BERKSHIRE NHS FOUNDATION TRUST",
+    "cqcId": "RHW",
+    "cqcName": "Royal Berkshire NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RTH",
+    "rttName": "OXFORD UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+    "cqcId": "RTH",
+    "cqcName": "Oxford University Hospitals NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RXQ",
+    "rttName": "BUCKINGHAMSHIRE HEALTHCARE NHS TRUST",
+    "cqcId": "RXQ",
+    "cqcName": "Buckinghamshire Healthcare NHS Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RC9",
+    "rttName": "BEDFORDSHIRE HOSPITALS NHS FOUNDATION TRUST",
+    "cqcId": "RC9",
+    "cqcName": "Bedfordshire Hospitals NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RD8",
+    "rttName": "MILTON KEYNES UNIVERSITY HOSPITAL NHS FOUNDATION TRUST",
+    "cqcId": "RD8",
+    "cqcName": "Milton Keynes University Hospital NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RGM",
+    "rttName": "ROYAL PAPWORTH HOSPITAL NHS FOUNDATION TRUST",
+    "cqcId": "RGM",
+    "cqcName": "Royal Papworth Hospital NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RGN",
+    "rttName": "NORTH WEST ANGLIA NHS FOUNDATION TRUST",
+    "cqcId": "RGN",
+    "cqcName": "North West Anglia NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RGT",
+    "rttName": "CAMBRIDGE UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+    "cqcId": "RGT",
+    "cqcName": "Cambridge University Hospitals NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RWG",
+    "rttName": "WEST HERTFORDSHIRE TEACHING HOSPITALS NHS TRUST",
+    "cqcId": "RWG",
+    "cqcName": "West Hertfordshire Teaching Hospitals NHS Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RWH",
+    "rttName": "EAST AND NORTH HERTFORDSHIRE TEACHING NHS TRUST",
+    "cqcId": "RWH",
+    "cqcName": "East and North Hertfordshire Teaching NHS Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RA2",
+    "rttName": "ROYAL SURREY NHS FOUNDATION TRUST",
+    "cqcId": "RA2",
+    "cqcName": "Royal Surrey NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": false
+  },
+  {
+    "odsCode": "RDR",
+    "rttName": "SUSSEX COMMUNITY NHS FOUNDATION TRUST",
+    "cqcId": "RDR",
+    "cqcName": "Sussex Community NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RDU",
+    "rttName": "FRIMLEY HEALTH NHS FOUNDATION TRUST",
+    "cqcId": "RDU",
+    "cqcName": "Frimley Health NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RPC",
+    "rttName": "QUEEN VICTORIA HOSPITAL NHS FOUNDATION TRUST",
+    "cqcId": "RPC",
+    "cqcName": "Queen Victoria Hospital NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RTK",
+    "rttName": "ASHFORD AND ST PETER'S HOSPITALS NHS FOUNDATION TRUST",
+    "cqcId": "RTK",
+    "cqcName": "Ashford and St. Peter's Hospitals NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RTP",
+    "rttName": "SURREY AND SUSSEX HEALTHCARE NHS TRUST",
+    "cqcId": "RTP",
+    "cqcName": "Surrey and Sussex Healthcare NHS Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": false
+  },
+  {
+    "odsCode": "RXC",
+    "rttName": "EAST SUSSEX HEALTHCARE NHS TRUST",
+    "cqcId": "RXC",
+    "cqcName": "East Sussex Healthcare NHS Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RYR",
+    "rttName": "UNIVERSITY HOSPITALS SUSSEX NHS FOUNDATION TRUST",
+    "cqcId": "RYR",
+    "cqcName": "University Hospitals Sussex NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": false
+  },
+  {
+    "odsCode": "RCX",
+    "rttName": "THE QUEEN ELIZABETH HOSPITAL, KING'S LYNN, NHS FOUNDATION TRUST",
+    "cqcId": "RCX",
+    "cqcName": "The Queen Elizabeth Hospital King's Lynn NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RGP",
+    "rttName": "JAMES PAGET UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+    "cqcId": "RGP",
+    "cqcName": "James Paget University Hospitals NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RGR",
+    "rttName": "WEST SUFFOLK NHS FOUNDATION TRUST",
+    "cqcId": "RGR",
+    "cqcName": "West Suffolk NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RM1",
+    "rttName": "NORFOLK AND NORWICH UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+    "cqcId": "RM1",
+    "cqcName": "Norfolk and Norwich University Hospitals NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "R1K",
+    "rttName": "LONDON NORTH WEST UNIVERSITY HEALTHCARE NHS TRUST",
+    "cqcId": "R1K",
+    "cqcName": "London North West University Healthcare NHS Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RAL",
+    "rttName": "ROYAL FREE LONDON NHS FOUNDATION TRUST",
+    "cqcId": "RAL",
+    "cqcName": "Royal Free London NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RAN",
+    "rttName": "ROYAL NATIONAL ORTHOPAEDIC HOSPITAL NHS TRUST",
+    "cqcId": "RAN",
+    "cqcName": "Royal National Orthopaedic Hospital NHS Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RAS",
+    "rttName": "THE HILLINGDON HOSPITALS NHS FOUNDATION TRUST",
+    "cqcId": "RAS",
+    "cqcName": "The Hillingdon Hospitals NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": false
+  },
+  {
+    "odsCode": "RKE",
+    "rttName": "WHITTINGTON HEALTH NHS TRUST",
+    "cqcId": "RKE",
+    "cqcName": "Whittington Health NHS Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RPY",
+    "rttName": "THE ROYAL MARSDEN NHS FOUNDATION TRUST",
+    "cqcId": "RPY",
+    "cqcName": "The Royal Marsden NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RQM",
+    "rttName": "CHELSEA AND WESTMINSTER HOSPITAL NHS FOUNDATION TRUST",
+    "cqcId": "RQM",
+    "cqcName": "Chelsea and Westminster Hospital NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RRV",
+    "rttName": "UNIVERSITY COLLEGE LONDON HOSPITALS NHS FOUNDATION TRUST",
+    "cqcId": "RRV",
+    "cqcName": "University College London Hospitals NHS Foundation Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  },
+  {
+    "odsCode": "RYJ",
+    "rttName": "IMPERIAL COLLEGE HEALTHCARE NHS TRUST",
+    "cqcId": "RYJ",
+    "cqcName": "Imperial College Healthcare NHS Trust",
+    "method": "ods-code",
+    "confidence": 1,
+    "accepted": true,
+    "cqcHasOverallRating": true
+  }
+]

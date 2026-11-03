@@ -1,0 +1,17 @@
+{
+  "name": "referral-compass",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "data": "node scripts/build-data.mjs",
+    "data:cqc": "node scripts/extract-cqc.mjs data/raw/cqc/latest_ratings.ods data/raw/cqc-providers.csv"
+  },
+  "dependencies": {
+    "next": "16.4.4",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  }
+}

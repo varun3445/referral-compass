@@ -1,0 +1,2368 @@
+[
+  {
+    "odsCode": "RTK",
+    "name": "Ashford and St. Peter's Hospitals NHS Foundation Trust",
+    "rttName": "ASHFORD AND ST PETER'S HOSPITALS NHS FOUNDATION TRUST",
+    "isSpecialist": false,
+    "specialistNote": null,
+    "postcode": "KT16 0PZ",
+    "postcodeSource": "ODS",
+    "lat": 51.37783,
+    "lng": -0.52704,
+    "cqc": {
+      "rating": "Good",
+      "date": "2018-10-04",
+      "url": "http://www.cqc.org.uk/provider/RTK",
+      "matchConfidence": 1,
+      "matchMethod": "ods-code",
+      "unavailableReason": null,
+      "wellLed": null
+    },
+    "specialties": {
+      "110": {
+        "name": "Trauma & Orthopaedics",
+        "medianWeeks": 12.6,
+        "p92Weeks": 38.2,
+        "pctWithin18": 66.5,
+        "totalWaiting": 7920,
+        "smallNumbers": false
+      },
+      "301": {
+        "name": "Gastroenterology",
+        "medianWeeks": 10.8,
+        "p92Weeks": 27.9,
+        "pctWithin18": 73.2,
+        "totalWaiting": 1798,
+        "smallNumbers": false
+      },
+      "320": {
+        "name": "Cardiology",
+        "medianWeeks": 13.1,
+        "p92Weeks": 34.6,
+        "pctWithin18": 64.7,
+        "totalWaiting": 2404,
+        "smallNumbers": false
+      },
+      "330": {
+        "name": "Dermatology",
+        "medianWeeks": 12.1,
+        "p92Weeks": 34.2,
+        "pctWithin18": 65.1,
+        "totalWaiting": 5734,
+        "smallNumbers": false
+      },
+      "410": {
+        "name": "Rheumatology",
+        "medianWeeks": 11.9,
+        "p92Weeks": 29.3,
+        "pctWithin18": 64.8,
+        "totalWaiting": 375,
+        "smallNumbers": false
+      }
+    }
+  },
+  {
+    "odsCode": "RF4",
+    "name": "Barking, Havering and Redbridge University Hospitals NHS Trust",
+    "rttName": "BARKING, HAVERING AND REDBRIDGE UNIVERSITY HOSPITALS NHS TRUST",
+    "isSpecialist": false,
+    "specialistNote": null,
+    "postcode": "RM7 0AG",
+    "postcodeSource": "ODS",
+    "lat": 51.56865,
+    "lng": 0.17906,
+    "cqc": {
+      "rating": "Requires improvement",
+      "date": "2023-02-10",
+      "url": "http://www.cqc.org.uk/provider/RF4",
+      "matchConfidence": 1,
+      "matchMethod": "ods-code",
+      "unavailableReason": null,
+      "wellLed": null
+    },
+    "specialties": {
+      "110": {
+        "name": "Trauma & Orthopaedics",
+        "medianWeeks": 15.1,
+        "p92Weeks": 38.3,
+        "pctWithin18": 60,
+        "totalWaiting": 4364,
+        "smallNumbers": false
+      },
+      "301": {
+        "name": "Gastroenterology",
+        "medianWeeks": 8.1,
+        "p92Weeks": 25.5,
+        "pctWithin18": 83.5,
+        "totalWaiting": 4194,
+        "smallNumbers": false
+      },
+      "320": {
+        "name": "Cardiology",
+        "medianWeeks": 11.7,
+        "p92Weeks": 25.2,
+        "pctWithin18": 73.6,
+        "totalWaiting": 4283,
+        "smallNumbers": false
+      },
+      "330": {
+        "name": "Dermatology",
+        "medianWeeks": 12.9,
+        "p92Weeks": 38.2,
+        "pctWithin18": 61.4,
+        "totalWaiting": 3184,
+        "smallNumbers": false
+      },
+      "410": {
+        "name": "Rheumatology",
+        "medianWeeks": 12.7,
+        "p92Weeks": 28.4,
+        "pctWithin18": 67.5,
+        "totalWaiting": 1266,
+        "smallNumbers": false
+      }
+    }
+  },
+  {
+    "odsCode": "R1H",
+    "name": "Barts Health NHS Trust",
+    "rttName": "BARTS HEALTH NHS TRUST",
+    "isSpecialist": false,
+    "specialistNote": null,
+    "postcode": "E1 2ES",
+    "postcodeSource": "ODS",
+    "lat": 51.51717,
+    "lng": -0.05602,
+    "cqc": {
+      "rating": "Requires improvement",
+      "date": "2019-02-12",
+      "url": "http://www.cqc.org.uk/provider/R1H",
+      "matchConfidence": 1,
+      "matchMethod": "ods-code",
+      "unavailableReason": null,
+      "wellLed": null
+    },
+    "specialties": {
+      "110": {
+        "name": "Trauma & Orthopaedics",
+        "medianWeeks": 15.9,
+        "p92Weeks": 39.7,
+        "pctWithin18": 55.5,
+        "totalWaiting": 8893,
+        "smallNumbers": false
+      },
+      "301": {
+        "name": "Gastroenterology",
+        "medianWeeks": 12.3,
+        "p92Weeks": 37.4,
+        "pctWithin18": 64.7,
+        "totalWaiting": 8819,
+        "smallNumbers": false
+      },
+      "320": {
+        "name": "Cardiology",
+        "medianWeeks": 10.2,
+        "p92Weeks": 29.5,
+        "pctWithin18": 76.5,
+        "totalWaiting": 8277,
+        "smallNumbers": false
+      },
+      "330": {
+        "name": "Dermatology",
+        "medianWeeks": 14.6,
+        "p92Weeks": 40.6,
+        "pctWithin18": 57.9,
+        "totalWaiting": 7442,
+        "smallNumbers": false
+      },
+      "410": {
+        "name": "Rheumatology",
+        "medianWeeks": 10.1,
+        "p92Weeks": 26.1,
+        "pctWithin18": 75.3,
+        "totalWaiting": 1262,
+        "smallNumbers": false
+      }
+    }
+  },
+  {
+    "odsCode": "RC9",
+    "name": "Bedfordshire Hospitals NHS Foundation Trust",
+    "rttName": "BEDFORDSHIRE HOSPITALS NHS FOUNDATION TRUST",
+    "isSpecialist": false,
+    "specialistNote": null,
+    "postcode": "LU4 0DZ",
+    "postcodeSource": "ODS",
+    "lat": 51.89429,
+    "lng": -0.47415,
+    "cqc": {
+      "rating": "Good",
+      "date": "2022-12-16",
+      "url": "http://www.cqc.org.uk/provider/RC9",
+      "matchConfidence": 1,
+      "matchMethod": "ods-code",
+      "unavailableReason": null,
+      "wellLed": null
+    },
+    "specialties": {
+      "110": {
+        "name": "Trauma & Orthopaedics",
+        "medianWeeks": 20.8,
+        "p92Weeks": 50.3,
+        "pctWithin18": 45.5,
+        "totalWaiting": 7426,
+        "smallNumbers": false
+      },
+      "301": {
+        "name": "Gastroenterology",
+        "medianWeeks": 10.2,
+        "p92Weeks": 37.2,
+        "pctWithin18": 73.6,
+        "totalWaiting": 3110,
+        "smallNumbers": false
+      },
+      "320": {
+        "name": "Cardiology",
+        "medianWeeks": 15.5,
+        "p92Weeks": 36.3,
+        "pctWithin18": 58.7,
+        "totalWaiting": 6634,
+        "smallNumbers": false
+      },
+      "330": {
+        "name": "Dermatology",
+        "medianWeeks": 16.5,
+        "p92Weeks": 41.8,
+        "pctWithin18": 54.1,
+        "totalWaiting": 8467,
+        "smallNumbers": false
+      },
+      "410": {
+        "name": "Rheumatology",
+        "medianWeeks": 8.6,
+        "p92Weeks": 19.3,
+        "pctWithin18": 90.4,
+        "totalWaiting": 1158,
+        "smallNumbers": false
+      }
+    }
+  },
+  {
+    "odsCode": "RXQ",
+    "name": "Buckinghamshire Healthcare NHS Trust",
+    "rttName": "BUCKINGHAMSHIRE HEALTHCARE NHS TRUST",
+    "isSpecialist": false,
+    "specialistNote": null,
+    "postcode": "HP7 0JD",
+    "postcodeSource": "ODS",
+    "lat": 51.66301,
+    "lng": -0.62141,
+    "cqc": {
+      "rating": "Good",
+      "date": "2022-07-04",
+      "url": "http://www.cqc.org.uk/provider/RXQ",
+      "matchConfidence": 1,
+      "matchMethod": "ods-code",
+      "unavailableReason": null,
+      "wellLed": null
+    },
+    "specialties": {
+      "110": {
+        "name": "Trauma & Orthopaedics",
+        "medianWeeks": 16,
+        "p92Weeks": 40.2,
+        "pctWithin18": 56.1,
+        "totalWaiting": 4881,
+        "smallNumbers": false
+      },
+      "301": {
+        "name": "Gastroenterology",
+        "medianWeeks": 12.2,
+        "p92Weeks": 35.1,
+        "pctWithin18": 65.8,
+        "totalWaiting": 3771,
+        "smallNumbers": false
+      },
+      "320": {
+        "name": "Cardiology",
+        "medianWeeks": 14.6,
+        "p92Weeks": 32.2,
+        "pctWithin18": 62.9,
+        "totalWaiting": 2766,
+        "smallNumbers": false
+      },
+      "330": {
+        "name": "Dermatology",
+        "medianWeeks": 11.7,
+        "p92Weeks": 34.7,
+        "pctWithin18": 71.9,
+        "totalWaiting": 3634,
+        "smallNumbers": false
+      },
+      "410": {
+        "name": "Rheumatology",
+        "medianWeeks": 8.5,
+        "p92Weeks": 18.6,
+        "pctWithin18": 90.8,
+        "totalWaiting": 465,
+        "smallNumbers": false
+      }
+    }
+  },
+  {
+    "odsCode": "RGT",
+    "name": "Cambridge University Hospitals NHS Foundation Trust",
+    "rttName": "CAMBRIDGE UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+    "isSpecialist": false,
+    "specialistNote": null,
+    "postcode": "CB2 0QQ",
+    "postcodeSource": "ODS",
+    "lat": 52.175,
+    "lng": 0.14065,
+    "cqc": {
+      "rating": "Good",
+      "date": "2019-02-26",
+      "url": "http://www.cqc.org.uk/provider/RGT",
+      "matchConfidence": 1,
+      "matchMethod": "ods-code",
+      "unavailableReason": null,
+      "wellLed": null
+    },
+    "specialties": {
+      "110": {
+        "name": "Trauma & Orthopaedics",
+        "medianWeeks": 15.1,
+        "p92Weeks": 39.6,
+        "pctWithin18": 58,
+        "totalWaiting": 4462,
+        "smallNumbers": false
+      },
+      "301": {
+        "name": "Gastroenterology",
+        "medianWeeks": 5.5,
+        "p92Weeks": 22.8,
+        "pctWithin18": 88.4,
+        "totalWaiting": 1563,
+        "smallNumbers": false
+      },
+      "320": {
+        "name": "Cardiology",
+        "medianWeeks": 15,
+        "p92Weeks": 39.5,
+        "pctWithin18": 58,
+        "totalWaiting": 2906,
+        "smallNumbers": false
+      },
+      "330": {
+        "name": "Dermatology",
+        "medianWeeks": 10.6,
+        "p92Weeks": 38.2,
+        "pctWithin18": 64.5,
+        "totalWaiting": 4084,
+        "smallNumbers": false
+      },
+      "410": {
+        "name": "Rheumatology",
+        "medianWeeks": 7.6,
+        "p92Weeks": 23.1,
+        "pctWithin18": 85.1,
+        "totalWaiting": 1824,
+        "smallNumbers": false
+      }
+    }
+  },
+  {
+    "odsCode": "RQM",
+    "name": "Chelsea and Westminster Hospital NHS Foundation Trust",
+    "rttName": "CHELSEA AND WESTMINSTER HOSPITAL NHS FOUNDATION TRUST",
+    "isSpecialist": false,
+    "specialistNote": null,
+    "postcode": "SW10 9NH",
+    "postcodeSource": "ODS",
+    "lat": 51.48431,
+    "lng": -0.18162,
+    "cqc": {
+      "rating": "Good",
+      "date": "2020-01-31",
+      "url": "http://www.cqc.org.uk/provider/RQM",
+      "matchConfidence": 1,
+      "matchMethod": "ods-code",
+      "unavailableReason": null,
+      "wellLed": null
+    },
+    "specialties": {
+      "110": {
+        "name": "Trauma & Orthopaedics",
+        "medianWeeks": 15.9,
+        "p92Weeks": 44.6,
+        "pctWithin18": 55.7,
+        "totalWaiting": 5459,
+        "smallNumbers": false
+      },
+      "301": {
+        "name": "Gastroenterology",
+        "medianWeeks": 8.2,
+        "p92Weeks": 22.6,
+        "pctWithin18": 85.3,
+        "totalWaiting": 1698,
+        "smallNumbers": false
+      },
+      "320": {
+        "name": "Cardiology",
+        "medianWeeks": 9.1,
+        "p92Weeks": 17.2,
+        "pctWithin18": 96.2,
+        "totalWaiting": 1804,
+        "smallNumbers": false
+      },
+      "330": {
+        "name": "Dermatology",
+        "medianWeeks": 9.8,
+        "p92Weeks": 26.5,
+        "pctWithin18": 77.8,
+        "totalWaiting": 5115,
+        "smallNumbers": false
+      },
+      "410": {
+        "name": "Rheumatology",
+        "medianWeeks": 10.9,
+        "p92Weeks": 27.4,
+        "pctWithin18": 76.6,
+        "totalWaiting": 1168,
+        "smallNumbers": false
+      }
+    }
+  },
+  {
+    "odsCode": "RJ6",
+    "name": "Croydon Health Services NHS Trust",
+    "rttName": "CROYDON HEALTH SERVICES NHS TRUST",
+    "isSpecialist": false,
+    "specialistNote": null,
+    "postcode": "CR7 7YE",
+    "postcodeSource": "ODS",
+    "lat": 51.38913,
+    "lng": -0.10876,
+    "cqc": {
+      "rating": "Requires improvement",
+      "date": "2020-02-11",
+      "url": "http://www.cqc.org.uk/provider/RJ6",
+      "matchConfidence": 1,
+      "matchMethod": "ods-code",
+      "unavailableReason": null,
+      "wellLed": null
+    },
+    "specialties": {
+      "110": {
+        "name": "Trauma & Orthopaedics",
+        "medianWeeks": 9,
+        "p92Weeks": 29.9,
+        "pctWithin18": 80.1,
+        "totalWaiting": 3706,
+        "smallNumbers": false
+      },
+      "301": {
+        "name": "Gastroenterology",
+        "medianWeeks": 10.4,
+        "p92Weeks": 29.7,
+        "pctWithin18": 78.5,
+        "totalWaiting": 2257,
+        "smallNumbers": false
+      },
+      "320": {
+        "name": "Cardiology",
+        "medianWeeks": 10.2,
+        "p92Weeks": 29.5,
+        "pctWithin18": 78.3,
+        "totalWaiting": 1467,
+        "smallNumbers": false
+      },
+      "330": {
+        "name": "Dermatology",
+        "medianWeeks": 12.8,
+        "p92Weeks": 44.6,
+        "pctWithin18": 65.3,
+        "totalWaiting": 2875,
+        "smallNumbers": false
+      },
+      "410": {
+        "name": "Rheumatology",
+        "medianWeeks": 12.8,
+        "p92Weeks": 33.8,
+        "pctWithin18": 66.7,
+        "totalWaiting": 1146,
+        "smallNumbers": false
+      }
+    }
+  },
+  {
+    "odsCode": "RN7",
+    "name": "Dartford and Gravesham NHS Trust",
+    "rttName": "DARTFORD AND GRAVESHAM NHS TRUST",
+    "isSpecialist": false,
+    "specialistNote": null,
+    "postcode": "DA2 8DA",
+    "postcodeSource": "ODS",
+    "lat": 51.43495,
+    "lng": 0.25867,
+    "cqc": {
+      "rating": "Good",
+      "date": "2019-08-22",
+      "url": "http://www.cqc.org.uk/provider/RN7",
+      "matchConfidence": 1,
+      "matchMethod": "ods-code",
+      "unavailableReason": null,
+      "wellLed": null
+    },
+    "specialties": {
+      "110": {
+        "name": "Trauma & Orthopaedics",
+        "medianWeeks": 17.7,
+        "p92Weeks": 48,
+        "pctWithin18": 50.8,
+        "totalWaiting": 5003,
+        "smallNumbers": false
+      },
+      "301": {
+        "name": "Gastroenterology",
+        "medianWeeks": 12,
+        "p92Weeks": 31.1,
+        "pctWithin18": 65.6,
+        "totalWaiting": 2202,
+        "smallNumbers": false
+      },
+      "320": {
+        "name": "Cardiology",
+        "medianWeeks": 15,
+        "p92Weeks": 36.8,
+        "pctWithin18": 61,
+        "totalWaiting": 1975,
+        "smallNumbers": false
+      }
+    }
+  },
+  {
+    "odsCode": "RWH",
+    "name": "East and North Hertfordshire Teaching NHS Trust",
+    "rttName": "EAST AND NORTH HERTFORDSHIRE TEACHING NHS TRUST",
+    "isSpecialist": false,
+    "specialistNote": null,
+    "postcode": "SG1 4AB",
+    "postcodeSource": "ODS",
+    "lat": 51.92425,
+    "lng": -0.21189,
+    "cqc": {
+      "rating": "Requires improvement",
+      "date": "2023-11-03",
+      "url": "http://www.cqc.org.uk/provider/RWH",
+      "matchConfidence": 1,
+      "matchMethod": "ods-code",
+      "unavailableReason": null,
+      "wellLed": null
+    },
+    "specialties": {
+      "110": {
+        "name": "Trauma & Orthopaedics",
+        "medianWeeks": 19.3,
+        "p92Weeks": 49,
+        "pctWithin18": 47.7,
+        "totalWaiting": 4917,
+        "smallNumbers": false
+      },
+      "301": {
+        "name": "Gastroenterology",
+        "medianWeeks": 11.8,
+        "p92Weeks": 42.9,
+        "pctWithin18": 64.7,
+        "totalWaiting": 2256,
+        "smallNumbers": false
+      },
+      "320": {
+        "name": "Cardiology",
+        "medianWeeks": 8.3,
+        "p92Weeks": 16.1,
+        "pctWithin18": 94.5,
+        "totalWaiting": 3785,
+        "smallNumbers": false
+      },
+      "330": {
+        "name": "Dermatology",
+        "medianWeeks": 13.4,
+        "p92Weeks": 47.5,
+        "pctWithin18": 57.9,
+        "totalWaiting": 1912,
+        "smallNumbers": false
+      },
+      "410": {
+        "name": "Rheumatology",
+        "medianWeeks": 15.3,
+        "p92Weeks": 33.6,
+        "pctWithin18": 57.7,
+        "totalWaiting": 1375,
+        "smallNumbers": false
+      }
+    }
+  },
+  {
+    "odsCode": "RVR",
+    "name": "Epsom and St Helier University Hospitals NHS Trust",
+    "rttName": "EPSOM AND ST HELIER UNIVERSITY HOSPITALS NHS TRUST",
+    "isSpecialist": false,
+    "specialistNote": null,
+    "postcode": "SM5 1AA",
+    "postcodeSource": "ODS",
+    "lat": 51.38019,
+    "lng": -0.18371,
+    "cqc": {
+      "rating": "Good",
+      "date": "2019-09-19",
+      "url": "http://www.cqc.org.uk/provider/RVR",
+      "matchConfidence": 1,
+      "matchMethod": "ods-code",
+      "unavailableReason": null,
+      "wellLed": null
+    },
+    "specialties": {
+      "110": {
+        "name": "Trauma & Orthopaedics",
+        "medianWeeks": 13.4,
+        "p92Weeks": 36.8,
+        "pctWithin18": 61.9,
+        "totalWaiting": 6885,
+        "smallNumbers": false
+      },
+      "301": {
+        "name": "Gastroenterology",
+        "medianWeeks": 11,
+        "p92Weeks": 40.2,
+        "pctWithin18": 66.5,
+        "totalWaiting": 3491,
+        "smallNumbers": false
+      },
+      "320": {
+        "name": "Cardiology",
+        "medianWeeks": 13.7,
+        "p92Weeks": 40,
+        "pctWithin18": 63.9,
+        "totalWaiting": 3442,
+        "smallNumbers": false
+      },
+      "330": {
+        "name": "Dermatology",
+        "medianWeeks": 15,
+        "p92Weeks": 41.8,
+        "pctWithin18": 55.7,
+        "totalWaiting": 3861,
+        "smallNumbers": false
+      },
+      "410": {
+        "name": "Rheumatology",
+        "medianWeeks": 10.2,
+        "p92Weeks": 26.8,
+        "pctWithin18": 80.3,
+        "totalWaiting": 659,
+        "smallNumbers": false
+      }
+    }
+  },
+  {
+    "odsCode": "RDU",
+    "name": "Frimley Health NHS Foundation Trust",
+    "rttName": "FRIMLEY HEALTH NHS FOUNDATION TRUST",
+    "isSpecialist": false,
+    "specialistNote": null,
+    "postcode": "GU16 7UJ",
+    "postcodeSource": "ODS",
+    "lat": 51.31967,
+    "lng": -0.74201,
+    "cqc": {
+      "rating": "Good",
+      "date": "2019-03-13",
+      "url": "http://www.cqc.org.uk/provider/RDU",
+      "matchConfidence": 1,
+      "matchMethod": "ods-code",
+      "unavailableReason": null,
+      "wellLed": null
+    },
+    "specialties": {
+      "110": {
+        "name": "Trauma & Orthopaedics",
+        "medianWeeks": 16.4,
+        "p92Weeks": 43.9,
+        "pctWithin18": 53.7,
+        "totalWaiting": 12240,
+        "smallNumbers": false
+      },
+      "301": {
+        "name": "Gastroenterology",
+        "medianWeeks": 8.9,
+        "p92Weeks": 38.2,
+        "pctWithin18": 71.1,
+        "totalWaiting": 1830,
+        "smallNumbers": false
+      },
+      "320": {
+        "name": "Cardiology",
+        "medianWeeks": 9.8,
+        "p92Weeks": 29.4,
+        "pctWithin18": 70.8,
+        "totalWaiting": 2714,
+        "smallNumbers": false
+      },
+      "330": {
+        "name": "Dermatology",
+        "medianWeeks": 11.6,
+        "p92Weeks": 29.4,
+        "pctWithin18": 68.2,
+        "totalWaiting": 4627,
+        "smallNumbers": false
+      },
+      "410": {
+        "name": "Rheumatology",
+        "medianWeeks": 5.2,
+        "p92Weeks": 18.1,
+        "pctWithin18": 91.9,
+        "totalWaiting": 554,
+        "smallNumbers": false
+      }
+    }
+  },
+  {
+    "odsCode": "RJ1",
+    "name": "Guy's and St Thomas' NHS Foundation Trust",
+    "rttName": "GUY'S AND ST THOMAS' NHS FOUNDATION TRUST",
+    "isSpecialist": false,
+    "specialistNote": null,
+    "postcode": "SE1 7EH",
+    "postcodeSource": "ODS",
+    "lat": 51.49796,
+    "lng": -0.11888,
+    "cqc": {
+      "rating": "Good",
+      "date": "2019-07-23",
+      "url": "http://www.cqc.org.uk/provider/RJ1",
+      "matchConfidence": 1,
+      "matchMethod": "ods-code",
+      "unavailableReason": null,
+      "wellLed": null
+    },
+    "specialties": {
+      "110": {
+        "name": "Trauma & Orthopaedics",
+        "medianWeeks": 13.7,
+        "p92Weeks": 37.7,
+        "pctWithin18": 61.4,
+        "totalWaiting": 5150,
+        "smallNumbers": false
+      },
+      "301": {
+        "name": "Gastroenterology",
+        "medianWeeks": 9.1,
+        "p92Weeks": 27,
+        "pctWithin18": 76.7,
+        "totalWaiting": 3034,
+        "smallNumbers": false
+      },
+      "320": {
+        "name": "Cardiology",
+        "medianWeeks": 14.5,
+        "p92Weeks": 41.4,
+        "pctWithin18": 58.6,
+        "totalWaiting": 10822,
+        "smallNumbers": false
+      },
+      "330": {
+        "name": "Dermatology",
+        "medianWeeks": 10.3,
+        "p92Weeks": 26.5,
+        "pctWithin18": 74.6,
+        "totalWaiting": 7531,
+        "smallNumbers": false
+      },
+      "410": {
+        "name": "Rheumatology",
+        "medianWeeks": 5.7,
+        "p92Weeks": 15.1,
+        "pctWithin18": 95.5,
+        "totalWaiting": 486,
+        "smallNumbers": false
+      }
+    }
+  },
+  {
+    "odsCode": "RN5",
+    "name": "Hampshire Hospitals NHS Foundation Trust",
+    "rttName": "HAMPSHIRE HOSPITALS NHS FOUNDATION TRUST",
+    "isSpecialist": false,
+    "specialistNote": null,
+    "postcode": "RG24 9NA",
+    "postcodeSource": "ODS",
+    "lat": 51.28063,
+    "lng": -1.1099,
+    "cqc": {
+      "rating": "Good",
+      "date": "2020-04-07",
+      "url": "http://www.cqc.org.uk/provider/RN5",
+      "matchConfidence": 1,
+      "matchMethod": "ods-code",
+      "unavailableReason": null,
+      "wellLed": null
+    },
+    "specialties": {
+      "110": {
+        "name": "Trauma & Orthopaedics",
+        "medianWeeks": 14.2,
+        "p92Weeks": 40.8,
+        "pctWithin18": 60.7,
+        "totalWaiting": 5901,
+        "smallNumbers": false
+      },
+      "301": {
+        "name": "Gastroenterology",
+        "medianWeeks": 12.9,
+        "p92Weeks": 45,
+        "pctWithin18": 60.5,
+        "totalWaiting": 2951,
+        "smallNumbers": false
+      },
+      "320": {
+        "name": "Cardiology",
+        "medianWeeks": 16.9,
+        "p92Weeks": 39.5,
+        "pctWithin18": 53.5,
+        "totalWaiting": 4020,
+        "smallNumbers": false
+      },
+      "330": {
+        "name": "Dermatology",
+        "medianWeeks": 11.2,
+        "p92Weeks": 41.8,
+        "pctWithin18": 69.7,
+        "totalWaiting": 3200,
+        "smallNumbers": false
+      },
+      "410": {
+        "name": "Rheumatology",
+        "medianWeeks": 14.6,
+        "p92Weeks": 39.5,
+        "pctWithin18": 57.1,
+        "totalWaiting": 1409,
+        "smallNumbers": false
+      }
+    }
+  },
+  {
+    "odsCode": "RQX",
+    "name": "Homerton Healthcare NHS Foundation Trust",
+    "rttName": "HOMERTON HEALTHCARE NHS FOUNDATION TRUST",
+    "isSpecialist": false,
+    "specialistNote": null,
+    "postcode": "E9 6SR",
+    "postcodeSource": "ODS",
+    "lat": 51.55064,
+    "lng": -0.04607,
+    "cqc": {
+      "rating": "Good",
+      "date": "2018-08-10",
+      "url": "http://www.cqc.org.uk/provider/RQX",
+      "matchConfidence": 1,
+      "matchMethod": "ods-code",
+      "unavailableReason": null,
+      "wellLed": null
+    },
+    "specialties": {
+      "110": {
+        "name": "Trauma & Orthopaedics",
+        "medianWeeks": 14.8,
+        "p92Weeks": 41.8,
+        "pctWithin18": 58.7,
+        "totalWaiting": 2580,
+        "smallNumbers": false
+      },
+      "301": {
+        "name": "Gastroenterology",
+        "medianWeeks": 6.7,
+        "p92Weeks": 17.8,
+        "pctWithin18": 92.5,
+        "totalWaiting": 1010,
+        "smallNumbers": false
+      },
+      "320": {
+        "name": "Cardiology",
+        "medianWeeks": 13.6,
+        "p92Weeks": 29.8,
+        "pctWithin18": 65.1,
+        "totalWaiting": 1372,
+        "smallNumbers": false
+      },
+      "330": {
+        "name": "Dermatology",
+        "medianWeeks": 9.6,
+        "p92Weeks": 27.1,
+        "pctWithin18": 74,
+        "totalWaiting": 1764,
+        "smallNumbers": false
+      },
+      "410": {
+        "name": "Rheumatology",
+        "medianWeeks": 3.4,
+        "p92Weeks": 9.1,
+        "pctWithin18": 99,
+        "totalWaiting": 197,
+        "smallNumbers": false
+      }
+    }
+  },
+  {
+    "odsCode": "RYJ",
+    "name": "Imperial College Healthcare NHS Trust",
+    "rttName": "IMPERIAL COLLEGE HEALTHCARE NHS TRUST",
+    "isSpecialist": false,
+    "specialistNote": null,
+    "postcode": "W2 1BL",
+    "postcodeSource": "ODS",
+    "lat": 51.51754,
+    "lng": -0.17439,
+    "cqc": {
+      "rating": "Requires improvement",
+      "date": "2019-07-23",
+      "url": "http://www.cqc.org.uk/provider/RYJ",
+      "matchConfidence": 1,
+      "matchMethod": "ods-code",
+      "unavailableReason": null,
+      "wellLed": null
+    },
+    "specialties": {
+      "110": {
+        "name": "Trauma & Orthopaedics",
+        "medianWeeks": 12.6,
+        "p92Weeks": 35.4,
+        "pctWithin18": 64.5,
+        "totalWaiting": 3215,
+        "smallNumbers": false
+      },
+      "301": {
+        "name": "Gastroenterology",
+        "medianWeeks": 7.9,
+        "p92Weeks": 17.9,
+        "pctWithin18": 92.4,
+        "totalWaiting": 2764,
+        "smallNumbers": false
+      },
+      "320": {
+        "name": "Cardiology",
+        "medianWeeks": 12,
+        "p92Weeks": 33.8,
+        "pctWithin18": 66.9,
+        "totalWaiting": 8185,
+        "smallNumbers": false
+      },
+      "330": {
+        "name": "Dermatology",
+        "medianWeeks": 10.4,
+        "p92Weeks": 29.6,
+        "pctWithin18": 71.7,
+        "totalWaiting": 4140,
+        "smallNumbers": false
+      },
+      "410": {
+        "name": "Rheumatology",
+        "medianWeeks": 7.6,
+        "p92Weeks": 24.8,
+        "pctWithin18": 86,
+        "totalWaiting": 613,
+        "smallNumbers": false
+      }
+    }
+  },
+  {
+    "odsCode": "RYY",
+    "name": "Kent Community Health NHS Foundation Trust",
+    "rttName": "KENT COMMUNITY HEALTH NHS FOUNDATION TRUST",
+    "isSpecialist": true,
+    "specialistNote": "Community health trust",
+    "postcode": "TN25 4AZ",
+    "postcodeSource": "ODS",
+    "lat": 51.17189,
+    "lng": 0.87074,
+    "cqc": {
+      "rating": "Outstanding",
+      "date": "2019-07-24",
+      "url": "http://www.cqc.org.uk/provider/RYY",
+      "matchConfidence": 1,
+      "matchMethod": "ods-code",
+      "unavailableReason": null,
+      "wellLed": null
+    },
+    "specialties": {
+      "110": {
+        "name": "Trauma & Orthopaedics",
+        "medianWeeks": 7.1,
+        "p92Weeks": 15,
+        "pctWithin18": 99.7,
+        "totalWaiting": 3828,
+        "smallNumbers": false
+      }
+    }
+  },
+  {
+    "odsCode": "RJZ",
+    "name": "King's College Hospital NHS Foundation Trust",
+    "rttName": "KING'S COLLEGE HOSPITAL NHS FOUNDATION TRUST",
+    "isSpecialist": false,
+    "specialistNote": null,
+    "postcode": "SE5 9RS",
+    "postcodeSource": "ODS",
+    "lat": 51.46808,
+    "lng": -0.09389,
+    "cqc": {
+      "rating": null,
+      "date": null,
+      "url": "http://www.cqc.org.uk/provider/RJZ",
+      "matchConfidence": 1,
+      "matchMethod": "ods-code",
+      "unavailableReason": "CQC has published a trust-level Well-led rating only, no overall rating",
+      "wellLed": {
+        "rating": "Requires improvement",
+        "date": "2026-07-15"
+      }
+    },
+    "specialties": {
+      "110": {
+        "name": "Trauma & Orthopaedics",
+        "medianWeeks": 13.9,
+        "p92Weeks": 40.2,
+        "pctWithin18": 61.8,
+        "totalWaiting": 3861,
+        "smallNumbers": false
+      },
+      "301": {
+        "name": "Gastroenterology",
+        "medianWeeks": 10.7,
+        "p92Weeks": 35.8,
+        "pctWithin18": 71.9,
+        "totalWaiting": 2755,
+        "smallNumbers": false
+      },
+      "320": {
+        "name": "Cardiology",
+        "medianWeeks": 12.4,
+        "p92Weeks": 37.2,
+        "pctWithin18": 67.6,
+        "totalWaiting": 5068,
+        "smallNumbers": false
+      },
+      "330": {
+        "name": "Dermatology",
+        "medianWeeks": 11.1,
+        "p92Weeks": 31.4,
+        "pctWithin18": 71.8,
+        "totalWaiting": 3625,
+        "smallNumbers": false
+      },
+      "410": {
+        "name": "Rheumatology",
+        "medianWeeks": 10.7,
+        "p92Weeks": 26.3,
+        "pctWithin18": 78.4,
+        "totalWaiting": 1087,
+        "smallNumbers": false
+      }
+    }
+  },
+  {
+    "odsCode": "RAX",
+    "name": "Kingston and Richmond NHS Foundation Trust",
+    "rttName": "KINGSTON AND RICHMOND NHS FOUNDATION TRUST",
+    "isSpecialist": false,
+    "specialistNote": null,
+    "postcode": "KT2 7QB",
+    "postcodeSource": "ODS",
+    "lat": 51.41483,
+    "lng": -0.2826,
+    "cqc": {
+      "rating": "Outstanding",
+      "date": "2018-08-30",
+      "url": "http://www.cqc.org.uk/provider/RAX",
+      "matchConfidence": 1,
+      "matchMethod": "ods-code",
+      "unavailableReason": null,
+      "wellLed": null
+    },
+    "specialties": {
+      "110": {
+        "name": "Trauma & Orthopaedics",
+        "medianWeeks": 16,
+        "p92Weeks": 37.4,
+        "pctWithin18": 56.6,
+        "totalWaiting": 2776,
+        "smallNumbers": false
+      },
+      "301": {
+        "name": "Gastroenterology",
+        "medianWeeks": 15.1,
+        "p92Weeks": 36.7,
+        "pctWithin18": 60,
+        "totalWaiting": 3071,
+        "smallNumbers": false
+      },
+      "320": {
+        "name": "Cardiology",
+        "medianWeeks": 11.9,
+        "p92Weeks": 32.1,
+        "pctWithin18": 68.2,
+        "totalWaiting": 1807,
+        "smallNumbers": false
+      },
+      "330": {
+        "name": "Dermatology",
+        "medianWeeks": 12.5,
+        "p92Weeks": 36.7,
+        "pctWithin18": 63,
+        "totalWaiting": 3434,
+        "smallNumbers": false
+      },
+      "410": {
+        "name": "Rheumatology",
+        "medianWeeks": 5.2,
+        "p92Weeks": 9.6,
+        "pctWithin18": 99.3,
+        "totalWaiting": 425,
+        "smallNumbers": false
+      }
+    }
+  },
+  {
+    "odsCode": "RJ2",
+    "name": "Lewisham and Greenwich NHS Trust",
+    "rttName": "LEWISHAM AND GREENWICH NHS TRUST",
+    "isSpecialist": false,
+    "specialistNote": null,
+    "postcode": "SE13 6LH",
+    "postcodeSource": "ODS",
+    "lat": 51.45302,
+    "lng": -0.01792,
+    "cqc": {
+      "rating": "Requires improvement",
+      "date": "2020-07-03",
+      "url": "http://www.cqc.org.uk/provider/RJ2",
+      "matchConfidence": 1,
+      "matchMethod": "ods-code",
+      "unavailableReason": null,
+      "wellLed": null
+    },
+    "specialties": {
+      "110": {
+        "name": "Trauma & Orthopaedics",
+        "medianWeeks": 13,
+        "p92Weeks": 45.2,
+        "pctWithin18": 62.5,
+        "totalWaiting": 5996,
+        "smallNumbers": false
+      },
+      "301": {
+        "name": "Gastroenterology",
+        "medianWeeks": 11.9,
+        "p92Weeks": 40.4,
+        "pctWithin18": 65.4,
+        "totalWaiting": 6339,
+        "smallNumbers": false
+      },
+      "320": {
+        "name": "Cardiology",
+        "medianWeeks": 11.5,
+        "p92Weeks": 36,
+        "pctWithin18": 70.3,
+        "totalWaiting": 3123,
+        "smallNumbers": false
+      },
+      "330": {
+        "name": "Dermatology",
+        "medianWeeks": 6.4,
+        "p92Weeks": 20,
+        "pctWithin18": 89.5,
+        "totalWaiting": 2917,
+        "smallNumbers": false
+      },
+      "410": {
+        "name": "Rheumatology",
+        "medianWeeks": 8.4,
+        "p92Weeks": 25.1,
+        "pctWithin18": 80.8,
+        "totalWaiting": 610,
+        "smallNumbers": false
+      }
+    }
+  },
+  {
+    "odsCode": "R1K",
+    "name": "London North West University Healthcare NHS Trust",
+    "rttName": "LONDON NORTH WEST UNIVERSITY HEALTHCARE NHS TRUST",
+    "isSpecialist": false,
+    "specialistNote": null,
+    "postcode": "HA1 3UJ",
+    "postcodeSource": "ODS",
+    "lat": 51.57541,
+    "lng": -0.32201,
+    "cqc": {
+      "rating": "Requires improvement",
+      "date": "2022-05-20",
+      "url": "http://www.cqc.org.uk/provider/R1K",
+      "matchConfidence": 1,
+      "matchMethod": "ods-code",
+      "unavailableReason": null,
+      "wellLed": null
+    },
+    "specialties": {
+      "110": {
+        "name": "Trauma & Orthopaedics",
+        "medianWeeks": 15,
+        "p92Weeks": 40.3,
+        "pctWithin18": 59.5,
+        "totalWaiting": 6566,
+        "smallNumbers": false
+      },
+      "301": {
+        "name": "Gastroenterology",
+        "medianWeeks": 11.1,
+        "p92Weeks": 34.5,
+        "pctWithin18": 69.1,
+        "totalWaiting": 6832,
+        "smallNumbers": false
+      },
+      "320": {
+        "name": "Cardiology",
+        "medianWeeks": 13.1,
+        "p92Weeks": 37.1,
+        "pctWithin18": 67.3,
+        "totalWaiting": 4804,
+        "smallNumbers": false
+      },
+      "330": {
+        "name": "Dermatology",
+        "medianWeeks": 12.4,
+        "p92Weeks": 36.2,
+        "pctWithin18": 61.9,
+        "totalWaiting": 3044,
+        "smallNumbers": false
+      },
+      "410": {
+        "name": "Rheumatology",
+        "medianWeeks": 6.1,
+        "p92Weeks": 14.7,
+        "pctWithin18": 96.3,
+        "totalWaiting": 981,
+        "smallNumbers": false
+      }
+    }
+  },
+  {
+    "odsCode": "RWF",
+    "name": "Maidstone and Tunbridge Wells NHS Trust",
+    "rttName": "MAIDSTONE AND TUNBRIDGE WELLS NHS TRUST",
+    "isSpecialist": false,
+    "specialistNote": null,
+    "postcode": "ME16 9QQ",
+    "postcodeSource": "ODS",
+    "lat": 51.27366,
+    "lng": 0.484,
+    "cqc": {
+      "rating": "Requires improvement",
+      "date": "2018-03-09",
+      "url": "http://www.cqc.org.uk/provider/RWF",
+      "matchConfidence": 1,
+      "matchMethod": "ods-code",
+      "unavailableReason": null,
+      "wellLed": null
+    },
+    "specialties": {
+      "110": {
+        "name": "Trauma & Orthopaedics",
+        "medianWeeks": 10.8,
+        "p92Weeks": 28.1,
+        "pctWithin18": 75.6,
+        "totalWaiting": 4271,
+        "smallNumbers": false
+      },
+      "301": {
+        "name": "Gastroenterology",
+        "medianWeeks": 14.4,
+        "p92Weeks": 31.8,
+        "pctWithin18": 62.9,
+        "totalWaiting": 2806,
+        "smallNumbers": false
+      },
+      "320": {
+        "name": "Cardiology",
+        "medianWeeks": 10.5,
+        "p92Weeks": 25.9,
+        "pctWithin18": 78.4,
+        "totalWaiting": 2268,
+        "smallNumbers": false
+      },
+      "410": {
+        "name": "Rheumatology",
+        "medianWeeks": 4.5,
+        "p92Weeks": 10.7,
+        "pctWithin18": 100,
+        "totalWaiting": 446,
+        "smallNumbers": false
+      }
+    }
+  },
+  {
+    "odsCode": "RPA",
+    "name": "Medway NHS Foundation Trust",
+    "rttName": "MEDWAY NHS FOUNDATION TRUST",
+    "isSpecialist": false,
+    "specialistNote": null,
+    "postcode": "ME7 5NY",
+    "postcodeSource": "ODS",
+    "lat": 51.37986,
+    "lng": 0.54209,
+    "cqc": {
+      "rating": "Requires improvement",
+      "date": "2021-07-30",
+      "url": "http://www.cqc.org.uk/provider/RPA",
+      "matchConfidence": 1,
+      "matchMethod": "ods-code",
+      "unavailableReason": null,
+      "wellLed": null
+    },
+    "specialties": {
+      "110": {
+        "name": "Trauma & Orthopaedics",
+        "medianWeeks": 16.8,
+        "p92Weeks": 37.9,
+        "pctWithin18": 54.1,
+        "totalWaiting": 3116,
+        "smallNumbers": false
+      },
+      "301": {
+        "name": "Gastroenterology",
+        "medianWeeks": 11.6,
+        "p92Weeks": 32.5,
+        "pctWithin18": 64.3,
+        "totalWaiting": 2663,
+        "smallNumbers": false
+      },
+      "320": {
+        "name": "Cardiology",
+        "medianWeeks": 19,
+        "p92Weeks": 43.1,
+        "pctWithin18": 47.7,
+        "totalWaiting": 3322,
+        "smallNumbers": false
+      },
+      "410": {
+        "name": "Rheumatology",
+        "medianWeeks": 29.4,
+        "p92Weeks": 54,
+        "pctWithin18": 32.1,
+        "totalWaiting": 3226,
+        "smallNumbers": false
+      }
+    }
+  },
+  {
+    "odsCode": "RAJ",
+    "name": "Mid and South Essex NHS Foundation Trust",
+    "rttName": "MID AND SOUTH ESSEX NHS FOUNDATION TRUST",
+    "isSpecialist": false,
+    "specialistNote": null,
+    "postcode": "SS0 0RY",
+    "postcodeSource": "ODS",
+    "lat": 51.55384,
+    "lng": 0.68865,
+    "cqc": {
+      "rating": null,
+      "date": null,
+      "url": "http://www.cqc.org.uk/provider/RAJ",
+      "matchConfidence": 1,
+      "matchMethod": "ods-code",
+      "unavailableReason": "CQC has published a trust-level Well-led rating only, no overall rating",
+      "wellLed": {
+        "rating": "Inadequate",
+        "date": "2025-11-05"
+      }
+    },
+    "specialties": {
+      "110": {
+        "name": "Trauma & Orthopaedics",
+        "medianWeeks": 30.8,
+        "p92Weeks": 66.6,
+        "pctWithin18": 28.7,
+        "totalWaiting": 11377,
+        "smallNumbers": false
+      },
+      "301": {
+        "name": "Gastroenterology",
+        "medianWeeks": 17.2,
+        "p92Weeks": 47,
+        "pctWithin18": 51.7,
+        "totalWaiting": 10047,
+        "smallNumbers": false
+      },
+      "320": {
+        "name": "Cardiology",
+        "medianWeeks": 12.3,
+        "p92Weeks": 33,
+        "pctWithin18": 66.8,
+        "totalWaiting": 11056,
+        "smallNumbers": false
+      },
+      "330": {
+        "name": "Dermatology",
+        "medianWeeks": 20.1,
+        "p92Weeks": 55.5,
+        "pctWithin18": 47.9,
+        "totalWaiting": 10264,
+        "smallNumbers": false
+      },
+      "410": {
+        "name": "Rheumatology",
+        "medianWeeks": 22.1,
+        "p92Weeks": 56.4,
+        "pctWithin18": 44.7,
+        "totalWaiting": 2057,
+        "smallNumbers": false
+      }
+    }
+  },
+  {
+    "odsCode": "RD8",
+    "name": "Milton Keynes University Hospital NHS Foundation Trust",
+    "rttName": "MILTON KEYNES UNIVERSITY HOSPITAL NHS FOUNDATION TRUST",
+    "isSpecialist": false,
+    "specialistNote": null,
+    "postcode": "MK6 5LD",
+    "postcodeSource": "ODS",
+    "lat": 52.02638,
+    "lng": -0.73576,
+    "cqc": {
+      "rating": "Good",
+      "date": "2019-07-30",
+      "url": "http://www.cqc.org.uk/provider/RD8",
+      "matchConfidence": 1,
+      "matchMethod": "ods-code",
+      "unavailableReason": null,
+      "wellLed": null
+    },
+    "specialties": {
+      "110": {
+        "name": "Trauma & Orthopaedics",
+        "medianWeeks": 15.5,
+        "p92Weeks": 44.2,
+        "pctWithin18": 56.8,
+        "totalWaiting": 3071,
+        "smallNumbers": false
+      },
+      "301": {
+        "name": "Gastroenterology",
+        "medianWeeks": 10,
+        "p92Weeks": 21.2,
+        "pctWithin18": 80.9,
+        "totalWaiting": 1719,
+        "smallNumbers": false
+      },
+      "320": {
+        "name": "Cardiology",
+        "medianWeeks": 10.3,
+        "p92Weeks": 27.1,
+        "pctWithin18": 74.7,
+        "totalWaiting": 1989,
+        "smallNumbers": false
+      },
+      "330": {
+        "name": "Dermatology",
+        "medianWeeks": 5.2,
+        "p92Weeks": 11.7,
+        "pctWithin18": 96.9,
+        "totalWaiting": 1427,
+        "smallNumbers": false
+      },
+      "410": {
+        "name": "Rheumatology",
+        "medianWeeks": 20.4,
+        "p92Weeks": 49.9,
+        "pctWithin18": 45.1,
+        "totalWaiting": 1409,
+        "smallNumbers": false
+      }
+    }
+  },
+  {
+    "odsCode": "RPC",
+    "name": "Queen Victoria Hospital NHS Foundation Trust",
+    "rttName": "QUEEN VICTORIA HOSPITAL NHS FOUNDATION TRUST",
+    "isSpecialist": true,
+    "specialistNote": "Specialist plastics, burns and eye trust",
+    "postcode": "RH19 3DZ",
+    "postcodeSource": "ODS",
+    "lat": 51.13507,
+    "lng": -0.00287,
+    "cqc": {
+      "rating": "Good",
+      "date": "2019-05-23",
+      "url": "http://www.cqc.org.uk/provider/RPC",
+      "matchConfidence": 1,
+      "matchMethod": "ods-code",
+      "unavailableReason": null,
+      "wellLed": null
+    },
+    "specialties": {
+      "320": {
+        "name": "Cardiology",
+        "medianWeeks": 11.5,
+        "p92Weeks": 33.6,
+        "pctWithin18": 65.8,
+        "totalWaiting": 222,
+        "smallNumbers": false
+      },
+      "410": {
+        "name": "Rheumatology",
+        "medianWeeks": 9.2,
+        "p92Weeks": 19,
+        "pctWithin18": 88,
+        "totalWaiting": 75,
+        "smallNumbers": false
+      }
+    }
+  },
+  {
+    "odsCode": "RHW",
+    "name": "Royal Berkshire NHS Foundation Trust",
+    "rttName": "ROYAL BERKSHIRE NHS FOUNDATION TRUST",
+    "isSpecialist": false,
+    "specialistNote": null,
+    "postcode": "RG1 5AN",
+    "postcodeSource": "ODS",
+    "lat": 51.45102,
+    "lng": -0.95931,
+    "cqc": {
+      "rating": "Good",
+      "date": "2020-01-07",
+      "url": "http://www.cqc.org.uk/provider/RHW",
+      "matchConfidence": 1,
+      "matchMethod": "ods-code",
+      "unavailableReason": null,
+      "wellLed": null
+    },
+    "specialties": {
+      "110": {
+        "name": "Trauma & Orthopaedics",
+        "medianWeeks": 10,
+        "p92Weeks": 22.6,
+        "pctWithin18": 82.9,
+        "totalWaiting": 2231,
+        "smallNumbers": false
+      },
+      "301": {
+        "name": "Gastroenterology",
+        "medianWeeks": 9.8,
+        "p92Weeks": 24.5,
+        "pctWithin18": 82,
+        "totalWaiting": 3905,
+        "smallNumbers": false
+      },
+      "320": {
+        "name": "Cardiology",
+        "medianWeeks": 10.9,
+        "p92Weeks": 23.2,
+        "pctWithin18": 82.3,
+        "totalWaiting": 2834,
+        "smallNumbers": false
+      },
+      "330": {
+        "name": "Dermatology",
+        "medianWeeks": 9,
+        "p92Weeks": 23.7,
+        "pctWithin18": 82.6,
+        "totalWaiting": 2620,
+        "smallNumbers": false
+      },
+      "410": {
+        "name": "Rheumatology",
+        "medianWeeks": 9.5,
+        "p92Weeks": 24.8,
+        "pctWithin18": 78.7,
+        "totalWaiting": 521,
+        "smallNumbers": false
+      }
+    }
+  },
+  {
+    "odsCode": "RAL",
+    "name": "Royal Free London NHS Foundation Trust",
+    "rttName": "ROYAL FREE LONDON NHS FOUNDATION TRUST",
+    "isSpecialist": false,
+    "specialistNote": null,
+    "postcode": "NW3 2QG",
+    "postcodeSource": "ODS",
+    "lat": 51.55323,
+    "lng": -0.1653,
+    "cqc": {
+      "rating": "Requires improvement",
+      "date": "2019-05-10",
+      "url": "http://www.cqc.org.uk/provider/RAL",
+      "matchConfidence": 1,
+      "matchMethod": "ods-code",
+      "unavailableReason": null,
+      "wellLed": null
+    },
+    "specialties": {
+      "110": {
+        "name": "Trauma & Orthopaedics",
+        "medianWeeks": 16.3,
+        "p92Weeks": 46.2,
+        "pctWithin18": 54.4,
+        "totalWaiting": 9609,
+        "smallNumbers": false
+      },
+      "301": {
+        "name": "Gastroenterology",
+        "medianWeeks": 11.1,
+        "p92Weeks": 33,
+        "pctWithin18": 70.6,
+        "totalWaiting": 9393,
+        "smallNumbers": false
+      },
+      "320": {
+        "name": "Cardiology",
+        "medianWeeks": 15.2,
+        "p92Weeks": 33.9,
+        "pctWithin18": 58.5,
+        "totalWaiting": 8245,
+        "smallNumbers": false
+      },
+      "330": {
+        "name": "Dermatology",
+        "medianWeeks": 8.2,
+        "p92Weeks": 25.6,
+        "pctWithin18": 81.2,
+        "totalWaiting": 9039,
+        "smallNumbers": false
+      },
+      "410": {
+        "name": "Rheumatology",
+        "medianWeeks": 15.5,
+        "p92Weeks": 35.5,
+        "pctWithin18": 57,
+        "totalWaiting": 3450,
+        "smallNumbers": false
+      }
+    }
+  },
+  {
+    "odsCode": "RAN",
+    "name": "Royal National Orthopaedic Hospital NHS Trust",
+    "rttName": "ROYAL NATIONAL ORTHOPAEDIC HOSPITAL NHS TRUST",
+    "isSpecialist": true,
+    "specialistNote": "Specialist orthopaedic trust",
+    "postcode": "HA7 4LP",
+    "postcodeSource": "ODS",
+    "lat": 51.63257,
+    "lng": -0.31041,
+    "cqc": {
+      "rating": "Good",
+      "date": "2019-03-22",
+      "url": "http://www.cqc.org.uk/provider/RAN",
+      "matchConfidence": 1,
+      "matchMethod": "ods-code",
+      "unavailableReason": null,
+      "wellLed": null
+    },
+    "specialties": {
+      "110": {
+        "name": "Trauma & Orthopaedics",
+        "medianWeeks": 9.1,
+        "p92Weeks": 28.7,
+        "pctWithin18": 77.8,
+        "totalWaiting": 4774,
+        "smallNumbers": false
+      },
+      "301": {
+        "name": "Gastroenterology",
+        "medianWeeks": 4.8,
+        "p92Weeks": 14.7,
+        "pctWithin18": 95.2,
+        "totalWaiting": 21,
+        "smallNumbers": true
+      },
+      "410": {
+        "name": "Rheumatology",
+        "medianWeeks": 8.4,
+        "p92Weeks": 23.1,
+        "pctWithin18": 84.7,
+        "totalWaiting": 581,
+        "smallNumbers": false
+      }
+    }
+  },
+  {
+    "odsCode": "RGM",
+    "name": "Royal Papworth Hospital NHS Foundation Trust",
+    "rttName": "ROYAL PAPWORTH HOSPITAL NHS FOUNDATION TRUST",
+    "isSpecialist": true,
+    "specialistNote": "Specialist heart and lung trust",
+    "postcode": "CB2 0AY",
+    "postcodeSource": "ODS",
+    "lat": 52.17352,
+    "lng": 0.13605,
+    "cqc": {
+      "rating": "Outstanding",
+      "date": "2019-10-16",
+      "url": "http://www.cqc.org.uk/provider/RGM",
+      "matchConfidence": 1,
+      "matchMethod": "ods-code",
+      "unavailableReason": null,
+      "wellLed": null
+    },
+    "specialties": {
+      "320": {
+        "name": "Cardiology",
+        "medianWeeks": 13.6,
+        "p92Weeks": 37.7,
+        "pctWithin18": 61.3,
+        "totalWaiting": 2099,
+        "smallNumbers": false
+      }
+    }
+  },
+  {
+    "odsCode": "RA2",
+    "name": "Royal Surrey NHS Foundation Trust",
+    "rttName": "ROYAL SURREY NHS FOUNDATION TRUST",
+    "isSpecialist": false,
+    "specialistNote": null,
+    "postcode": "GU2 7XX",
+    "postcodeSource": "ODS",
+    "lat": 51.24101,
+    "lng": -0.60744,
+    "cqc": {
+      "rating": null,
+      "date": null,
+      "url": "http://www.cqc.org.uk/provider/RA2",
+      "matchConfidence": 1,
+      "matchMethod": "ods-code",
+      "unavailableReason": "CQC has published a trust-level Well-led rating only, no overall rating",
+      "wellLed": {
+        "rating": "Outstanding",
+        "date": "2025-06-13"
+      }
+    },
+    "specialties": {
+      "110": {
+        "name": "Trauma & Orthopaedics",
+        "medianWeeks": 13.4,
+        "p92Weeks": 41.7,
+        "pctWithin18": 62.7,
+        "totalWaiting": 5951,
+        "smallNumbers": false
+      },
+      "301": {
+        "name": "Gastroenterology",
+        "medianWeeks": 14.8,
+        "p92Weeks": 44.3,
+        "pctWithin18": 57.2,
+        "totalWaiting": 1415,
+        "smallNumbers": false
+      },
+      "320": {
+        "name": "Cardiology",
+        "medianWeeks": 11.1,
+        "p92Weeks": 38.5,
+        "pctWithin18": 67.1,
+        "totalWaiting": 1089,
+        "smallNumbers": false
+      },
+      "410": {
+        "name": "Rheumatology",
+        "medianWeeks": 7.1,
+        "p92Weeks": 17.8,
+        "pctWithin18": 92.5,
+        "totalWaiting": 308,
+        "smallNumbers": false
+      }
+    }
+  },
+  {
+    "odsCode": "RJ7",
+    "name": "St George's University Hospitals NHS Foundation Trust",
+    "rttName": "ST GEORGE'S UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+    "isSpecialist": false,
+    "specialistNote": null,
+    "postcode": "SW17 0QT",
+    "postcodeSource": "ODS",
+    "lat": 51.42668,
+    "lng": -0.17569,
+    "cqc": {
+      "rating": null,
+      "date": null,
+      "url": "http://www.cqc.org.uk/provider/RJ7",
+      "matchConfidence": 1,
+      "matchMethod": "ods-code",
+      "unavailableReason": "CQC has published a trust-level Well-led rating only, no overall rating",
+      "wellLed": {
+        "rating": "Requires improvement",
+        "date": "2025-10-31"
+      }
+    },
+    "specialties": {
+      "110": {
+        "name": "Trauma & Orthopaedics",
+        "medianWeeks": 11.7,
+        "p92Weeks": 32.9,
+        "pctWithin18": 67.8,
+        "totalWaiting": 4118,
+        "smallNumbers": false
+      },
+      "301": {
+        "name": "Gastroenterology",
+        "medianWeeks": 10,
+        "p92Weeks": 31.8,
+        "pctWithin18": 70.4,
+        "totalWaiting": 2751,
+        "smallNumbers": false
+      },
+      "320": {
+        "name": "Cardiology",
+        "medianWeeks": 13.7,
+        "p92Weeks": 39.4,
+        "pctWithin18": 61.8,
+        "totalWaiting": 5695,
+        "smallNumbers": false
+      },
+      "330": {
+        "name": "Dermatology",
+        "medianWeeks": 11.4,
+        "p92Weeks": 40,
+        "pctWithin18": 67.3,
+        "totalWaiting": 5427,
+        "smallNumbers": false
+      },
+      "410": {
+        "name": "Rheumatology",
+        "medianWeeks": 11,
+        "p92Weeks": 33.1,
+        "pctWithin18": 74.7,
+        "totalWaiting": 1531,
+        "smallNumbers": false
+      }
+    }
+  },
+  {
+    "odsCode": "RTP",
+    "name": "Surrey and Sussex Healthcare NHS Trust",
+    "rttName": "SURREY AND SUSSEX HEALTHCARE NHS TRUST",
+    "isSpecialist": false,
+    "specialistNote": null,
+    "postcode": "RH1 5RH",
+    "postcodeSource": "ODS",
+    "lat": 51.21919,
+    "lng": -0.16198,
+    "cqc": {
+      "rating": null,
+      "date": null,
+      "url": "http://www.cqc.org.uk/provider/RTP",
+      "matchConfidence": 1,
+      "matchMethod": "ods-code",
+      "unavailableReason": "CQC has published a trust-level Well-led rating only, no overall rating",
+      "wellLed": {
+        "rating": "Requires improvement",
+        "date": "2026-07-28"
+      }
+    },
+    "specialties": {
+      "110": {
+        "name": "Trauma & Orthopaedics",
+        "medianWeeks": 17,
+        "p92Weeks": 44,
+        "pctWithin18": 52.7,
+        "totalWaiting": 3068,
+        "smallNumbers": false
+      },
+      "301": {
+        "name": "Gastroenterology",
+        "medianWeeks": 12.6,
+        "p92Weeks": 37.1,
+        "pctWithin18": 65.7,
+        "totalWaiting": 4526,
+        "smallNumbers": false
+      },
+      "320": {
+        "name": "Cardiology",
+        "medianWeeks": 8.3,
+        "p92Weeks": 21,
+        "pctWithin18": 88.3,
+        "totalWaiting": 2782,
+        "smallNumbers": false
+      },
+      "330": {
+        "name": "Dermatology",
+        "medianWeeks": 15.9,
+        "p92Weeks": 51.2,
+        "pctWithin18": 54.2,
+        "totalWaiting": 4853,
+        "smallNumbers": false
+      },
+      "410": {
+        "name": "Rheumatology",
+        "medianWeeks": 10.3,
+        "p92Weeks": 28.3,
+        "pctWithin18": 75.1,
+        "totalWaiting": 879,
+        "smallNumbers": false
+      }
+    }
+  },
+  {
+    "odsCode": "RDR",
+    "name": "Sussex Community NHS Foundation Trust",
+    "rttName": "SUSSEX COMMUNITY NHS FOUNDATION TRUST",
+    "isSpecialist": true,
+    "specialistNote": "Community health trust",
+    "postcode": "BN2 3EW",
+    "postcodeSource": "ODS",
+    "lat": 50.83118,
+    "lng": -0.1145,
+    "cqc": {
+      "rating": "Good",
+      "date": "2018-07-30",
+      "url": "http://www.cqc.org.uk/provider/RDR",
+      "matchConfidence": 1,
+      "matchMethod": "ods-code",
+      "unavailableReason": null,
+      "wellLed": null
+    },
+    "specialties": {
+      "110": {
+        "name": "Trauma & Orthopaedics",
+        "medianWeeks": 14,
+        "p92Weeks": 41.9,
+        "pctWithin18": 60.9,
+        "totalWaiting": 14239,
+        "smallNumbers": false
+      }
+    }
+  },
+  {
+    "odsCode": "RAS",
+    "name": "The Hillingdon Hospitals NHS Foundation Trust",
+    "rttName": "THE HILLINGDON HOSPITALS NHS FOUNDATION TRUST",
+    "isSpecialist": false,
+    "specialistNote": null,
+    "postcode": "UB8 3NN",
+    "postcodeSource": "ODS",
+    "lat": 51.52608,
+    "lng": -0.46115,
+    "cqc": {
+      "rating": null,
+      "date": null,
+      "url": "http://www.cqc.org.uk/provider/RAS",
+      "matchConfidence": 1,
+      "matchMethod": "ods-code",
+      "unavailableReason": "CQC has published a trust-level Well-led rating only, no overall rating",
+      "wellLed": {
+        "rating": "Requires improvement",
+        "date": "2025-06-04"
+      }
+    },
+    "specialties": {
+      "110": {
+        "name": "Trauma & Orthopaedics",
+        "medianWeeks": 14.2,
+        "p92Weeks": 38.3,
+        "pctWithin18": 59.8,
+        "totalWaiting": 5993,
+        "smallNumbers": false
+      },
+      "301": {
+        "name": "Gastroenterology",
+        "medianWeeks": 8.4,
+        "p92Weeks": 32.4,
+        "pctWithin18": 74.6,
+        "totalWaiting": 1027,
+        "smallNumbers": false
+      },
+      "320": {
+        "name": "Cardiology",
+        "medianWeeks": 19.6,
+        "p92Weeks": 40,
+        "pctWithin18": 45.9,
+        "totalWaiting": 1945,
+        "smallNumbers": false
+      },
+      "330": {
+        "name": "Dermatology",
+        "medianWeeks": 6.9,
+        "p92Weeks": 20.5,
+        "pctWithin18": 86.9,
+        "totalWaiting": 1154,
+        "smallNumbers": false
+      },
+      "410": {
+        "name": "Rheumatology",
+        "medianWeeks": 9.5,
+        "p92Weeks": 26.4,
+        "pctWithin18": 77.1,
+        "totalWaiting": 423,
+        "smallNumbers": false
+      }
+    }
+  },
+  {
+    "odsCode": "RQW",
+    "name": "The Princess Alexandra Hospital NHS Trust",
+    "rttName": "THE PRINCESS ALEXANDRA HOSPITAL NHS TRUST",
+    "isSpecialist": false,
+    "specialistNote": null,
+    "postcode": "CM20 1QX",
+    "postcodeSource": "ODS",
+    "lat": 51.77132,
+    "lng": 0.08732,
+    "cqc": {
+      "rating": null,
+      "date": null,
+      "url": "http://www.cqc.org.uk/provider/RQW",
+      "matchConfidence": 1,
+      "matchMethod": "ods-code",
+      "unavailableReason": "CQC has published a trust-level Well-led rating only, no overall rating",
+      "wellLed": {
+        "rating": "Requires improvement",
+        "date": "2026-08-26"
+      }
+    },
+    "specialties": {
+      "110": {
+        "name": "Trauma & Orthopaedics",
+        "medianWeeks": 16.5,
+        "p92Weeks": 42.8,
+        "pctWithin18": 54,
+        "totalWaiting": 5501,
+        "smallNumbers": false
+      },
+      "301": {
+        "name": "Gastroenterology",
+        "medianWeeks": 14.6,
+        "p92Weeks": 36.6,
+        "pctWithin18": 59.8,
+        "totalWaiting": 3060,
+        "smallNumbers": false
+      },
+      "320": {
+        "name": "Cardiology",
+        "medianWeeks": 13.8,
+        "p92Weeks": 31.2,
+        "pctWithin18": 65.4,
+        "totalWaiting": 3930,
+        "smallNumbers": false
+      },
+      "330": {
+        "name": "Dermatology",
+        "medianWeeks": 8,
+        "p92Weeks": 21.3,
+        "pctWithin18": 87,
+        "totalWaiting": 2714,
+        "smallNumbers": false
+      },
+      "410": {
+        "name": "Rheumatology",
+        "medianWeeks": 12.9,
+        "p92Weeks": 33.8,
+        "pctWithin18": 66.8,
+        "totalWaiting": 1153,
+        "smallNumbers": false
+      }
+    }
+  },
+  {
+    "odsCode": "RPY",
+    "name": "The Royal Marsden NHS Foundation Trust",
+    "rttName": "THE ROYAL MARSDEN NHS FOUNDATION TRUST",
+    "isSpecialist": true,
+    "specialistNote": "Specialist cancer trust",
+    "postcode": "SW3 6JJ",
+    "postcodeSource": "ODS",
+    "lat": 51.49056,
+    "lng": -0.17254,
+    "cqc": {
+      "rating": "Outstanding",
+      "date": "2020-01-16",
+      "url": "http://www.cqc.org.uk/provider/RPY",
+      "matchConfidence": 1,
+      "matchMethod": "ods-code",
+      "unavailableReason": null,
+      "wellLed": null
+    },
+    "specialties": {
+      "301": {
+        "name": "Gastroenterology",
+        "medianWeeks": 5,
+        "p92Weeks": 19.2,
+        "pctWithin18": 89.1,
+        "totalWaiting": 46,
+        "smallNumbers": true
+      },
+      "330": {
+        "name": "Dermatology",
+        "medianWeeks": 10,
+        "p92Weeks": 21.7,
+        "pctWithin18": 50,
+        "totalWaiting": 4,
+        "smallNumbers": true
+      }
+    }
+  },
+  {
+    "odsCode": "RRV",
+    "name": "University College London Hospitals NHS Foundation Trust",
+    "rttName": "UNIVERSITY COLLEGE LONDON HOSPITALS NHS FOUNDATION TRUST",
+    "isSpecialist": false,
+    "specialistNote": null,
+    "postcode": "NW1 2PG",
+    "postcodeSource": "ODS",
+    "lat": 51.52574,
+    "lng": -0.13738,
+    "cqc": {
+      "rating": "Good",
+      "date": "2018-12-11",
+      "url": "http://www.cqc.org.uk/provider/RRV",
+      "matchConfidence": 1,
+      "matchMethod": "ods-code",
+      "unavailableReason": null,
+      "wellLed": null
+    },
+    "specialties": {
+      "110": {
+        "name": "Trauma & Orthopaedics",
+        "medianWeeks": 9.1,
+        "p92Weeks": 31.8,
+        "pctWithin18": 73.6,
+        "totalWaiting": 3449,
+        "smallNumbers": false
+      },
+      "301": {
+        "name": "Gastroenterology",
+        "medianWeeks": 9.7,
+        "p92Weeks": 25.3,
+        "pctWithin18": 80.2,
+        "totalWaiting": 3932,
+        "smallNumbers": false
+      },
+      "320": {
+        "name": "Cardiology",
+        "medianWeeks": 9.8,
+        "p92Weeks": 27.5,
+        "pctWithin18": 72.5,
+        "totalWaiting": 806,
+        "smallNumbers": false
+      },
+      "330": {
+        "name": "Dermatology",
+        "medianWeeks": 11.2,
+        "p92Weeks": 38.1,
+        "pctWithin18": 65.3,
+        "totalWaiting": 2808,
+        "smallNumbers": false
+      },
+      "410": {
+        "name": "Rheumatology",
+        "medianWeeks": 12.5,
+        "p92Weeks": 38.2,
+        "pctWithin18": 64.2,
+        "totalWaiting": 827,
+        "smallNumbers": false
+      }
+    }
+  },
+  {
+    "odsCode": "RYR",
+    "name": "University Hospitals Sussex NHS Foundation Trust",
+    "rttName": "UNIVERSITY HOSPITALS SUSSEX NHS FOUNDATION TRUST",
+    "isSpecialist": false,
+    "specialistNote": null,
+    "postcode": "BN11 2DH",
+    "postcodeSource": "ODS",
+    "lat": 50.81668,
+    "lng": -0.3634,
+    "cqc": {
+      "rating": null,
+      "date": null,
+      "url": "http://www.cqc.org.uk/provider/RYR",
+      "matchConfidence": 1,
+      "matchMethod": "ods-code",
+      "unavailableReason": "CQC has published a trust-level Well-led rating only, no overall rating",
+      "wellLed": {
+        "rating": "Requires improvement",
+        "date": "2026-05-06"
+      }
+    },
+    "specialties": {
+      "110": {
+        "name": "Trauma & Orthopaedics",
+        "medianWeeks": 18.8,
+        "p92Weeks": 48.9,
+        "pctWithin18": 48.4,
+        "totalWaiting": 7875,
+        "smallNumbers": false
+      },
+      "301": {
+        "name": "Gastroenterology",
+        "medianWeeks": 17,
+        "p92Weeks": 40.1,
+        "pctWithin18": 52.2,
+        "totalWaiting": 5176,
+        "smallNumbers": false
+      },
+      "320": {
+        "name": "Cardiology",
+        "medianWeeks": 15.9,
+        "p92Weeks": 39.4,
+        "pctWithin18": 55.4,
+        "totalWaiting": 7763,
+        "smallNumbers": false
+      },
+      "330": {
+        "name": "Dermatology",
+        "medianWeeks": 11,
+        "p92Weeks": 55.6,
+        "pctWithin18": 61.4,
+        "totalWaiting": 9006,
+        "smallNumbers": false
+      },
+      "410": {
+        "name": "Rheumatology",
+        "medianWeeks": 13.4,
+        "p92Weeks": 37.4,
+        "pctWithin18": 61.6,
+        "totalWaiting": 1082,
+        "smallNumbers": false
+      }
+    }
+  },
+  {
+    "odsCode": "RWG",
+    "name": "West Hertfordshire Teaching Hospitals NHS Trust",
+    "rttName": "WEST HERTFORDSHIRE TEACHING HOSPITALS NHS TRUST",
+    "isSpecialist": false,
+    "specialistNote": null,
+    "postcode": "WD18 0HB",
+    "postcodeSource": "ODS",
+    "lat": 51.64893,
+    "lng": -0.40416,
+    "cqc": {
+      "rating": "Requires improvement",
+      "date": "2020-06-17",
+      "url": "http://www.cqc.org.uk/provider/RWG",
+      "matchConfidence": 1,
+      "matchMethod": "ods-code",
+      "unavailableReason": null,
+      "wellLed": null
+    },
+    "specialties": {
+      "110": {
+        "name": "Trauma & Orthopaedics",
+        "medianWeeks": 16.9,
+        "p92Weeks": 43.5,
+        "pctWithin18": 53.2,
+        "totalWaiting": 5047,
+        "smallNumbers": false
+      },
+      "301": {
+        "name": "Gastroenterology",
+        "medianWeeks": 8.6,
+        "p92Weeks": 18.3,
+        "pctWithin18": 91.7,
+        "totalWaiting": 3428,
+        "smallNumbers": false
+      },
+      "320": {
+        "name": "Cardiology",
+        "medianWeeks": 10.8,
+        "p92Weeks": 26.5,
+        "pctWithin18": 77.7,
+        "totalWaiting": 4564,
+        "smallNumbers": false
+      },
+      "330": {
+        "name": "Dermatology",
+        "medianWeeks": 9.4,
+        "p92Weeks": 23,
+        "pctWithin18": 82.1,
+        "totalWaiting": 3602,
+        "smallNumbers": false
+      },
+      "410": {
+        "name": "Rheumatology",
+        "medianWeeks": 10.3,
+        "p92Weeks": 27.5,
+        "pctWithin18": 74.8,
+        "totalWaiting": 937,
+        "smallNumbers": false
+      }
+    }
+  },
+  {
+    "odsCode": "RKE",
+    "name": "Whittington Health NHS Trust",
+    "rttName": "WHITTINGTON HEALTH NHS TRUST",
+    "isSpecialist": false,
+    "specialistNote": null,
+    "postcode": "N19 5NF",
+    "postcodeSource": "ODS",
+    "lat": 51.56648,
+    "lng": -0.13907,
+    "cqc": {
+      "rating": "Good",
+      "date": "2020-03-20",
+      "url": "http://www.cqc.org.uk/provider/RKE",
+      "matchConfidence": 1,
+      "matchMethod": "ods-code",
+      "unavailableReason": null,
+      "wellLed": null
+    },
+    "specialties": {
+      "110": {
+        "name": "Trauma & Orthopaedics",
+        "medianWeeks": 8.5,
+        "p92Weeks": 28.9,
+        "pctWithin18": 78.1,
+        "totalWaiting": 2089,
+        "smallNumbers": false
+      },
+      "301": {
+        "name": "Gastroenterology",
+        "medianWeeks": 6.3,
+        "p92Weeks": 24.6,
+        "pctWithin18": 86.1,
+        "totalWaiting": 1108,
+        "smallNumbers": false
+      },
+      "320": {
+        "name": "Cardiology",
+        "medianWeeks": 11,
+        "p92Weeks": 26.4,
+        "pctWithin18": 75.1,
+        "totalWaiting": 953,
+        "smallNumbers": false
+      },
+      "330": {
+        "name": "Dermatology",
+        "medianWeeks": 28.3,
+        "p92Weeks": 44.8,
+        "pctWithin18": 38.7,
+        "totalWaiting": 1748,
+        "smallNumbers": false
+      },
+      "410": {
+        "name": "Rheumatology",
+        "medianWeeks": 5.5,
+        "p92Weeks": 15,
+        "pctWithin18": 97.4,
+        "totalWaiting": 305,
+        "smallNumbers": false
+      }
+    }
+  }
+]

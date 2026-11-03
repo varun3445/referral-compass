@@ -1,0 +1,25 @@
+{
+  "rttMonth": "2026-08",
+  "rttLabel": "Aug 2026",
+  "rttPeriod": "RTT-August-2026",
+  "rttSourceUrl": "https://www.england.nhs.uk/statistics/statistical-work-areas/rtt-waiting-times/rtt-data-2026-27/",
+  "cqcFileDate": "2026-10-01",
+  "cqcDownloaded": "2026-11-03",
+  "cqcSourceUrl": "https://www.cqc.org.uk/about-us/transparency/using-cqc-data",
+  "odsSourceUrl": "https://directory.spineservices.nhs.uk/ORD/2-0-0/organisations/",
+  "specialties": {
+    "110": "Trauma & Orthopaedics",
+    "301": "Gastroenterology",
+    "320": "Cardiology",
+    "330": "Dermatology",
+    "410": "Rheumatology"
+  },
+  "radiusKm": 80,
+  "minWaitingForRanking": 50,
+  "center": {
+    "lat": 51.5074,
+    "lng": -0.1278
+  },
+  "providerCount": 41,
+  "builtAt": "2026-11-03"
+}

@@ -1,0 +1,8 @@
+node_modules
+.next
+.vercel
+data/raw/
+.env*
+.DS_Store
+.impeccable/
+next-env.d.ts
